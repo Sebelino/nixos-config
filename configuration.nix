@@ -60,6 +60,8 @@
     git-crypt
     gnupg
     mkpasswd
+    pinentry
+    pinentry-curses
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
