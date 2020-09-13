@@ -56,6 +56,8 @@
     wget
     vim
     git
+    git-crypt
+    gnupg
     mkpasswd
   ];
 
