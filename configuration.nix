@@ -91,6 +91,11 @@
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
 
+  services.udev.packages = [
+    pkgs.yubikey-personalization
+    pkgs.libu2f-host
+  ];
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.layout = "se";
