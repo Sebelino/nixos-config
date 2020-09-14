@@ -62,6 +62,7 @@
     pinentry
     pinentry-curses
     chromium
+    docker
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
