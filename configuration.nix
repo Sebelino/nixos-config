@@ -91,6 +91,9 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # Tell certain packages to be built with pulseaudio support if available
+  nixpkgs.config.pulseaudio = true;
+
   services.udev.packages = [
     pkgs.yubikey-personalization
     pkgs.libu2f-host
