@@ -61,6 +61,7 @@
     mkpasswd
     pinentry
     pinentry-curses
+    chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
