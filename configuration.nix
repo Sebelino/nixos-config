@@ -69,6 +69,7 @@
     docker
     minikube
     jq
+    xorg.xkbcomp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
