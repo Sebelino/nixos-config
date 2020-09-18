@@ -63,7 +63,6 @@
     git-crypt
     gnupg
     mkpasswd
-    pinentry
     pinentry-curses
     chromium
     docker
