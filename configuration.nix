@@ -104,8 +104,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = false;
 
   virtualisation.docker.enable = false;
 
