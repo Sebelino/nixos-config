@@ -68,6 +68,7 @@
     jq
     xorg.xkbcomp
     rxvt-unicode
+    feh
   ];
 
   environment.variables.EDITOR = "nvim";
