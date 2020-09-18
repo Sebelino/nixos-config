@@ -14,15 +14,17 @@
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    # Use the systemd-boot EFI boot loader.
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices = {
-    luksroot = {
-      device = "/dev/disk/by-uuid/71f99570-61ab-479a-ad2f-32c693de6951";
-      preLVM = true;
-      allowDiscards = true;
+    initrd.luks.devices = {
+      luksroot = {
+        device = "/dev/disk/by-uuid/71f99570-61ab-479a-ad2f-32c693de6951";
+        preLVM = true;
+        allowDiscards = true;
+      };
     };
   };
 
