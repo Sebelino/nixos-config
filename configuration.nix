@@ -120,6 +120,9 @@
 
   services.xserver.displayManager.sessionCommands = "setxkbmap solemak";
 
+  services.xserver.autoRepeatDelay = 250;
+  services.xserver.autoRepeatInterval = 50;
+
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
