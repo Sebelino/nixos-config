@@ -70,6 +70,7 @@
     minikube
     jq
     xorg.xkbcomp
+    rxvt-unicode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
