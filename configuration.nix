@@ -104,25 +104,27 @@
       pkgs.libu2f-host
     ];
 
-    # Enable the X11 windowing system.
-    xserver.enable = true;
+    xserver = {
+      # Enable the X11 windowing system.
+      enable = true;
 
-    xserver.extraLayouts.solemak = {
-      description = "Solemak, my own variant of Colemak";
-      languages = [ "eng" ];
-      symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
+      extraLayouts.solemak = {
+        description = "Solemak, my own variant of Colemak";
+        languages = [ "eng" ];
+        symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
+      };
+
+      displayManager.sessionCommands = "setxkbmap solemak";
+
+      autoRepeatDelay = 250;
+      autoRepeatInterval = 50;
+
+      # Enable touchpad support.
+      libinput.enable = true;
+
+      windowManager.xmonad.enable = true;
+      windowManager.xmonad.enableContribAndExtras = true;
     };
-
-    xserver.displayManager.sessionCommands = "setxkbmap solemak";
-
-    xserver.autoRepeatDelay = 250;
-    xserver.autoRepeatInterval = 50;
-
-    # Enable touchpad support.
-    xserver.libinput.enable = true;
-
-    xserver.windowManager.xmonad.enable = true;
-    xserver.windowManager.xmonad.enableContribAndExtras = true;
   };
 
   virtualisation.docker.enable = false;
