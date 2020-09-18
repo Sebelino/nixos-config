@@ -98,6 +98,11 @@
     openssh.allowSFTP = true;
 
     printing.enable = false;
+
+    udev.packages = [
+      pkgs.yubikey-personalization
+      pkgs.libu2f-host
+    ];
   };
 
   virtualisation.docker.enable = false;
@@ -108,11 +113,6 @@
 
   # Tell certain packages to be built with pulseaudio support if available
   nixpkgs.config.pulseaudio = true;
-
-  services.udev.packages = [
-    pkgs.yubikey-personalization
-    pkgs.libu2f-host
-  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
