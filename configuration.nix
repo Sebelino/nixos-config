@@ -58,7 +58,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     wget
-    vim
+    neovim
     git
     git-crypt
     gnupg
@@ -68,6 +68,17 @@
     jq
     xorg.xkbcomp
     rxvt-unicode
+  ];
+
+  environment.variables.EDITOR = "nvim";
+
+  nixpkgs.overlays = [
+    (self: super: {
+      neovim = super.neovim.override {
+        viAlias = true;
+        vimAlias = true;
+      };
+    })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
