@@ -96,6 +96,8 @@
     # Enable the OpenSSH daemon.
     openssh.enable = true;
     openssh.allowSFTP = true;
+
+    printing.enable = false;
   };
 
   # Open ports in the firewall.
@@ -104,7 +106,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  services.printing.enable = false;
 
   virtualisation.docker.enable = false;
 
