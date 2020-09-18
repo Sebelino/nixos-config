@@ -111,7 +111,14 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.layout = "se";
+
+  services.xserver.extraLayouts.solemak = {
+    description = "Solemak, my own variant of Colemak";
+    languages = [ "eng" ];
+    symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
+  };
+
+  services.xserver.displayManager.sessionCommands = "setxkbmap solemak";
 
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
