@@ -103,6 +103,26 @@
       pkgs.yubikey-personalization
       pkgs.libu2f-host
     ];
+
+    # Enable the X11 windowing system.
+    xserver.enable = true;
+
+    xserver.extraLayouts.solemak = {
+      description = "Solemak, my own variant of Colemak";
+      languages = [ "eng" ];
+      symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
+    };
+
+    xserver.displayManager.sessionCommands = "setxkbmap solemak";
+
+    xserver.autoRepeatDelay = 250;
+    xserver.autoRepeatInterval = 50;
+
+    # Enable touchpad support.
+    xserver.libinput.enable = true;
+
+    xserver.windowManager.xmonad.enable = true;
+    xserver.windowManager.xmonad.enableContribAndExtras = true;
   };
 
   virtualisation.docker.enable = false;
@@ -113,26 +133,6 @@
 
   # Tell certain packages to be built with pulseaudio support if available
   nixpkgs.config.pulseaudio = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  services.xserver.extraLayouts.solemak = {
-    description = "Solemak, my own variant of Colemak";
-    languages = [ "eng" ];
-    symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
-  };
-
-  services.xserver.displayManager.sessionCommands = "setxkbmap solemak";
-
-  services.xserver.autoRepeatDelay = 250;
-  services.xserver.autoRepeatInterval = 50;
-
-  # Enable touchpad support.
-  services.xserver.libinput.enable = true;
-
-  services.xserver.windowManager.xmonad.enable = true;
-  services.xserver.windowManager.xmonad.enableContribAndExtras = true;
 
   users.mutableUsers = false;
 
