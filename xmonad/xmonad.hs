@@ -231,7 +231,7 @@ myLogHook = return ()
 myStartupHook :: X()
 myStartupHook = do --SEBELINO
     setWMName "LG3D"
-    spawnOn "1" "xterm"
+    spawnOn "1" "urxvt"
 --    spawnOn "1" "chromium"
 --    spawnOn "6" "thunderbird"
 --    spawnOn "8" "urxvt -e cmus"
@@ -262,7 +262,7 @@ main = xmonad defaults
 --
 defaults = defaultConfig {
       -- simple stuff
-        terminal           = "xterm",
+        terminal           = "urxvt",
         focusFollowsMouse  = False,                  -- Whether focus follows the mouse pointer.
         clickJustFocuses   = True,                   -- Whether clicking on a window to focus also passes the click to the window
         borderWidth        = 0,
