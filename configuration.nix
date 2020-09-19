@@ -96,6 +96,7 @@ in
     feh
     lm_sensors
     thunderbird
+    xmobar
   ];
 
   environment.variables.EDITOR = "nvim";
