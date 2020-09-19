@@ -9,9 +9,9 @@ iwconfig $IFACE 2>&1 | grep -q no\ wireless\ extensions\. && {
   exit 0
 }
 
-essid=`iwconfig $IFACE | awk -F '"' '/ESSID/ {print $2}'`
-stngth=`iwconfig $IFACE | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1`
-bars=`expr $stngth / 10`
+essid="$(iwconfig $IFACE | awk -F '"' '/ESSID/ {print $2}')"
+stngth="$(iwconfig $IFACE | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1)"
+bars="$(expr $stngth / 10)"
 
 case $bars in
   0)  bar='[----------]' ;;
