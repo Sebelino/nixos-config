@@ -1,0 +1,42 @@
+Config { font = "xft:DejaVu Sans Mono:pixelsize=10"
+       , overrideRedirect = True
+       , bgColor = "black"
+       , fgColor = "green"
+       , border = NoBorder
+       , borderColor = "#FF0000"
+       , lowerOnStart = False
+       , hideOnStart = False
+       , persistent = True
+       , position = TopW L 100
+       , commands = [ Run Date "%a %_d %b %H:%M:%S" "date" 10
+                    , Run MultiCpu ["-L","50","-H","85","--normal","white"
+                        ,"--high","red","-p","3","-t","Cpu: <total0>% <total1>% <total2>% <total3>%"] 20
+                    , Run Memory ["--Low","50","--High","85","--normal","#ffffff"
+                        ,"--high","red","--ppad","3","-t","Mem: <usedratio>%"] 20
+                    , Run Swap ["--Low","50","--High","85","--normal","yellow"
+                        ,"--high","red","--ppad","3","-t","<usedratio>%"] 20
+                    , Run CoreTemp ["--template","<core0>°C <core1>°C","--Low","70","--High","80"
+                        ,"--low","darkgreen","--normal","darkorange","--high","darkred"] 50
+                    , Run Com "/home/sebelino/scripts/wireless.sh" [] "wireless" 100
+                    , Run Battery [ "-t","<leftipat> <timeleft> / <left>%"
+                                  , "-L","50"
+                                  , "-H","75"
+                                  , "-n","#ffffff"
+                                  , "-l","red"
+                    ] 300
+--                    , Run Com "/usr/bin/python" ["/home/sebelino/scripts/workstatus.py", "noproc"] "work" 100
+                    , Run Com "/home/sebelino/scripts/charging.sh" [] "charging" 20
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%multicpu% | %memory% %swap% | %battery% | %charging% | %coretemp% | %wireless% }{ <fc=#ee9a00>%date%</fc> "
+       }
+       , alpha = 255
+       , textOffset = -1
+       , iconOffset = -1
+       , iconRoot = "."
+       , additionalFonts = ["xft:inconsolata:size=8"]
+       , allDesktops = True
+       , pickBroadest = True
+
