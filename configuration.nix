@@ -204,6 +204,7 @@ in
   users.mutableUsers = false;
 
   home-manager.users.sebelino = { pkgs, ... }: {
+    programs.bat.enable = true;
   };
 
   # This value determines the NixOS release from which the default
