@@ -95,6 +95,7 @@ in
     rxvt-unicode
     feh
     lm_sensors
+    thunderbird
   ];
 
   environment.variables.EDITOR = "nvim";
