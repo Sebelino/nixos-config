@@ -211,6 +211,14 @@ in
     programs.bat.enable = true;
     programs.zsh.enable = true;
     programs.urxvt.enable = true;
+    programs.urxvt.scroll.bar.enable = false;
+
+    xresources.properties = {
+      "URxvt.background" = "rgba:1111/1111/1111/dddd";
+      "URxvt.foreground" = "white";
+      "URxvt.font" = "xft:monospace:size=9";
+    };
+
     programs.neovim = {
       enable = true;
       vimAlias = true;
