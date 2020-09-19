@@ -214,8 +214,8 @@ in
       enable = true;
       vimAlias = true;
       extraConfig = "colorscheme murphy";
-      plugins = [
-        pkgs.vimPlugins.vim-nix
+      plugins = with pkgs.vimPlugins; [
+        vim-nix
       ];
     };
   };
