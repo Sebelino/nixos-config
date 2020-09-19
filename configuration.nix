@@ -176,7 +176,7 @@ in
       displayManager.sessionCommands = "setxkbmap solemak";
 
       autoRepeatDelay = 250;
-      autoRepeatInterval = 50;
+      autoRepeatInterval = 20;
 
       # Enable touchpad support.
       libinput.enable = true;
