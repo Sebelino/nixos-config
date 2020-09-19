@@ -213,6 +213,7 @@ in
     programs.neovim = {
       enable = true;
       vimAlias = true;
+      extraConfig = "colorscheme murphy";
       plugins = [
         pkgs.vimPlugins.vim-nix
       ];
