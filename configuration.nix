@@ -97,6 +97,7 @@ in
     lm_sensors
     thunderbird
     xmobar
+    acpi
   ];
 
   environment.variables.EDITOR = "nvim";
