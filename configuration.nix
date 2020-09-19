@@ -98,6 +98,7 @@ in
     thunderbird
     xmobar
     acpi
+    dmenu
   ];
 
   environment.variables.EDITOR = "nvim";
