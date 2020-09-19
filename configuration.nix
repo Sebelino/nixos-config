@@ -210,6 +210,7 @@ in
   home-manager.users.sebelino = { pkgs, ... }: {
     programs.bat.enable = true;
     programs.zsh.enable = true;
+    programs.urxvt.enable = true;
     programs.neovim = {
       enable = true;
       vimAlias = true;
