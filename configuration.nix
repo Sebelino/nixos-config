@@ -210,6 +210,13 @@ in
   home-manager.users.sebelino = { pkgs, ... }: {
     programs.bat.enable = true;
     programs.zsh.enable = true;
+    programs.neovim = {
+      enable = true;
+      vimAlias = true;
+      plugins = [
+        pkgs.vimPlugins.vim-nix
+      ];
+    };
   };
 
   # This value determines the NixOS release from which the default
