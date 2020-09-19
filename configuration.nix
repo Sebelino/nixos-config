@@ -133,12 +133,13 @@ in
     thinkfan = {
       enable = true;
       levels = ''
-        (0,     0,      55)
-        (1,     50,     60)
-        (2,     52,     61)
-        (3,     54,     63)
-        (6,     56,     65)
-        (7,     60,     85)
+        (0,     0,      60)
+        (1,     60,     65)
+        (2,     65,     70)
+        (3,     70,     75)
+        (4,     75,     80)
+        (5,     80,     85)
+        (7,     85,     90)
         (127,   80,     32767)
       '';
       # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/hwmon /g'
