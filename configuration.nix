@@ -90,6 +90,7 @@ in
     xorg.xkbcomp
     rxvt-unicode
     feh
+    lm_sensors
   ];
 
   environment.variables.EDITOR = "nvim";
