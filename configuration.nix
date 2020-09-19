@@ -203,8 +203,13 @@ in
 
   users.mutableUsers = false;
 
+  users.extraUsers.sebelino = {
+    shell = pkgs.zsh;
+  };
+
   home-manager.users.sebelino = { pkgs, ... }: {
     programs.bat.enable = true;
+    programs.zsh.enable = true;
   };
 
   # This value determines the NixOS release from which the default
