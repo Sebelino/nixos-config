@@ -12,12 +12,18 @@ let
     # Hash obtained using `nix-prefetch-url --unpack <url>`
     sha256 = "0g2j41cx2w2an5d9kkqvgmada7ssdxqz1zvjd7hi5vif8ag0v5la";
   };
+
+  home-manager = builtins.fetchGit {
+    url = "https://github.com/rycee/home-manager.git";
+    rev = "9b1b55ba0264a55add4b7b4e022bdc2832b531f6";
+  };
 in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./secrets
+      (import "${home-manager}/nixos")
     ];
 
   # Package pinning
@@ -196,6 +202,9 @@ in
   nixpkgs.config.pulseaudio = true;
 
   users.mutableUsers = false;
+
+  home-manager.users.sebelino = { pkgs, ... }: {
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
