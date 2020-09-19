@@ -46,6 +46,10 @@ in
       };
     };
 
+    initrd.availableKernelModules = [
+      "thinkpad_acpi"
+    ];
+
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -125,6 +129,34 @@ in
       pkgs.yubikey-personalization
       pkgs.libu2f-host
     ];
+
+    thinkfan = {
+      enable = true;
+      levels = ''
+        (0,     0,      55)
+        (1,     48,     60)
+        (2,     50,     61)
+        (3,     52,     63)
+        (6,     56,     65)
+        (7,     60,     85)
+        (127,   80,     32767)
+      '';
+      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/hwmon /g'
+      # Non-working and always-zero entries discarded, as well as the one that goes from 0 to 66 when plugging in charger
+      sensors = ''
+        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp1_input
+        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp5_input
+        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp2_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp3_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp4_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone7/hwmon8/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon5/temp1_input
+      '';
+    };
 
     xserver = {
       # Enable the X11 windowing system.
