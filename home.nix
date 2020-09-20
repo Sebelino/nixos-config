@@ -56,6 +56,9 @@
     git = {
       enable = true;
       userName = "Sebastian Olsson";
+      ignores = [
+        "gitignore/"
+      ];
     };
   };
 
