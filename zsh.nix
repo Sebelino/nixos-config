@@ -4,6 +4,11 @@
   shellAliases = import ./shell-aliases.nix;
   enableAutosuggestions = true;
   initExtra = ''
+    # BEWARE: Persistent rehash -- might incur performance penalty
+    # https://wiki.archlinux.org/index.php/zsh#Persistent_rehash
+    # Consider replacing it with an on-demand rehash
+    zstyle ':completion:*' rehash true
+
     # Taken from prezto, needed by a few shell aliases
     # Log
     zstyle -s ':prezto:module:git:log:medium' format '_git_log_medium_format' \
