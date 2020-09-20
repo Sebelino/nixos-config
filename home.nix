@@ -13,6 +13,7 @@
     chromium
     dmenu
     feh
+    fzf
     git
     git-crypt
     glxinfo
