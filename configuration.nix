@@ -213,7 +213,9 @@ in
 
     programs = {
       bat.enable = true;
-      zsh.enable = true;
+      zsh = {
+        enable = true;
+      };
       urxvt = {
         enable = true;
         scroll.bar.enable = false;
