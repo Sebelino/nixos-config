@@ -4,6 +4,8 @@
     EDITOR = "nvim";
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
     ack
     arandr
