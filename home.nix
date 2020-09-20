@@ -27,7 +27,7 @@
 
   programs = {
     bat.enable = true;
-    zsh = import ./zsh.nix;
+    zsh = import ./zsh.nix { pkgs = pkgs; };
     urxvt = {
       enable = true;
       fonts = [

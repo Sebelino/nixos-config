@@ -1,4 +1,4 @@
-{
+{ pkgs }: {
   enable = true;
   autocd = true;
   shellAliases = import ./shell-aliases.nix;
@@ -17,6 +17,12 @@
     zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_submodules' \
       || _git_status_ignore_submodules='none'
   '';
+  plugins = [
+    {
+      name = "fast-syntax-highlighting";
+      src = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions";
+    }
+  ];
   oh-my-zsh = {
     enable = true;
     theme = "agnoster";
