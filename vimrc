@@ -51,7 +51,6 @@ set scrolloff=999
 ""set gfn=Consolas:h7
 "syn on
 "" set guicursor+=a:blinkon0
-"set number
 "set ruler
 "set nohlsearch
 "
