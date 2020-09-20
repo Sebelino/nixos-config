@@ -179,6 +179,9 @@ in
   # Tell certain packages to be built with pulseaudio support if available
   nixpkgs.config.pulseaudio = true;
 
+  # Allow unfree packages system-wide for now
+  nixpkgs.config.allowUnfree = true;
+
   users.mutableUsers = false;
 
   users.extraUsers.sebelino = {
