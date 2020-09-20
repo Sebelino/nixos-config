@@ -3,6 +3,9 @@ colorscheme murphy
 " Line numbers
 set number
 
+" Keep cursor centered
+set scrolloff=999
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -15,9 +18,6 @@ set number
 "
 "set autoindent
 "set cindent
-"
-"" Keep cursor centered
-"set scrolloff=999
 "
 ""let g:loaded_matchparen=1
 "
