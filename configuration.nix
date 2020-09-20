@@ -211,9 +211,11 @@ in
     programs = {
       bat.enable = true;
       zsh.enable = true;
-      urxvt.enable = true;
-      urxvt.scroll.bar.enable = false;
-      urxvt.scroll.lines = 20000;
+      urxvt = {
+        enable = true;
+        scroll.bar.enable = false;
+        scroll.lines = 20000;
+      };
       neovim = {
         enable = true;
         vimAlias = true;
