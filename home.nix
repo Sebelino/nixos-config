@@ -14,6 +14,7 @@
     git-crypt
     glxinfo
     gnupg
+    go
     jq
     lm_sensors
     mkpasswd
