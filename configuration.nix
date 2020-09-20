@@ -189,7 +189,7 @@ in
     };
   };
 
-  virtualisation.docker.enable = false;
+  virtualisation.docker.enable = true;
 
   # Enable sound.
   sound.enable = true;
