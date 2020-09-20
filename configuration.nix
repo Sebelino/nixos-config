@@ -213,6 +213,14 @@ in
     programs.urxvt.enable = true;
     programs.urxvt.scroll.bar.enable = false;
     programs.urxvt.scroll.lines = 20000;
+    programs.neovim = {
+      enable = true;
+      vimAlias = true;
+      extraConfig = "colorscheme murphy";
+      plugins = with pkgs.vimPlugins; [
+        vim-nix
+      ];
+    };
 
     xresources.properties = {
       "URxvt.background" = "rgba:1111/1111/1111/dddd";
@@ -222,15 +230,6 @@ in
       "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
       "URxvt.borderless" = true;
       "URxvt.highlightColor" = "#d01018";
-    };
-
-    programs.neovim = {
-      enable = true;
-      vimAlias = true;
-      extraConfig = "colorscheme murphy";
-      plugins = with pkgs.vimPlugins; [
-        vim-nix
-      ];
     };
   };
 
