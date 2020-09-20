@@ -61,5 +61,6 @@
     "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
     "URxvt.borderless" = true;
     "URxvt.highlightColor" = "#d01018";
+    "URxvt.depth" = 32;  # Enables transparency together with xcompmgr -c
   };
 }
