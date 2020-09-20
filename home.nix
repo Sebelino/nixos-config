@@ -29,6 +29,7 @@
       enable = true;
       autocd = true;
       shellAliases = import ./shell-aliases.nix;
+      enableAutosuggestions = true;
     };
     urxvt = {
       enable = true;
