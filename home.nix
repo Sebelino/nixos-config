@@ -42,7 +42,7 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      extraConfig = "colorscheme murphy";
+      extraConfig = (builtins.readFile ./vimrc);
       plugins = with pkgs.vimPlugins; [
         vim-nix
         vim-gitgutter
