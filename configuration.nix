@@ -172,7 +172,9 @@ in
         symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
       };
 
-      displayManager.sessionCommands = "setxkbmap solemak";
+      displayManager.sessionCommands = ''
+        setxkbmap solemak &!
+      '';
 
       autoRepeatDelay = 250;
       autoRepeatInterval = 20;
