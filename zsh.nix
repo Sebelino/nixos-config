@@ -17,4 +17,7 @@
     zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_submodules' \
       || _git_status_ignore_submodules='none'
   '';
+  oh-my-zsh = {
+    enable = true;
+  };
 }
