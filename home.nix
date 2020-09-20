@@ -11,6 +11,7 @@
     feh
     git
     git-crypt
+    glxinfo
     gnupg
     jq
     lm_sensors
