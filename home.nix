@@ -29,6 +29,9 @@
     zsh = import ./zsh.nix;
     urxvt = {
       enable = true;
+      fonts = [
+        "xft:monospace:size=9"
+      ];
       scroll.bar.enable = false;
       scroll.lines = 20000;
     };
@@ -46,7 +49,6 @@
   xresources.properties = {
     "URxvt.background" = "rgba:1111/1111/1111/dddd";
     "URxvt.foreground" = "white";
-    "URxvt.font" = "xft:monospace:size=9";
     "URxvt.keysym.Shift-Up" = "command:\\033]720;1\\007";
     "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
     "URxvt.borderless" = true;
