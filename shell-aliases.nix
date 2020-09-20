@@ -1,6 +1,7 @@
 {
   # Homebrewn aliases
   cdn = "cd $HOME/nixos-config";
+  nrs = "sudo nixos-rebuild switch";
 
   # Branch (b)
   gb = "git branch";
