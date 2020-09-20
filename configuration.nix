@@ -207,6 +207,7 @@ in
       pcsx2
       pinentry-curses
       thunderbird
+      tree
       xmobar
       xorg.xkbcomp
     ];
