@@ -215,6 +215,7 @@ in
       bat.enable = true;
       zsh = {
         enable = true;
+        autocd = true;
       };
       urxvt = {
         enable = true;
