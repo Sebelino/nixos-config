@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     ack
+    arandr
     chromium
     dmenu
     feh
