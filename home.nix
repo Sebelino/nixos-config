@@ -19,6 +19,7 @@
     glxinfo
     gnupg
     go
+    google-cloud-sdk
     jq
     lm_sensors
     mkpasswd
