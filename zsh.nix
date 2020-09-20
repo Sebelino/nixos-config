@@ -20,5 +20,8 @@
   oh-my-zsh = {
     enable = true;
     theme = "agnoster";
+    plugins = [
+      "colored-man-pages"
+    ];
   };
 }
