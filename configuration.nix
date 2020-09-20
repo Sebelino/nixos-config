@@ -88,23 +88,9 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    neovim
-    git
-    git-crypt
-    gnupg
-    mkpasswd
-    pinentry-curses
-    chromium
-    jq
-    xorg.xkbcomp
-    rxvt-unicode
-    feh
-    lm_sensors
-    thunderbird
-    xmobar
     acpi
-    dmenu
+    neovim
+    wget
   ];
 
   environment.variables.EDITOR = "nvim";
@@ -208,6 +194,22 @@ in
   };
 
   home-manager.users.sebelino = { pkgs, ... }: {
+    home.packages = with pkgs; [
+      chromium
+      dmenu
+      feh
+      git
+      git-crypt
+      gnupg
+      jq
+      lm_sensors
+      mkpasswd
+      pinentry-curses
+      thunderbird
+      xmobar
+      xorg.xkbcomp
+    ];
+
     programs = {
       bat.enable = true;
       zsh.enable = true;
