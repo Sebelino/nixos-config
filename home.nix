@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     ack
     arandr
+    awscli2
     chromium
     dmenu
     feh
@@ -23,6 +24,7 @@
     pciutils
     pcsx2
     pinentry-curses
+    ssm-session-manager-plugin
     thunderbird
     tree
     xcompmgr
