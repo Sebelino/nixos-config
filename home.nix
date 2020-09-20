@@ -30,7 +30,7 @@
     urxvt = {
       enable = true;
       fonts = [
-        "xft:monospace:size=9"
+        "xft:inconsolata:size=12"
       ];
       scroll.bar.enable = false;
       scroll.lines = 20000;
