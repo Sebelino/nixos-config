@@ -157,7 +157,6 @@ in
         hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input
         hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
         hwmon /sys/devices/pci0000:00/0000:00:1d.4/0000:3d:00.0/hwmon/hwmon1/temp1_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
         hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon5/temp1_input
       '';
     };
