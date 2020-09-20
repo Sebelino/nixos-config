@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import Data.Monoid
 import System.Exit
@@ -199,7 +200,9 @@ myManageHook = manageSpawn <+> composeAll  -- Needs "manageSpawn <+>" for spawnO
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore
+    , appName   =? "center_window"  --> doRectFloat (W.RationalRect 0.2 0.2 0.6 0.6)
+    ]
 
 ------------------------------------------------------------------------
 -- Event handling
