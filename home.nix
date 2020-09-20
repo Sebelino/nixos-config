@@ -15,6 +15,7 @@
     jq
     lm_sensors
     mkpasswd
+    pciutils
     pcsx2
     pinentry-curses
     thunderbird
