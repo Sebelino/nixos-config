@@ -204,6 +204,7 @@ in
       jq
       lm_sensors
       mkpasswd
+      pcsx2
       pinentry-curses
       thunderbird
       xmobar
