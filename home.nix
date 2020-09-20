@@ -53,6 +53,10 @@
         vim-gitgutter
       ];
     };
+    git = {
+      enable = true;
+      userName = "Sebastian Olsson";
+    };
   };
 
   xresources.properties = {
