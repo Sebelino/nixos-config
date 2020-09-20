@@ -89,19 +89,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     acpi
-    neovim
     wget
-  ];
-
-  environment.variables.EDITOR = "nvim";
-
-  nixpkgs.overlays = [
-    (self: super: {
-      neovim = super.neovim.override {
-        viAlias = true;
-        vimAlias = true;
-      };
-    })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -198,6 +186,10 @@ in
   };
 
   home-manager.users.sebelino = { pkgs, ... }: {
+    home.sessionVariables = {
+      EDITOR = "nvim";
+    };
+
     home.packages = with pkgs; [
       chromium
       dmenu
@@ -224,6 +216,7 @@ in
       };
       neovim = {
         enable = true;
+        viAlias = true;
         vimAlias = true;
         extraConfig = "colorscheme murphy";
         plugins = with pkgs.vimPlugins; [
