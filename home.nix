@@ -45,6 +45,7 @@
       extraConfig = "colorscheme murphy";
       plugins = with pkgs.vimPlugins; [
         vim-nix
+        vim-gitgutter
       ];
     };
   };
