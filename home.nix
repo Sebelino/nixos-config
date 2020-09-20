@@ -52,7 +52,7 @@
   };
 
   xresources.properties = {
-    "URxvt.background" = "rgba:1111/1111/1111/dddd";
+    "URxvt.background" = "rgba:0000/0000/0200/c800";
     "URxvt.foreground" = "white";
     "URxvt.keysym.Shift-Up" = "command:\\033]720;1\\007";
     "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
