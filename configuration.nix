@@ -208,18 +208,20 @@ in
   };
 
   home-manager.users.sebelino = { pkgs, ... }: {
-    programs.bat.enable = true;
-    programs.zsh.enable = true;
-    programs.urxvt.enable = true;
-    programs.urxvt.scroll.bar.enable = false;
-    programs.urxvt.scroll.lines = 20000;
-    programs.neovim = {
-      enable = true;
-      vimAlias = true;
-      extraConfig = "colorscheme murphy";
-      plugins = with pkgs.vimPlugins; [
-        vim-nix
-      ];
+    programs = {
+      bat.enable = true;
+      zsh.enable = true;
+      urxvt.enable = true;
+      urxvt.scroll.bar.enable = false;
+      urxvt.scroll.lines = 20000;
+      neovim = {
+        enable = true;
+        vimAlias = true;
+        extraConfig = "colorscheme murphy";
+        plugins = with pkgs.vimPlugins; [
+          vim-nix
+        ];
+      };
     };
 
     xresources.properties = {
