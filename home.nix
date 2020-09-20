@@ -5,6 +5,7 @@
   };
 
   home.packages = with pkgs; [
+    ack
     chromium
     dmenu
     feh
