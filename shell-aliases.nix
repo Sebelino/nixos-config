@@ -2,6 +2,7 @@
   # Homebrewn aliases
   cdn = "cd $HOME/nixos-config";
   nrs = "sudo nixos-rebuild switch";
+  nrS = "urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch; sleep 10' &!";
   dup = "urxvt &";
 
   # Branch (b)
