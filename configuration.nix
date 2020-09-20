@@ -212,6 +212,7 @@ in
     programs.zsh.enable = true;
     programs.urxvt.enable = true;
     programs.urxvt.scroll.bar.enable = false;
+    programs.urxvt.scroll.lines = 20000;
 
     xresources.properties = {
       "URxvt.background" = "rgba:1111/1111/1111/dddd";
