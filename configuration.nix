@@ -221,6 +221,7 @@ in
       "URxvt.keysym.Shift-Up" = "command:\\033]720;1\\007";
       "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
       "URxvt.borderless" = true;
+      "URxvt.highlightColor" = "#d01018";
     };
 
     programs.neovim = {
