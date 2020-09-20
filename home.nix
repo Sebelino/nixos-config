@@ -22,7 +22,10 @@
     pinentry-curses
     thunderbird
     tree
+    xcompmgr
     xmobar
+    xorg.transset
+    xorg.xdpyinfo
     xorg.xkbcomp
   ];
 
