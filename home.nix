@@ -30,7 +30,7 @@
     urxvt = {
       enable = true;
       fonts = [
-        "xft:inconsolata:size=12"
+        "xft:Inconsolata for Powerline:size=14"
       ];
       scroll.bar.enable = false;
       scroll.lines = 20000;
