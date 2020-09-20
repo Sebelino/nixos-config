@@ -89,6 +89,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     acpi
+    slack
     wget
   ];
 
