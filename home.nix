@@ -40,6 +40,7 @@
       enable = true;
       viAlias = true;
       vimAlias = true;
+      vimdiffAlias = true;
       extraConfig = "colorscheme murphy";
       plugins = with pkgs.vimPlugins; [
         vim-nix
