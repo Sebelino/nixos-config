@@ -265,7 +265,7 @@ defaults = defaultConfig {
         terminal           = "urxvt",
         focusFollowsMouse  = False,                  -- Whether focus follows the mouse pointer.
         clickJustFocuses   = True,                   -- Whether clicking on a window to focus also passes the click to the window
-        borderWidth        = 0,
+        borderWidth        = 1,
         modMask            = mod4Mask, -- mod1Mask = Alt key, mod4Mask = Hyper_L. Do "xkbcomp $DISPLAY"
         workspaces         = ["1","2","3","4","5","6","7","8","9"],
         normalBorderColor  = "#111111",
