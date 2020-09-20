@@ -1,4 +1,7 @@
 {
+  # Homebrewn aliases
+  cdn = "cd $HOME/nixos-config";
+
   # Branch (b)
   gb = "git branch";
   gba = "git branch --all --verbose";
