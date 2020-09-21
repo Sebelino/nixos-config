@@ -26,6 +26,7 @@
     jdk8
     jq
     lm_sensors
+    minikube
     mkpasswd
     pciutils
     pcsx2
