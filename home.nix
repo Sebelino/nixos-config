@@ -10,6 +10,7 @@
     ack
     arandr
     awscli2
+    bazel_1
     chromium
     dmenu
     feh
