@@ -15,6 +15,12 @@ vmap <F12> <ESC>:set hls!<CR>gv
 nnoremap <silent><C-i> :qa<CR>
 nnoremap <silent><C-s> :w<CR>
 
+" Upon reopening a file, jump to the position held at the end of the previous session
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -130,12 +136,6 @@ nnoremap <silent><C-s> :w<CR>
 "
 "" Shorter sudo
 "cmap w!! w !sudo tee % > /dev/null
-"
-"" Uncomment the following to have Vim jump to the last position when reopening a file.
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-"    \| exe "normal! g'\"" | endif
-"endif
 "
 "" Python-mode
 "let g:pymode_folding = 0
