@@ -6,6 +6,11 @@ set number
 " Keep cursor centered
 set scrolloff=999
 
+" Toggle search highlighting
+map  <F12> :set hls!<CR>
+imap <F12> <ESC>:set hls!<CR>a
+vmap <F12> <ESC>:set hls!<CR>gv
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -53,10 +58,6 @@ set scrolloff=999
 "" set guicursor+=a:blinkon0
 "set ruler
 "set nohlsearch
-"
-"map  <F12> :set hls!<CR>
-"imap <F12> <ESC>:set hls!<CR>a
-"vmap <F12> <ESC>:set hls!<CR>gv
 "
 "map <F11> :set wrap!<CR>
 "
