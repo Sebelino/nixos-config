@@ -28,6 +28,7 @@
     lm_sensors
     minikube
     mkpasswd
+    openssl
     pciutils
     pcsx2
     pinentry-curses
