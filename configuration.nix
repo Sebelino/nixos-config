@@ -100,6 +100,7 @@ in
     slack
     wget
     nvidia-offload
+    xscreensaver
   ];
 
   fonts.fonts = with pkgs; [
