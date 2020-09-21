@@ -11,6 +11,10 @@ map  <F12> :set hls!<CR>
 imap <F12> <ESC>:set hls!<CR>a
 vmap <F12> <ESC>:set hls!<CR>gv
 
+" Shortcut for :qa and :w
+nnoremap <silent><C-i> :qa<CR>
+nnoremap <silent><C-s> :w<CR>
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -99,9 +103,6 @@ vmap <F12> <ESC>:set hls!<CR>gv
 "nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 "nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 "
-"" Shortcut for :qa and :w
-"nnoremap <silent><C-i> :qa<CR>
-"nnoremap <silent><C-s> :w<CR>
 "
 "" Disables arrow keys.
 "" inoremap  <Up>     <NOP>
