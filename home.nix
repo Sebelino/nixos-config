@@ -23,6 +23,7 @@
     gnupg
     go
     google-cloud-sdk
+    jdk8
     jq
     lm_sensors
     mkpasswd
