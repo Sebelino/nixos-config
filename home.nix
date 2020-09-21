@@ -16,6 +16,7 @@
     feh
     fzf
     gcc
+    gettext  # msgfmt
     git
     git-crypt
     glxinfo
