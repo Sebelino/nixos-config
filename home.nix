@@ -15,6 +15,7 @@
     dmenu
     feh
     fzf
+    gcc
     git
     git-crypt
     glxinfo
