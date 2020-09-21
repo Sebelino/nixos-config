@@ -12,6 +12,7 @@
     awscli2
     bazel_1
     chromium
+    cmus
     dmenu
     feh
     fzf
