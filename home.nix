@@ -32,6 +32,7 @@
     pciutils
     pcsx2
     pinentry-curses
+    python39
     ssm-session-manager-plugin
     thunderbird
     tree
