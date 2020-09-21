@@ -1,0 +1,11 @@
+# Sin: Can probably be purified with system.activationScripts
+# https://discourse.nixos.org/t/always-symlinking-the-latest-jdk-to-a-certain-path/3099
+sudo mkdir -p /lib64
+sudo ln -s /nix/store/jvjchabdmcxlwjhbiii5sy6d2hcg6z7r-glibc-2.31/lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
+
+# Sin: Needed for infra's scripts
+sudo ln -s /run/current-system/sw/bin/bash /bin/bash
+
+# Sin: Symlink /home/sebelino/.xmonad/xmonad.hs -> /home/sebelino/nixos-config/xmonad/xmonad.hs
+# Sin: Symlink /home/sebelino/.xmobarrc -> /home/sebelino/nixos-config/statusbar/xmobarrc
+# Sin: Symlink /etc/nixos/configuration.nix -> /home/sebelino/nixos-config/configuration.nix
