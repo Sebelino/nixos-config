@@ -4,6 +4,8 @@
   nrs = "sudo nixos-rebuild switch";
   nrS = ''urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch && echo -e "\e[1;32mOK!"; sleep 2' &!'';
   dup = "urxvt &";
+  kgp = "kubectl get pods --all-namespaces";
+  kgpw = "watch -n1 kubectl get pods --all-namespaces";
 
   # Branch (b)
   gb = "git branch";
