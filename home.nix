@@ -25,6 +25,7 @@
     go
     google-cloud-sdk
     jdk8
+    jetbrains.idea-ultimate
     jq
     lm_sensors
     minikube
