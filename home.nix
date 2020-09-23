@@ -43,6 +43,7 @@
     xorg.transset
     xorg.xdpyinfo
     xorg.xkbcomp
+    nix-index  # Example usage: nix-locate zlib.h
   ];
 
   programs = {
