@@ -11,3 +11,10 @@ sudo ln -s /run/current-system/sw/bin/bash /bin/bash
 # Sin: Symlink /etc/nixos/configuration.nix -> /home/sebelino/nixos-config/configuration.nix
 
 # Sin: Create ~/.gitconfig
+
+# Sin: Fn-lock not configured to be on by default
+When I got a new Thinkpad, the way to e.g. increase volume was to press F3,
+rather than Fn+F3. I.e. the Fn keys were "inverted". I found that this was
+because "FnLock" was not on. To enable it, I needed to look for a key labeled
+FnLock on my keyboard -- Esc in my case -- and press Fn+Esc. I wonder if this
+default behavior is configurable in Nix.
