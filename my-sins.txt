@@ -18,3 +18,6 @@ rather than Fn+F3. I.e. the Fn keys were "inverted". I found that this was
 because "FnLock" was not on. To enable it, I needed to look for a key labeled
 FnLock on my keyboard -- Esc in my case -- and press Fn+Esc. I wonder if this
 default behavior is configurable in Nix.
+
+# Sin: IntellJ plugins and keybindings are not configured in Nix -- I had to
+set them up all over again.
