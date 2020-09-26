@@ -183,7 +183,7 @@ in
 
       displayManager.sessionCommands = ''
         setxkbmap solemak &!
-        xcompmgr -c -f &!
+        xcompmgr -c -f -D 5 &!
       '';
 
       autoRepeatDelay = 250;
