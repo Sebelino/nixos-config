@@ -35,6 +35,7 @@
     pcsx2
     pinentry-curses
     python39
+    scrot
     ssm-session-manager-plugin
     thunderbird
     tree
