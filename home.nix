@@ -21,6 +21,7 @@
     git
     git-crypt
     glxinfo
+    gnumake  # Needed to build Bazel projects (python toolchain)
     gnupg
     go
     google-cloud-sdk
