@@ -29,6 +29,7 @@
     lm_sensors
     minikube
     mkpasswd
+    mplayer
     nix-index # Example usage: nix-locate zlib.h
     nixfmt
     openssl
