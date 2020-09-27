@@ -46,6 +46,7 @@
     xorg.transset
     xorg.xdpyinfo
     xorg.xkbcomp
+    zathura
   ];
 
   programs = {
