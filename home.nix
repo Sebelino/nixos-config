@@ -23,6 +23,7 @@
     gnupg
     go
     google-cloud-sdk
+    gzdoom
     jdk8
     jq
     lm_sensors
