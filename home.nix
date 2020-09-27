@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
     ack
+    acpilight
     arandr
     awscli2
     bazel_1
