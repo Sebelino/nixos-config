@@ -2,7 +2,8 @@
   # Homebrewn aliases
   cdn = "cd $HOME/nixos-config";
   nrs = "sudo nixos-rebuild switch";
-  nrS = ''urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch && echo -e "\e[1;32mOK!"; sleep 2' &!'';
+  nrS = ''
+    urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch && echo -e "\e[1;32mOK!"; sleep 2' &!'';
   dup = "urxvt &";
   kgp = "kubectl get pods --all-namespaces";
   kgpw = "watch -n1 kubectl get pods --all-namespaces";
@@ -88,12 +89,15 @@
   giX = "git rm -rf --cached";
 
   # Log (l)
-  gl = "git log --topo-order --pretty=format:\"\${_git_log_medium_format}\"";
-  gls = "git log --topo-order --stat --pretty=format:\"\${_git_log_medium_format}\"";
-  gld = "git log --topo-order --stat --patch --full-diff --pretty=format:\"\${_git_log_medium_format}\"";
-  glo = "git log --topo-order --pretty=format:\"\${_git_log_oneline_format}\"";
-  glg = "git log --topo-order --all --graph --pretty=format:\"\${_git_log_oneline_format}\"";
-  glb = "git log --topo-order --pretty=format:\"\${_git_log_brief_format}\"";
+  gl = ''git log --topo-order --pretty=format:"''${_git_log_medium_format}"'';
+  gls = ''
+    git log --topo-order --stat --pretty=format:"''${_git_log_medium_format}"'';
+  gld = ''
+    git log --topo-order --stat --patch --full-diff --pretty=format:"''${_git_log_medium_format}"'';
+  glo = ''git log --topo-order --pretty=format:"''${_git_log_oneline_format}"'';
+  glg = ''
+    git log --topo-order --all --graph --pretty=format:"''${_git_log_oneline_format}"'';
+  glb = ''git log --topo-order --pretty=format:"''${_git_log_brief_format}"'';
   glc = "git shortlog --summary --numbered";
 
   # Merge (m)
@@ -110,8 +114,9 @@
   gpa = "git push --all";
   gpA = "git push --all && git push --tags";
   gpt = "git push --tags";
-  gpc = "git push --set-upstream origin \"$(git-branch-current 2> /dev/null)\"";
-  gpp = "git pull origin \"$(git-branch-current 2> /dev/null)\" && git push origin \"$(git-branch-current 2> /dev/null)\"";
+  gpc = ''git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'';
+  gpp = ''
+    git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'';
 
   # Rebase (r)
   gr = "git rebase";
@@ -162,7 +167,8 @@
   gtl = "git tag -l";
 
   # Working Copy (w)
-  gws = "git status --ignore-submodules=\${_git_status_ignore_submodules} --short";
+  gws =
+    "git status --ignore-submodules=\${_git_status_ignore_submodules} --short";
   gwS = "git status --ignore-submodules=\${_git_status_ignore_submodules}";
   gwd = "git diff --no-ext-diff";
   gwD = "git diff --no-ext-diff --word-diff";
