@@ -31,6 +31,7 @@
     minikube
     mkpasswd
     nix-index  # Example usage: nix-locate zlib.h
+    nixfmt
     openssl
     pciutils
     pcsx2
