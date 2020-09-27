@@ -41,6 +41,7 @@
     ssm-session-manager-plugin
     thunderbird
     tree
+    unzip
     xcompmgr
     xmobar
     xorg.transset
