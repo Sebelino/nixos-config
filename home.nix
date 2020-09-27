@@ -26,6 +26,7 @@
     gzdoom
     jdk8
     jq
+    libxml2 # Needed for infra's scripts
     lm_sensors
     minikube
     mkpasswd
