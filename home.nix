@@ -1,8 +1,6 @@
 { pkgs, ... }: {
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -17,11 +15,11 @@
     feh
     fzf
     gcc
-    gettext  # msgfmt
+    gettext # msgfmt
     git
     git-crypt
     glxinfo
-    gnumake  # Needed to build Bazel projects (python toolchain)
+    gnumake # Needed to build Bazel projects (python toolchain)
     gnupg
     go
     google-cloud-sdk
@@ -30,7 +28,7 @@
     lm_sensors
     minikube
     mkpasswd
-    nix-index  # Example usage: nix-locate zlib.h
+    nix-index # Example usage: nix-locate zlib.h
     nixfmt
     openssl
     pciutils
@@ -57,9 +55,7 @@
     command-not-found.enable = true;
     urxvt = {
       enable = true;
-      fonts = [
-        "xft:Inconsolata for Powerline:size=12"
-      ];
+      fonts = [ "xft:Inconsolata for Powerline:size=12" ];
       scroll.bar.enable = false;
       scroll.lines = 20000;
     };
@@ -69,17 +65,12 @@
       vimAlias = true;
       vimdiffAlias = true;
       extraConfig = (builtins.readFile ./vimrc);
-      plugins = with pkgs.vimPlugins; [
-        vim-nix
-        vim-gitgutter
-      ];
+      plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
     };
     git = {
       enable = true;
       userName = "Sebastian Olsson";
-      ignores = [
-        "gitignore/"
-      ];
+      ignores = [ "gitignore/" ];
     };
   };
 
@@ -90,6 +81,6 @@
     "URxvt.keysym.Shift-Down" = "command:\\033]721;1\\007";
     "URxvt.borderless" = true;
     "URxvt.highlightColor" = "#d01018";
-    "URxvt.depth" = 32;  # Enables transparency together with xcompmgr -c
+    "URxvt.depth" = 32; # Enables transparency together with xcompmgr -c
   };
 }
