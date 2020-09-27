@@ -8,7 +8,8 @@ let
   nixpkgs = builtins.fetchTarball {
     name = "nixos-unstable-2020-09-15";
     # Latest nixos-unstable commit hash taken from https://status.nixos.org/
-    url = "https://github.com/nixos/nixpkgs/archive/441a7da8080352881bb52f85e910d8855e83fc55.tar.gz";
+    url =
+      "https://github.com/nixos/nixpkgs/archive/441a7da8080352881bb52f85e910d8855e83fc55.tar.gz";
     # Hash obtained using `nix-prefetch-url --unpack <url>`
     sha256 = "0093drxn7blw4hay41zbqzz1vhldil5sa5p0mwaqy5dn08yn4y3q";
   };
@@ -25,24 +26,18 @@ let
     export __VK_LAYER_NV_optimus=NVIDIA_only
     exec -a "$0" "$@"
   '';
-in
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./secrets
-      (import "${home-manager}/nixos")
-    ];
+in {
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./secrets
+    (import "${home-manager}/nixos")
+  ];
 
   # Package pinning
-  nixpkgs.pkgs = import "${nixpkgs}" {
-    inherit (config.nixpkgs) config;
-  };
+  nixpkgs.pkgs = import "${nixpkgs}" { inherit (config.nixpkgs) config; };
 
-  nix.nixPath = [
-    "nixpkgs=${nixpkgs}"
-    "nixos-config=/etc/nixos/configuration.nix"
-  ];
+  nix.nixPath =
+    [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
 
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" ];
@@ -60,16 +55,14 @@ in
       };
     };
 
-    initrd.availableKernelModules = [
-      "thinkpad_acpi"
-    ];
+    initrd.availableKernelModules = [ "thinkpad_acpi" ];
 
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking = {
     hostName = "sebelino-p43"; # Define your hostname.
-    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
     # The global useDHCP flag is deprecated, therefore explicitly set to false here.
     # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -81,9 +74,7 @@ in
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_TIME = "sv_SE.UTF-8";
-  };
+  i18n.extraLocaleSettings = { LC_TIME = "sv_SE.UTF-8"; };
 
   console = {
     font = "Lat2-Terminus16";
@@ -103,10 +94,7 @@ in
     xscreensaver
   ];
 
-  fonts.fonts = with pkgs; [
-    inconsolata
-    powerline-fonts
-  ];
+  fonts.fonts = with pkgs; [ inconsolata powerline-fonts ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -125,10 +113,7 @@ in
 
     printing.enable = false;
 
-    udev.packages = [
-      pkgs.yubikey-personalization
-      pkgs.libu2f-host
-    ];
+    udev.packages = [ pkgs.yubikey-personalization pkgs.libu2f-host ];
 
     thinkfan = {
       enable = true;
@@ -226,9 +211,7 @@ in
 
   users.extraUsers.sebelino = {
     shell = pkgs.zsh;
-    extraGroups = [
-      "docker"
-    ];
+    extraGroups = [ "docker" ];
   };
 
   home-manager.users.sebelino = import ./home.nix;
