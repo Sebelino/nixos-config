@@ -214,7 +214,7 @@ in {
 
   users.extraUsers.sebelino = {
     shell = pkgs.zsh;
-    extraGroups = [ "docker" ];
+    extraGroups = [ "docker" "video" ];
   };
 
   home-manager.users.sebelino = import ./home.nix;
