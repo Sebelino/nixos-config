@@ -36,6 +36,7 @@
     pciutils
     pcsx2
     pinentry-curses
+    python27
     python39
     scrot
     ssm-session-manager-plugin
