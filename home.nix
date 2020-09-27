@@ -37,6 +37,7 @@
     python27
     python39
     scrot
+    shutter
     ssm-session-manager-plugin
     thunderbird
     tree
