@@ -37,6 +37,7 @@
     pinentry-curses
     python27
     python39
+    ranger
     scrot
     shutter
     ssm-session-manager-plugin
