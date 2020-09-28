@@ -22,6 +22,8 @@ default behavior is configurable in Nix.
 # Sin: IntellJ plugins and keybindings are not configured in Nix -- I had to
 set them up all over again.
 
+# Sin: Symlink /home/sebelino/.config/cmus/rc -> /home/sebelino/nixos-config/cmus/rc
+
 
 
 
