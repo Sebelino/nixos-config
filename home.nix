@@ -36,6 +36,7 @@
     nix-index # Example usage: nix-locate zlib.h
     nixfmt
     openssl
+    pavucontrol
     pciutils
     pcsx2
     pinentry-curses
