@@ -11,6 +11,7 @@
     awscli2
     bazel_1
     chromium
+    citrix_workspace
     cmus
     dmenu
     feh
