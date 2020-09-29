@@ -21,6 +21,9 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+" Toggle text wrapping with F11
+map <F11> :set wrap!<CR>
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -68,8 +71,6 @@ endif
 "" set guicursor+=a:blinkon0
 "set ruler
 "set nohlsearch
-"
-"map <F11> :set wrap!<CR>
 "
 "set tabstop=4 shiftwidth=4 softtabstop=4
 "set textwidth=101
