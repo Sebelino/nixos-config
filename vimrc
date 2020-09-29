@@ -24,6 +24,9 @@ endif
 " Toggle text wrapping with F11
 map <F11> :set wrap!<CR>
 
+" Upon pressing Tab, put spaces instead of the tab character
+set expandtab
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -74,7 +77,6 @@ map <F11> :set wrap!<CR>
 "
 "set tabstop=4 shiftwidth=4 softtabstop=4
 "set textwidth=101
-"set expandtab
 "autocmd FileType html,htm setlocal ts=2 sw=2 sts=2
 "
 "" Shows number of visually selected characters
