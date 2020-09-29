@@ -34,6 +34,7 @@
     minikube
     mkpasswd
     mplayer
+    ncat # Provides nmap
     nix-index # Example usage: nix-locate zlib.h
     nixfmt
     openssl
