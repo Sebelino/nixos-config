@@ -27,6 +27,9 @@ map <F11> :set wrap!<CR>
 " Upon pressing Tab, put spaces instead of the tab character
 set expandtab
 
+" Use 4 spaces for tabs
+set tabstop=4 shiftwidth=4 softtabstop=4
+
 "" Rust
 "let g:rustfmt_autosave = 1
 "
@@ -75,7 +78,6 @@ set expandtab
 "set ruler
 "set nohlsearch
 "
-"set tabstop=4 shiftwidth=4 softtabstop=4
 "set textwidth=101
 "autocmd FileType html,htm setlocal ts=2 sw=2 sts=2
 "
