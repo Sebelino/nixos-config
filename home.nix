@@ -10,6 +10,7 @@
     arandr
     awscli2
     bazel_1
+    bind # Provides dig
     chromium
     citrix_workspace
     cmus
