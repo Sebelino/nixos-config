@@ -94,5 +94,6 @@
     "URxvt.perl-ext-common" =
       "default,clipboard,keyboard-select,selection-to-clipboard";
     "URxvt.perl-lib" = "/home/sebelino/nixos-config/urxvt-perl";
+    "URxvt.fading" = "50";
   };
 }
