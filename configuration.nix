@@ -127,7 +127,7 @@ in {
         (7,     85,     90)
         (127,   80,     32767)
       '';
-      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/hwmon /g'
+      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/hwmon /g' | sort -u
       # Non-working and always-zero entries discarded, as well as the one that goes from 0 to 66 when plugging in charger
       sensors = ''
         hwmon /sys/devices/pci0000:00/0000:00:1d.4/0000:3d:00.0/hwmon/hwmon1/temp1_input
