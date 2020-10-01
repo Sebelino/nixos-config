@@ -24,6 +24,8 @@ set them up all over again.
 
 # Sin: Symlink /home/sebelino/.config/cmus/rc -> /home/sebelino/nixos-config/cmus/rc
 
+# Sin: ~/bin/idea-wrapped to work around Java11-in-path misconfig
+
 
 
 
