@@ -49,6 +49,7 @@
     shutter
     ssm-session-manager-plugin
     thunderbird
+    torbrowser
     tree
     unzip
     xcompmgr
