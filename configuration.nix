@@ -159,6 +159,11 @@ in {
         symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
       };
 
+      displayManager.autoLogin = {
+        enable = true;
+        user = "sebelino";
+      };
+
       displayManager.sessionCommands = ''
         xcompmgr -c -f -D 5 &!
       '';
