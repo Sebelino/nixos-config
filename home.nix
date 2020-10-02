@@ -93,6 +93,7 @@
     };
     initExtra = ''
       setxkbmap solemak &!
+      ${pkgs.feh}/bin/feh --no-fehbg --bg-scale /home/sebelino/pictures/nixos_wallpaper.png
     '';
   };
 

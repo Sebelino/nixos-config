@@ -25,6 +25,8 @@ set them up all over again.
 
 # Sin: ~/bin/idea-wrapped to work around Java11-in-path misconfig
 
+# Sin: home.nix hard-codes wallpaper path to: /home/sebelino/pictures/nixos_wallpaper.png
+
 
 
 
