@@ -6,7 +6,6 @@ sudo ln -s /nix/store/jvjchabdmcxlwjhbiii5sy6d2hcg6z7r-glibc-2.31/lib64/ld-linux
 # Sin: Needed for infra's scripts
 sudo ln -s /run/current-system/sw/bin/bash /bin/bash
 
-# Sin: Symlink /home/sebelino/.xmonad/xmonad.hs -> /home/sebelino/nixos-config/xmonad/xmonad.hs
 # Sin: Symlink /home/sebelino/.xmobarrc -> /home/sebelino/nixos-config/statusbar/xmobarrc
 # Sin: Symlink /etc/nixos/configuration.nix -> /home/sebelino/nixos-config/configuration.nix
 

@@ -160,7 +160,6 @@ in {
       };
 
       displayManager.sessionCommands = ''
-        setxkbmap solemak &!
         xcompmgr -c -f -D 5 &!
       '';
 

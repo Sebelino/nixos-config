@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -82,6 +82,18 @@
       userName = "Sebastian Olsson";
       ignores = [ "gitignore/" ];
     };
+  };
+
+  xsession = {
+    enable = true;
+    windowManager.xmonad = {
+      enable = true;
+      enableContribAndExtras = true;
+      config = lib.mkDefault xmonad/xmonad.hs;
+    };
+    initExtra = ''
+      setxkbmap solemak &!
+    '';
   };
 
   xresources.properties = {
