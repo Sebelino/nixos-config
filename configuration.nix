@@ -94,6 +94,8 @@ in {
     xscreensaver
   ];
 
+  environment.homeBinInPath = true;
+
   fonts.fonts = with pkgs; [ inconsolata powerline-fonts ];
 
   # Some programs need SUID wrappers, can be configured further or are
