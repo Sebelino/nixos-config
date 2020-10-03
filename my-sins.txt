@@ -27,6 +27,10 @@ set them up all over again.
 
 # Sin: home.nix hard-codes wallpaper path to: /home/sebelino/pictures/nixos_wallpaper.png
 
+# Sin: ln -s ~/nixos-config/display/one_screen.sh ~/bin/
+# Sin: ln -s ~/nixos-config/display/two_screens.sh ~/bin/
+# Sin: ln -s ~/nixos-config/display/three_screens.sh ~/bin/
+
 
 
 
