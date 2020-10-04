@@ -14,6 +14,7 @@
     chromium
     citrix_workspace
     cmus
+    dconf
     dmenu
     fceux
     feh
@@ -113,5 +114,10 @@
       "default,clipboard,keyboard-select,selection-to-clipboard";
     "URxvt.perl-lib" = "/home/sebelino/nixos-config/urxvt-perl";
     "URxvt.fading" = "50";
+  };
+
+  gtk = {
+    enable = true;
+    theme.name = "Adwaita-dark";
   };
 }
