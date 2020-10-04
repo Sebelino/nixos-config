@@ -45,6 +45,7 @@
     pciutils
     pcsx2
     pinentry-curses
+    ppsspp
     python27
     python39
     ranger
