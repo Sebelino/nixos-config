@@ -54,6 +54,7 @@
     ssm-session-manager-plugin
     thunderbird
     torbrowser
+    transmission-gtk
     tree
     unzip
     xcompmgr
