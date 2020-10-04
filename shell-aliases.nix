@@ -5,6 +5,7 @@
   nrS = ''
     urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch && echo -e "\e[1;32mOK!"; sleep 2' &!'';
   dup = "urxvt &";
+  kubectl = "minikube kubectl --";
   kgp = "kubectl get pods --all-namespaces";
   kgpw = "watch -n1 kubectl get pods --all-namespaces";
 
