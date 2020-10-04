@@ -15,6 +15,7 @@
     citrix_workspace
     cmus
     dmenu
+    fceux
     feh
     fzf
     gcc
