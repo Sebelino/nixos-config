@@ -17,6 +17,7 @@
     dmenu
     fceux
     feh
+    file
     fzf
     gcc
     gettext # msgfmt
