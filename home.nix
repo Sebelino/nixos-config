@@ -27,7 +27,7 @@
     go
     google-cloud-sdk
     gzdoom
-    jdk8
+    jdk11
     jq
     libxml2 # Needed for infra's scripts
     lm_sensors
