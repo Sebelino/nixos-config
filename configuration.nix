@@ -152,7 +152,7 @@ in {
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp6_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp7_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp9_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone1/hwmon4/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
         hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon5/temp1_input
         hwmon /sys/devices/virtual/thermal/thermal_zone7/hwmon8/temp1_input
       '';
