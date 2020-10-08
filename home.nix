@@ -11,6 +11,7 @@
     awscli2
     bazel_1
     bind # Provides dig
+    buildifier
     chromium
     citrix_workspace
     cmus
