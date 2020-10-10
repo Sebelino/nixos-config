@@ -38,6 +38,7 @@
     minikube
     mkpasswd
     mplayer
+    mpv
     ncat # Provides nmap
     nix-index # Example usage: nix-locate zlib.h
     nixfmt
