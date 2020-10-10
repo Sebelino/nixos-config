@@ -106,6 +106,14 @@ in {
     pinentryFlavor = "curses";
   };
 
+  security.sudo.extraRules = [{
+    users = [ "sebelino" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/systemctl restart thinkfan.service";
+      options = [ "SETENV" "NOPASSWD" ];
+    }];
+  }];
+
   # List services that you want to enable:
 
   services = {
