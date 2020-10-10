@@ -20,6 +20,7 @@
     fceux
     feh
     file
+    fluidsynth
     fzf
     gcc
     gettext # msgfmt
