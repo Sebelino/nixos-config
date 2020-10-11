@@ -137,7 +137,7 @@ in {
         (7,     85,     90)
         (127,   80,     32767)
       '';
-      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/        hwmon /g' | grep -v "temp8_input\|pci0000" | sort -u
+      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/        hwmon /g' | grep -v "temp8_input\|temp11_input\|pci0000" | sort -u
       # Non-working and always-zero entries discarded, as well as the one that goes from 0 to 66 when plugging in charger
       sensors = ''
         hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
@@ -146,7 +146,6 @@ in {
         hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp4_input
         hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp10_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp11_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp12_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp13_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp14_input
@@ -182,7 +181,7 @@ in {
       };
 
       displayManager.sessionCommands = ''
-        xcompmgr -c -f -D 5 &!
+        xcompmgr &!
       '';
 
       autoRepeatDelay = 250;
