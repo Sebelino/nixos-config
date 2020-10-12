@@ -61,6 +61,7 @@
     tree
     unzip
     xcompmgr
+    xorg.xhost # Needed for infra's scripts
     xmobar
     xorg.transset
     xorg.xdpyinfo
