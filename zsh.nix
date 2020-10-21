@@ -22,10 +22,21 @@
     zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_submodules' \
       || _git_status_ignore_submodules='none'
   '';
-  plugins = [{
-    name = "fast-syntax-highlighting";
-    src = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions";
-  }];
+  plugins = [
+    {
+      name = "fast-syntax-highlighting";
+      src = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions";
+    }
+    {
+      name = "zsh-nix-shell";
+      src = pkgs.fetchFromGitHub {
+        owner = "chisui";
+        repo = "zsh-nix-shell";
+        rev = "v0.1.0";
+        sha256 = "0snhch9hfy83d4amkyxx33izvkhbwmindy0zjjk28hih1a9l2jmx";
+      };
+    }
+  ];
   oh-my-zsh = {
     enable = true;
     theme = "agnoster";
