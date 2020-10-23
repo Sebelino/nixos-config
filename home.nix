@@ -9,7 +9,6 @@
     acpilight
     arandr
     awscli2
-    bazel_1
     bind # Provides dig
     buildifier
     chromium
