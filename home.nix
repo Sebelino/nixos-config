@@ -16,6 +16,7 @@
     cmus
     dconf
     dmenu
+    docker-compose
     fceux
     feh
     file
@@ -60,10 +61,10 @@
     tree
     unzip
     xcompmgr
-    xorg.xhost # Needed for infra's scripts
     xmobar
     xorg.transset
     xorg.xdpyinfo
+    xorg.xhost # Needed for infra's scripts
     xorg.xkbcomp
     zathura
   ];
