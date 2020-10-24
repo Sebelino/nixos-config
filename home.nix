@@ -19,6 +19,7 @@
     docker-compose
     fceux
     feh
+    ffmpeg
     file
     fluidsynth
     fzf
