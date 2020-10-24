@@ -35,6 +35,7 @@
     jdk11
     jq
     libxml2 # Needed for infra's scripts
+    llvmPackages.bintools
     lm_sensors
     minikube
     mkpasswd
