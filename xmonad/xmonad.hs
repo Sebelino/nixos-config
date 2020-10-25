@@ -106,8 +106,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0                 , 0x1008FF13), spawn ("amixer -D default set Master " ++ myVolStep ++ "%+ > /dev/null"))
     -- Print screen
     , ((0                 , xK_Print), spawn "scrot -e 'mv $f ~/Pictures/scrot/'")
-    -- Toggle keyboard layout
-    , ((0                 , xK_Pause), spawn "toggle-solemak.sh")
+    -- Toggle keyboard layout (xK_section = button left of "1")
+    , ((0                 , xK_section), spawn "/home/sebelino/bin/toggle_solemak.sh")
     -- Secret.wav
     , ((modm              , xK_Pause), spawn "mplayer ~/music/Secret.wav -af volume=10:1")
     -- Lock screen
