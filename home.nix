@@ -69,6 +69,7 @@
     xmobar
     xorg.transset
     xorg.xdpyinfo
+    xorg.xev
     xorg.xhost # Needed for infra's scripts
     xorg.xkbcomp
     zathura
