@@ -38,6 +38,8 @@
     libxml2 # Needed for infra's scripts
     llvmPackages.bintools
     lm_sensors
+    mednafen
+    mednaffe
     minikube
     mkpasswd
     mplayer
