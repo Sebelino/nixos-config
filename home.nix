@@ -48,6 +48,7 @@
     nix-index # Example usage: nix-locate zlib.h
     nixfmt
     openssl
+    p7zip
     pavucontrol
     pciutils
     pcsx2
