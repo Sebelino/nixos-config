@@ -31,6 +31,8 @@ set them up all over again.
 # Sin: ln -s ~/nixos-config/display/two_screens.sh ~/bin/
 # Sin: ln -s ~/nixos-config/display/three_screens.sh ~/bin/
 
+# Sin: Added ~/.bazelrc
+
 
 
 
