@@ -38,6 +38,7 @@
     libxml2 # Needed for infra's scripts
     llvmPackages.bintools
     lm_sensors
+    mariadb-client
     mednafen
     mednaffe
     minikube
