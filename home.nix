@@ -32,6 +32,7 @@
     gnupg
     go
     google-cloud-sdk
+    graphviz
     gzdoom
     jdk11
     jq
