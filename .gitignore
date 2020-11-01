@@ -1,1 +1,2 @@
 bin/aws-ssh
+bin/kube-generate.sh
