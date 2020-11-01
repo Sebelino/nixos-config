@@ -98,7 +98,10 @@
     git = {
       enable = true;
       userName = "Sebastian Olsson";
-      ignores = [ "gitignore/" ];
+      ignores = [
+        "gitignore/"
+        ".ijwb"
+      ];
     };
   };
 
