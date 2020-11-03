@@ -24,6 +24,7 @@
     fluidsynth
     fzf
     gcc
+    gephi
     gettext # msgfmt
     git
     git-crypt
@@ -34,6 +35,7 @@
     google-cloud-sdk
     graphviz
     gzdoom
+    imagemagick
     jdk11
     jq
     libxml2 # Needed for infra's scripts
