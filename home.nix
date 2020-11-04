@@ -64,6 +64,7 @@
     scrot
     shutter
     ssm-session-manager-plugin
+    terraform_0_13
     thunderbird
     torbrowser
     transmission-gtk
