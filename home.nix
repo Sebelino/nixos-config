@@ -57,6 +57,7 @@
     pciutils
     pcsx2
     pinentry-curses
+    postman
     ppsspp
     python27
     python39
