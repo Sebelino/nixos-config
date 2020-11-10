@@ -3,6 +3,10 @@
   autocd = true;
   shellAliases = import ./shell-aliases.nix;
   enableAutosuggestions = true;
+  history = {
+    size = 100000;
+    save = 100000;
+  };
   initExtra = ''
     # BEWARE: Persistent rehash -- might incur performance penalty
     # https://wiki.archlinux.org/index.php/zsh#Persistent_rehash
