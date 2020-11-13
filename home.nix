@@ -27,6 +27,7 @@
     gcc
     gephi
     gettext # msgfmt
+    gimp
     git
     git-crypt
     glxinfo
