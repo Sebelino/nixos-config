@@ -1,0 +1,13 @@
+map y navigate previous
+map e navigate next
+set selection-clipboard clipboard
+
+set recolor-lightcolor "#000000"
+set highlight-active-color "#FF0000"
+set recolor true
+set recolor-keephue true
+
+set statusbar-fg "#008000"
+set statusbar-bg "#080808"
+
+map i set recolor
