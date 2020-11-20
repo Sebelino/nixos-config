@@ -18,6 +18,7 @@
     dconf
     dmenu
     docker-compose
+    drive
     fceux
     feh
     ffmpeg
