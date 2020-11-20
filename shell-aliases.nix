@@ -8,6 +8,7 @@
   kgp = "kubectl get pods --all-namespaces";
   kgpw = "watch -n1 kubectl get pods --all-namespaces";
   tfr = "sudo systemctl restart thinkfan.service";
+  zat = "zathura";
 
   # Branch (b)
   gb = "git branch";
