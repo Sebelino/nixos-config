@@ -33,6 +33,7 @@ set them up all over again.
 
 # Sin: Added ~/.bazelrc
 
+# ln -s /home/sebelino/nixos-config/zathura/zathurarc /home/sebelino/.config/zathura/zathurarc
 
 
 
