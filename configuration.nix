@@ -106,6 +106,8 @@ in {
     pinentryFlavor = "curses";
   };
 
+  programs.ssh = { startAgent = true; };
+
   security.sudo.extraRules = [
     {
       users = [ "sebelino" ];
