@@ -45,6 +45,7 @@
     llvmPackages.bintools
     lm_sensors
     mariadb-client
+    maven
     mednafen
     mednaffe
     minikube
