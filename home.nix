@@ -41,6 +41,7 @@
     imagemagick
     jdk11
     jq
+    k4dirstat
     libxml2 # Needed for infra's scripts
     llvmPackages.bintools
     lm_sensors
