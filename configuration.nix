@@ -203,6 +203,10 @@ in {
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+
+  # Needed to get e.g. USB working in guest OS
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # Enable sound.
   sound.enable = true;
@@ -234,6 +238,8 @@ in {
     shell = pkgs.zsh;
     extraGroups = [ "docker" "video" ];
   };
+
+  users.extraGroups.vboxusers.members = [ "sebelino" ];
 
   home-manager.users.sebelino = import ./home.nix;
 
