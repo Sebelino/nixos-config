@@ -36,6 +36,7 @@
     gnupg
     go
     google-cloud-sdk
+    gptfdisk
     graphviz
     gzdoom
     imagemagick
