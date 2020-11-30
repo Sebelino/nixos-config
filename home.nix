@@ -59,6 +59,7 @@
     nixfmt
     openssl
     p7zip
+    parted
     pavucontrol
     pciutils
     pcsx2
