@@ -30,6 +30,7 @@ in {
   boot = {
     # Use the systemd-boot EFI boot loader.
     loader.systemd-boot.enable = true;
+    loader.systemd-boot.configurationLimit = 100;
     loader.timeout = 5;
 
     initrd.luks.devices = {
