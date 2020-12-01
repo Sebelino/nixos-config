@@ -5,6 +5,15 @@
 { config, pkgs, ... }:
 
 let
+  nixpkgs = builtins.fetchTarball {
+    name = "nixos-unstable-2020-11-30";
+    # Latest nixos-unstable commit hash taken from https://status.nixos.org/
+    url =
+      "https://github.com/nixos/nixpkgs/archive/24eb3f87fc610f18de7076aee7c5a84ac5591e3e.tar.gz";
+    # Hash obtained using `nix-prefetch-url --unpack <url>`
+    sha256 = "1ca14hhbinnz1ylbqnhwinjdbm6nn859j4gmyamg2kr7jl6611s0";
+  };
+
   home-manager = builtins.fetchGit {
     url = "https://github.com/rycee/home-manager.git";
     rev = "9b1b55ba0264a55add4b7b4e022bdc2832b531f6";
@@ -23,6 +32,12 @@ in {
     ./secrets
     (import "${home-manager}/nixos")
   ];
+
+  # Package pinning
+  nixpkgs.pkgs = import "${nixpkgs}" { inherit (config.nixpkgs) config; };
+
+  nix.nixPath =
+    [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
 
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" ];
