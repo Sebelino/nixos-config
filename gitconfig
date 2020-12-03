@@ -3,3 +3,5 @@
     rewritebranch = !"git rebase -i $(git merge-base master HEAD)"
 [user]
 	email = sebelino7@gmail.com
+[rerere]
+	enabled = true
