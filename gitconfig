@@ -1,0 +1,5 @@
+[alias]
+    pr-checkout = "!f() { git fetch upstream pull/\"$1\"/head:PR-\"$1\"; git checkout PR-\"$1\"; }; f"
+    rewritebranch = !"git rebase -i $(git merge-base master HEAD)"
+[user]
+	email = sebelino7@gmail.com

@@ -35,6 +35,8 @@ set them up all over again.
 
 # ln -s /home/sebelino/nixos-config/zathura/zathurarc /home/sebelino/.config/zathura/zathurarc
 
+# Sin: ln -s /home/sebelino/nixos-config/gitconfig /home/sebelino/.gitconfig
+
 
 
 
