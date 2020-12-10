@@ -10,6 +10,7 @@
   tfr = "sudo systemctl restart thinkfan.service";
   zat = "zathura";
   sok = "find . -name ";
+  gcod = "gcod_fn";
 
   # Branch (b)
   gb = "git branch";

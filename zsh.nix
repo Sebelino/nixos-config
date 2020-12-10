@@ -25,6 +25,12 @@
     # Status
     zstyle -s ':prezto:module:git:status:ignore' submodules '_git_status_ignore_submodules' \
       || _git_status_ignore_submodules='none'
+
+    # Alias gcod
+    function gcod_fn {
+        commit_sha="$1"
+        git diff "$commit_sha"~1 "$commit_sha"
+    }
   '';
   plugins = [
     {
