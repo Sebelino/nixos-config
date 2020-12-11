@@ -40,6 +40,7 @@
     graphviz
     gzdoom
     imagemagick
+    inkscape
     jdk11
     jq
     k4dirstat
