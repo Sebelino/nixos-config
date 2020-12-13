@@ -36,8 +36,10 @@ in {
   # Package pinning
   nixpkgs.pkgs = import "${nixpkgs}" { inherit (config.nixpkgs) config; };
 
-  nix.nixPath =
-    [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
+  nix = {
+    nixPath =
+      [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
+  };
 
   # Supposedly better for the SSD.
   fileSystems."/".options = [ "noatime" "nodiratime" ];
