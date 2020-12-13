@@ -78,9 +78,7 @@ in {
     interfaces.enp0s31f6.useDHCP = true;
     interfaces.wlp0s20f3.useDHCP = true;
 
-    nameservers = [
-      "8.8.8.8"
-    ];
+    nameservers = [ "8.8.8.8" ];
   };
 
   # Select internationalisation properties.
