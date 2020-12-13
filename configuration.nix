@@ -39,6 +39,10 @@ in {
   nix = {
     nixPath =
       [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 
   # Supposedly better for the SSD.
