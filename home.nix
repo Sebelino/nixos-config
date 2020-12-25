@@ -61,6 +61,7 @@
     mpv
     ncat # Provides nmap
     nix-index # Example usage: nix-locate zlib.h
+    nix-prefetch-git
     nixfmt
     openssl
     p7zip
