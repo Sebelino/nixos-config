@@ -6,7 +6,7 @@
 
   home.packages = import ./packages-home.nix { pkgs = pkgs; };
 
-  home.file.".ideavimrc".source = ./ideavimrc;
+  home.file.".ideavimrc".source = ./editor/ideavimrc;
 
   programs = {
     bat.enable = true;
