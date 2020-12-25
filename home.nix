@@ -19,6 +19,7 @@
     dive
     dmenu
     docker-compose
+    dos2unix
     drive
     fceux
     feh
