@@ -116,14 +116,7 @@
       extraConfig = (builtins.readFile ./vim/vimrc);
       plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
     };
-    git = {
-      enable = true;
-      userName = "Sebastian Olsson";
-      ignores = [
-        "gitignore/"
-        ".ijwb"
-      ];
-    };
+    git = import ./vcs/git.nix;
     zathura = {
       enable = true;
       options = import ./pdfviewer/zathurarc.nix;
