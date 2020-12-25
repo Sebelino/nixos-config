@@ -9,5 +9,9 @@
     statusbar-bg = "#080808";
     statusbar-fg = "#008000";
   };
-  extraConfig = (builtins.readFile ./zathurarc);
+  extraConfig = ''
+    map y navigate previous
+    map e navigate next
+    map i set recolor
+  '';
 }
