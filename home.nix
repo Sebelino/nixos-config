@@ -108,14 +108,7 @@
       scroll.bar.enable = false;
       scroll.lines = 20000;
     };
-    neovim = {
-      enable = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-      extraConfig = (builtins.readFile ./editor/vimrc);
-      plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
-    };
+    neovim = import ./editor/neovim.nix { pkgs = pkgs; };
     git = import ./vcs/git.nix;
     zathura = import ./pdfviewer/zathura.nix;
   };
