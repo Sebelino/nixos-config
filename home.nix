@@ -113,7 +113,7 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      extraConfig = (builtins.readFile ./vim/vimrc);
+      extraConfig = (builtins.readFile ./editor/vimrc);
       plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
     };
     git = import ./vcs/git.nix;
