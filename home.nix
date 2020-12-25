@@ -126,8 +126,8 @@
     };
     zathura = {
       enable = true;
-      options = import ./zathura/zathurarc.nix;
-      extraConfig = (builtins.readFile ./zathura/zathurarc);
+      options = import ./pdfviewer/zathurarc.nix;
+      extraConfig = (builtins.readFile ./pdfviewer/zathurarc);
     };
   };
 
