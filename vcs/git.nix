@@ -14,4 +14,5 @@
     diffcommitn = "!f(){ git diff HEAD~$(($1 + 1)) HEAD~$1 --name-only; }; f";
   };
   ignores = [ "gitignore/" ".ijwb" ];
+  lfs.enable = true;
 }
