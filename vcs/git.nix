@@ -1,6 +1,11 @@
 {
   enable = true;
   userName = "Sebastian Olsson";
+  extraConfig = {
+    rerere = {
+      enabled = true;
+    };
+  };
   aliases = {
     pr-checkout = ''
       !f() { git fetch upstream pull/"$1"/head:PR-"$1"; git checkout PR-"$1"; }; f'';
