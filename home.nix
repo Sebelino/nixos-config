@@ -102,12 +102,7 @@
     bat.enable = true;
     zsh = import ./shell/zsh.nix { pkgs = pkgs; };
     command-not-found.enable = true;
-    urxvt = {
-      enable = true;
-      fonts = [ "xft:Inconsolata for Powerline:size=12" ];
-      scroll.bar.enable = false;
-      scroll.lines = 20000;
-    };
+    urxvt = import ./terminal/urxvt.nix;
     neovim = import ./editor/neovim.nix { pkgs = pkgs; };
     git = import ./vcs/git.nix;
     zathura = import ./pdfviewer/zathura.nix;
