@@ -96,9 +96,7 @@
     zathura
   ];
 
-  home.file.".ideavimrc".text = ''
-  set ignorecase
-  '';
+  home.file.".ideavimrc".source = ./ideavimrc;
 
   programs = {
     bat.enable = true;
