@@ -186,7 +186,7 @@ in {
       extraLayouts.solemak = {
         description = "Solemak, my own variant of Colemak";
         languages = [ "eng" ];
-        symbolsFile = /home/sebelino/nixos-config/xkb/solemak;
+        symbolsFile = /home/sebelino/nixos-config/keyboard/xkb/solemak;
       };
 
       displayManager.autoLogin = {
