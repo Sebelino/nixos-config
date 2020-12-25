@@ -1,3 +1,4 @@
 #!/bin/sh
 
-nvidia-offload /home/sebelino/.nix-profile/bin/gzdoom "$@"
+#nvidia-offload /home/sebelino/.nix-profile/bin/gzdoom "$@"
+/home/sebelino/.nix-profile/bin/gzdoom "$@"
