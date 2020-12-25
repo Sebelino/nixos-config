@@ -16,6 +16,7 @@
     citrix_workspace
     cmus
     dconf
+    dive
     dmenu
     docker-compose
     drive
