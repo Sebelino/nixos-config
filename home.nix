@@ -80,6 +80,7 @@
     ssm-session-manager-plugin
     terraform_0_13
     thunderbird
+    topydo
     torbrowser
     transmission-gtk
     tree
