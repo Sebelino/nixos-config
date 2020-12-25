@@ -124,6 +124,10 @@
         ".ijwb"
       ];
     };
+    zathura = {
+      enable = true;
+      extraConfig = (builtins.readFile ./zathura/zathurarc);
+    };
   };
 
   services.keybase.enable = true;
