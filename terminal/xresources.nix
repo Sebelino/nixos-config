@@ -6,6 +6,7 @@
   "URxvt.borderless" = true;
   "URxvt.highlightColor" = "#d01018";
   "URxvt.depth" = 32; # Enables transparency together with xcompmgr -c
+  # CTRL + ALT + Å
   "URxvt.keysym.M-0xe5" = "perl:keyboard-select:search";
   "URxvt.perl-ext-common" =
     "default,clipboard,keyboard-select,selection-to-clipboard";
