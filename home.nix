@@ -96,6 +96,10 @@
     zathura
   ];
 
+  home.file.".ideavimrc".text = ''
+  set ignorecase
+  '';
+
   programs = {
     bat.enable = true;
     zsh = import ./zsh.nix { pkgs = pkgs; };
