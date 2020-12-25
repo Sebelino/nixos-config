@@ -138,7 +138,7 @@
     windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
-      config = lib.mkDefault xmonad/xmonad.hs;
+      config = lib.mkDefault windowmanager/xmonad.hs;
     };
     initExtra = ''
       setxkbmap solemak &!
