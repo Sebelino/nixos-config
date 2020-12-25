@@ -84,6 +84,7 @@
     torbrowser
     transmission-gtk
     tree
+    unar # unrar replacement
     unzip
     xcompmgr
     xmobar
