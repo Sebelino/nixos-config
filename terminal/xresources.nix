@@ -10,6 +10,6 @@
   "URxvt.keysym.M-0xe5" = "perl:keyboard-select:search";
   "URxvt.perl-ext-common" =
     "default,clipboard,keyboard-select,selection-to-clipboard";
-  "URxvt.perl-lib" = "/home/sebelino/nixos-config/urxvt-perl";
+  "URxvt.perl-lib" = "/home/sebelino/nixos-config/terminal/urxvt-perl";
   "URxvt.fading" = "50";
 }
