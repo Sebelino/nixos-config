@@ -117,11 +117,7 @@
       plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
     };
     git = import ./vcs/git.nix;
-    zathura = {
-      enable = true;
-      options = import ./pdfviewer/zathurarc.nix;
-      extraConfig = (builtins.readFile ./pdfviewer/zathurarc);
-    };
+    zathura = import ./pdfviewer/zathura.nix;
   };
 
   services.keybase.enable = true;
