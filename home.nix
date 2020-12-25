@@ -46,6 +46,8 @@
     jdk11
     jq
     k4dirstat
+    keybase
+    keybase-gui
     libxml2 # Needed for infra's scripts
     llvmPackages.bintools
     lm_sensors
