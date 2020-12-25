@@ -31,6 +31,11 @@
         commit_sha="$1"
         git diff "$commit_sha"~1 "$commit_sha"
     }
+
+    function gime_fn {
+        filename="$1"
+        find . -name "$filename"
+    }
   '';
   plugins = [
     {

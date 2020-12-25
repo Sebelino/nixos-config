@@ -11,6 +11,7 @@
   zat = "zathura";
   sok = "find . -name ";
   gcod = "gcod_fn";
+  gime = "gime_fn";
 
   # Branch (b)
   gb = "git branch";
