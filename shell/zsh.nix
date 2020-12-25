@@ -1,7 +1,7 @@
 { pkgs }: {
   enable = true;
   autocd = true;
-  shellAliases = import ./shell/aliases.nix;
+  shellAliases = import ./aliases.nix;
   enableAutosuggestions = true;
   history = {
     size = 100000;

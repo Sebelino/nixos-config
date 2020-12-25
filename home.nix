@@ -100,7 +100,7 @@
 
   programs = {
     bat.enable = true;
-    zsh = import ./zsh.nix { pkgs = pkgs; };
+    zsh = import ./shell/zsh.nix { pkgs = pkgs; };
     command-not-found.enable = true;
     urxvt = {
       enable = true;
