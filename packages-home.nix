@@ -6,6 +6,8 @@
   bazel-watcher
   bind # Provides dig
   buildifier
+  buildkite-agent
+  buildkite-cli
   chromium
   citrix_workspace
   cmus
