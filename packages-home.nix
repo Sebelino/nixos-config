@@ -56,6 +56,7 @@
   mplayer
   mpv
   ncat # Provides nmap
+  ngrok
   nix-index # Example usage: nix-locate zlib.h
   nix-prefetch-git
   nixfmt
