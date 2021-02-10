@@ -60,6 +60,7 @@
   nix-index # Example usage: nix-locate zlib.h
   nix-prefetch-git
   nixfmt
+  nodejs
   openssl
   p7zip
   parted
