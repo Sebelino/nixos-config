@@ -161,11 +161,11 @@ in {
       # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/        hwmon /g' | grep -v "temp8_input\|temp11_input\|pci0000" | sort -u
       # Non-working and always-zero entries discarded, as well as the one that goes from 0 to 66 when plugging in charger
       sensors = ''
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp3_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp4_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp2_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp3_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp4_input
+        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon7/temp5_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp10_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp12_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp13_input
@@ -180,9 +180,9 @@ in {
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp6_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp7_input
         hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp9_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon5/temp1_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone7/hwmon8/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon5/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon6/temp1_input
+        hwmon /sys/devices/virtual/thermal/thermal_zone7/hwmon9/temp1_input
       '';
     };
 
