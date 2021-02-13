@@ -228,6 +228,8 @@ in {
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  hardware.bluetooth.enable = true;
+
   # Allow brightness control via xbacklight from users in the `video` group.
   hardware.acpilight.enable = true;
 
