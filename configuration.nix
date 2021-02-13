@@ -230,6 +230,8 @@ in {
   sound.enable = true;
   hardware.pulseaudio = {
     enable = true;
+    # Allows Bluetooth audio devices to be used with PulseAudio
+    package = pkgs.pulseaudioFull;
   };
 
   hardware.bluetooth.enable = true;
