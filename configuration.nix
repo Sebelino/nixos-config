@@ -144,6 +144,8 @@ in {
 
     printing.enable = false;
 
+    blueman.enable = true;
+
     udev.packages = [ pkgs.yubikey-personalization pkgs.libu2f-host ];
 
     thinkfan = {
