@@ -36,6 +36,7 @@
   google-cloud-sdk
   gptfdisk
   graphviz
+  grpcurl
   gzdoom
   imagemagick
   inkscape
