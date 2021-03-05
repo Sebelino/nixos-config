@@ -92,5 +92,6 @@
   xorg.xev
   xorg.xhost # Needed for infra's scripts
   xorg.xkbcomp
+  xorg.xkbcomp
   zathura
 ]
