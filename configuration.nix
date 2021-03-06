@@ -198,6 +198,12 @@ in {
         symbolsFile = /home/sebelino/nixos-config/keyboard/xkb/solemak;
       };
 
+      extraLayouts.sesebel = {
+        description = "Slightly modified variant of Swedish keyboard";
+        languages = [ "eng" ];
+        symbolsFile = /home/sebelino/nixos-config/keyboard/xkb/sesebel;
+      };
+
       displayManager.autoLogin = {
         enable = true;
         user = "sebelino";
