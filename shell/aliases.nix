@@ -12,6 +12,7 @@
   sok = "find . -name ";
   gcod = "gcod_fn";
   gime = "gime_fn";
+  aws-login = "export AWS_PROFILE=$(assume-aws-role --print)";
 
   # Branch (b)
   gb = "git branch";
