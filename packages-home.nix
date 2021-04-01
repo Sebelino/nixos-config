@@ -78,6 +78,7 @@
   scrot
   shutter
   skaffold
+  snes9x-gtk
   ssm-session-manager-plugin
   terraform_0_13
   thunderbird
