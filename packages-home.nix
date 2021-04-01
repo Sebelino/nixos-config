@@ -77,6 +77,7 @@
   ranger
   scrot
   shutter
+  skaffold
   ssm-session-manager-plugin
   terraform_0_13
   thunderbird
