@@ -29,6 +29,7 @@
   gimp
   git
   git-crypt
+  git-sizer
   glxinfo
   gnumake # Needed to build Bazel projects (python toolchain)
   gnupg
