@@ -36,6 +36,7 @@
   go
   google-cloud-sdk
   gptfdisk
+  gradle
   graphviz
   grpcurl
   gzdoom
