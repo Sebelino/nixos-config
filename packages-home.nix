@@ -89,6 +89,7 @@
   tree
   unar # unrar replacement
   unzip
+  vlc
   xcompmgr
   xmobar
   xorg.transset
