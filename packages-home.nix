@@ -73,6 +73,7 @@
   pinentry-curses
   postman
   ppsspp
+  protonvpn-cli
   python27
   python39
   ranger
