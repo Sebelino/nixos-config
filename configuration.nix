@@ -6,17 +6,17 @@
 
 let
   nixpkgs = builtins.fetchTarball {
-    name = "nixos-unstable-2020-11-30";
+    name = "nixos-unstable-2021-05-13";
     # Latest nixos-unstable commit hash taken from https://status.nixos.org/
     url =
-      "https://github.com/nixos/nixpkgs/archive/24eb3f87fc610f18de7076aee7c5a84ac5591e3e.tar.gz";
+      "https://github.com/nixos/nixpkgs/archive/65d6153aec85c8cb46023f0a7248628f423ca4ee.tar.gz";
     # Hash obtained using `nix-prefetch-url --unpack <url>`
-    sha256 = "1ca14hhbinnz1ylbqnhwinjdbm6nn859j4gmyamg2kr7jl6611s0";
+    sha256 = "1cjd7253c4i0wl30vs6lisgvs947775684d79l03awafx7h12kh8";
   };
 
   home-manager = builtins.fetchGit {
     url = "https://github.com/rycee/home-manager.git";
-    rev = "9b1b55ba0264a55add4b7b4e022bdc2832b531f6";
+    rev = "23769994e8f7b212d9a257799173b120ed87736b";
   };
 
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
@@ -150,35 +150,6 @@ in {
 
     thinkfan = {
       enable = true;
-      levels = ''
-        (0,     0,      60)
-        (1,     60,     65)
-        (2,     65,     70)
-        (3,     70,     75)
-        (4,     75,     80)
-        (5,     80,     85)
-        (7,     85,     90)
-        (127,   80,     32767)
-      '';
-      # Entries here discovered by: find /sys/devices -type f -name "temp*_input"|sed 's/^/        hwmon /g' | grep -v "temp8_input\|temp11_input\|pci0000" | sort -u
-      # Non-working and always-zero entries discarded, as well as the one that goes from 0 to 66 when plugging in charger
-      sensors = ''
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp3_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp4_input
-        hwmon /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp5_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp1_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp2_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp3_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp4_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp5_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp6_input
-        hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon0/temp7_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone3/hwmon4/temp1_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone4/hwmon5/temp1_input
-        hwmon /sys/devices/virtual/thermal/thermal_zone7/hwmon8/temp1_input
-      '';
     };
 
     xserver = {
