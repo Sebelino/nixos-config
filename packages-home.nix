@@ -17,6 +17,7 @@
   docker-compose
   dos2unix
   drive
+  eksctl
   fceux
   feh
   ffmpeg
