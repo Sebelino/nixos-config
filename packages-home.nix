@@ -47,6 +47,7 @@
   k4dirstat
   keybase
   keybase-gui
+  kubectl
   libxml2 # Needed for infra's scripts
   llvmPackages.bintools
   lm_sensors
