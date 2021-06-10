@@ -128,6 +128,11 @@ set them up all over again.
 ```
 
 ```
+# Sin: Need to run this every time the computer restarts in order to run nrs
+sudo rmmod thinkpad_acpi && sudo modprobe thinkpad_acpi && tfr
+```
+
+```
 TODO:
 symlink ~/.themes
 symlink ~/.vimrc
