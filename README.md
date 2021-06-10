@@ -159,6 +159,13 @@ sudo rmmod thinkpad_acpi && sudo modprobe thinkpad_acpi && tfr
 ```
 
 ```
+# Overcoming: ImportError: libstdc++.so.6: cannot open shared object file: No such file or directory
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(nix-build -E 'import <nixpkgs>' -A stdenv.cc.cc.lib --no-out-link)/lib python3
+>>> import matplotlib
+```
+
+```
 TODO:
 symlink ~/.themes
 symlink ~/.vimrc
