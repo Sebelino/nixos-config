@@ -6,17 +6,17 @@
 
 let
   nixpkgs = builtins.fetchTarball {
-    name = "nixos-unstable-2021-05-13";
+    name = "nixos-unstable-2021-06-06";
     # Latest nixos-unstable commit hash taken from https://status.nixos.org/
     url =
-      "https://github.com/nixos/nixpkgs/archive/65d6153aec85c8cb46023f0a7248628f423ca4ee.tar.gz";
+      "https://github.com/nixos/nixpkgs/archive/fbfb79400a08bf754e32b4d4fc3f7d8f8055cf94.tar.gz";
     # Hash obtained using `nix-prefetch-url --unpack <url>`
-    sha256 = "1cjd7253c4i0wl30vs6lisgvs947775684d79l03awafx7h12kh8";
+    sha256 = "0pgyx1l1gj33g5i9kwjar7dc3sal2g14mhfljcajj8bqzzrbc3za";
   };
 
   home-manager = builtins.fetchGit {
     url = "https://github.com/rycee/home-manager.git";
-    rev = "23769994e8f7b212d9a257799173b120ed87736b";
+    rev = "42847469b3f65a363dc52b66be09d0ac4edcc55c";
   };
 
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
