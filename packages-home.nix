@@ -25,7 +25,6 @@
   file
   fluidsynth
   fzf
-  gcc
   gephi
   gettext # msgfmt
   gimp
@@ -75,7 +74,6 @@
   pcsx2
   pinentry-curses
   postman
-  ppsspp
   protonvpn-cli
   python27
   python39
