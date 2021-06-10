@@ -65,6 +65,32 @@ It should now complete successfully. Now add back those lines and re-run:
 sudo nixos-rebuild switch --upgrade
 ```
 
+Sometimes this STILL results in an error due to home-manager not being able to
+be properly built due to package collisions or whatever. One thing that has
+demonstrably worked has been to remove some non-essential packages before
+upgrading:
+
+```
+--- a/packages-home.nix
++++ b/packages-home.nix
+@@ -25,7 +25,6 @@
+   file
+   fluidsynth
+   fzf
+-  gcc
+   gephi
+   gettext # msgfmt
+   gimp
+@@ -75,7 +74,6 @@
+   pcsx2
+   pinentry-curses
+   postman
+-  ppsspp
+   protonvpn-cli
+   python27
+   python39
+```
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
