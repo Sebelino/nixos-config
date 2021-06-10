@@ -5,6 +5,7 @@
   awscli2
   bazel-watcher
   bind # Provides dig
+  black
   buildifier
   buildkite-agent
   buildkite-cli
