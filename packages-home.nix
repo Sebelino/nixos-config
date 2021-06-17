@@ -23,6 +23,7 @@
   feh
   ffmpeg
   file
+  firefox
   fluidsynth
   fzf
   gephi
