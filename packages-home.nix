@@ -1,6 +1,7 @@
 { pkgs }: with pkgs; [
   ack
   acpilight
+  anki
   arandr
   awscli2
   bazel-watcher
