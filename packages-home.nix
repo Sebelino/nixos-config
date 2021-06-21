@@ -27,6 +27,7 @@
   firefox
   fluidsynth
   fzf
+  gcc
   gephi
   gettext # msgfmt
   gimp
@@ -52,7 +53,6 @@
   keybase-gui
   kubectl
   libxml2 # Needed for infra's scripts
-  llvmPackages.bintools
   lm_sensors
   mariadb-client
   maven
