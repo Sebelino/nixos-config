@@ -21,6 +21,6 @@ echo "Setting up partitions..."
 set -x
 
 sgdisk --zap-all "$DEVICE"
-sgdisk --new=::+500MB "$DEVICE"
+sgdisk --new=1::+500MB "$DEVICE"
 sgdisk --typecode=1:ef00 "$DEVICE"
 sgdisk --new=:: "$DEVICE"
