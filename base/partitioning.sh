@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+luks_passphrase="$1"
+
 DEVICE="/dev/sda"
 
 sgdisk --print "$DEVICE"
@@ -26,3 +28,8 @@ sgdisk --typecode=1:ef00 "$DEVICE"
 sgdisk --new=:: "$DEVICE"
 sgdisk --change-name=1:efiboot "$DEVICE"
 sgdisk --change-name=2:lvmroot "$DEVICE"
+
+lvmroot_partition="${DEVICE}2"
+
+echo "$luks_passphrase" | cryptsetup --batch-mode luksFormat "$lvmroot_partition"
+echo "$luks_passphrase" | cryptsetup luksOpen "$lvmroot_partition" enc-pv
