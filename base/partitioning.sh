@@ -2,7 +2,22 @@
 
 set -euo pipefail
 
-sgdisk --zap-all /dev/sda
-sgdisk --new=1::+500MB /dev/sda
-sgdisk --typecode=1:ef00 /dev/sda
-sgdisk --new=:: /dev/sda
+DEVICE="/dev/sda"
+
+sgdisk --print "$DEVICE"
+
+echo "Wipe this partition?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) exit;;
+    esac
+done
+
+echo "Setting up partitions..."
+
+sgdisk --zap-all "$DEVICE"
+sgdisk --new=::+500MB "$DEVICE"
+sgdisk --typecode=1:ef00 "$DEVICE"
+sgdisk --new=:: "$DEVICE"
