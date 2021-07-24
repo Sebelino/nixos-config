@@ -6,6 +6,7 @@ DEVICE="/dev/sda"
 
 sgdisk --print "$DEVICE"
 
+echo ""
 echo "Wipe this partition?"
 
 select yn in "Yes" "No"; do
@@ -16,6 +17,8 @@ select yn in "Yes" "No"; do
 done
 
 echo "Setting up partitions..."
+
+set -x
 
 sgdisk --zap-all "$DEVICE"
 sgdisk --new=::+500MB "$DEVICE"
