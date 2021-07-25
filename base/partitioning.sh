@@ -44,6 +44,15 @@ vgcreate vg /dev/mapper/enc-pv
 lvcreate -L 8G -n swap vg
 lvcreate -l '100%FREE' -n root vg
 
-mkfs.fat /dev/sda1
+mkfs.fat -F 32 /dev/sda1
 mkfs.ext4 -L root /dev/vg/root
 mkswap -L swap /dev/vg/swap
+
+mkdir -p /mnt
+mount /dev/vg/root /mnt
+mkdir /mnt/boot
+swapon /dev/vg/swap
+
+nixos-generate-config --root /mnt
+nixos-install
+reboot
