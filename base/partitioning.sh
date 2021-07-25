@@ -60,5 +60,5 @@ mount /dev/sda1 /mnt/boot
 swapon /dev/vg/swap
 
 nixos-generate-config --root /mnt
-nixos-install
+nixos-install --no-root-passwd
 reboot
