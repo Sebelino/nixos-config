@@ -46,7 +46,7 @@ vgcreate vg /dev/mapper/enc-pv
 lvcreate -L 8G -n swap vg
 lvcreate -l '100%FREE' -n root vg
 
-mkfs.fat -F 32 /dev/sda1
+mkfs.fat -F32 /dev/sda1
 mkfs.ext4 -L root /dev/vg/root
 mkswap -L swap /dev/vg/swap
 
