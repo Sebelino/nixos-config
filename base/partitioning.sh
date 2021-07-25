@@ -6,8 +6,10 @@ luks_passphrase="$1"
 
 DEVICE="/dev/sda"
 
+boot_partition="${DEVICE}1"
+
 # Close anything that is open (from a possible previous run of the script) before proceeding
-umount /dev/sda1 || true
+umount "$boot_partition" || true
 umount /dev/vg/root || true
 swapoff /dev/vg/swap || true
 cryptsetup luksClose vg-root || true
