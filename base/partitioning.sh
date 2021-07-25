@@ -36,3 +36,8 @@ lvmroot_partition="${DEVICE}2"
 
 echo "$luks_passphrase" | cryptsetup --batch-mode luksFormat "$lvmroot_partition"
 echo "$luks_passphrase" | cryptsetup luksOpen "$lvmroot_partition" enc-pv
+
+pvcreate /dev/mapper/enc-pv
+vgcreate vg /dev/mapper/enc-pv
+lvcreate -L 8G -n swap vg
+lvcreate -l '100%FREE' -n root vg
