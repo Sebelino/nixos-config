@@ -7,6 +7,8 @@ luks_passphrase="$1"
 DEVICE="/dev/sda"
 
 # Close anything that is open (from a possible previous run of the script) before proceeding
+umount /dev/vg/root || true
+swapoff /dev/vg/swap || true
 cryptsetup luksClose vg-root || true
 cryptsetup luksClose vg-swap || true
 cryptsetup luksClose enc-pv || true
