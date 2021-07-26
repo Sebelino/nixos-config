@@ -61,4 +61,17 @@ swapon /dev/vg/swap
 
 nixos-generate-config --root /mnt
 nixos-install --no-root-passwd
-reboot
+
+lvmroot_uuid="$(blkid "${lvmroot_partition}" -s UUID -o value)"
+
+echo "
+boot.initrd.luks.devices = {
+  lvmroot = {
+    device = \"/dev/disk/by-uuid/${lvmroot_uuid}\";
+    preLVM = true;
+    allowDiscards = true;
+  };
+};
+" >> /mnt/etc/nixos/configuration.nix
+
+#reboot
