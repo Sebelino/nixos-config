@@ -74,4 +74,8 @@ boot.initrd.luks.devices = {
 };
 " >> /mnt/etc/nixos/configuration.nix
 
+echo "Now type:"
+echo "nano /mnt/etc/nixos/configuration.nix"
+echo "and move up the section at the bottom of the file that begins with 'boot.initrd.luks.devices'."
+
 #reboot
