@@ -89,6 +89,7 @@
   ssm-session-manager-plugin
   terraform_0_13
   thunderbird
+  timidity
   topydo
   torbrowser
   transmission-gtk
