@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# After booting into the NixOS live cd, do:
+# sudo su
+# loadkeys /etc/kbd/keymaps/i386/qwerty/sv-latin1.map.gz
+# wpa_passphrase Olssons-5G | tee /etc/wpa_supplicant.conf
+# (Enter Wifi password)
+# systemctl restart wpa_supplicant.service
+# bash <(curl -sL <THIS_SCRIPT>)
+
 set -euo pipefail
 
 luks_passphrase="$1"
