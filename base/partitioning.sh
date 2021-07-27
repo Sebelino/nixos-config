@@ -6,7 +6,7 @@
 # wpa_passphrase Olssons-5G | tee /etc/wpa_supplicant.conf
 # (Enter Wifi password)
 # systemctl restart wpa_supplicant.service
-# bash <(curl -sL <THIS_SCRIPT>) my_luks_passphrase
+# bash <(curl -sL <THIS_SCRIPT>) <MY_LUKS_PASSPHRASE>
 
 set -euo pipefail
 
