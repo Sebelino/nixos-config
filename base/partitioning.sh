@@ -82,8 +82,13 @@ boot.initrd.luks.devices = {
 };
 " >> /mnt/etc/nixos/configuration.nix
 
+set +x
+
+echo ""
 echo "Now type:"
 echo "nano /mnt/etc/nixos/configuration.nix"
 echo "and move up the section at the bottom of the file that begins with 'boot.initrd.luks.devices'."
-
-#reboot
+echo ""
+echo "When done, run:"
+echo "nixos-install --no-root-passwd"
+echo "reboot"
