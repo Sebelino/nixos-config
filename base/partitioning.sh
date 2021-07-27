@@ -68,7 +68,6 @@ mount /dev/sda1 /mnt/boot
 swapon /dev/vg/swap
 
 nixos-generate-config --root /mnt
-nixos-install --no-root-passwd
 
 lvmroot_uuid="$(blkid "${lvmroot_partition}" -s UUID -o value)"
 
