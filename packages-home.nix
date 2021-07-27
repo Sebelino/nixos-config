@@ -97,6 +97,7 @@
   unar # unrar replacement
   unzip
   vlc
+  wineWowPackages.stable
   xcompmgr
   xmobar
   xorg.transset
