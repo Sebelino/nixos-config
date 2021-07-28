@@ -56,7 +56,7 @@ in {
 
     initrd.luks.devices = {
       luksroot = {
-        device = import ./hardware-luksroot.nix;
+        device = "/dev/disk/by-uuid/${import ./hardware-luksroot-uuid.nix}";
         preLVM = true;
         allowDiscards = true;
       };
