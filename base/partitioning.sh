@@ -73,7 +73,7 @@ nix-env --install git
 
 BASE_DIR="/mnt/tmp"
 
-mkdir -p "$BASE_DIR/etc/nixos"
+mkdir -p "$BASE_DIR"
 cd "${BASE_DIR}"
 git clone https://github.com/Sebelino/nixos-config
 
@@ -83,6 +83,7 @@ nixos_dir="${install_dir}/etc/nixos"
 nixos-generate-config --root "$install_dir"
 echo "\"${lvmroot_partition}\"" >> "${nixos_dir}/hardware-lvmroot-uuid.nix"
 
+mkdir -p /mnt/etc/nixos
 ln -s "${nixos_dir}/configuration.nix" /mnt/etc/nixos/configuration.nix
 nixos-install
 reboot
