@@ -67,28 +67,21 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 swapon /dev/vg/swap
 
-nixos-generate-config --root /mnt
-
 lvmroot_uuid="$(blkid "${lvmroot_partition}" -s UUID -o value)"
 
-echo "
-boot.initrd.luks.devices = {
-  lvmroot = {
-    device = \"/dev/disk/by-uuid/${lvmroot_uuid}\";
-    preLVM = true;
-    allowDiscards = true;
-  };
-};
-" >> /mnt/etc/nixos/configuration.nix
+nix-env --install git
 
-set +x
+BASE_DIR="/mnt/tmp"
 
-echo ""
-echo "Now type:"
-echo "vim /mnt/etc/nixos/configuration.nix"
-echo "and move up the section at the bottom of the file that begins with 'boot.initrd.luks.devices'."
-echo ""
-echo "When done, do:"
-echo "nixos-install"
-echo "(Enter root password)"
-echo "reboot"
+cd "${BASE_DIR}"
+git clone https://github.com/Sebelino/nixos-config
+
+install_dir="${BASE_DIR}/nixos-config/base"
+nixos_dir="${install_dir}/etc/nixos"
+
+nixos-generate-config --root "$install_dir"
+echo "\"${lvmroot_partition}\"" >> "${nixos_dir}/hardware-lvmroot-uuid.nix"
+
+ln -s "${nixos_dir}/configuration.nix" /mnt/etc/nixos/configuration.nix
+nixos-install
+reboot
