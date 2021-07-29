@@ -6,6 +6,13 @@
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+    initrd.luks.devices = {
+      lvmroot = {
+        device = "/dev/disk/by-uuid/${import ./hardware-lvmroot-uuid.nix}";
+        preLVM = true;
+        allowDiscards = true;
+      };
+    };
   };
 
   networking.useDHCP = false;
