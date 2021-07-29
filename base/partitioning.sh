@@ -73,6 +73,7 @@ nix-env --install git
 
 BASE_DIR="/mnt/tmp"
 
+mkdir -p "$BASE_DIR"
 cd "${BASE_DIR}"
 git clone https://github.com/Sebelino/nixos-config
 
