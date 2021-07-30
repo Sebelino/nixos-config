@@ -84,6 +84,9 @@ nixos-generate-config --root "/mnt" --dir "/tmp/nixos-config/base/etc/nixos"
 echo "\"${lvmroot_uuid}\"" >> "${nixos_dir}/hardware-lvmroot-uuid.nix"
 
 mkdir -p /mnt/etc/nixos
-ln -s "${nixos_dir}/configuration.nix" /mnt/etc/nixos/configuration.nix
+
+# Need to strip off the /mnt prefix here because of the chrooting later
+ln -s "/tmp/nixos-config/base/etc/nixos/configuration.nix" /mnt/etc/nixos/configuration.nix
+
 nixos-install
 reboot
