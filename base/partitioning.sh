@@ -80,7 +80,7 @@ git clone https://github.com/Sebelino/nixos-config
 install_dir="${BASE_DIR}/nixos-config/base"
 nixos_dir="${install_dir}/etc/nixos"
 
-nixos-generate-config --root "/mnt" --dir "$install_dir"
+nixos-generate-config --root "/mnt" --dir "/tmp/nixos-config/base/etc/nixos"
 echo "\"${lvmroot_uuid}\"" >> "${nixos_dir}/hardware-lvmroot-uuid.nix"
 
 mkdir -p /mnt/etc/nixos
