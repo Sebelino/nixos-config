@@ -24,6 +24,9 @@ cryptsetup luksClose vg-root 2> /dev/null || true
 cryptsetup luksClose vg-swap 2> /dev/null || true
 cryptsetup luksClose enc-pv 2> /dev/null || true
 
+# In case there are any leftover files from a previous install, discard them now
+rm -rf /tmp/nixos-config
+
 sgdisk --print "$DEVICE"
 
 echo ""
