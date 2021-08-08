@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# * Copy this script to the root dir of a NixOS Live CD USB
+# * Copy this script to the root dir of a NixOS Live CD USB:
+# sudo mount /dev/sda2 /mnt
+# sudo cp bootstrap.sh /mnt/
+# sudo umount /mnt
 # * On the machine where you want to install NixOS, run:
 # sudo su
 # mkdir /temp
