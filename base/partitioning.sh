@@ -19,6 +19,7 @@ boot_partition="${DEVICE}1"
 # Close anything that is open (from a possible previous run of the script) before proceeding
 umount "$boot_partition" 2> /dev/null || true
 umount /dev/vg/root 2> /dev/null || true
+umount /mnt 2> /dev/null || true
 swapoff /dev/vg/swap 2> /dev/null || true
 cryptsetup luksClose vg-root 2> /dev/null || true
 cryptsetup luksClose vg-swap 2> /dev/null || true
