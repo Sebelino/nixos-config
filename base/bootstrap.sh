@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# * Copy this script to the root dir of a NixOS Live CD USB
+# * On the machine where you want to install NixOS, run:
+# sudo su
+# mkdir /temp
+# mount /dev/sdb2 /temp
+# /temp/bootstrap.sh <WIFI_PASSPHRASE> <LUKS_PASSPHRASE>
+
 set -euo pipefail
 
 set -x
