@@ -76,8 +76,8 @@
   pavucontrol
   pciutils
   pcsx2
-  poppler_utils
   pinentry-curses
+  poppler_utils
   postman
   protonvpn-cli
   python27
