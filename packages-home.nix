@@ -52,6 +52,7 @@
   keybase
   keybase-gui
   kubectl
+  libreoffice
   libxml2 # Needed for infra's scripts
   llvmPackages.bintools-unwrapped
   lm_sensors
