@@ -88,7 +88,7 @@
   skaffold
   snes9x-gtk
   ssm-session-manager-plugin
-  terraform_0_13
+  terraform_0_14
   thunderbird
   timidity
   topydo
