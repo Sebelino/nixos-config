@@ -80,6 +80,7 @@
   poppler_utils
   postman
   protonvpn-cli
+  pstree
   python27
   python39
   ranger
