@@ -4,5 +4,5 @@
   vimAlias = true;
   vimdiffAlias = true;
   extraConfig = (builtins.readFile ./vimrc);
-  plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter ];
+  plugins = with pkgs.vimPlugins; [ vim-nix vim-gitgutter vim-terraform ];
 }
