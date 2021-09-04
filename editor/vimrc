@@ -88,18 +88,6 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "filetype plugin on
 "set omnifunc=syntaxcomplete#Complete
 "
-"" Vim LaTeX / LaTeX Suite
-"filetype plugin indent on
-"set grepprg=grep\ -nH\ $*
-"let g:tex_flavor = "latex"
-"" Disable code folding.
-"let Tex_FoldedSections=""
-"let Tex_FoldedEnvironments=""
-"let Tex_FoldedMisc=""
-"" Disable quickfix annoyance.
-"let Tex_GotoError=0
-"let g:Imap_UsePlaceHolders = 0
-"
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "let g:SuperTabDefaultCompletionType = "context"
 "
