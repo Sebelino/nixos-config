@@ -167,6 +167,6 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "" Incremental search
 "set incsearch
 "
-"" Save-alias
-"command W w
-"command Q q
+" Save-alias
+command W w
+command Q q
