@@ -113,6 +113,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Lock screen
     , ((modm              , xK_0), spawn "xscreensaver-command -lock")
 
+    -- Create Jira ticket
+    , ((modm              , xK_End), spawn "~/bin/create_issue.sh")
+
+    --, ((modm              , xK_Aring), spawn "touch /tmp/HOY_Aring.txt")
+    --, ((modm              , xK_Page_Up), spawn "touch /tmp/HOY_PageUp.txt")
+    --, ((modm              , xK_Page_Down), spawn "touch /tmp/HOY_PageDown.txt")
+    --, ((modm              , xK_space), spawn "touch /tmp/HOY_Space.txt")
+
     -- For crappy USB mice
     , ((modm              , xK_j), spawn "sudo ~/scripts/usbmouse-stop-idling.sh")
     ]
