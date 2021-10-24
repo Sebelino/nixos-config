@@ -16,7 +16,7 @@ let
 
   home-manager = builtins.fetchGit {
     url = "https://github.com/rycee/home-manager.git";
-    rev = "42847469b3f65a363dc52b66be09d0ac4edcc55c";
+    rev = "406eeec0b98903561767ce7aca311034d298d53e";
   };
 
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
