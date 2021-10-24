@@ -80,6 +80,7 @@
   pinentry-curses
   poppler_utils
   postman
+  ppsspp
   protonvpn-cli
   pstree
   python27
