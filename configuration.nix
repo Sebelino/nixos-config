@@ -6,12 +6,12 @@
 
 let
   nixpkgs = builtins.fetchTarball {
-    name = "nixos-unstable-2021-06-06";
+    name = "nixos-unstable-2021-10-24";
     # Latest nixos-unstable commit hash taken from https://status.nixos.org/
     url =
-      "https://github.com/nixos/nixpkgs/archive/fbfb79400a08bf754e32b4d4fc3f7d8f8055cf94.tar.gz";
+      "https://github.com/nixos/nixpkgs/archive/34ad3ffe08adfca17fcb4e4a47bb5f3b113687be.tar.gz";
     # Hash obtained using `nix-prefetch-url --unpack <url>`
-    sha256 = "0pgyx1l1gj33g5i9kwjar7dc3sal2g14mhfljcajj8bqzzrbc3za";
+    sha256 = "02li241rz5668nfyp88zfjilxf0mr9yansa93fbl38hjwkhf3ix6";
   };
 
   home-manager = builtins.fetchGit {
