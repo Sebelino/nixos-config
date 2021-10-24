@@ -13,6 +13,7 @@
   gcod = "gcod_fn";
   gime = "gime_fn";
   aws-login = "export AWS_PROFILE=$(assume-aws-role --print)";
+  ejc = "vim ~/src/jira-cli/config.yaml";
 
   # Branch (b)
   gb = "git branch";
