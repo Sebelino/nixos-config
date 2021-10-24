@@ -2,6 +2,7 @@
   ack
   acpilight
   anki
+  ansifilter
   arandr
   awscli2
   bazel-watcher
