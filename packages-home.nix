@@ -26,6 +26,7 @@
   ffmpeg
   file
   firefox
+  flameshot
   fluidsynth
   fzf
   gcc
