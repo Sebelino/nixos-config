@@ -75,27 +75,27 @@ lvmroot_uuid="$(blkid "${lvmroot_partition}" -s UUID -o value)"
 
 nix-env --install git
 
-BASE_DIR="/mnt/nixos-base"
+BASE_DIR="/nixos-base"
 
-mkdir -p "$BASE_DIR"
-cd "${BASE_DIR}"
+mkdir -p "/mnt$BASE_DIR"
+cd "/mnt${BASE_DIR}"
 git clone https://github.com/Sebelino/nixos-config
 
 install_dir="${BASE_DIR}/nixos-config/base"
 nixos_dir="${install_dir}/etc/nixos"
 
-nixos-generate-config --root "/mnt" --dir "${BASE_DIR#/mnt}/nixos-config/base/etc/nixos"
-echo "\"${lvmroot_uuid}\"" >> "${nixos_dir}/hardware-lvmroot-uuid.nix"
+nixos-generate-config --root "/mnt" --dir "${BASE_DIR}/nixos-config/base/etc/nixos"
+echo "\"${lvmroot_uuid}\"" >> "/mnt${nixos_dir}/hardware-lvmroot-uuid.nix"
 
 mkdir -p /mnt/etc/nixos
 
-# Need to strip off the /mnt prefix here because of the chrooting later
-ln -s "${BASE_DIR#/mnt}/nixos-config/base/etc/nixos/configuration.nix" /mnt/etc/nixos/configuration.nix
-
-# However, nixos-install expects to find the file below /tmp, so let's create another symlink
-mkdir -p /tmp/nixos-config/base/etc/nixos/
-ln -s "${BASE_DIR}/nixos-config/base/etc/nixos/configuration.nix" /tmp/nixos-config/base/etc/nixos/configuration.nix
+# nixos-install expects to find the file at /mnt/etc/nixos/configuration.nix, so let's create a symlink
+ln -s "/mnt${BASE_DIR}/nixos-config/base/etc/nixos/configuration.nix" /mnt/etc/nixos/configuration.nix
 
 nixos-install
+
+# Need to strip off the /mnt prefix here because of the chrooting when booting this system
+rm /mnt/etc/nixos/configuration.nix
+ln -s "${BASE_DIR}/nixos-config/base/etc/nixos/configuration.nix" /mnt/etc/nixos/configuration.nix
 
 reboot
