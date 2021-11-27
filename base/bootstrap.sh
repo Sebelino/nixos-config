@@ -21,7 +21,7 @@ systemctl restart wpa_supplicant.service
 
 # Wait for wpa_supplicant to prevent "Could not resolve host..."
 # TODO: Solve this with a retry instead
-sleep 10
+sleep 15
 
 # Git should already be pre-installed. If it isn't, you can do: nix-env --install git
 git clone https://github.com/Sebelino/nixos-config /tmp/nixos-config
