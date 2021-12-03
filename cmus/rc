@@ -18,7 +18,7 @@ set show_hidden=true
 set shuffle=true
 
 # Suppresses an annoying error on startup: https://github.com/cmus/cmus/issues/609
-set mpris=false
+#set mpris=false
 
 cd ~/gdrive/music
 view 5
