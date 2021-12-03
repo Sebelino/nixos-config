@@ -21,4 +21,4 @@ set shuffle=true
 #set mpris=false
 
 cd ~/gdrive/music
-view 5
+set start_view=browser
