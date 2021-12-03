@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-chromium -app=https://calendar.google.com/calendar
+#APP=chromium
+APP=google-chrome
+
+"$APP" -app=https://calendar.google.com/calendar
