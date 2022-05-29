@@ -51,7 +51,6 @@ case "$button" in
     temporizeHorizontalScroll "L"
     notify-send --urgency=low "Scroll <<<"
     if [[ $(xdotool getwindowfocus getwindowname) == *"Google Chrome"* ]]; then
-        echo hoy > /home/sebelino/HOY.txt
         xdotool key --clearmodifiers Control_L+Page_Up # Previous tab
     fi
     ;;
