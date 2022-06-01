@@ -9,6 +9,7 @@ set -euo pipefail
 button=$1
 
 hScrollIndexBuffer="/dev/shm/mx_master_3_scroll_buffer"
+smart_shift_buffer="/dev/shm/smart_shift_buffer"
 
 # Create temporarily file if it doesn't already exist
 if [ ! -f "$hScrollIndexBuffer" ]; then
@@ -51,7 +52,9 @@ case "$button" in
     temporizeHorizontalScroll "L"
     notify-send --urgency=low "Scroll <<<"
     if [[ $(xdotool getwindowfocus getwindowname) == *"Google Chrome"* ]]; then
-        xdotool key --clearmodifiers Control_L+Page_Up # Previous tab
+        if [[ $(cat /dev/shm/smart_shift_buffer) == *"1"* ]]; then
+            xdotool key --clearmodifiers Control_L+Page_Up # Previous tab
+        fi
     fi
     ;;
 
@@ -59,7 +62,9 @@ case "$button" in
     temporizeHorizontalScroll "R"
     notify-send --urgency=low "Scroll >>>"
     if [[ $(xdotool getwindowfocus getwindowname) == *"Google Chrome"* ]]; then
-        xdotool key --clearmodifiers Control_L+Page_Down # Next tab
+        if [[ $(cat /dev/shm/smart_shift_buffer) == *"1"* ]]; then
+            xdotool key --clearmodifiers Control_L+Page_Down # Next tab
+        fi
     fi
     ;;
 esac
