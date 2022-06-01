@@ -52,13 +52,13 @@
 ---
 - And:
   - Process: anki
-  - Key: [Forward Button, pressed]
+  - Key: [Forward Button, released]
 - KeyPress: space
 ...
 ---
 - And:
   - Process: chrome
-  - Key: [Forward Button, pressed]
+  - Key: [Forward Button, released]
 - KeyPress: [Control_L, w]
 ...
 ---
@@ -68,7 +68,7 @@
 - KeyPress: F5
 ...
 ---
-- Key: [Forward Button, pressed]
+- Key: [Forward Button, released]
 - KeyPress: [Hyper_L, Shift_R, t]
 ...
 ---
