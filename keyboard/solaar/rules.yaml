@@ -37,6 +37,12 @@
 - KeyPress: [Control_L, w]
 ...
 ---
+- And:
+  - Process: chrome
+  - Key: [Middle Button, pressed]
+- KeyPress: F5
+...
+---
 - Key: [Forward Button, pressed]
 - KeyPress: [Hyper_L, Shift_R, t]
 ...

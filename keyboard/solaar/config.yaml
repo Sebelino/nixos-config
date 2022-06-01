@@ -4,12 +4,12 @@
     disable-keyboard-keys, divert-crown, crown-smooth, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params,
     lowres-scroll-mode]
   _modelId: B02340820000
-  _sensitive: {change-host: false, divert-keys: false, dpi-sliding: false, hires-smooth-invert: false, hires-smooth-resolution: false, mouse-gestures: false,
+  _sensitive: {change-host: false, divert-keys: true, dpi-sliding: false, hires-smooth-invert: false, hires-smooth-resolution: false, mouse-gestures: false,
     reprogrammable-keys: false, thumb-scroll-mode: false}
   _serial: CD63774D
   _unitId: CD63774D
   _wpid: '4082'
-  divert-keys: {82: 0, 83: 0, 86: 1, 195: 1, 196: 1}
+  divert-keys: {82: 1, 83: 0, 86: 1, 195: 1, 196: 1}
   dpi: 1000
   dpi-sliding: 0
   hires-scroll-mode: false
