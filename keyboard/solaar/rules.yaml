@@ -20,6 +20,11 @@
 - KeyPress: [Hyper_L, Shift_R, t]
 ...
 ---
+- MouseGesture: [Mouse Up, Mouse Down]
+- Execute: [notify-send, --urgency=low, Spawn terminal]
+- KeyPress: [Hyper_L, t]
+...
+---
 - MouseGesture: Mouse Left
 - Execute: [notify-send, --urgency=low, '1', Switch window]
 - KeyPress: [Hyper_L, '1']
