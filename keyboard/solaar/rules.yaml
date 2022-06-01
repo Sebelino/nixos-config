@@ -5,6 +5,21 @@
 - KeyPress: [Hyper_L, '9']
 ...
 ---
+- MouseGesture: [Mouse Down, Mouse Right]
+- Execute: [notify-send, --urgency=low, '8', Switch window]
+- KeyPress: [Hyper_L, '8']
+...
+---
+- MouseGesture: [Mouse Right, Mouse Up]
+- Execute: [notify-send, --urgency=low, '4', Switch window]
+- KeyPress: [Hyper_L, '4']
+...
+---
+- MouseGesture: [Mouse Down, Mouse Up]
+- Execute: [notify-send, --urgency=low, 'Mouse Down, Up']
+- KeyPress: [Hyper_L, Shift_R, t]
+...
+---
 - MouseGesture: Mouse Left
 - Execute: [notify-send, --urgency=low, '1', Switch window]
 - KeyPress: [Hyper_L, '1']
