@@ -16,7 +16,7 @@
 ...
 ---
 - MouseGesture: [Mouse Down, Mouse Up]
-- Execute: [notify-send, --urgency=low, 'Mouse Down, Up']
+- Execute: [notify-send, --urgency=low, Kill window]
 - KeyPress: [Hyper_L, Shift_R, t]
 ...
 ---
