@@ -25,6 +25,11 @@
 - KeyPress: [Hyper_L, t]
 ...
 ---
+- MouseGesture: [Mouse Left, Mouse Up]
+- Execute: [notify-send, --urgency=low, Toggle between windows]
+- KeyPress: [Hyper_L, n]
+...
+---
 - MouseGesture: Mouse Left
 - Execute: [notify-send, --urgency=low, '1', Switch window]
 - KeyPress: [Hyper_L, '1']
