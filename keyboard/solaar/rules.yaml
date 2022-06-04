@@ -15,6 +15,13 @@
 - KeyPress: [Hyper_L, '4']
 ...
 ---
+- And:
+  - Process: slack
+  - MouseGesture: [Mouse Down, Mouse Up]
+- Execute: [notify-send, --urgency=low, Kill Slack]
+- KeyPress: [Control_L, q]
+...
+---
 - MouseGesture: [Mouse Down, Mouse Up]
 - Execute: [notify-send, --urgency=low, Kill window]
 - KeyPress: [Hyper_L, Shift_R, t]
