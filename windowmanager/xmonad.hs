@@ -282,7 +282,7 @@ defaults = defaultConfig {
         modMask            = mod4Mask, -- mod1Mask = Alt key, mod4Mask = Hyper_L. Do "xkbcomp $DISPLAY"
         workspaces         = ["1","2","3","4","5","6","7","8","9"],
         normalBorderColor  = "#111111",
-        focusedBorderColor = "#FF0000",
+        focusedBorderColor = "#600000",
 
       -- key bindings
         keys               = myKeys,
