@@ -6,7 +6,7 @@ set -x
 
 laptop_screen="$(xrandr | grep eDP | cut -d' ' -f1)"
 
-external_monitor_output=$(xrandr | grep "^\(DP-1\(-1\)\?\|DP-1\(-2\)\?\|HDMI-1\(-1\)\?\|HDMI-1\(-2\)\?\) connected" -A1)
+external_monitor_output=$(xrandr | grep "^\(DP-1\(-1\)\?\|DP-2\|DP-1\(-2\)\?\|HDMI-1\(-1\)\?\|HDMI-2\|HDMI-1\(-2\)\?\) connected" -A1)
 
 second_monitor_name="$(echo $external_monitor_output | head -n1 | cut -d' ' -f1)"
 second_monitor_resolution="$(echo "$external_monitor_output" | tail -1 | awk '{print $1}')"
