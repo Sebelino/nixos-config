@@ -64,6 +64,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Open text editor popup
     , ((modm,               xK_x     ), spawn "popup_editor.sh")
 
+    -- Screencap part of the screen
+    , ((modm,               xK_c     ), spawn "flameshot gui")
+
     -- Push window back into tiling
     , ((modm,               xK_v     ), withFocused $ windows . W.sink)
 
