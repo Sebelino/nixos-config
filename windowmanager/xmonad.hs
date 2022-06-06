@@ -62,7 +62,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_u     ), sendMessage Expand)
 
     -- Open text editor popup
-    , ((modm,               xK_c     ), spawn "popup_editor.sh")
+    , ((modm,               xK_x     ), spawn "popup_editor.sh")
 
     -- Push window back into tiling
     , ((modm,               xK_v     ), withFocused $ windows . W.sink)
