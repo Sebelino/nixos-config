@@ -1,6 +1,6 @@
 # Reload changes by doing:
 #
-# killall -HUP xbindkeys
+# pkill xbindkeys ; xbindkeys &!
 
 ## Scrollwheel left
 "~/.xbindkeys/mx_master_3_bindings.sh Scroll_L"
