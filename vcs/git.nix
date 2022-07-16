@@ -1,6 +1,7 @@
 {
   enable = true;
   userName = "Sebastian Olsson";
+  userEmail = "sebelino7@gmail.com";
   extraConfig = {
     rerere = {
       enabled = true;
