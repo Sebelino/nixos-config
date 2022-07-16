@@ -18,6 +18,8 @@ let
     url = "https://github.com/rycee/home-manager/archive/4c5106ed0f3168ff2df21b646aef67e86cbfc11c.tar.gz";
     sha256 = "0r6hmz68mlir68jk499yii7g2qprxdn76i3bgky6qxsy8vz78mgi";
   };
+
+  environment = (import ./environments/zenia);
 in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -57,7 +59,7 @@ in {
   };
 
   networking = {
-    hostName = "zenia"; # Define your hostname.
+    hostName = environment.hostName;
     wireless = {
       enable = true; # Enables wireless support via wpa_supplicant.
       networks = (import ./secrets/wifi.nix);
