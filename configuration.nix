@@ -22,7 +22,7 @@ let
   environment = (import ./environments/zenia);
 in {
   imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+    ./environments/zenia/hardware-configuration.nix
     (import "${home-manager}/nixos")
   ];
 
