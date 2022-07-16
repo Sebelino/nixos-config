@@ -49,7 +49,7 @@ in {
 
     initrd.luks.devices = {
       luksroot = {
-        device = "/dev/disk/by-uuid/${import ./environments/zenia/hardware-luksroot-uuid.nix}";
+        device = "/dev/disk/by-uuid/${import environment.luksroot_uuid}";
         preLVM = true;
         allowDiscards = true;
       };
