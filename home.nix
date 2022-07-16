@@ -26,6 +26,7 @@
         };
       };
     };
+    xmobar = (import ./statusbar/xmobar.nix);
   };
 
   services.keybase.enable = true;
