@@ -21,7 +21,6 @@ let
 in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./secrets
     (import "${home-manager}/nixos")
   ];
 
@@ -61,6 +60,7 @@ in {
     hostName = "zenia"; # Define your hostname.
     wireless = {
       enable = true; # Enables wireless support via wpa_supplicant.
+      networks = (import ./secrets/wifi.nix);
     };
 
     # The global useDHCP flag is deprecated, therefore explicitly set to false here.
