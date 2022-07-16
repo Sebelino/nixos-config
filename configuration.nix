@@ -119,8 +119,6 @@ in {
     }
   ];
 
-  # List services that you want to enable:
-
   services = {
     # Enable the OpenSSH daemon.
     openssh.enable = true;
