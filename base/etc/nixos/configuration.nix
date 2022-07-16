@@ -19,8 +19,8 @@
   networking.interfaces.wlp2s0.useDHCP = true;
   networking.wireless.enable = true;
   networking.wireless.networks = {
-   "Olssons-5G" = { psk = "***"; };
-   "Kirijo Group-5G" = { psk = "***"; };
+   "Olssons-5G" = { psk = "************"; };
+   "Kirijo Group-5G" = { psk = "************"; };
   };
   services.xserver.enable = true;
 
