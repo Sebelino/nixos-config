@@ -91,6 +91,23 @@ upgrading:
    python39
 ```
 
+## GPG
+
+Needed to decrypt git-crypt encrypted files.
+
+1. Download `gpgkeys.7z`
+1. `7z x gpgkeys.7z`
+1. Enter 7z passphrase
+1. `gpg --import myprivkeys.asc`
+1. Enter GPG passphrases
+1. `gpg --import mypubkeys.asc`
+1. `shred -u myprivkeys.asc mypubkeys.asc`
+
+Now you can decrypt the files:
+```bash
+$ git crypt unlock
+```
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
