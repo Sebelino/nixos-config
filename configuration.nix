@@ -33,7 +33,12 @@ in {
     (import "${home-manager}/nixos")
   ];
 
+  # Package pinning
+  nixpkgs.pkgs = import "${nixpkgs}" { inherit (config.nixpkgs) config; };
+
   nix = {
+    nixPath =
+      [ "nixpkgs=${nixpkgs}" "nixos-config=/etc/nixos/configuration.nix" ];
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
