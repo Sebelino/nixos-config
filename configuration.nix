@@ -134,17 +134,7 @@ in {
       # Enable the X11 windowing system.
       enable = true;
 
-      extraLayouts.solemak = {
-        description = "Solemak, my own variant of Colemak";
-        languages = [ "eng" ];
-        symbolsFile = ./keyboard/xkb/solemak;
-      };
-
-      extraLayouts.sesebel = {
-        description = "Slightly modified variant of Swedish keyboard";
-        languages = [ "eng" ];
-        symbolsFile = ./keyboard/xkb/sesebel;
-      };
+      extraLayouts = (import ./keyboard/layouts.nix);
 
       displayManager.autoLogin = {
         enable = true;
