@@ -196,7 +196,7 @@ in {
   users.users.sebelino = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "docker" ];
-    hashedPassword = (import ./secrets/passwords.nix );
+    hashedPassword = (import ./secrets/passwords.nix ).sebelino;
   };
 
   users.extraUsers.sebelino = {
