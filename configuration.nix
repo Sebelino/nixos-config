@@ -191,6 +191,12 @@ in {
 
   users.mutableUsers = false;
 
+  users.users.sebelino = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "audio" "docker" ];
+    hashedPassword = (import ./secrets/passwords.nix );
+  };
+
   users.extraUsers.sebelino = {
     shell = pkgs.zsh;
     extraGroups = [ "docker" "video" ];
