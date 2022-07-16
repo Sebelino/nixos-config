@@ -12,7 +12,7 @@ imap <F12> <ESC>:set hls!<CR>a
 vmap <F12> <ESC>:set hls!<CR>gv
 
 " Shortcut for :qa and :w
-nnoremap <silent><C-a> :qa<CR>
+nnoremap <silent><C-y> :qa<CR>
 nnoremap <silent><C-s> :w<CR>
 
 " Upon reopening a file, jump to the position held at the end of the previous session
