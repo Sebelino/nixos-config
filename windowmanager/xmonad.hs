@@ -99,11 +99,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Fn+F4
     , ((0                 , 0x1008FF05), spawn "toggle-backlight.sh")
     -- Fn+F5: Brightness down
-    -- , ((0                 , 0x1008FF03), spawn "xbacklight -set 1")
-    , ((0                 , 0x1008FF03), spawn "light -S 1")
+    , ((0                 , 0x1008FF03), spawn "xbacklight -set 1")
+    -- , ((0                 , 0x1008FF03), spawn "light -S 1")
     -- Fn+F6: Brightness up
-    -- , ((0                 , 0x1008FF02), spawn "xbacklight -set 100")
-    , ((0                 , 0x1008FF02), spawn "light -S 100")
+    , ((0                 , 0x1008FF02), spawn "xbacklight -set 100")
+    -- , ((0                 , 0x1008FF02), spawn "light -S 100")
     -- Fn+F9: Enable/disable touchpad
     , ((0                 , 0x1008FFA9), spawn "touchpad-toggle.sh")
     -- Fn+F10: Toggle between Mute and non-mute
