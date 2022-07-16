@@ -40,7 +40,7 @@
     initExtra = ''
       setxkbmap solemak &!
       flameshot &!
-      ${pkgs.feh}/bin/feh --no-fehbg --bg-scale /home/sebelino/nixos-config/blobs/images/nixos_wallpaper.png
+      ${pkgs.feh}/bin/feh --no-fehbg --bg-scale ${ ./. + "/blobs/images/nixos_wallpaper.png"}
     '';
   };
 
