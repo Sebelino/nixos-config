@@ -57,7 +57,6 @@
   libxml2 # Needed for infra's scripts
   llvmPackages.bintools-unwrapped
   lm_sensors
-  mariadb-client
   maven
   mednafen
   mednaffe
