@@ -22,11 +22,27 @@
    "Olssons-5G" = { psk = "************"; };
    "Kirijo Group-5G" = { psk = "************"; };
   };
-  services.xserver.enable = true;
 
-  services.openssh.enable = true;
-  services.openssh.allowSFTP = true;
-  services.openssh.permitRootLogin = "yes";
+  services = {
+    # Enable the OpenSSH daemon.
+    openssh.enable = true;
+    openssh.allowSFTP = true;
+    openssh.permitRootLogin = "yes";
+    xserver = {
+      # Enable the X11 windowing system.
+      enable = true;
+
+      displayManager.autoLogin = {
+        enable = true;
+        user = "sebelino";
+      };
+      autoRepeatDelay = 250;
+      autoRepeatInterval = 20;
+
+      windowManager.xmonad.enable = true;
+      windowManager.xmonad.enableContribAndExtras = true;
+    };
+  };
 
   programs.gnupg.agent = {
     enable = true;
