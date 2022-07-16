@@ -62,8 +62,6 @@ in {
       };
     };
 
-    initrd.availableKernelModules = [ "thinkpad_acpi" ];
-
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -121,14 +119,6 @@ in {
     {
       users = [ "sebelino" ];
       commands = [{
-        command =
-          "/run/current-system/sw/bin/systemctl restart thinkfan.service";
-        options = [ "SETENV" "NOPASSWD" ];
-      }];
-    }
-    {
-      users = [ "sebelino" ];
-      commands = [{
         command = "/run/current-system/sw/bin/nixos-rebuild switch";
         options = [ "SETENV" "NOPASSWD" ];
       }];
@@ -147,10 +137,6 @@ in {
     blueman.enable = true;
 
     udev.packages = [ pkgs.yubikey-personalization pkgs.libu2f-host ];
-
-    thinkfan = {
-      enable = true;
-    };
 
     xserver = {
       # Enable the X11 windowing system.
