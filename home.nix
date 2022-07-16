@@ -31,6 +31,10 @@
 
   services.keybase.enable = true;
 
+  services.dunst = {
+    enable = true;
+  };
+
   xsession = {
     enable = true;
     windowManager.xmonad = {

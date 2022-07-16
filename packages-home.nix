@@ -53,6 +53,7 @@
   keybase
   keybase-gui
   kubectl
+  libnotify
   libreoffice
   libxml2 # Needed for infra's scripts
   llvmPackages.bintools-unwrapped
