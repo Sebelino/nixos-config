@@ -3,23 +3,15 @@
   acpilight
   anki-bin
   ansifilter
-  arandr
-  awscli2
-  bazel-watcher
   bind # Provides dig
   black
-  buildifier
-  buildkite-agent
-  buildkite-cli
   chromium
   cmus
   dconf
-  dive
   dmenu
   docker-compose
   dos2unix
   drive
-  eksctl
   fceux
   feh
   ffmpeg
@@ -30,38 +22,20 @@
   fzf
   gcc
   gephi
-  gettext # msgfmt
   gimp
   git
   git-crypt
-  git-sizer
-  glxinfo
-  gnumake # Needed to build Bazel projects (python toolchain)
   gnupg
   go
-  google-cloud-sdk
-  gptfdisk
-  gradle
-  graphviz
-  grpcurl
-  gzdoom
   imagemagick
-  inkscape
-  jdk11
   jq
   k4dirstat
   keybase
   keybase-gui
-  kubectl
   libnotify
   libreoffice
-  libxml2 # Needed for infra's scripts
   llvmPackages.bintools-unwrapped
   lm_sensors
-  maven
-  mednafen
-  mednaffe
-  minikube
   mkpasswd
   mplayer
   mpv
@@ -69,28 +43,19 @@
   nix-index # Example usage: nix-locate zlib.h
   nix-prefetch-git
   nixfmt
-  nodejs
   openssl
   p7zip
   parted
   pavucontrol
   pciutils
-  pcsx2
   pinentry-curses
   poppler_utils
-  postman
-  ppsspp
-  protonvpn-cli
   pstree
-  python27
   python39
   ranger
   scrot
-  shutter
-  skaffold
   snes9x-gtk
   ssm-session-manager-plugin
-  terraform_0_14
   thunderbird
   timidity
   topydo
@@ -99,14 +64,11 @@
   unar # unrar replacement
   unzip
   vlc
-  wineWowPackages.stable
   xcompmgr
   xmobar
   xorg.transset
   xorg.xdpyinfo
   xorg.xev
-  xorg.xhost # Needed for infra's scripts
-  xorg.xkbcomp
   xorg.xkbcomp
   xsel
   yq
