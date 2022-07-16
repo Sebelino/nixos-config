@@ -61,15 +61,14 @@ in {
   };
 
   networking = {
-    hostName = "sebelino-p43"; # Define your hostname.
+    hostName = "zenia"; # Define your hostname.
     wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
     # The global useDHCP flag is deprecated, therefore explicitly set to false here.
     # Per-interface useDHCP will be mandatory in the future, so this generated config
     # replicates the default behaviour.
     useDHCP = false;
-    interfaces.enp0s31f6.useDHCP = true;
-    interfaces.wlp0s20f3.useDHCP = true;
+    interfaces.wlp2s0.useDHCP = true;
 
     nameservers = [ "8.8.8.8" ];
   };
