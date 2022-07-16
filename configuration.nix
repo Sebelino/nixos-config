@@ -140,13 +140,13 @@ in {
       extraLayouts.solemak = {
         description = "Solemak, my own variant of Colemak";
         languages = [ "eng" ];
-        symbolsFile = /home/sebelino/nixos-config/keyboard/xkb/solemak;
+        symbolsFile = ./keyboard/xkb/solemak;
       };
 
       extraLayouts.sesebel = {
         description = "Slightly modified variant of Swedish keyboard";
         languages = [ "eng" ];
-        symbolsFile = /home/sebelino/nixos-config/keyboard/xkb/sesebel;
+        symbolsFile = ./keyboard/xkb/sesebel;
       };
 
       displayManager.autoLogin = {
