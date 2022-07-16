@@ -40,4 +40,6 @@
     enable = true;
     theme.name = "Adwaita-dark";
   };
+
+  home.stateVersion = "20.03";
 }
