@@ -1,1 +1,0 @@
-../secrets/assume-wrapper.sh
