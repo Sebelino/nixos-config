@@ -12,7 +12,6 @@
   buildkite-agent
   buildkite-cli
   chromium
-  citrix_workspace
   cmus
   dconf
   dive
@@ -66,7 +65,6 @@
   mkpasswd
   mplayer
   mpv
-  ncat # Provides nmap
   ngrok
   nix-index # Example usage: nix-locate zlib.h
   nix-prefetch-git
@@ -96,7 +94,6 @@
   thunderbird
   timidity
   topydo
-  torbrowser
   transmission-gtk
   tree
   unar # unrar replacement
