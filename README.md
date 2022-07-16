@@ -107,6 +107,10 @@ Now you can decrypt the files:
 ```bash
 $ git crypt unlock
 ```
+and download any binary blobs:
+```bash
+$ git lfs install
+```
 
 ## Sins
 
