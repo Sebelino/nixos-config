@@ -18,14 +18,6 @@ let
     url = "https://github.com/rycee/home-manager/archive/4c5106ed0f3168ff2df21b646aef67e86cbfc11c.tar.gz";
     sha256 = "0r6hmz68mlir68jk499yii7g2qprxdn76i3bgky6qxsy8vz78mgi";
   };
-
-  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
-    export __NV_PRIME_RENDER_OFFLOAD=1
-    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-    export __GLX_VENDOR_LIBRARY_NAME=nvidia
-    export __VK_LAYER_NV_optimus=NVIDIA_only
-    exec -a "$0" "$@"
-  '';
 in {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -96,7 +88,6 @@ in {
     acpi
     slack
     wget
-    nvidia-offload
     xscreensaver
   ];
 
@@ -170,8 +161,6 @@ in {
 
       windowManager.xmonad.enable = true;
       windowManager.xmonad.enableContribAndExtras = true;
-
-      videoDrivers = [ "nvidia" ];
     };
   };
 
@@ -193,17 +182,6 @@ in {
 
   # Allow brightness control via xbacklight from users in the `video` group.
   hardware.acpilight.enable = true;
-
-  hardware.nvidia.prime = {
-    offload.enable = true;
-
-    # See https://nixos.wiki/wiki/Nvidia for how to set these
-    # Bus ID of the Intel GPU. You can find it using lspci, either under 3D or VGA
-    intelBusId = "PCI:0:2:0";
-
-    # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
-    nvidiaBusId = "PCI:60:0:0";
-  };
 
   # Tell certain packages to be built with pulseaudio support if available
   nixpkgs.config.pulseaudio = true;
