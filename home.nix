@@ -18,11 +18,11 @@
     zathura = import ./pdfviewer/zathura.nix;
     ssh = {
       enable = true;
-      userKnownHostsFile = "/nixos-base/nixos-config/ssh/known_hosts";
+      userKnownHostsFile = "${ ./. + "/ssh/known_hosts" }";
       matchBlocks = {
         "github" = {
           host = "github.com";
-          identityFile = "/nixos-base/nixos-config/secrets/id_ed25519";
+          identityFile = "${ ./. + "/secrets/id_ed25519" }";
         };
       };
     };
