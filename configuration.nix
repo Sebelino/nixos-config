@@ -199,6 +199,8 @@ in {
     hashedPassword = (import ./secrets/passwords.nix ).sebelino;
   };
 
+  users.users.root.hashedPassword = (import ./secrets/passwords.nix).root;
+
   users.extraUsers.sebelino = {
     shell = pkgs.zsh;
     extraGroups = [ "docker" "video" ];
