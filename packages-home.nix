@@ -1,7 +1,7 @@
 { pkgs }: with pkgs; [
   ack
   acpilight
-  anki
+  anki-bin
   ansifilter
   arandr
   awscli2
