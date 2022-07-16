@@ -16,6 +16,16 @@
     neovim = import ./editor/neovim.nix { pkgs = pkgs; };
     git = import ./vcs/git.nix;
     zathura = import ./pdfviewer/zathura.nix;
+    ssh = {
+      enable = true;
+      userKnownHostsFile = "/nixos-base/nixos-config/ssh/known_hosts";
+      matchBlocks = {
+        "github" = {
+          host = "github.com";
+          identityFile = "/nixos-base/nixos-config/secrets/id_ed25519";
+        };
+      };
+    };
   };
 
   services.keybase.enable = true;
