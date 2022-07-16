@@ -14,9 +14,9 @@ let
     sha256 = "0036sv1sc4ddf8mv8f8j9ifqzl3fhvsbri4z1kppn0f1zk6jv9yi";
   };
 
-  home-manager = builtins.fetchGit {
-    url = "https://github.com/rycee/home-manager.git";
-    rev = "406eeec0b98903561767ce7aca311034d298d53e";
+  home-manager = builtins.fetchTarball {
+    url = "https://github.com/rycee/home-manager/archive/4c5106ed0f3168ff2df21b646aef67e86cbfc11c.tar.gz";
+    sha256 = "0r6hmz68mlir68jk499yii7g2qprxdn76i3bgky6qxsy8vz78mgi";
   };
 
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
