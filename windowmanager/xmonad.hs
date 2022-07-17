@@ -107,11 +107,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Fn+F9: Enable/disable touchpad
     , ((0                 , 0x1008FFA9), spawn "touchpad-toggle.sh")
     -- Fn+F10: Toggle between Mute and non-mute
-    , ((0                 , 0x1008FF12), spawn "amixer -D pulse set Master toggle")
+    , ((0                 , 0x1008FF12), spawn "amixer set Master toggle")
     -- Fn+F11: Lower volume by <myVolStep> Db
-    , ((0                 , 0x1008FF11), spawn ("amixer -D pulse set Master " ++ myVolStep ++ "%- > /dev/null"))
+    , ((0                 , 0x1008FF11), spawn ("amixer set Master " ++ myVolStep ++ "%- > /dev/null"))
     -- Fn+F12: Raise volume by <myVolStep> Db
-    , ((0                 , 0x1008FF13), spawn ("amixer -D pulse set Master " ++ myVolStep ++ "%+ > /dev/null"))
+    , ((0                 , 0x1008FF13), spawn ("amixer set Master " ++ myVolStep ++ "%+ > /dev/null"))
     -- Print screen
     , ((0                 , xK_Print), spawn "scrot -e 'mv $f ~/Pictures/scrot/'")
     -- Toggle keyboard layout (xK_section = button left of "1")
