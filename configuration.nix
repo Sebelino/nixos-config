@@ -15,7 +15,8 @@ let
   };
 
   home-manager = builtins.fetchTarball {
-    url = "https://github.com/rycee/home-manager/archive/4c5106ed0f3168ff2df21b646aef67e86cbfc11c.tar.gz";
+    url =
+      "https://github.com/rycee/home-manager/archive/4c5106ed0f3168ff2df21b646aef67e86cbfc11c.tar.gz";
     sha256 = "0r6hmz68mlir68jk499yii7g2qprxdn76i3bgky6qxsy8vz78mgi";
   };
 
@@ -88,12 +89,7 @@ in {
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    acpi
-    slack
-    wget
-    xscreensaver
-  ];
+  environment.systemPackages = with pkgs; [ acpi slack wget xscreensaver ];
 
   environment.homeBinInPath = true;
 
@@ -109,15 +105,13 @@ in {
 
   programs.ssh = { startAgent = true; };
 
-  security.sudo.extraRules = [
-    {
-      users = [ "sebelino" ];
-      commands = [{
-        command = "/run/current-system/sw/bin/nixos-rebuild switch";
-        options = [ "SETENV" "NOPASSWD" ];
-      }];
-    }
-  ];
+  security.sudo.extraRules = [{
+    users = [ "sebelino" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/nixos-rebuild switch";
+      options = [ "SETENV" "NOPASSWD" ];
+    }];
+  }];
 
   services = {
     # Enable the OpenSSH daemon.
@@ -192,7 +186,7 @@ in {
   users.users.sebelino = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "docker" ];
-    hashedPassword = (import ./secrets/passwords.nix ).sebelino;
+    hashedPassword = (import ./secrets/passwords.nix).sebelino;
   };
 
   users.users.root.hashedPassword = (import ./secrets/passwords.nix).root;

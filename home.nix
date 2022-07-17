@@ -36,11 +36,11 @@ in {
     zathura = import ./pdfviewer/zathura.nix;
     ssh = {
       enable = true;
-      userKnownHostsFile = "${ ./. + "/ssh/known_hosts" }";
+      userKnownHostsFile = "${./. + "/ssh/known_hosts"}";
       matchBlocks = {
         "github" = {
           host = "github.com";
-          identityFile = "${ ./. + "/secrets/id_ed25519" }";
+          identityFile = "${./. + "/secrets/id_ed25519"}";
         };
       };
     };
@@ -49,9 +49,7 @@ in {
 
   services.keybase.enable = true;
 
-  services.dunst = {
-    enable = true;
-  };
+  services.dunst = { enable = true; };
 
   xsession = {
     enable = true;
@@ -63,7 +61,9 @@ in {
     initExtra = ''
       setxkbmap solemak &!
       flameshot &!
-      ${pkgs.feh}/bin/feh --no-fehbg --bg-scale ${ ./. + "/blobs/images/nixos_wallpaper.png"}
+      ${pkgs.feh}/bin/feh --no-fehbg --bg-scale ${
+        ./. + "/blobs/images/nixos_wallpaper.png"
+      }
     '';
   };
 

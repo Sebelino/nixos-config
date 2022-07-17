@@ -3,9 +3,7 @@
   userName = "Sebastian Olsson";
   userEmail = "sebelino7@gmail.com";
   extraConfig = {
-    rerere = {
-      enabled = true;
-    };
+    rerere = { enabled = true; };
     url."git@github.com:".insteadOf = "https://github.com/";
   };
   aliases = {

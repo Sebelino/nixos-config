@@ -19,8 +19,8 @@
   networking.interfaces.wlp2s0.useDHCP = true;
   networking.wireless.enable = true;
   networking.wireless.networks = {
-   "Olssons-5G" = { psk = "************"; };
-   "Kirijo Group-5G" = { psk = "************"; };
+    "Olssons-5G" = { psk = "************"; };
+    "Kirijo Group-5G" = { psk = "************"; };
   };
 
   services = {
@@ -49,15 +49,13 @@
     pinentryFlavor = "curses";
   };
 
-  security.sudo.extraRules = [
-    {
-      users = [ "sebelino" ];
-      commands = [{
-        command = "/run/current-system/sw/bin/nixos-rebuild switch";
-        options = [ "SETENV" "NOPASSWD" ];
-      }];
-    }
-  ];
+  security.sudo.extraRules = [{
+    users = [ "sebelino" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/nixos-rebuild switch";
+      options = [ "SETENV" "NOPASSWD" ];
+    }];
+  }];
 
   users.users.sebelino = {
     isNormalUser = true;
