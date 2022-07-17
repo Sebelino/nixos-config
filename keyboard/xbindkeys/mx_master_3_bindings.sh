@@ -51,10 +51,10 @@ case "$button" in
   "Scroll_L")
     temporizeHorizontalScroll "L"
     notify-send --urgency=low "Scroll <<<"
-    if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Google Chrome"* ]]; then
+    if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Chromium"* ]]; then
         xdotool key --clearmodifiers Left # Rewind <<< 5 seconds
     fi
-    if [[ $(xdotool getwindowfocus getwindowname) == *"Google Chrome"* ]]; then
+    if [[ $(xdotool getwindowfocus getwindowname) == *"Chromium"* ]]; then
         if [[ $(cat /dev/shm/smart_shift_buffer) == *"1"* ]]; then
             xdotool key --clearmodifiers Control_L+Page_Up # Previous tab
         fi
@@ -64,10 +64,10 @@ case "$button" in
   "Scroll_R")
     temporizeHorizontalScroll "R"
     notify-send --urgency=low "Scroll >>>"
-    if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Google Chrome"* ]]; then
+    if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Chromium"* ]]; then
         xdotool key --clearmodifiers Right # Rewind >>> 5 seconds
     fi
-    if [[ $(xdotool getwindowfocus getwindowname) == *"Google Chrome"* ]]; then
+    if [[ $(xdotool getwindowfocus getwindowname) == *"Chromium"* ]]; then
         if [[ $(cat /dev/shm/smart_shift_buffer) == *"1"* ]]; then
             xdotool key --clearmodifiers Control_L+Page_Down # Next tab
         fi
