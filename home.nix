@@ -1,4 +1,12 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+let
+  symlink = { source, destination }:
+    lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      if [[ ! -L "${destination}" ]]; then
+        ln -s "${source}" "${destination}"
+      fi
+    '';
+in {
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -7,6 +15,16 @@
   home.packages = import ./packages-home.nix { pkgs = pkgs; };
 
   home.file.".ideavimrc".source = ./editor/ideavimrc;
+
+  home.activation.solaar_config = symlink {
+    source = "/nixos-base/nixos-config/keyboard/solaar/config.yaml";
+    destination = "$HOME/.config/solaar/config.yaml";
+  };
+
+  home.activation.solaar_rules = symlink {
+    source = "/nixos-base/nixos-config/keyboard/solaar/rules.yaml";
+    destination = "$HOME/.config/solaar/rules.yaml";
+  };
 
   programs = {
     bat.enable = true;
