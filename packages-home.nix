@@ -55,6 +55,7 @@
   ranger
   scrot
   snes9x-gtk
+  solaar
   ssm-session-manager-plugin
   thunderbird
   timidity

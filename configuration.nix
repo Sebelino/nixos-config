@@ -175,6 +175,12 @@ in {
   # Allow brightness control via xbacklight from users in the `video` group.
   hardware.acpilight.enable = true;
 
+  # For Solaar
+  hardware.logitech.wireless = {
+    enable = true;
+    enableGraphical = true;
+  };
+
   # Tell certain packages to be built with pulseaudio support if available
   nixpkgs.config.pulseaudio = true;
 
