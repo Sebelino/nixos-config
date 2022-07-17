@@ -65,7 +65,9 @@
   unar # unrar replacement
   unzip
   vlc
+  xbindkeys
   xcompmgr
+  xdotool
   xmobar
   xorg.transset
   xorg.xdpyinfo
