@@ -68,13 +68,13 @@
 ...
 ---
 - And:
-  - Process: chrome
+  - Process: chromium
   - Key: [Forward Button, released]
 - KeyPress: [Control_L, w]
 ...
 ---
 - And:
-  - Process: chrome
+  - Process: chromium
   - Key: [Middle Button, pressed]
 - KeyPress: F5
 ...
