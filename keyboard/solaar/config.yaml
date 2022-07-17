@@ -8,7 +8,7 @@
   _serial: CD63774D
   _unitId: CD63774D
   _wpid: '4082'
-  divert-keys: {82: 0, 83: 0, 86: 0, 195: 1, 196: 0}
+  divert-keys: {82: 1, 83: 0, 86: 1, 195: 1, 196: 1}
   dpi: 1000
   dpi-sliding: 0
   hires-scroll-mode: false
