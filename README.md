@@ -124,6 +124,16 @@ in `/etc/pulse/default.pa` should probably be removed as it might prevent the
 phenomenon where Pulseaudio switches to HDMI audio whenever you use an external
 monitor. This is yet to be tested.
 
+## Autologin
+
+In `/etc/systemd/system/getty.target.wants/getty@tty1.service`, change:
+```
+ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+```
+to:
+```
+ExecStart=-/sbin/agetty --autologin sebelino - $TERM
+```
 
 ## Sins
 
