@@ -24,7 +24,6 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=10"
                                   , "-n","#ffffff"
                                   , "-l","red"
                     ] 300
---                    , Run Com "/usr/bin/python" ["/home/sebelino/scripts/workstatus.py", "noproc"] "work" 100
                     , Run Com "/home/sebelino/nixos-config/statusbar/charging.sh" [] "charging" 20
                     , Run StdinReader
                     ]
