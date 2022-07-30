@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 setxkbmap solemak
 
 feh --bg-fill "$HOME/pictures/arch.jpg"
