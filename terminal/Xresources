@@ -1,0 +1,23 @@
+URxvt.background: rgba:0000/0000/0200/c800
+URxvt.foreground: white
+URxvt.keysym.Shift-Up: command:\\033]720;1\\007
+URxvt.keysym.Shift-Down: command:\\033]721;1\\007
+URxvt.borderless: true
+URxvt.highlightColor: #d01018
+
+! Enables transparency together with xcompmgr -c
+URxvt.depth: 32
+
+! CTRL + ALT + Å
+URxvt.keysym.M-0xe5: perl:keyboard-select:search
+
+URxvt.perl-ext-common: default,clipboard,keyboard-select,selection-to-clipboard
+URxvt.perl-lib: /home/sebelino/nixos-config/terminal/urxvt-perl
+URxvt.fading: 50
+
+
+URxvt.font: xft:Bitstream Vera Sans Mono:size=12
+URxvt.scrollBar: false
+URxvt.saveLines: 20000
+
+Xft.hintstyle: hintnone
