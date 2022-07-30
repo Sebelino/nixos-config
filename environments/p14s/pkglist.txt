@@ -96,6 +96,7 @@ texinfo
 thunderbird
 traceroute
 transmission-gtk
+trayer
 tree
 ttf-dejavu
 ttf-fira-mono
