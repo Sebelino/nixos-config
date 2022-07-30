@@ -259,7 +259,7 @@ spawnToWorkspace workspace app = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad def {
+main = xmonad $ docks def {
       -- simple stuff
         terminal           = "urxvt",
         focusFollowsMouse  = False,                  -- Whether focus follows the mouse pointer.
@@ -277,7 +277,7 @@ main = xmonad def {
       -- hooks, layouts
         layoutHook         = avoidStruts $ myLayout,
         manageHook         = myManageHook,
-        handleEventHook    = mconcat [ docksEventHook, handleEventHook defaultConfig ],
+        handleEventHook    = mconcat [ handleEventHook def ],
         logHook            = myLogHook,
         startupHook        = myStartupHook
     }
