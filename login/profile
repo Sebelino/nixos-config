@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Make QT6 use the GTK2 theme
+export QT_QPA_PLATFORMTHEME=gtk2
