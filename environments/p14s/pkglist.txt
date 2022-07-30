@@ -7,6 +7,7 @@ atool
 autoconf
 automake
 base
+bat
 bind
 binutils
 bison
@@ -70,6 +71,7 @@ noto-fonts-extra
 openssh
 p7zip
 pacman
+parted
 patch
 pavucontrol
 perl-email-outlook-message
