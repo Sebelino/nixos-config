@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-#APP=chromium
-APP=google-chrome
+URL="https://docs.google.com/spreadsheets/d/1XqVApGZCqDE5orAhljFu2T9_SmQCgszvfd3y2HsW0Dk/edit#gid=1328184427"
 
-"$APP" -app=https://docs.google.com/spreadsheets/d/1mbHHmGE1ELDz_YSCb6hCI97obRTdBcQP6eTISXNNcm8/edit#gid=0
+google-chrome "-app=$URL"
+chromium "-app=$URL"
