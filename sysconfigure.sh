@@ -25,6 +25,18 @@ symlink() {
     fi
 }
 
+copy() {
+    src="$scriptdir/$1"
+    dst="$2"
+
+    if [ ! -f "$dst" ]; then
+        echo "Copying: $src -> $dst"
+        cp "$src" "$dst"
+    else
+        echo "Already present: $dst"
+    fi
+}
+
 symlink "login/xinitrc" "$HOME/.xinitrc"
 symlink "login/zprofile" "$HOME/.zprofile"
 symlink "bin" "$HOME/bin"
@@ -47,6 +59,9 @@ symlink "keyboard/xbindkeysrc" "$HOME/.xbindkeysrc"
 symlink "filemanager/ranger/rc.conf" "$HOME/.config/ranger/rc.conf"
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
+
+# ~/.xscreensaver apparently can't be a symlink
+copy "screensaver/xscreensaver" "$HOME/.xscreensaver"
 
 echo "Reloading any changes to the terminal..."
 xrdb "$HOME/.Xresources"
