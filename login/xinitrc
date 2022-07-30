@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+setxkbmap solemak
+
+feh --bg-fill "$HOME/pictures/arch.jpg"
+
+# Auto-repeat speed/delay
+xset r rate 250 50
+
+# Load ~/.Xresources so Urxvt doesn't look ugly
+xrdb "$HOME/.Xresources"
+
+# Run the Urxvt daemon to hopefully reduce latency and memory usage
+urxvtd &!
+
+# Make terminals transparent
+xcompmgr &!
+
+# Status bar
+xmobar &!
+
+# Start screenshot tool daemon
+flameshot &!
+
+# Start screensaver daemon
+xscreensaver -no-splash &!
+
+# Needed for notification daemon: https://wiki.archlinux.org/title/Dunst#Dunst_fails_to_start_via_systemd
+systemctl --user import-environment DISPLAY
+
+exec xmonad
