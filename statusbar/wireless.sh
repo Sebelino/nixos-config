@@ -2,7 +2,7 @@
 
 # Displays the status of my wireless connection.
 
-IFACE=wlp0s20f3
+IFACE="$(basename "$(readlink -f /sys/class/net/wl*)")"
 
 iwconfig $IFACE 2>&1 | grep -q no\ wireless\ extensions\. && {
   echo wired
