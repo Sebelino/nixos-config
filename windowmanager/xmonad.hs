@@ -220,18 +220,6 @@ myManageHook = manageSpawn <+> composeAll  -- Needs "manageSpawn <+>" for spawnO
     ]
 
 ------------------------------------------------------------------------
--- Event handling
-
--- * EwmhDesktops users should change this to ewmhDesktopsEventHook
---
--- Defines a custom handler function for X Events. The function should
--- return (All True) if the default handler is to be run afterwards. To
--- combine event hooks use mappend or mconcat from Data.Monoid.
---
---myEventHook = mempty --SEBELINO
-myEventHook = mconcat [ docksEventHook, handleEventHook defaultConfig ]
-
-------------------------------------------------------------------------
 -- Status bars and logging
 
 -- Perform an arbitrary action on each internal state change or X event.
@@ -297,7 +285,7 @@ defaults = defaultConfig {
       -- hooks, layouts
         layoutHook         = avoidStruts $ myLayout,
         manageHook         = myManageHook,
-        handleEventHook    = myEventHook,
+        handleEventHook    = mconcat [ docksEventHook, handleEventHook defaultConfig ],
         logHook            = myLogHook,
         startupHook        = myStartupHook
     }
