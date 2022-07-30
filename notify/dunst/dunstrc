@@ -1,6 +1,8 @@
-[global]
-    # Make sure to install https://archlinux.org/packages/?name=adwaita-icon-theme
-    icon_path = "/usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/"
+[slack_message]
+    appname = "Slack"
+    summary = "*Slackbot*"
+    new_icon = "/home/sebelino/nixos-config/blobs/images/slack.png"
+    urgency = normal
 
 [urgency_low]
     background = "#222222"
