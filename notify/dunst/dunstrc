@@ -1,4 +1,5 @@
 [global]
+    # Make sure to install https://archlinux.org/packages/?name=adwaita-icon-theme
     icon_path = "/usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/"
 
 [urgency_low]
