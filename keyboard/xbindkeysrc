@@ -3,9 +3,9 @@
 # pkill xbindkeys ; xbindkeys &!
 
 ## Scrollwheel left
-"~/.xbindkeys/mx_master_3_bindings.sh Scroll_L"
+"~/nixos-config/keyboard/xbindkeys/mx_master_3_bindings.sh Scroll_L"
   b:6 + release
 
 ## Scrollwheel right
-"~/.xbindkeys/mx_master_3_bindings.sh Scroll_R"
+"~/nixos-config/keyboard/xbindkeys/mx_master_3_bindings.sh Scroll_R"
   b:7 + release
