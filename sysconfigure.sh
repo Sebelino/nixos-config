@@ -11,7 +11,10 @@ symlink() {
     dstdir="$(dirname "$dst")"
     mkdir -p "$dstdir"
 
-    if [ -L "$dst" ]; then
+    if [ -h "$dst" -a ! -e "$dst" ]; then
+        echo "Error: Symlink is broken: $dst"
+        exit 1
+    elif [ -L "$dst" ]; then
         echo "Already symlinked: $dst"
     elif [ -f "$dst" ]; then
         echo "Error: Already exists and is a file: $dst" >&2
