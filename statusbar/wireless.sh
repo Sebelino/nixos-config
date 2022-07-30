@@ -4,13 +4,15 @@
 
 IFACE="$(basename "$(readlink -f /sys/class/net/wl*)")"
 
-iwconfig $IFACE 2>&1 | grep -q no\ wireless\ extensions\. && {
+iwconfig_out="$(iwconfig $IFACE)"
+
+echo "$iwconfig_out" 2>&1 | grep -q no\ wireless\ extensions\. && {
   echo wired
   exit 0
 }
 
-essid="$(iwconfig $IFACE | awk -F '"' '/ESSID/ {print $2}')"
-stngth="$(iwconfig $IFACE | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1)"
+essid="$(echo "$iwconfig_out" | awk -F '"' '/ESSID/ {print $2}')"
+stngth="$(echo "$iwconfig_out" | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1)"
 bars="$(expr $stngth / 10)"
 
 case $bars in
