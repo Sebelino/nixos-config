@@ -137,6 +137,13 @@ ExecStart=-/sbin/agetty --autologin sebelino - $TERM
 
 To automatically enter X11 on boot, check `.zprofile`.
 
+## Pull Git LFS blobs
+
+```bash
+git lfs install
+git lfs pull
+```
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
