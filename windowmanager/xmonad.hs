@@ -111,7 +111,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Fn+F12: Raise volume by <myVolStep> Db
     , ((0                 , 0x1008FF13), spawn ("amixer set Master " ++ myVolStep ++ "%+ > /dev/null"))
     -- Print screen
-    , ((0                 , xK_Print), spawn "scrot -e 'mv $f ~/Pictures/scrot/'")
+    , ((0                 , xK_Print), spawn "scrot -e 'mv $f ~/pictures/scrot/'")
     -- Toggle keyboard layout (xK_section = button left of "1")
     , ((0                 , xK_section), spawn "/home/sebelino/bin/toggle_solemak.sh")
     -- Secret.wav
