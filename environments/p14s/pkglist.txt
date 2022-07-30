@@ -37,13 +37,16 @@ flex
 gawk
 gcc
 gettext
+gimp
 git
 git-crypt
+git-lfs
 gnome-themes-extra
 grep
 groff
 gzip
 highlight
+imagemagick
 inetutils
 jq
 libreoffice-fresh
