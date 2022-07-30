@@ -61,11 +61,14 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "	autocmd GUIEnter * set visualbell t_vb=
 "endif
 "
-""" backup to ~/.tmp
-"set backup
-"set backupdir=~/.vim/backup
-"set directory=~/.vim/swap
-"set writebackup
+
+set backup
+set backupdir=~/.vim/backup/
+
+set writebackup
+set backupcopy=yes
+au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
+
 "
 "" GUI settings
 "set t_Co=256
