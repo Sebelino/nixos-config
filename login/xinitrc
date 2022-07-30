@@ -16,9 +16,6 @@ urxvtd &!
 # Make terminals transparent
 xcompmgr &!
 
-# Status bar
-xmobar &!
-
 # Start screenshot tool daemon
 flameshot &!
 

@@ -7,7 +7,7 @@ import System.Exit
 import XMonad.Layout.Spacing
 import Control.Concurrent
 import XMonad.Actions.SpawnOn
-import XMonad.Util.SpawnOnce (spawnOnOnce)
+import XMonad.Util.SpawnOnce (spawnOnce, spawnOnOnce)
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -245,7 +245,7 @@ myStartupHook = do --SEBELINO
     spawnOnOnce "5" "slack"
     spawnOnOnce "6" "chromium -app=https://docs.google.com/spreadsheets/d/1XqVApGZCqDE5orAhljFu2T9_SmQCgszvfd3y2HsW0Dk/edit#gid=1328184427"
     spawnOnOnce "9" "urxvt -e cmus"
-    spawnOnOnce "9" "urxvt -cd ~/vita"
+    spawnOnce "statusbar.sh"
 
 spawnToWorkspace :: String -> String -> X()
 spawnToWorkspace workspace app = do
