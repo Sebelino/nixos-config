@@ -55,6 +55,7 @@ echo "Making /usr/share/X11/xkb/symbols/ writable to allow creating symlinks in 
 sudo chmod o+w /usr/share/X11/xkb/symbols/
 
 echo "Adding $USER to video group to allow using light to control screen brightness..."
+echo "Adding $USER to nix-users to use Nix..."
 sudo usermod -aG video,nix-users $USER
 
 symlink "keyboard/xkb/solemak" "/usr/share/X11/xkb/symbols/solemak"
