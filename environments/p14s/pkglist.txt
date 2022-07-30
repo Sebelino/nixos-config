@@ -62,6 +62,7 @@ mpv
 neovim
 net-tools
 networkmanager
+nix
 nm-connection-editor
 nmap
 noto-fonts
