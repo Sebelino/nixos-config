@@ -20,7 +20,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm, xK_t), spawn $ XMonad.terminal conf)
 
-    , ((modm,               xK_s     ), spawn "dmenu_run")
+    , ((modm,               xK_s     ), spawn "dmenu_run -nb '#000000'  -sf '#1e1e1e'  -sb '#00f000'  -nf '#00f000' ")
 
     -- close focused window
 --    , ((modm .|. shiftMask, xK_c     ), kill)
