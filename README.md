@@ -139,8 +139,7 @@ and add the following lines:
 ExecStart=
 ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin sebelino - $TERM
 
-# Include these if you have configured your system to start X11 automatically
-Type=simple
+# Better include this if you have configured your system to start X11 automatically
 Environment=XDG_SESSION_TYPE=x11
 ```
 
