@@ -126,13 +126,22 @@ monitor. This is yet to be tested.
 
 ## Autologin
 
-In `/etc/systemd/system/getty.target.wants/getty@tty1.service`, change:
+Add an override for tty1:
+
 ```
-ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+$ sudo -E systemctl edit getty@tty1.service
 ```
-to:
+
+and add the following lines:
+
 ```
-ExecStart=-/sbin/agetty --autologin sebelino - $TERM
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin sebelino - $TERM
+
+# Include these if you have configured your system to start X11 automatically
+Type=simple
+Environment=XDG_SESSION_TYPE=x11
 ```
 
 To automatically enter X11 on boot, check `.zprofile`.
