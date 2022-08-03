@@ -152,6 +152,12 @@ git lfs install
 git lfs pull
 ```
 
+## Statusbar
+
+To add Thunderbird to the list of system tray icons, in
+Arch at least you can install the `systray-x-git` package.
+Then restart Thunderbird and the statusbar and it should work.
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
