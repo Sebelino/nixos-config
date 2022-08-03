@@ -7,7 +7,7 @@ trayer \
     --expand true \
     --edge top \
     --align left \
-    --width 5 \
+    --width 6 \
     --height 17 \
     --tint 0x000000 \
     --transparent true \

@@ -7,7 +7,7 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=10"
        , lowerOnStart = False
        , hideOnStart = False
        , persistent = True
-       , position = TopW R 95
+       , position = TopW R 94
        , commands = [ Run Date "%a %_d %b %H:%M:%S" "date" 10
                     , Run MultiCpu ["-L","50","-H","85","--normal","white"
                         ,"--high","red","-p","3","-t","Cpu: <total0>% <total1>% <total2>% <total3>%"] 20
