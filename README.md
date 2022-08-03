@@ -158,6 +158,8 @@ To add Thunderbird to the list of system tray icons, in
 Arch at least you can install the `systray-x-git` package.
 Then restart Thunderbird and the statusbar and it should work.
 
+![image](https://user-images.githubusercontent.com/837775/182543676-3bd27358-6cff-49f0-a912-effdb1296bf0.png)
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
