@@ -18,6 +18,9 @@ urxvtd &!
 # Make terminals transparent
 xcompmgr &!
 
+# Used by Solaar rules to allow switching browser tabs with mouse etc.
+xbindkeys &!
+
 # Start screenshot tool daemon
 flameshot &!
 
