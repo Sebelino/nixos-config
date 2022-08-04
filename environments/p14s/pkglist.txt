@@ -3,6 +3,7 @@ acpi
 alsa-utils
 anki
 apulse
+arandr
 atool
 autoconf
 automake
@@ -93,6 +94,7 @@ sed
 slack-desktop
 solaar
 sudo
+systray-x-git
 tailscale-git
 teams
 texinfo
@@ -115,6 +117,7 @@ wpa_supplicant
 xbindkeys
 xclip
 xcompmgr
+xdotool
 xmobar
 xmonad
 xmonad-contrib
