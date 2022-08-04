@@ -112,6 +112,19 @@ and download any binary blobs:
 $ git lfs install
 ```
 
+## Audio issues
+
+Bluetooth doesn't seem to connect automatically on Arch.
+I found a promising AUR package that I think fixes it:
+
+```
+yay -S bluetooth-autoconnect
+sudo systemctl enable bluetooth-autoconnect
+sudo systemctl restart bluetooth-autoconnect
+systemctl --user enable pulseaudio-bluetooth-autoconnect.service
+systemctl --user restart pulseaudio-bluetooth-autoconnect.service
+```
+
 ## Autologin
 
 Add an override for tty1:
