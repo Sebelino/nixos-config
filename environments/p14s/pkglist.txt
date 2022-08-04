@@ -80,6 +80,7 @@ parted
 patch
 pavucontrol
 perl-email-outlook-message
+perl-lwp-protocol-https
 pkgconf
 pulseaudio
 pulseaudio-alsa
