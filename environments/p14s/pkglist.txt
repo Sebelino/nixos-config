@@ -12,6 +12,7 @@ bat
 bind
 binutils
 bison
+bluetooth-autoconnect
 bluez
 bluez-hciconfig
 bluez-utils
@@ -110,6 +111,7 @@ ttf-google-fonts-typewolf
 ttf-nerd-fonts-symbols
 ueberzug
 unzip
+usbutils
 vlc
 w3m
 which
