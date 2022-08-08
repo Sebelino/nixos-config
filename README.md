@@ -181,6 +181,12 @@ Then restart Thunderbird and the statusbar and it should work.
 
 ![image](https://user-images.githubusercontent.com/837775/182543676-3bd27358-6cff-49f0-a912-effdb1296bf0.png)
 
+## Kernel module madness
+
+```bash
+cat /{etc,usr/lib}/modprobe.d/*
+```
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
