@@ -125,6 +125,26 @@ systemctl --user enable pulseaudio-bluetooth-autoconnect.service
 systemctl --user restart pulseaudio-bluetooth-autoconnect.service
 ```
 
+```
+> No default controller available
+```
+
+Try shutting down the computer and leave it powered off for a few seconds
+```bash
+shutdown now
+```
+
+If you get this:
+```
+[bluetooth]# connect 5C:EB:68:71:71:E7
+Failed to connect: org.bluez.Error.NotReady br-connection-adapter-not-powered
+```
+try setting
+```
+AutoEnable=true
+```
+in `/etc/bluetooth/main.conf`.
+
 ## Autologin
 
 Add an override for tty1:
