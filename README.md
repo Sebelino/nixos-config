@@ -145,13 +145,29 @@ AutoEnable=true
 ```
 in `/etc/bluetooth/main.conf`.
 
-Actually, this pulseaudio trouble may just be a consequence of not adding `module-switch-on-connect` to `/etc/pulse/default.pa`.
+### Audio issues: HDMI sound
+
+Sometimes, when I connect my laptop to a monitor by HDMI, the sound switches to use the monitor's audio output. That is not what I want.
+Whenever that happens, I have to go to `pavucontrol` -> `Output Devices` and click on `Set as fallback` for my laptop's audio device to switch back the sound to my speaker or headphones. Sometimes I have to restart Chrome or Microsoft Teams, too. Sometimes I even have to restart `pulseaudio`:
+
+```bash
+pulseaudio --kill ; sleep 1 ; pulseaudio --start
+```
+
+I have tried making sure that both `module-switch-on-port-available` and `module-switch-on-connect` are enabled in `/etc/pulse/default.pa`.
+`module-switch-on-connect` also has a `blacklist` option which may come in handy.
+
 ```
 $ pacmd list-modules | grep switch
 	name: <module-switch-on-port-available>
 	name: <module-switch-on-connect>
 		module.description = "When a sink/source is added, switch to it or conditionally switch to it"
 ```
+
+However, what has helped so far has been to simply blacklist the HDMI sound in `pavucontrol` -> `Configuration`.
+Simply set the Profile of the monitor device to `Off` and click `Lock card to this profile`.
+
+![image](https://user-images.githubusercontent.com/837775/185778750-0d3142a2-f660-4dc3-ac47-be43cbd92b4b.png)
 
 ## Autologin
 
