@@ -145,6 +145,14 @@ AutoEnable=true
 ```
 in `/etc/bluetooth/main.conf`.
 
+Actually, this pulseaudio trouble may just be a consequence of not adding `module-switch-on-connect` to `/etc/pulse/default.pa`.
+```
+$ pacmd list-modules | grep switch
+	name: <module-switch-on-port-available>
+	name: <module-switch-on-connect>
+		module.description = "When a sink/source is added, switch to it or conditionally switch to it"
+```
+
 ## Autologin
 
 Add an override for tty1:
