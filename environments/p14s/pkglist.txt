@@ -64,6 +64,7 @@ lvm2
 m4
 make
 man-db
+mdatp-bin
 mplayer
 mpv
 neovim
