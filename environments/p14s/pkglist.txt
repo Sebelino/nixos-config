@@ -101,6 +101,7 @@ sudo
 systray-x-git
 tailscale-git
 teams
+terraform
 texinfo
 thunderbird
 traceroute
