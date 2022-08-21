@@ -161,3 +161,9 @@ au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 " Save-alias
 command W w
 command Q q
+
+nnoremap <A-l> :TerraformFmt<CR>
+
+call plug#begin()
+Plug 'hashivim/vim-terraform'
+call plug#end()
