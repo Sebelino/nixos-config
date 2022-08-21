@@ -2,6 +2,19 @@
 
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
+_aws_profile_switch_sts() {
+    aws sts get-caller-identity >/dev/null
+    if [ "$?" -eq 255 ]; then
+        aws sso login
+    fi
+}
+
+_aws_profile_switch() {
+    export AWS_PROFILE="$(aws configure list-profiles | fzf)"
+    echo "AWS_PROFILE=\033[1;35m$AWS_PROFILE\033[m"
+    _aws_profile_switch_sts &!
+}
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -15,7 +28,7 @@ alias sok="find . -name "
 alias gcod="gcod_fn"
 alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
-alias aps='export AWS_PROFILE="$(aws configure list-profiles | fzf)" && echo "AWS_PROFILE=\033[1;35m$AWS_PROFILE"'
+alias aps='_aws_profile_switch'
 
 # Neovim
 alias vim="nvim"
