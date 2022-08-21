@@ -15,6 +15,7 @@ alias sok="find . -name "
 alias gcod="gcod_fn"
 alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
+alias aps='export AWS_PROFILE="$(aws configure list-profiles | fzf)" && echo "AWS_PROFILE=\033[1;35m$AWS_PROFILE"'
 
 # Neovim
 alias vim="nvim"
