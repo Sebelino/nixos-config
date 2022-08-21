@@ -12,7 +12,7 @@ _aws_profile_switch_sts() {
 _aws_profile_switch() {
     export AWS_PROFILE="$(aws configure list-profiles | fzf)"
     echo "AWS_PROFILE=\033[1;35m$AWS_PROFILE\033[m"
-    _aws_profile_switch_sts &!
+    _aws_profile_switch_sts &! # Takes almost a second, so run it in the background
 }
 
 # Homebrewn aliases
