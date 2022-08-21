@@ -7,6 +7,7 @@ arandr
 atool
 autoconf
 automake
+aws-cli-v2
 base
 bat
 bind
