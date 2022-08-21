@@ -133,6 +133,7 @@ xorg-xdpyinfo
 xorg-xinit
 xscreensaver
 xterm
+yamllint
 yay
 yq
 zathura
