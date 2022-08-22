@@ -30,4 +30,7 @@ xscreensaver -no-splash &!
 # Needed for notification daemon: https://wiki.archlinux.org/title/Dunst#Dunst_fails_to_start_via_systemd
 systemctl --user import-environment DISPLAY
 
+# Otherwise X11 will crash on boot
+xmonad --recompile
+
 exec xmonad
