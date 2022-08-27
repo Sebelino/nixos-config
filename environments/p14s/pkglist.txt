@@ -24,6 +24,7 @@ dhcpcd
 dialog
 dmenu
 docker
+dos2unix
 drive-git
 dropbox
 dropbox-cli
