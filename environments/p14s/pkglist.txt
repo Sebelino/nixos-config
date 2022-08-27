@@ -46,6 +46,7 @@ gimp
 git
 git-crypt
 git-lfs
+github-cli
 gnome-themes-extra
 grep
 groff
