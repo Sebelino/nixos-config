@@ -15,6 +15,10 @@ _aws_profile_switch() {
     _aws_profile_switch_sts &! # Takes almost a second, so run it in the background
 }
 
+_vim_fzf() {
+    nvim $(fzf)
+}
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -29,6 +33,7 @@ alias gcod="gcod_fn"
 alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
 alias aps='_aws_profile_switch'
+alias vimf="_vim_fzf"
 
 # Neovim
 alias vim="nvim"
