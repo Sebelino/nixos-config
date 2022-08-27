@@ -7,3 +7,5 @@
 	required = true
 [alias]
     rewritebranch = "!f() { git rebase -i $(git merge-base main HEAD); }; f"
+[commit]
+	gpgsign = true
