@@ -19,6 +19,12 @@ _vim_fzf() {
     nvim $(fzf)
 }
 
+_github_create_pr() {
+    git push -u origin HEAD && \
+    gh pr create --fill && \
+    gh pr view --web
+}
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -34,7 +40,7 @@ alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
 alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
-alias ghp="git push -u origin HEAD && gh pr create --fill && gh pr view --web"
+alias ghp="_github_create_pr"
 alias gbp="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d"
 
 # Neovim
