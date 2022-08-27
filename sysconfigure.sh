@@ -59,6 +59,7 @@ symlink "keyboard/xbindkeysrc" "$HOME/.xbindkeysrc"
 symlink "filemanager/ranger/rc.conf" "$HOME/.config/ranger/rc.conf"
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
+symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
 # ~/.xscreensaver apparently can't be a symlink
 copy "screensaver/xscreensaver" "$HOME/.xscreensaver"
