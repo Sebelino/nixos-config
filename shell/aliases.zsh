@@ -19,7 +19,7 @@ _aws_profile_switch() {
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
 alias nrS="urxvt -name center_window -e sh -c 'sudo nixos-rebuild switch && echo -e \"\e[1;32mOK!\"; sleep 2' &!"
-alias dup="urxvt &"
+alias dup="urxvt &!"
 alias kgp="kubectl get pods --all-namespaces"
 alias kgpw="watch -n1 kubectl get pods --all-namespaces"
 alias tfr="sudo systemctl restart thinkfan.service"
