@@ -119,6 +119,9 @@ ttf-nerd-fonts-symbols
 ueberzug
 unzip
 usbutils
+virtualbox
+virtualbox-guest-iso
+virtualbox-guest-utils
 vlc
 w3m
 which
