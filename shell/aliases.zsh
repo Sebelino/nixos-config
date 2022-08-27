@@ -25,6 +25,16 @@ _github_create_pr() {
     gh pr view --web
 }
 
+_update_branch_with_trunk() {
+    trunk="$(git branch -l master main | sed 's/^[* ] //')"
+    this_branch="$(git rev-parse --abbrev-ref HEAD)" && \
+    git checkout "$trunk" && \
+    git pull --rebase && \
+    git checkout "$this_branch" && \
+    git rebase "$trunk" && \
+    unset trunk
+}
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -42,6 +52,7 @@ alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
 alias ghp="_github_create_pr"
 alias gbp="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d"
+alias gbt="_update_branch_with_trunk"
 
 # Neovim
 alias vim="nvim"
