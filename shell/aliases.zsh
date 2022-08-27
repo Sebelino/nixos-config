@@ -34,6 +34,7 @@ alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
 alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
+alias ghp="git push -u origin HEAD && gh pr create --fill && gh pr view --web"
 
 # Neovim
 alias vim="nvim"
