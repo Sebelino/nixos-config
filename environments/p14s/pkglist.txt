@@ -126,6 +126,7 @@ vlc
 w3m
 which
 wireless_tools
+words
 wpa_supplicant
 xbindkeys
 xclip
