@@ -35,6 +35,14 @@ _update_branch_with_trunk() {
     unset trunk
 }
 
+_create_branch_with_generated_name() {
+    git checkout main && \
+    git pull --rebase --autostash && \
+    branch_name="$(generate_random_branch_name.sh)" && \
+    git checkout -b "$branch_name" && \
+    unset branch_name
+}
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -53,6 +61,7 @@ alias vimf="_vim_fzf"
 alias ghp="_github_create_pr"
 alias gbp="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d"
 alias gbt="_update_branch_with_trunk"
+alias gbC="_create_branch_with_generated_name"
 
 # Neovim
 alias vim="nvim"
