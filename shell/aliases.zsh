@@ -20,8 +20,9 @@ _vim_fzf() {
 }
 
 _github_create_pr() {
+    extra_arg="$1"
     git push -u origin HEAD && \
-    gh pr create --fill && \
+    gh pr create --fill $1 && \
     gh pr view --web
 }
 
@@ -36,10 +37,14 @@ _update_branch_with_trunk() {
 }
 
 _create_branch_with_generated_name() {
+    git add . && \
+    git stash && \
     git checkout main && \
-    git pull --rebase --autostash && \
+    git pull --rebase && \
     branch_name="$(generate_random_branch_name.sh)" && \
     git checkout -b "$branch_name" && \
+    git stash pop && \
+    git add . && \
     unset branch_name
 }
 
@@ -59,9 +64,15 @@ alias ejc="vim ~/src/jira-cli/config.yaml"
 alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
 alias ghp="_github_create_pr"
+alias ghpd="_github_create_pr --draft"
 alias gbp="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d"
 alias gbt="_update_branch_with_trunk"
 alias gbC="_create_branch_with_generated_name"
+alias ghm="gh pr merge --auto --rebase"
+alias ghe="gh pr edit"
+alias tfa="terraform apply"
+alias tfp="terraform plan"
+alias tfi="terraform init"
 
 # Neovim
 alias vim="nvim"
