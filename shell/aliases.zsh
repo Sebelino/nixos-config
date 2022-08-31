@@ -2,6 +2,18 @@
 
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
+_switch_hotspot() {
+    HOTSPOT_NAME="Sebelino-hotspot"
+    current_ssid="$(iwgetid -r)"
+    if [ "$current_ssid" = "$HOTSPOT_NAME" ]; then
+        nmcli connection down id Sebelino-hotspot
+    else
+        for i in {1..5}; do
+            nmcli dev wifi connect Sebelino-hotspot && break || sleep 1
+        done
+    fi
+}
+
 _aws_profile_switch_sts() {
     aws sts get-caller-identity >/dev/null
     if [ "$?" -eq 255 ]; then
@@ -61,6 +73,8 @@ alias sok="find . -name "
 alias gcod="gcod_fn"
 alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
+alias nät="nmcli dev wifi"
+alias näts="_switch_hotspot"
 alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
 alias ghp="_github_create_pr"
