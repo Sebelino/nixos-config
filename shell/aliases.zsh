@@ -73,6 +73,7 @@ alias ghe="gh pr edit"
 alias tfa="terraform apply"
 alias tfp="terraform plan"
 alias tfi="terraform init"
+alias tsm="terraform state mv"
 
 # Neovim
 alias vim="nvim"
