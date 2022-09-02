@@ -17,7 +17,7 @@ Config { font = "xft:DejaVu Sans Mono:pixelsize=10"
                         ,"--high","red","--ppad","3","-t","<usedratio>%"] 20
                     , Run CoreTemp ["--template","<core0>°C <core1>°C <core2>°C <core3>°C <core4>°C","--Low","70","--High","80"
                         ,"--low","darkgreen","--normal","darkorange","--high","darkred"] 50
-                    , Run Com "/home/sebelino/nixos-config/statusbar/wireless.sh" [] "wireless" 100
+                    , Run Com "/home/sebelino/nixos-config/statusbar/wireless.sh" [] "wireless" 50
                     , Run Battery [ "-t","<leftipat> <timeleft> / <left>%"
                                   , "-L","50"
                                   , "-H","75"
