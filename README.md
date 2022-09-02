@@ -169,6 +169,25 @@ Simply set the Profile of the monitor device to `Off` and click `Lock card to th
 
 ![image](https://user-images.githubusercontent.com/837775/185778750-0d3142a2-f660-4dc3-ac47-be43cbd92b4b.png)
 
+### Audio issues: Handsfree
+
+When starting my Bluetooth headset, the default
+Pulseaudio profile for it would always be set to HFP (handsfree).
+I needed to go to `pavucontrol` ->  Configuration to switch it to the `A2DP
+Sink` profile every time.
+
+That is, until I found that you could fix the problem by adding
+`auto_switch=false` to a line in `/etc/pulse/default.pa`:
+
+```
+  .ifexists module-bluetooth-policy.so
+- load-module module-bluetooth-policy
++ load-module module-bluetooth-policy auto_switch=false
+  .endif
+```
+
+[Reference.](https://askubuntu.com/questions/1205749/how-permanently-remove-or-disable-hsp-hfp-bluetooth-profile)
+
 ## Autologin
 
 Add an override for tty1:
