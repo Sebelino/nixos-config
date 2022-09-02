@@ -30,6 +30,11 @@ case $bars in
   *)  bar='[----!!----]' ;;
 esac
 
-echo $essid $bar
+
+if [ "$essid" = "Sebelino-hotspot" ]; then
+    echo $essid $bar "******************************************"
+else
+    echo $essid $bar
+fi
 
 exit 0
