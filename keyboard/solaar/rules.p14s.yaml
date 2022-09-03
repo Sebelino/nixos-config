@@ -84,11 +84,9 @@
 ...
 ---
 - Key: [Smart Shift, pressed]
-- Execute: [notify-send, --urgency=low, Smart Shift press]
 - Execute: [/home/sebelino/nixos-config/keyboard/smart_shift_buffer.sh, '1']
 ...
 ---
 - Key: [Smart Shift, released]
-- Execute: [notify-send, --urgency=low, Smart Shift release]
 - Execute: [/home/sebelino/nixos-config/keyboard/smart_shift_buffer.sh, '0']
 ...
