@@ -17,7 +17,7 @@ if [ ! -f "$hScrollIndexBuffer" ]; then
 fi
 
 # Horizontal scroll sensitivity reduction
-hScrollModulo=3
+hScrollModulo=2
 
 temporizeHorizontalScroll() {
 
