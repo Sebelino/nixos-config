@@ -50,7 +50,6 @@ case "$button" in
 
   "Scroll_L")
     temporizeHorizontalScroll "L"
-    notify-send --urgency=low "Scroll <<<"
     if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Chromium"* ]]; then
         xdotool key --clearmodifiers Left # Rewind <<< 5 seconds
     fi
@@ -63,7 +62,6 @@ case "$button" in
 
   "Scroll_R")
     temporizeHorizontalScroll "R"
-    notify-send --urgency=low "Scroll >>>"
     if [[ $(xdotool getwindowfocus getwindowname) == *"YouTube - Chromium"* ]]; then
         xdotool key --clearmodifiers Right # Rewind >>> 5 seconds
     fi
