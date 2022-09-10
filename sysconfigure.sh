@@ -40,6 +40,7 @@ copy() {
 symlink "login/xinitrc" "$HOME/.xinitrc"
 symlink "login/zprofile" "$HOME/.zprofile"
 symlink "bin" "$HOME/bin"
+symlink "gibin" "$HOME/gibin"
 symlink "secrets/adx/id_ed25519" "$HOME/.ssh/id_ed25519"
 symlink "secrets/adx/id_ed25519.pub" "$HOME/.ssh/id_ed25519.pub"
 symlink "windowmanager/xmonad.hs" "$HOME/.xmonad/xmonad.hs"
