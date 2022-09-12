@@ -60,6 +60,13 @@ _create_branch_with_generated_name() {
     unset branch_name
 }
 
+_generate_state_moving_script() {
+    terraform plan -no-color > /tmp/terraform_plan.txt && \
+    cat /tmp/terraform_plan.txt | state_mover.py > /tmp/terraform_plan.txt.sh && \
+    bat /tmp/terraform_plan.txt.sh
+}
+
+
 # Homebrewn aliases
 alias cdn="cd $HOME/nixos-config"
 alias nrs="sudo nixos-rebuild switch"
@@ -89,6 +96,7 @@ alias tfp="terraform plan"
 alias tfi="terraform init"
 alias tfd="terraform destroy"
 alias tsm="terraform state mv"
+alias tfg="_generate_state_moving_script"
 
 # Neovim
 alias vim="nvim"
