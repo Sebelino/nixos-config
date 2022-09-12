@@ -8,7 +8,7 @@ _switch_hotspot() {
     if [ "$current_ssid" = "$HOTSPOT_NAME" ]; then
         nmcli connection down id Sebelino-hotspot
     else
-        for i in {1..5}; do
+        for i in {1..50}; do
             nmcli dev wifi connect Sebelino-hotspot && break || sleep 1
         done
     fi
