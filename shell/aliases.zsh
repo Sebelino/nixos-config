@@ -82,6 +82,7 @@ alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
 alias nät="nmcli dev wifi"
 alias näts="_switch_hotspot"
+alias nätr="sudo systemctl restart NetworkManager"
 alias aps='_aws_profile_switch'
 alias vimf="_vim_fzf"
 alias ghp="_github_create_pr"
