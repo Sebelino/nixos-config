@@ -168,4 +168,5 @@ nnoremap <A-l> :TerraformFmt<CR>
 " After updating this list, run :PlugInstall
 call plug#begin()
 Plug 'hashivim/vim-terraform'
+Plug 'LnL7/vim-nix'
 call plug#end()
