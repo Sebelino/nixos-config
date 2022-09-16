@@ -32,11 +32,12 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 
 "" Rust
 "let g:rustfmt_autosave = 1
-"
-"" vim-gitgutter
-"set updatetime=100  " How often to update markers to the left
-"nmap ]h <Plug>GitGutterNextHunk
-"nmap [h <Plug>GitGutterPrevHunk
+
+" vim-gitgutter
+set updatetime=100  " How often to update markers to the left
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
 "
 "set backspace=start,eol,indent
 "
@@ -169,4 +170,5 @@ nnoremap <A-l> :TerraformFmt<CR>
 call plug#begin()
 Plug 'hashivim/vim-terraform'
 Plug 'LnL7/vim-nix'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
