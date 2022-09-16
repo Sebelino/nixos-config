@@ -33,7 +33,7 @@ _vim_fzf() {
 
 _github_create_pr() {
     extra_arg="$1"
-    git push -u origin HEAD && \
+    git push -u origin HEAD && \  # Push before creating, to avoid the gh prompt
     gh pr create --fill $1 && \
     gh pr view --web  # Should retry here
 }
