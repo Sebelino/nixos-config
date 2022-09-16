@@ -164,6 +164,7 @@ command Q q
 
 nnoremap <A-l> :TerraformFmt<CR>
 
+" vim-plug is installed at ~/.local/share/nvim/site/autoload/plug.vim
 call plug#begin()
 Plug 'hashivim/vim-terraform'
 call plug#end()
