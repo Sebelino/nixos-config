@@ -35,7 +35,7 @@ _github_create_pr() {
     extra_arg="$1"
     git push -u origin HEAD && \
     gh pr create --fill $1 && \
-    gh pr view --web
+    gh pr view --web  # Should retry here
 }
 
 _update_branch_with_trunk() {
