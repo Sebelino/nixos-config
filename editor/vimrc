@@ -163,7 +163,11 @@ au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 command W w
 command Q q
 
+" vim-terraform
 nnoremap <A-l> :TerraformFmt<CR>
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
 
 " vim-plug is installed at ~/.local/share/nvim/site/autoload/plug.vim
 " After updating this list, run :PlugInstall
@@ -171,4 +175,5 @@ call plug#begin()
 Plug 'hashivim/vim-terraform'
 Plug 'LnL7/vim-nix'
 Plug 'airblade/vim-gitgutter'
+Plug 'preservim/vim-markdown'
 call plug#end()
