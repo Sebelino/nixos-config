@@ -1,5 +1,10 @@
 colorscheme wombat-sebelino
 
+" Settings that should pretty much always be enabled
+set nocompatible
+syntax on
+filetype plugin indent on
+
 " Line numbers
 set number
 
