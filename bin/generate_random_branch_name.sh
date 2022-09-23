@@ -3,7 +3,8 @@
 set -euo pipefail
 
 words="$(shuf -n2 /usr/share/dict/words | sed "s/'.*//" | tr '[:upper:]' '[:lower:]' | tr '\n' '-')"
+words=${words::-1}
 
 today="$(date '+%m-%d')"
 
-echo "Sebelino-${words}${today}"
+echo "Sebelino-${today}-${words}"
