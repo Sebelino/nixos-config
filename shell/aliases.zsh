@@ -60,6 +60,12 @@ _create_branch_with_generated_name() {
     unset branch_name
 }
 
+_create_branch_with_generated_name_from_current_branch() {
+    branch_name="$(generate_random_branch_name.sh)" && \
+    git checkout -b "$branch_name" && \
+    unset branch_name
+}
+
 _generate_state_moving_script() {
     terraform plan -no-color > /tmp/terraform_plan.txt && \
     cat /tmp/terraform_plan.txt | state_mover.py > /tmp/terraform_plan.txt.sh && \
@@ -90,6 +96,7 @@ alias ghpd="_github_create_pr --draft"
 alias gbp="git branch --merged | egrep -v '(^\*|master|main|dev)' | xargs git branch -d"
 alias gbt="_update_branch_with_trunk"
 alias gbC="_create_branch_with_generated_name"
+alias gbCC="_create_branch_with_generated_name_from_current_branch"
 alias ghm="gh pr merge --auto --rebase"
 alias ghe="gh pr edit"
 alias tfa="terraform apply"
