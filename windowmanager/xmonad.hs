@@ -119,6 +119,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_Pause), spawn "mplayer ~/music/Secret.wav -af volume=10:1")
     -- Lock screen
     , ((modm              , xK_0), spawn "xscreensaver-command -lock")
+    -- Enable/disable mac on bluetooth headset
+    , ((modm,               xK_period), spawn "toggle_handsfree.sh")
 
     -- Create Jira ticket
     , ((modm              , xK_End), spawn "~/bin/create_issue.sh")
