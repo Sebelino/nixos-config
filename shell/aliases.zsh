@@ -106,6 +106,7 @@ alias tfd="terraform destroy"
 alias tsm="terraform state mv"
 alias tfg="_generate_state_moving_script"
 alias tfl='$(git rev-parse --show-toplevel)/tools/tflint_recursive.sh'
+alias grq='git rev-parse --show-toplevel'
 
 # Neovim
 alias vim="nvim"
