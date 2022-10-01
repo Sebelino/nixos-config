@@ -72,7 +72,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'LnL7/vim-nix'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/vim-markdown'
-Plug 'tarekbecker/vim-yaml-formatter'
 
 " nvim-cmp
 Plug 'neovim/nvim-lspconfig'
