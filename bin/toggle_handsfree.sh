@@ -15,3 +15,5 @@ nonactive_profile="$(echo "$card" | jq -r ".profiles | del(.off) | del(.$active_
 set -x
 
 pactl set-card-profile "$card_name" "$nonactive_profile"
+
+notify-send --urgency=low "Toggle audio profile" "$nonactive_profile"
