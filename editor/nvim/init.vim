@@ -54,6 +54,9 @@ au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 command W w
 command Q q
 
+" YAML editing
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " vim-terraform
 nnoremap <A-l> :TerraformFmt<CR>
 
