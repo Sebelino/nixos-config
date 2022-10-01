@@ -121,6 +121,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_0), spawn "xscreensaver-command -lock")
     -- Enable/disable mac on bluetooth headset
     , ((modm,               xK_period), spawn "toggle_handsfree.sh")
+    -- Toggle mic mute on/off
+    , ((modm,               xK_plus), spawn "toggle_mic_mute.sh")
 
     -- Create Jira ticket
     , ((modm              , xK_End), spawn "~/bin/create_issue.sh")
