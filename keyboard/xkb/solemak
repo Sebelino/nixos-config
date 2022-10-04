@@ -21,7 +21,7 @@ xkb_symbols "basic" {
     key <AE11> { [       Hyper_L,      Hyper_L,         Hyper_L,          Hyper_L ] };
     key <AE12> { [          plus,        minus,        multiply,         division ] };
 
-    key <BKSP> { [ Pause ] };
+    key <BKSP> { [     BackSpace,    BackSpace,       BackSpace,         BackSpace] };
 
     key <AD01> { [             q,            Q,       braceleft,       Adiaeresis ] };
     key <AD02> { [             w,            W,      braceright,            Aring ] };
