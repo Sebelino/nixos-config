@@ -127,6 +127,7 @@ terraform-ls-git
 texinfo
 tflint-bin
 tfsec-bin
+thinkpad-p14s
 thunderbird
 traceroute
 transmission-gtk
