@@ -122,6 +122,7 @@ systray-x-git
 tailscale-git
 teams
 terraform
+terraform-ls-git
 texinfo
 tflint-bin
 tfsec-bin
