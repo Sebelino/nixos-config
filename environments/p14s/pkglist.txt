@@ -151,6 +151,8 @@ xbindkeys
 xclip
 xcompmgr
 xdotool
+xf86-video-fbdev
+xf86-video-vesa
 xmobar
 xmonad
 xmonad-contrib
