@@ -1,5 +1,6 @@
 ack
 acpi
+acpid
 actionlint
 alsa-utils
 anki-git
