@@ -230,6 +230,36 @@ Then restart Thunderbird and the statusbar and it should work.
 cat /{etc,usr/lib}/modprobe.d/*
 ```
 
+## Sluggish X11
+
+I got stuck on an issue one day after a reboot. Pretty much everything
+graphical felt noticably slower than usual. Resizing windows in XMonad was
+delayed, and OpenGL-heavy xscreensavers were really slow. This made me suspect
+the video driver.
+
+I got a hint after checking the errors and warnings in `~/.local/share/xorg/Xorg.0.log`.
+There were a couple of errors about video drivers which I fixed
+by installing `xf86-video-fbdev` and `xf86-video-vesa`.
+
+I had a look at
+[this page](https://wiki.archlinux.org/title/xorg#Driver_installation)
+and installed `xf86-video-amdgpu`.
+```bash
+$ yay -S xf86-video-amdgpu
+```
+And that fixed the issue!
+
+After fixing the issue, `xrandr` now prints:
+
+```bash
+$ xrandr --listproviders
+Providers: number : 1
+Provider 0: id: 0x56 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 4 outputs: 4 associated providers: 0 name:Unknown AMD Radeon GPU @ pci:0000:07:00.0
+```
+
+whereas previously, `modesetting` had been present in the output instead of the
+`Unknown`... part.
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
