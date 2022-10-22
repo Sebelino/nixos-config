@@ -165,6 +165,7 @@ xorg-server
 xorg-xdpyinfo
 xorg-xinit
 xscreensaver
+xss-lock
 xterm
 yamllint
 yay
