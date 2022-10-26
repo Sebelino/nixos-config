@@ -16,6 +16,7 @@ xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0 --primary \
        --output DP-1-1 --off \
        --output DP-1-2 --off \
        --output DP-2 --off \
+       --output DisplayPort-0 --off \
        --verbose
 
 pkill xmobar ; xmobar &
