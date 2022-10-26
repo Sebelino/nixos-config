@@ -165,7 +165,7 @@ lua <<EOF
 EOF
 
 lua <<EOF
-  cmp = require('cmp')
+  local cmp = require('cmp')
   function setAutoCmp(mode)
     if mode then
       cmp.setup({
