@@ -29,6 +29,7 @@ dmenu
 docker
 docker-compose
 dos2unix
+drawio-desktop
 drive-git
 dropbox
 dropbox-cli
