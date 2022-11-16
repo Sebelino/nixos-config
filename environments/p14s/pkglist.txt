@@ -108,6 +108,7 @@ python-pyalsa
 python-pynvim
 qt6gtk2
 ranger
+remmina
 reviewdog-bin
 ripgrep
 rubberband
