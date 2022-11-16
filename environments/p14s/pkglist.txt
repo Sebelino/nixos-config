@@ -9,6 +9,7 @@ arandr
 atool
 autoconf
 automake
+avidemux-qt
 aws-cli-v2
 base
 bat
