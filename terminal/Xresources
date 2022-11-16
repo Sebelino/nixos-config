@@ -21,3 +21,8 @@ URxvt.scrollBar: false
 URxvt.saveLines: 20000
 
 Xft.hintstyle: hintnone
+
+! https://superuser.com/questions/1415969/how-to-disable-urxvt-autoscroll-on-output
+URxvt.scrollTtyOutput:      false
+URxvt.scrollWithBuffer:     true
+URxvt.scrollTtyKeypress:    true
