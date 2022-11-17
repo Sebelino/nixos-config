@@ -79,8 +79,13 @@
 - KeyPress: F5
 ...
 ---
-- Key: [Forward Button, released]
-- KeyPress: [Hyper_L, Shift_R, t]
+- And:
+  - Not:
+      Process: chromium
+  - Key: [Forward Button, released]
+- KeyPress:
+  - [Hyper_L, Shift_R, t]
+  - click
 ...
 ---
 - Key: [Smart Shift, pressed]
