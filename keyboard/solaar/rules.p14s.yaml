@@ -2,34 +2,46 @@
 ---
 - MouseGesture: [Mouse Up, Mouse Right]
 - Execute: [notify-send, --urgency=low, '9', Switch window]
-- KeyPress: [Hyper_L, '9']
+- KeyPress:
+  - [Hyper_L, '9']
+  - click
 ...
 ---
 - MouseGesture: [Mouse Down, Mouse Right]
 - Execute: [notify-send, --urgency=low, '8', Switch window]
-- KeyPress: [Hyper_L, '8']
+- KeyPress:
+  - [Hyper_L, '8']
+  - click
 ...
 ---
 - MouseGesture: [Mouse Right, Mouse Up]
 - Execute: [notify-send, --urgency=low, '4', Switch window]
-- KeyPress: [Hyper_L, '4']
+- KeyPress:
+  - [Hyper_L, '4']
+  - click
 ...
 ---
 - And:
   - Process: slack
   - MouseGesture: [Mouse Down, Mouse Up]
 - Execute: [notify-send, --urgency=low, Kill Slack]
-- KeyPress: [Control_L, q]
+- KeyPress:
+  - [Control_L, q]
+  - click
 ...
 ---
 - MouseGesture: [Mouse Down, Mouse Up]
 - Execute: [notify-send, --urgency=low, Kill window]
-- KeyPress: [Hyper_L, Shift_R, t]
+- KeyPress:
+  - [Hyper_L, Shift_R, t]
+  - click
 ...
 ---
 - MouseGesture: [Mouse Up, Mouse Down]
 - Execute: [notify-send, --urgency=low, Spawn terminal]
-- KeyPress: [Hyper_L, t]
+- KeyPress:
+  - [Hyper_L, t]
+  - click
 ...
 ---
 - MouseGesture: [Mouse Left, Mouse Left]
@@ -38,45 +50,61 @@
 ---
 - MouseGesture: [Mouse Left, Mouse Up]
 - Execute: [notify-send, --urgency=low, Toggle between windows]
-- KeyPress: [Hyper_L, n]
+- KeyPress:
+  - [Hyper_L, n]
+  - click
 ...
 ---
 - MouseGesture: Mouse Left
 - Execute: [notify-send, --urgency=low, '1', Switch window]
-- KeyPress: [Hyper_L, '1']
+- KeyPress:
+  - [Hyper_L, '1']
+  - click
 ...
 ---
 - MouseGesture: Mouse Up
 - Execute: [notify-send, --urgency=low, '2', Switch window]
-- KeyPress: [Hyper_L, '2']
+- KeyPress:
+  - [Hyper_L, '2']
+  - click
 ...
 ---
 - MouseGesture: Mouse Right
 - Execute: [notify-send, --urgency=low, '5', Switch window]
-- KeyPress: [Hyper_L, '5']
+- KeyPress:
+  - [Hyper_L, '5']
+  - click
 ...
 ---
 - MouseGesture: Mouse Down
 - Execute: [notify-send, --urgency=low, '6', Switch window]
-- KeyPress: [Hyper_L, '6']
+- KeyPress:
+  - [Hyper_L, '6']
+  - click
 ...
 ---
 - And:
   - Process: anki
   - Key: [Forward Button, released]
-- KeyPress: space
+- KeyPress:
+  - space
+  - click
 ...
 ---
 - And:
   - Process: chromium
   - Key: [Forward Button, released]
-- KeyPress: [Control_L, w]
+- KeyPress:
+  - [Control_L, w]
+  - click
 ...
 ---
 - And:
   - Process: chromium
   - Key: [Middle Button, pressed]
-- KeyPress: F5
+- KeyPress:
+  - F5
+  - click
 ...
 ---
 - And:
