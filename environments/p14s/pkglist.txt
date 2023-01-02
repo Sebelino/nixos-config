@@ -135,6 +135,7 @@ tailscale-git
 teams
 terraform
 terraform-ls-git
+terragrunt
 texinfo
 tflint-bin
 tfsec-bin
