@@ -71,6 +71,7 @@ imagemagick
 inetutils
 infracost
 jq
+k9s
 libreoffice-fresh
 libtool
 libxcrypt-compat
