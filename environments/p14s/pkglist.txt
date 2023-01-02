@@ -72,6 +72,7 @@ inetutils
 infracost
 jq
 k9s
+kube-score-bin
 libreoffice-fresh
 libtool
 libxcrypt-compat
