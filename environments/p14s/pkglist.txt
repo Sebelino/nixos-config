@@ -8,6 +8,7 @@ anki-git
 apulse
 arandr
 atool
+audacity
 autoconf
 automake
 avidemux-qt
