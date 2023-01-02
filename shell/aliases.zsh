@@ -88,6 +88,7 @@ alias gime="gime_fn"
 alias ejc="vim ~/src/jira-cli/config.yaml"
 alias nät="nmcli dev wifi"
 alias näts="_switch_hotspot"
+alias nätn="nmtui" # For new connections, pick "Activate a connection"
 alias nätr="sudo systemctl restart NetworkManager"
 alias storfont='urxvt -fn "xft:Bitstream Vera Sans Mono:size=20" &!'
 alias aps='_aws_profile_switch'
