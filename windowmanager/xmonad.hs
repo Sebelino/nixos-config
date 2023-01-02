@@ -265,7 +265,7 @@ spawnToWorkspace workspace app = do
 --
 main = xmonad $ docks def {
       -- simple stuff
-        terminal           = "urxvt",
+        terminal           = "alacritty",
         focusFollowsMouse  = False,                  -- Whether focus follows the mouse pointer.
         clickJustFocuses   = True,                   -- Whether clicking on a window to focus also passes the click to the window
         borderWidth        = 1,
