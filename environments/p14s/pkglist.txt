@@ -2,6 +2,7 @@ ack
 acpi
 acpid
 actionlint
+alacritty
 alsa-utils
 anki-git
 apulse
