@@ -7,4 +7,4 @@ words=${words::-1}
 
 today="$(date '+%m-%d')"
 
-echo "Sebelino-${today}-${words}"
+echo "${today}-${words}-Sebelino"
