@@ -110,6 +110,7 @@ pkgconf
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
+python-boto3
 python-pip
 python-pyalsa
 python-pynvim
