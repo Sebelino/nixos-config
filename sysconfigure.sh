@@ -77,3 +77,4 @@ sudo usermod -aG video,nix-users,docker,vboxusers $USER
 
 symlink "keyboard/xkb/solemak" "/usr/share/X11/xkb/symbols/solemak"
 symlink "keyboard/xkb/sesebel" "/usr/share/X11/xkb/symbols/sesebel"
+symlink "keyboard/xkb/xnp2" "/usr/share/X11/xkb/symbols/xnp2"
