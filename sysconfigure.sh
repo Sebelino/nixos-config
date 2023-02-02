@@ -74,7 +74,7 @@ sudo chmod o+w /usr/share/X11/xkb/symbols/
 
 echo "Adding $USER to video group to allow using light to control screen brightness..."
 echo "Adding $USER to nix-users to use Nix..."
-sudo usermod -aG video,nix-users,docker,vboxusers $USER
+sudo usermod -aG video,nix-users,docker,vboxusers,wireshark $USER
 
 symlink "keyboard/xkb/solemak" "/usr/share/X11/xkb/symbols/solemak"
 symlink "keyboard/xkb/sesebel" "/usr/share/X11/xkb/symbols/sesebel"
