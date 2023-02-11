@@ -260,6 +260,21 @@ Provider 0: id: 0x56 cap: 0xf, Source Output, Sink Output, Source Offload, Sink 
 whereas previously, `modesetting` had been present in the output instead of the
 `Unknown`... part.
 
+## `xscreensaver-demo` crashes
+
+`xscreensaver-demo` and `xscreensaver-settings` would crash on startup with
+this error:
+
+```
+xscreensaver-settings: 12:51:11: X error:
+xscreensaver-settings:   Failed request: BadMatch (invalid parameter attributes)
+xscreensaver-settings:   Major opcode:   42 (X_SetInputFocus)
+xscreensaver-settings:   Resource id:    0xa00007
+xscreensaver-settings:   Serial number:  570 / 571
+```
+
+I downgraded xscreensaver from `6.06` to `6.04` as a workaround.
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
