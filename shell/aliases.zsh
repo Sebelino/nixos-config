@@ -16,7 +16,7 @@ _switch_hotspot() {
 
 _aws_profile_switch_sts() {
     aws sts get-caller-identity >/dev/null
-    if [ "$?" -eq 255 ]; then
+    if [ "$?" -ne 0 ]; then
         aws sso login
     fi
 }
