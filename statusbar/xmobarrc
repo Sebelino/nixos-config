@@ -1,7 +1,7 @@
 Config { font = "xft:Inconsolata 10"
        , overrideRedirect = True
        , bgColor = "black"
-       , fgColor = "green"
+       , fgColor = "#00FF00"
        , border = NoBorder
        , borderColor = "#FF0000"
        , lowerOnStart = False
