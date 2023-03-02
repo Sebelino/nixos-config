@@ -1,4 +1,4 @@
-Config { font = "xft:DejaVu Sans Mono:pixelsize=10"
+Config { font = "xft:Inconsolata 10"
        , overrideRedirect = True
        , bgColor = "black"
        , fgColor = "green"
