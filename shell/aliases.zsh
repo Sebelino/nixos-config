@@ -19,6 +19,11 @@ _aws_profile_switch_sts() {
     if [ "$?" -ne 0 ]; then
         aws sso login
     fi
+    # Set up kubectl against the correct AWS account
+    cluster_name="$(aws eks list-clusters | jq -r '.clusters[]')"
+    if [ -n "${cluster_name}" ]; then
+        aws eks update-kubeconfig --name "${cluster_name}" >/dev/null
+    fi
 }
 
 _aws_profile_switch() {
