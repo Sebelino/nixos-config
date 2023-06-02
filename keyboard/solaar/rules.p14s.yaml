@@ -56,7 +56,7 @@
 ...
 ---
 - MouseGesture: Mouse Left
-- Execute: [notify-send, --urgency=low, '1', Switch window]
+- Execute: [notify-send, --urgency=low, '3', Switch window]
 - KeyPress:
   - [Hyper_L, '3']
   - click
