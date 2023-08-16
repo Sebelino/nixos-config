@@ -358,3 +358,7 @@ symlink ~/.Xresources
 symlink ~/.gitignore_global
 symlink ~/.gzdoom/gzdoom.ini
 ```
+
+# Sin: Symlinked ~/.ssh/id_ed25519..., known_hosts
+
+# Sin: Symlinked ~/.config/nvim/colors
