@@ -114,20 +114,38 @@ $ git lfs install
 
 ## Audio issues
 
+### Bluetooth requirements
+
 Bluetooth doesn't seem to connect automatically on Arch.
-I found a promising AUR package that I think fixes it:
+You need several packages, and you need to enable some daemons.
 
 ```
+yay -S alsa-utils
 yay -S bluetooth-autoconnect
+yay -S bluez-utils
+yay -S pulseaudio
+yay -S pulseaudio-alsa
+yay -S pulseaudio-bluetooth
+
 sudo systemctl enable bluetooth-autoconnect
 sudo systemctl restart bluetooth-autoconnect
 systemctl --user enable pulseaudio-bluetooth-autoconnect.service
 systemctl --user restart pulseaudio-bluetooth-autoconnect.service
 ```
 
+Put the bluetooth device in pairing mode, then pair it like so:
+
 ```
-> No default controller available
+bluetoothctl
+power on
+agent on
+scan on
+trust 5C:EB:68:71:71:E7
+pair 5C:EB:68:71:71:E7
+connect 5C:EB:68:71:71:E7
 ```
+
+### bluetoothctl: No default controller available
 
 Try shutting down the computer and leave it powered off for a few seconds
 ```bash
