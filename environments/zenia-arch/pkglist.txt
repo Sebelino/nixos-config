@@ -1,0 +1,12 @@
+base
+base-devel
+efibootmgr
+git
+linux
+linux-firmware
+lvm2
+neovim
+networkmanager
+sudo
+wget
+zsh
