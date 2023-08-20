@@ -39,6 +39,7 @@ rxvt-unicode
 solaar
 sudo
 thunderbird
+transmission-qt
 ttf-google-fonts-typewolf
 ttf-nerd-fonts-symbols
 vim-plug
