@@ -75,8 +75,15 @@ echo "Making /usr/share/X11/xkb/symbols/ writable to allow creating symlinks in 
 sudo chmod o+w /usr/share/X11/xkb/symbols/
 
 echo "Adding $USER to video group to allow using light to control screen brightness..."
+sudo usermod -aG video $USER
 echo "Adding $USER to nix-users to use Nix..."
-sudo usermod -aG video,nix-users,docker,vboxusers,wireshark $USER
+sudo usermod -aG nix-users $USER
+echo "Adding $USER to docker to run Docker..."
+sudo usermod -aG docker $USER
+echo "Adding $USER to vboxusers to enable USB usage..."
+sudo usermod -aG vboxusers $USER
+echo "Adding $USER to wireshark to avoid running Wireshark with sudo..."
+sudo usermod -aG wireshark $USER
 
 symlink "keyboard/xkb/solemak" "/usr/share/X11/xkb/symbols/solemak"
 symlink "keyboard/xkb/sesebel" "/usr/share/X11/xkb/symbols/sesebel"
