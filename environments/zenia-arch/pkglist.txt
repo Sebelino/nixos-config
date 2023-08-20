@@ -13,6 +13,7 @@ efibootmgr
 git
 git-crypt
 git-lfs
+inetutils
 light
 linux
 linux-firmware
