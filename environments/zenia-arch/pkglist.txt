@@ -20,6 +20,8 @@ light
 linux
 linux-firmware
 lvm2
+man-db
+man-pages
 mplayer
 neovim
 net-tools
