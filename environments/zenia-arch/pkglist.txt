@@ -10,6 +10,8 @@ chromium
 cmus
 dmenu
 efibootmgr
+feh
+flameshot
 git
 git-crypt
 git-lfs
@@ -40,12 +42,16 @@ ttf-nerd-fonts-symbols
 vim-plug
 wget
 wireless_tools
+xbindkeys
 xclip
+xcompmgr
 xmobar
 xmonad
 xmonad-contrib
 xorg-server
 xorg-xinit
+xscreensaver
+xss-lock
 xterm
 yay
 zsh
