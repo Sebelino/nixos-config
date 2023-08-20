@@ -62,6 +62,9 @@ symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
 symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
+# Prevent unsafe permissions warning
+chmod 700 "$HOME/.gnupg"
+
 # ~/.xscreensaver apparently can't be a symlink
 copy "screensaver/xscreensaver" "$HOME/.xscreensaver"
 
