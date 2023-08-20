@@ -380,3 +380,17 @@ symlink ~/.gzdoom/gzdoom.ini
 # Sin: Symlinked ~/.ssh/id_ed25519..., known_hosts
 
 # Sin: Symlinked ~/.config/nvim/colors
+
+# Sin: Oh-my-zsh manual install
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+# Sin: `yay` colored output
+
+Uncomment "Color" in `/etc/pacman.conf` to get colored output in `yay`.
