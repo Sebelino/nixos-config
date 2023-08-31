@@ -180,3 +180,60 @@ Boot into Arch Linux, decrypt the disk, and log in as root.
 systemctl enable --now NetworkManager
 nmtui
 ```
+
+```bash
+cd /tmp
+git clone https://github.com/Sebelino/nixos-config
+cd nixos-config/
+bash ./environments/t14s/bootstrap-from-root.sh
+```
+
+Then exit and login as sebelino.
+
+```bash
+bash /tmp/nixos-config/environments/t14s/bootstrap-from-user.sh
+# sebelino was added to seat group by the script above, so we need to re-login
+exit
+```
+
+Start Wayland:
+
+```bash
+sway
+```
+
+Press Win + Enter to open an Alacritty terminal.
+
+```bash
+chromium &!
+```
+
+Install the Bitwarden Chrome extension.
+
+Log in to Google.
+
+Click on the Chrome profile and set the theme color to dark.
+
+Install extensions:
+
+* Hacker Vision
+* Distraction Free YouTube
+* New Tab Redirect
+  * Grant management permission
+  * Set Redirect URL to https://google.com
+* uBlock Origin
+* Vimium
+
+Download `gpgkeys.7z` from Gdrive.
+
+Import GPG keys:
+
+```bash
+bash /tmp/nixos-config/environments/t14s/install-gpg-key.sh
+```
+
+Set up ~/nixos-config/:
+
+```bash
+bash /tmp/nixos-config/environments/t14s/install-dotfiles-repo.sh
+```
