@@ -232,8 +232,14 @@ Import GPG keys:
 bash /tmp/nixos-config/environments/t14s/install-gpg-key.sh
 ```
 
-Set up ~/nixos-config/:
+Set up `~/nixos-config/`:
 
 ```bash
 bash /tmp/nixos-config/environments/t14s/install-dotfiles-repo.sh
+```
+
+Configure sound:
+
+```bash
+bash ~/nixos-config/environments/t14s/install-sound.sh
 ```
