@@ -4,9 +4,6 @@ set -Eeuo pipefail
 
 set -x
 
-if false; then
-fi
-
 tempdir="$(mktemp -d)"
 
 git clone https://aur.archlinux.org/yay "$tempdir"
@@ -22,9 +19,6 @@ yay -S --noconfirm sway swaylock swayidle swaybg wmenu
 mkdir -p "$HOME/.config/sway"
 cp /etc/sway/config "$HOME/.config/sway/config"
 sed -i 's/$term foot/$term alacritty/' "$HOME/.config/sway/config"
-
-nixospath=/home/sebelino/nixos-config-tmp
-cat "$nixospath/environments/t14s/extra-sway-config" >> "$HOME/.config/sway/config"
 
 yay -S --noconfirm xorg-xwayland wofi
 yay -S --noconfirm alacritty chromium parted vlc ack p7zip git-lfs git-crypt openssh
