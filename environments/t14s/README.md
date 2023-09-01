@@ -243,3 +243,9 @@ Configure sound:
 ```bash
 bash ~/nixos-config/environments/t14s/install-sound.sh
 ```
+
+Run symlinks:
+
+```bash
+bash ~/nixos-config/environments/t14s/sysconfigure.sh
+```
