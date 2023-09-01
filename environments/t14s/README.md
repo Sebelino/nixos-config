@@ -249,3 +249,9 @@ Run symlinks:
 ```bash
 bash ~/nixos-config/environments/t14s/sysconfigure.sh
 ```
+
+Install extra packages:
+
+```bash
+bash ~/nixos-config/environments/t14s/install-packages.sh
+```
