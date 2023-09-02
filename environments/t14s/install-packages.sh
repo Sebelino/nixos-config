@@ -8,6 +8,7 @@ yay -S \
     cmus \
     dmenu \
     light \
+    mplayer \
     zsh-theme-powerlevel10k \
     ttf-meslo-nerd-font-powerlevel10k \
     wl-clipboard \
