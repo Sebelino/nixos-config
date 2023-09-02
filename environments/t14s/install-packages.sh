@@ -2,5 +2,7 @@
 
 set -euo pipefail
 
-yay -S --noconfirm \
-    light
+yay -S \
+    light \
+    wl-clipboard \
+    --noconfirm
