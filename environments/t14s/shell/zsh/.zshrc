@@ -1,9 +1,3 @@
-# Zsh plugins, installed with yay:
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
-
 # Powerlevel10k config:
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -36,3 +30,9 @@ source $ZSH/oh-my-zsh.sh
 # Custom stuff:
 
 source "$ZDOTDIR/aliases.zsh"
+
+# Zsh plugins, installed with yay:
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
