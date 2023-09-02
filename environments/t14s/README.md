@@ -257,3 +257,9 @@ Install extra packages:
 ```bash
 bash ~/nixos-config/environments/t14s/install-packages.sh
 ```
+
+Enable extra daemons after installing those packages:
+
+```bash
+bash ~/nixos-config/environments/t14s/enable-daemons.sh
+```
