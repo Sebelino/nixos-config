@@ -6,6 +6,11 @@ alias vimdiff="nvim -d"
 
 # Commit (c)
 alias gc="git commit --verbose"
+alias gcF="git commit --verbose --amend"
 
 # Index (i)
 alias gia="git add"
+alias giA="git add --patch"
+
+# Working Copy (w)
+alias gws="git status --short"
