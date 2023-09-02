@@ -291,3 +291,9 @@ nvim
     ◍ shellcheck
     ◍ shfmt
 ```
+
+Install apps (non-essential packages):
+
+```bash
+bash ~/nixos-config/environments/t14s/install-apps.sh
+```
