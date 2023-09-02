@@ -8,3 +8,4 @@ source "${scriptdir}/../../lib/common.sh"
 
 symlink "sway" "$HOME/.config/sway"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
+symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
