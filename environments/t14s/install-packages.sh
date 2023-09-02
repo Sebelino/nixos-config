@@ -14,6 +14,7 @@ yay -S \
     zsh-theme-powerlevel10k \
     tree \
     ttf-meslo-nerd-font-powerlevel10k \
+    ttf-jetbrains-mono-nerd \
     wl-clipboard \
     --needed \
     --noconfirm
