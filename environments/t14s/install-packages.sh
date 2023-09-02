@@ -10,6 +10,7 @@ yay -S \
     light \
     mplayer \
     neovim-symlinks \
+    npm \
     oh-my-zsh-git \
     zsh-autosuggestions \
     zsh-theme-powerlevel10k \
