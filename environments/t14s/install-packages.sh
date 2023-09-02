@@ -6,7 +6,8 @@ yay -S \
     cmus \
     dmenu \
     light \
-    oh-my-zsh-git \
+    zsh-theme-powerlevel10k \
+    ttf-meslo-nerd-font-powerlevel10k \
     wl-clipboard \
     --needed \
     --noconfirm
