@@ -263,3 +263,19 @@ Enable extra daemons after installing those packages:
 ```bash
 bash ~/nixos-config/environments/t14s/enable-daemons.sh
 ```
+
+Set up Bluetooth.
+First, set the Bluetooth device in pairing mode.
+
+```bash
+bluetoothctl
+> power on
+> agent on
+> default-agent
+> scan on
+> pair 5C:EB:68:71:71:E7
+> trust 5C:EB:68:71:71:E7
+```
+
+Then turn off your Bluetooth device and restart it.
+Since the Bluetooth device is trusted, it should connect automatically.
