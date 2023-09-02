@@ -60,6 +60,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 input "type:keyboard" {
     xkb_layout se,us
+    xkb_variant nodeadkeys,
     xkb_options grp:rctrl_toggle
     repeat_delay 250
     repeat_rate 50
