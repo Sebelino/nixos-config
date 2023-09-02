@@ -214,6 +214,8 @@ Log in to Google.
 
 Click on the Chrome profile and set the theme color to dark.
 
+Chromium settings -> Appearance -> Show home button
+
 Install extensions:
 
 * Hacker Vision
