@@ -12,6 +12,7 @@ yay -S \
     oh-my-zsh-git \
     zsh-autosuggestions \
     zsh-theme-powerlevel10k \
+    tree \
     ttf-meslo-nerd-font-powerlevel10k \
     wl-clipboard \
     --needed \
