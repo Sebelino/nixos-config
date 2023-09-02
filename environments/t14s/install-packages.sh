@@ -10,6 +10,7 @@ yay -S \
     light \
     mplayer \
     oh-my-zsh-git \
+    zsh-autosuggestions \
     zsh-theme-powerlevel10k \
     ttf-meslo-nerd-font-powerlevel10k \
     wl-clipboard \
