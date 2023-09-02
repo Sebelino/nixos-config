@@ -6,5 +6,6 @@ yay -S \
     cmus \
     dmenu \
     light \
+    oh-my-zsh-git \
     wl-clipboard \
     --noconfirm

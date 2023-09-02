@@ -1,0 +1,16 @@
+# Installed by https://aur.archlinux.org/packages/oh-my-zsh-git
+ZSH=/usr/share/oh-my-zsh/
+
+ZSH_THEME="refined"
+
+plugins=(
+    git
+    colored-man-pages
+)
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
