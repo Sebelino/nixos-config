@@ -8,4 +8,5 @@ yay -S \
     light \
     oh-my-zsh-git \
     wl-clipboard \
+    --needed \
     --noconfirm
