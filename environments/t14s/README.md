@@ -279,3 +279,15 @@ bluetoothctl
 
 Then turn off your Bluetooth device and restart it.
 Since the Bluetooth device is trusted, it should connect automatically.
+
+After installing Neovim with `init.lua`, install any LSPs you need with Mason:
+
+```bash
+nvim
+
+:Mason
+    ◍ bash-language-server bashls
+    ◍ lua-language-server lua_ls
+    ◍ shellcheck
+    ◍ shfmt
+```
