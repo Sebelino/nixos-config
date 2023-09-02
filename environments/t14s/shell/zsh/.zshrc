@@ -1,7 +1,11 @@
-# Powerlevel10k config:
+# Zsh plugins, installed with yay:
 
-# Installed with https://archlinux.org/packages/extra/x86_64/zsh-theme-powerlevel10k/
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
+
+# zsh-autosuggestions
+
+# Powerlevel10k config:
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
