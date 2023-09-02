@@ -10,6 +10,7 @@ yay -S \
     pipewire-audio \
     pipewire-alsa \
     pipewire-pulse \
+    --needed \
     --noconfirm
 
 systemctl --user enable --now pipewire
