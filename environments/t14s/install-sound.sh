@@ -4,7 +4,13 @@ set -Eeuo pipefail
 
 set -x
 
-yay -S --noconfirm pipewire pipewire-docs pipewire-audio pipewire-alsa pipewire-pulse
+yay -S \
+    pipewire \
+    pipewire-docs \
+    pipewire-audio \
+    pipewire-alsa \
+    pipewire-pulse \
+    --noconfirm
 
 systemctl --user enable --now pipewire
 systemctl --user enable --now pipewire-pulse
