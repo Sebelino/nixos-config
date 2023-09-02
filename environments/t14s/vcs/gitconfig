@@ -1,0 +1,15 @@
+[user]
+    name = Sebastian Olsson
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[commit]
+    gpgsign = true
+[advice]
+    skippedCherryPicks = false
+[init]
+    defaultBranch = main
+[alias]
+    rewritebranch = "!f() { git rebase -i $(git merge-base main HEAD); }; f"
