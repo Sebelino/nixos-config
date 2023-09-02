@@ -20,7 +20,7 @@ mkdir -p "$HOME/.config/sway"
 cp /etc/sway/config "$HOME/.config/sway/config"
 sed -i 's/$term foot/$term alacritty/' "$HOME/.config/sway/config"
 
-yay -S --noconfirm xorg-xwayland wofi
+yay -S --noconfirm xorg-xwayland
 yay -S --noconfirm alacritty chromium parted vlc ack p7zip git-lfs git-crypt openssh
 
 # Sway uses seatd, which requires me to be added to this group

@@ -3,6 +3,7 @@
 set -euo pipefail
 
 yay -S \
+    dmenu \
     light \
     wl-clipboard \
     --noconfirm
