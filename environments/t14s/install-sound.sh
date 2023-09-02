@@ -8,8 +8,8 @@ yay -S \
     pipewire \
     pipewire-docs \
     pipewire-audio \
-    pipewire-alsa \
     pipewire-pulse \
+    wireplumber \
     --needed \
     --noconfirm
 
