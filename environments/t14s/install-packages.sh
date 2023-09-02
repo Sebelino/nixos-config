@@ -12,6 +12,7 @@ yay -S \
     oh-my-zsh-git \
     zsh-autosuggestions \
     zsh-theme-powerlevel10k \
+    zsh-syntax-highlighting \
     tree \
     ttf-meslo-nerd-font-powerlevel10k \
     ttf-jetbrains-mono-nerd \
