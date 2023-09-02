@@ -3,6 +3,8 @@
 set -euo pipefail
 
 yay -S \
+    bluez \
+    bluez-utils \
     cmus \
     dmenu \
     light \
