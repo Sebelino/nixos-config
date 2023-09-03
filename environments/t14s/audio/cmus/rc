@@ -11,4 +11,5 @@ set repeat=true
 set repeat_current=true
 set show_hidden=true
 set shuffle=true
+cd ~/gdrive/music
 set start_view=browser
