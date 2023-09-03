@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-yay -S \
-    anki-bin \
-    bat \
-    --needed \
-    --noconfirm
+scriptdir="$(dirname "$(realpath "$0")")"
+
+yay -S --needed --noconfirm - < "$scriptdir/pkgs-apps.txt"
