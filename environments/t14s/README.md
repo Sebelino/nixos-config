@@ -345,10 +345,8 @@ y/n> n
 y/e/d> y
 ```
 
-Now test the rclone setup:
+Now rclone the directories you need:
 
 ```bash
-rclone lsd google-drive:
-mkdir -p ~/gdrive
-rclone sync --interactive ~/gdrive google-drive:
+rclone sync google-drive:/music ~/gdrive/music
 ```
