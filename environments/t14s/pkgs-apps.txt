@@ -1,4 +1,5 @@
 anki-bin
+archiso
 bat
 find-the-command
 lf

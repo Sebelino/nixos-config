@@ -351,3 +351,14 @@ Now rclone the directories you need:
 ```bash
 rclone sync google-drive:/music ~/gdrive/music
 ```
+
+# Build my custom archiso
+
+```bash
+mkdir -p "$HOME/misc/iso/sarch-archiso"
+cd "$HOME/misc/iso/sarch-archiso/"
+cp -r /usr/share/archiso/configs/releng releng
+sudo mkarchiso -v -w "$HOME/misc/iso/sarch-archiso/output" -o "$HOME/misc/iso/sarch-archiso/output" releng/
+
+bash ~/nixos-config/environments/t14s/sarch-burn.sh
+```
