@@ -2,22 +2,6 @@
 
 set -euo pipefail
 
-yay -S \
-    bluez \
-    bluez-utils \
-    cmus \
-    dmenu \
-    light \
-    mplayer \
-    neovim-symlinks \
-    npm \
-    oh-my-zsh-git \
-    zsh-autosuggestions \
-    zsh-theme-powerlevel10k \
-    zsh-syntax-highlighting \
-    tree \
-    ttf-meslo-nerd-font-powerlevel10k \
-    ttf-jetbrains-mono-nerd \
-    wl-clipboard \
-    --needed \
-    --noconfirm
+scriptdir="$(dirname "$(realpath "$0")")"
+
+yay -S --needed --noconfirm - < "$scriptdir/pkgs-essentials.txt"

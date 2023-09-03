@@ -1,0 +1,16 @@
+bluez
+bluez-utils
+cmus
+dmenu
+light
+mplayer
+neovim-symlinks
+npm
+oh-my-zsh-git
+tree
+ttf-jetbrains-mono-nerd
+ttf-meslo-nerd-font-powerlevel10k
+wl-clipboard
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k
