@@ -352,19 +352,39 @@ Now rclone the directories you need:
 rclone sync google-drive:/music ~/gdrive/music
 ```
 
-# Build my custom archiso
+# ISO building
+
+I have created my custom Arch Linux ISO using `archiso`, which I call
+**sarch**. This is how I build it, run it in a VM, and burn it to a USB.
+
+## Setup
+
+Set up a version-controlled directory:
 
 ```bash
-mkdir -p "$HOME/misc/iso/sarch"
-cd "$HOME/misc/iso/sarch/"
-cp -r /usr/share/archiso/configs/releng releng
-sudo mkarchiso -v -w "$HOME/misc/iso/sarch/output" -o "$HOME/misc/iso/sarch/output" releng/
-
-bash ~/nixos-config/environments/t14s/sarch-burn.sh
+bash ~/nixos-config/environments/t14s/sarch-setup.sh
 ```
 
-# Run ISO in a VM:
+## Build
+
+(Re-)build a new `.iso` file from the contents at `~/misc/iso/sarch/`:
+
+```bash
+bash ~/nixos-config/environments/t14s/sarch-rebuild.sh
+```
+
+## Run ISO in a VM
+
+Run the ISO with QEMU to test it:
 
 ```bash
 bash ~/nixos-config/environments/t14s/sarch-boot.sh
+```
+
+## Burn to USB
+
+Write the `.iso` file to an USB plugged into your computer:
+
+```bash
+bash ~/nixos-config/environments/t14s/sarch-burn.sh
 ```
