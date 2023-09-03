@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-cd "$HOME/misc/iso/sarch-archiso/"
+cd "$HOME/misc/iso/sarch/"
 
 isofile="$(ls ./output/*.iso)"
 usb_device="$(ls /dev/disk/by-id/usb* | grep -v "part")"

@@ -355,10 +355,10 @@ rclone sync google-drive:/music ~/gdrive/music
 # Build my custom archiso
 
 ```bash
-mkdir -p "$HOME/misc/iso/sarch-archiso"
-cd "$HOME/misc/iso/sarch-archiso/"
+mkdir -p "$HOME/misc/iso/sarch"
+cd "$HOME/misc/iso/sarch/"
 cp -r /usr/share/archiso/configs/releng releng
-sudo mkarchiso -v -w "$HOME/misc/iso/sarch-archiso/output" -o "$HOME/misc/iso/sarch-archiso/output" releng/
+sudo mkarchiso -v -w "$HOME/misc/iso/sarch/output" -o "$HOME/misc/iso/sarch/output" releng/
 
 bash ~/nixos-config/environments/t14s/sarch-burn.sh
 ```
