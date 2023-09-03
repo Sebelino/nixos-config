@@ -1,2 +1,3 @@
 anki-bin
 bat
+find-the-command
