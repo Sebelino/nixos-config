@@ -36,3 +36,6 @@ source "$ZDOTDIR/aliases.zsh"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
+
+# Suggest packages to install if command not found
+source /usr/share/doc/find-the-command/ftc.zsh noprompt
