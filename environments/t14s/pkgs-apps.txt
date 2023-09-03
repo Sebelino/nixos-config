@@ -3,4 +3,5 @@ archiso
 bat
 find-the-command
 lf
+qemu-full
 rclone

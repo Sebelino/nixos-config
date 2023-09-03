@@ -362,3 +362,9 @@ sudo mkarchiso -v -w "$HOME/misc/iso/sarch-archiso/output" -o "$HOME/misc/iso/sa
 
 bash ~/nixos-config/environments/t14s/sarch-burn.sh
 ```
+
+# Run ISO in a VM:
+
+```bash
+bash ~/nixos-config/environments/t14s/sarch-boot.sh
+```
