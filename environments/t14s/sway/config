@@ -1,10 +1,10 @@
 # Windows key (and '+' on solemak)
 set $mod Mod4
 
-set $left h
-set $down j
-set $up k
-set $right l
+set $left l
+set $down n
+set $up u
+set $right e
 
 set $term alacritty
 
@@ -61,7 +61,7 @@ input "type:touchpad" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+j exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Move your focus around
     bindsym $mod+$left focus left
@@ -117,7 +117,7 @@ input "type:touchpad" {
     # Switch the current container between different layout styles
     bindsym $mod+d layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+j layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
