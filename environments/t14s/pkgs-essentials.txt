@@ -2,12 +2,14 @@ bluez
 bluez-utils
 cmus
 dmenu
+fd
 light
 mplayer
 neovim-symlinks
 npm
 oh-my-zsh-git
 pacman-contrib
+ripgrep
 tree
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
