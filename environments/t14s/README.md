@@ -215,6 +215,7 @@ Log in to Google.
 Click on the Chrome profile and set the theme color to dark.
 
 Chromium settings -> Appearance -> Show home button
+Chromium settings -> On startup -> Continue where you left off
 
 Install extensions:
 
