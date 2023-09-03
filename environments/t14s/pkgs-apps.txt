@@ -1,4 +1,5 @@
 anki-bin
 bat
 find-the-command
+lf
 rclone
