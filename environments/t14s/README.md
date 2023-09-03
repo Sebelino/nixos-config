@@ -297,3 +297,58 @@ Install apps (non-essential packages):
 ```bash
 bash ~/nixos-config/environments/t14s/install-apps.sh
 ```
+
+Set up Google Drive synced directory:
+
+```bash
+rclone config
+
+No remotes found, make a new one?
+n) New remote
+s) Set configuration password
+q) Quit config
+n/s/q> n
+
+Enter name for new remote.
+name> google-drive
+
+Storage> drive
+```
+
+Go to https://console.developers.google.com/.
+
+Enable the Google Drive API if you haven't already.
+
+Click `Credentials`.
+
+Click the `rclone-gdrive-sebelino` client.
+
+```
+client_id> ...
+
+client_secret> ...
+
+scope> drive
+
+service_account_file> (empty)
+
+y/n> n
+
+y/n> y
+```
+
+Go through Google consent screen.
+
+```
+y/n> n
+
+y/e/d> y
+```
+
+Now test the rclone setup:
+
+```bash
+rclone lsd google-drive:
+mkdir -p ~/gdrive
+rclone sync --interactive ~/gdrive google-drive:
+```
