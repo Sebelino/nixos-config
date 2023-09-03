@@ -198,6 +198,24 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  {
+    -- Markdown preview
+    'iamcco/markdown-preview.nvim',
+    build = 'cd app && npm install',
+    ft = 'markdown',
+    lazy = true,
+    keys = { { "gm", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" } },
+    config = function()
+      vim.g.mkdp_auto_close = true
+      vim.g.mkdp_open_to_the_world = false
+      vim.g.mkdp_open_ip = '127.0.0.1'
+      vim.g.mkdp_port = '8888'
+      vim.g.mkdp_browser = ""
+      vim.g.mkdp_echo_preview_url = true
+      vim.g.mkdp_page_title = "${name}"
+    end,
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
