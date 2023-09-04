@@ -5,6 +5,7 @@ _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)A
 # Commit (c)
 alias gc="git commit --verbose"
 alias gcF="git commit --verbose --amend"
+alias gcO="git checkout --patch"
 
 # Index (i)
 alias gia="git add"
