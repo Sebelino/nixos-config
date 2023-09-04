@@ -5,3 +5,4 @@ find-the-command
 lf
 qemu-full
 rclone
+wget
