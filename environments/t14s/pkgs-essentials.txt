@@ -13,6 +13,7 @@ ripgrep
 tree
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
+waybar
 wl-clipboard
 zsh-autosuggestions
 zsh-syntax-highlighting
