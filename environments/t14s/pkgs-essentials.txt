@@ -11,6 +11,7 @@ oh-my-zsh-git
 pacman-contrib
 ripgrep
 tree
+ttf-inconsolata
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
 waybar
