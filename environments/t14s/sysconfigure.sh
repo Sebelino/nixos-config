@@ -16,3 +16,6 @@ symlink "editor/nvim" "$HOME/.config/nvim"
 symlink "audio/cmus/rc" "$HOME/.config/cmus/rc"
 symlink "keyboard/xkb" "$HOME/.xkb"
 symlink "statusbar/waybar" "$HOME/.config/waybar"
+
+# Needed by waybar (keyboard-state)
+sudo usermod -aG input sebelino
