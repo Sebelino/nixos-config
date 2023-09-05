@@ -154,7 +154,8 @@ label:focus {
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: #000000;
+    color: #00ff00;
 }
 
 #disk {
