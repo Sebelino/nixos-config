@@ -32,7 +32,8 @@
         "format-icons": {
             "locked": "",
             "unlocked": ""
-        }
+        },
+        "binding-keys": [1, 58], // Alas, it doesn't seem to work to put ESC here
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
