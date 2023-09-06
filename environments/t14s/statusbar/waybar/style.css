@@ -173,7 +173,8 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    color: #ff0000;
+    background-color: #000000;
 }
 
 #pulseaudio {
