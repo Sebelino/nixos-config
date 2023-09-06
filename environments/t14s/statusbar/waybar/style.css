@@ -260,10 +260,10 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
+    background: #111111;
+    color: #00ffff;
     padding: 0 5px;
-    margin: 0 5px;
+    margin: 0 0px;
     min-width: 16px;
 }
 
