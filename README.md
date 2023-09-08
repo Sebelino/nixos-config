@@ -234,6 +234,21 @@ git lfs install
 git lfs pull
 ```
 
+## Git LFS makes push/pull slow
+
+Git LFS makes Git operations awfully slow for some reason. It can take between
+4 and 20 seconds to just do a `git push`:
+
+```bash
+GIT_TRACE=1 git push  0.04s user 0.05s system 2% cpu 4.295 total
+```
+
+You can mitigate this by passing the `--no-verify` flag:
+
+```bash
+GIT_TRACE=1 git push --no-verify  0.01s user 0.01s system 1% cpu 1.323 total
+```
+
 ## Statusbar
 
 To add Thunderbird to the list of system tray icons, in
