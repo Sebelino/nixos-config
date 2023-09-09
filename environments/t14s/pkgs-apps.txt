@@ -8,6 +8,7 @@ flameshot
 gtk3-demos
 gtk4-demos
 imagemagick
+kind
 lf
 qemu-full
 rclone
