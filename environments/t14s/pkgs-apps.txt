@@ -1,6 +1,7 @@
 anki-bin
 archiso
 bat
+bind
 docker
 drawio-desktop-bin
 find-the-command
