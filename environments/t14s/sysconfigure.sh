@@ -24,6 +24,7 @@ symlink "keyboard/xkb" "$HOME/.xkb"
 symlink "statusbar/waybar" "$HOME/.config/waybar"
 symlink "../../secrets/id_ed25519" "$HOME/.ssh/id_ed25519"
 symlink "../../ssh/id_ed25519.pub" "$HOME/.ssh/id_ed25519.pub"
+symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
