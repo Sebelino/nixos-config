@@ -17,6 +17,7 @@ ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
 waybar
 wl-clipboard
+wofi
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
