@@ -149,6 +149,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+f resize shrink width  96px
+bindsym $mod+p resize grow   width  96px
+
 # Status Bar
 bar {
     position top
