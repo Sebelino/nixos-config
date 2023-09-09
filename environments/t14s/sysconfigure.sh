@@ -6,6 +6,12 @@ scriptdir="$(dirname "$(realpath "$0")")"
 
 source "${scriptdir}/../../lib/common.sh"
 
+if [ ! -L "$HOME/.ssh/id_ed25519" ]; then
+    echo "Converting .ssh/ files into symlinks..."
+    rm "$HOME/.ssh/id_ed25519"
+    rm -f "$HOME/.ssh/id_ed25519.pub"
+fi
+
 symlink "sway" "$HOME/.config/sway"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
 symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
@@ -16,6 +22,10 @@ symlink "editor/nvim" "$HOME/.config/nvim"
 symlink "audio/cmus/rc" "$HOME/.config/cmus/rc"
 symlink "keyboard/xkb" "$HOME/.xkb"
 symlink "statusbar/waybar" "$HOME/.config/waybar"
+symlink "../../secrets/id_ed25519" "$HOME/.ssh/id_ed25519"
+symlink "../../ssh/id_ed25519.pub" "$HOME/.ssh/id_ed25519.pub"
+
+chmod 600 "$HOME/.ssh/id_ed25519"
 
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
