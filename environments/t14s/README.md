@@ -358,6 +358,14 @@ rclone bisync -P google-drive:/music ~/gdrive/music
 
 Anki -> Tools -> Preferences -> Appearance -> Theme = Dark.
 
+Chromium note: If you running Chromium with Wayland support, you might notice
+that some keybindings for Youtube no longer work with Solemak.
+Or rather, you have to switch to a new set of keybindings:
+
+* Pause: Instead of Space (Comma), use K
+* Decrease playback speed: Instead of Shift + Comma (Space + <), use Shift + Space (Space + Comma)
+* Increase playback speed: Instead of Shift + Period (Space + P), use Shift + Ä (Space + Period)
+
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
