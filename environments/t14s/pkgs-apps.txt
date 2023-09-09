@@ -3,11 +3,11 @@ archiso
 bat
 drawio-desktop-bin
 find-the-command
+gtk3-demos
+gtk4-demos
 imagemagick
 lf
 qemu-full
 rclone
 wget
 xorg-xlsclients
-gtk3-demos
-gtk4-demos
