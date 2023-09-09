@@ -3,6 +3,7 @@ archiso
 bat
 drawio-desktop-bin
 find-the-command
+flameshot
 gtk3-demos
 gtk4-demos
 imagemagick
