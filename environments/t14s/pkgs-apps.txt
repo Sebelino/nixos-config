@@ -8,3 +8,4 @@ lf
 qemu-full
 rclone
 wget
+xorg-xlsclients
