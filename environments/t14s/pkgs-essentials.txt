@@ -9,6 +9,7 @@ neovim-symlinks
 npm
 oh-my-zsh-git
 pacman-contrib
+pipewire-v4l2
 ripgrep
 tree
 ttf-inconsolata
@@ -16,6 +17,9 @@ ttf-jetbrains-mono-nerd
 ttf-meslo-nerd-font-powerlevel10k
 waybar
 wl-clipboard
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-theme-powerlevel10k
