@@ -33,3 +33,6 @@ chmod 600 "$HOME/.ssh/id_ed25519"
 
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
+
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
+sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service.d/autologin.conf
