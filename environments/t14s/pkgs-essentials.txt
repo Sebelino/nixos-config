@@ -4,6 +4,7 @@ cmus
 dmenu
 fd
 gnome-themes-extra
+grim
 light
 mplayer
 neovim-symlinks
