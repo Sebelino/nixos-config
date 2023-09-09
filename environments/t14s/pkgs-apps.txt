@@ -9,3 +9,5 @@ qemu-full
 rclone
 wget
 xorg-xlsclients
+gtk3-demos
+gtk4-demos
