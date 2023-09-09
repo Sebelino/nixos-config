@@ -3,6 +3,7 @@ bluez-utils
 cmus
 dmenu
 fd
+gnome-themes-extra
 light
 mplayer
 neovim-symlinks
