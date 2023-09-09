@@ -10,6 +10,7 @@ go-yq
 gtk3-demos
 gtk4-demos
 imagemagick
+jq
 kind
 lf
 qemu-full
