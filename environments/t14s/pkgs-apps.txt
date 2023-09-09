@@ -3,6 +3,7 @@ archiso
 bat
 drawio-desktop-bin
 find-the-command
+imagemagick
 lf
 qemu-full
 rclone
