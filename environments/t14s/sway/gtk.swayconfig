@@ -1,0 +1,9 @@
+# Sway doesn't properly read ~/.config/gtk-3.0/, so we need Gsettings instead. See:
+# https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+    gsettings set $gnome-schema icon-theme 'Adwaita-dark'
+}

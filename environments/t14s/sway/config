@@ -169,6 +169,7 @@ bar {
 }
 
 include /etc/sway/config.d/*
+include ~/.config/sway/gtk.swayconfig
 
 # Audio control
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
