@@ -350,6 +350,10 @@ Now rclone the directories you need:
 
 ```bash
 rclone sync google-drive:/music ~/gdrive/music
+
+# Bidirectional sync:
+rclone bisync -P google-drive:/music ~/gdrive/music --resync
+rclone bisync -P google-drive:/music ~/gdrive/music
 ```
 
 # ISO building
