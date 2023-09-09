@@ -356,6 +356,8 @@ rclone bisync -P google-drive:/music ~/gdrive/music --resync
 rclone bisync -P google-drive:/music ~/gdrive/music
 ```
 
+Anki -> Tools -> Preferences -> Appearance -> Theme = Dark.
+
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
