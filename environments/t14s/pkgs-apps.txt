@@ -1,6 +1,7 @@
 anki-bin
 archiso
 bat
+drawio-desktop-bin
 find-the-command
 lf
 qemu-full
