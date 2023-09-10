@@ -25,3 +25,6 @@ alias gpf="git push --force-with-lease"
 alias gws="git status --short"
 alias gwS="git status"
 alias gwd="git diff --no-ext-diff"
+
+# kubectl
+alias k=kubectl
