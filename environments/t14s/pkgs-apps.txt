@@ -3,6 +3,7 @@ archiso
 bat
 bind
 docker
+docker-buildx
 drawio-desktop-bin
 flameshot
 go-yq
