@@ -4,7 +4,6 @@ bat
 bind
 docker
 drawio-desktop-bin
-find-the-command
 flameshot
 go-yq
 gtk3-demos
