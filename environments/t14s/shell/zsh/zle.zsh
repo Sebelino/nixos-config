@@ -4,7 +4,7 @@
 # $ gc -m "feat: @"
 # with your cursor positioned at '@'.
 _git_commit_prep() {
-  LBUFFER='gc -m "chore: '
+  LBUFFER='gc -m "feat: '
   RBUFFER='"'
 }
 zle -N _git_commit_prep
