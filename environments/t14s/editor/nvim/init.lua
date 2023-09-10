@@ -256,8 +256,8 @@ vim.o.breakindent = true
 vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.o.ignorecase = false
+vim.o.smartcase = false
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
