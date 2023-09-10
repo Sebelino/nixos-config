@@ -8,6 +8,9 @@ alias gcf="git commit --amend --reuse-message HEAD"
 alias gcF="git commit --verbose --amend"
 alias gcO="git checkout --patch"
 
+# Fetch (f)
+alias gfr="git pull --rebase"
+
 # Index (i)
 alias gia="git add"
 alias giA="git add --patch"
