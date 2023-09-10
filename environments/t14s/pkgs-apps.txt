@@ -11,6 +11,7 @@ gtk4-demos
 imagemagick
 jc
 jq
+k9s
 kind
 lf
 qemu-full
