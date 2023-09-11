@@ -419,12 +419,29 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Custom keymaps
+
+-- F12 to toggle highlight of search terms
 vim.keymap.set('n', '<F12>', function()
   if not vim.o.hlsearch then
     vim.o.hlsearch = true
   else
     vim.o.hlsearch = false
   end
+end)
+
+-- CTRL+y to gracefully exit Neovim
+vim.keymap.set('n', '<C-y>', function ()
+  vim.cmd(':qa')
+end)
+
+-- CTRL+u to force-exit Neovim
+vim.keymap.set('n', '<C-u>', function ()
+  vim.cmd(':qa!')
+end)
+
+-- CTRL+s to save file
+vim.keymap.set('n', '<C-s>', function ()
+  vim.cmd(':w')
 end)
 
 -- [[ Configure LSP ]]
