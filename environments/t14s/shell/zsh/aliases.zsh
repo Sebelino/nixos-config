@@ -2,6 +2,9 @@
 
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
+# Branch (b)
+alias gbc="git checkout -b"
+
 # Commit (c)
 alias gc="git commit --verbose"
 alias gcf="git commit --amend --reuse-message HEAD"
