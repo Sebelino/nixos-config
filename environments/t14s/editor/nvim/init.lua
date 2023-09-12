@@ -444,6 +444,11 @@ vim.keymap.set('n', '<C-s>', function ()
   vim.cmd(':w')
 end)
 
+-- CTRL+h to save file and quit
+vim.keymap.set('n', '<C-h>', function ()
+  vim.cmd(':wq')
+end)
+
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
