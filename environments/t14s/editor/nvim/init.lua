@@ -435,7 +435,7 @@ vim.keymap.set('n', '<C-y>', function ()
 end)
 
 -- CTRL+u to force-exit Neovim
-vim.keymap.set('n', '<C-u>', function ()
+vim.keymap.set('n', '<C-q>', function ()
   vim.cmd(':qa!')
 end)
 
