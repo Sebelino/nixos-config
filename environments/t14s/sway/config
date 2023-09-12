@@ -182,3 +182,10 @@ bindsym XF86MonBrightnessDown exec light -U 100
 
 # Hovering the mouse pointer over a window shouldn't switch focus
 focus_follows_mouse no
+
+# Property Name             Border  BG      Text    Indicator Child-border
+client.focused              #0a0b16 #2f343f #00ff00 #4477ff   #800000
+client.focused_inactive     #111111 #111111 #007700 #112233   #111111
+client.unfocused            #111111 #111111 #007700 #112233   #111111
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f   #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f   #2f343f
