@@ -32,5 +32,6 @@ alias gws="git status --short"
 alias gwS="git status"
 alias gwd="git diff --no-ext-diff"
 
-# kubectl
+# Custom
 alias k=kubectl
+alias v=nvim
