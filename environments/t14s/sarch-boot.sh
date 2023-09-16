@@ -4,6 +4,5 @@ set -euo pipefail
 
 set -x
 
-cd "$HOME/misc/iso/sarch/"
-isofile="$(ls ./output/*.iso)"
+isofile="$(find "$HOME/misc/iso/sarch/output/" -name '*.iso')"
 run_archiso -i "$isofile"
