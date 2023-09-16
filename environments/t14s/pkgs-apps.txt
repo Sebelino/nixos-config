@@ -17,6 +17,7 @@ k9s
 kind
 kubectx
 lf
+net-tools
 nmap
 qemu-full
 rclone
