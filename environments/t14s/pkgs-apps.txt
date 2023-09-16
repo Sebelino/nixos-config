@@ -9,6 +9,7 @@ drawio-desktop-bin
 flameshot
 fzf
 go-yq
+gptfdisk
 gtk3-demos
 gtk4-demos
 imagemagick
