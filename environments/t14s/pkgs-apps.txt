@@ -20,5 +20,6 @@ lf
 nmap
 qemu-full
 rclone
+transmission-gtk
 wget
 xorg-xlsclients
