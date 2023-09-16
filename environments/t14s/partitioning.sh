@@ -2,8 +2,6 @@
 
 set -Eeuo pipefail
 
-set -x
-
 device_name="$(lsblk -J | jq -r '.blockdevices[] | select(.type == "disk") | .name')"
 
 device_file="/dev/${device_name}"
@@ -23,6 +21,8 @@ select yn in "Yes" "No"; do
         No ) exit;;
     esac
 done
+
+set -x
 
 sgdisk --new=:: "$device_file"
 
