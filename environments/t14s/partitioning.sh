@@ -12,6 +12,9 @@ ls "${device_file}"
 # Print all disks
 lsblk
 
+# Print candidate disk details (including free space)
+sgdisk --print ${device_file}
+
 echo ""
 echo "Create a new partition in this disk?: --> ${device_file} <--"
 
