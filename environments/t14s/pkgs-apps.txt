@@ -2,6 +2,7 @@ anki-bin
 archiso
 bat
 bind
+dnsmasq
 docker
 docker-buildx
 drawio-desktop-bin
@@ -22,5 +23,6 @@ nmap
 qemu-full
 rclone
 transmission-gtk
+virt-manager
 wget
 xorg-xlsclients
