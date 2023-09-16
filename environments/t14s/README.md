@@ -402,3 +402,53 @@ Write the `.iso` file to an USB plugged into your computer:
 ```bash
 bash ~/nixos-config/environments/t14s/sarch-burn.sh
 ```
+
+# Test ISO
+
+Let's replicate the conditions for a dual-boot install in a VM.
+
+Download a Windows 8.1 Single Language ISO here:
+
+https://www.microsoft.com/en-us/software-download/windows8ISO
+
+A product key may be required later. Look for one online, specifically for the
+Windows 8.1 Single Language version.
+
+Next, create a Windows 8.1 VM in virt-manager:
+
+```bash
+virt-manager &!
+```
+
+along with a disk. Give it a size of 64 GB. Install Windows 8.1 on this disk.
+
+Inside Windows, use the Disk Management utility to shrink the disk as much as
+you can.
+
+Next, create a new VM for your Sarch ISO. Make this VM use the 64 GB disk.
+Boot into Sarch. The disk should now be mounted:
+
+```bash
+lsblk
+
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+loop0    7:0 0 702.1M 1 loop /run/archiso/airootfs
+sr0     11:0 1 824.3M 0 rom  /run/archiso/bootmnt
+vda    254:0 0 64G    0 disk
+├─vda1 254:1 0 350M   0 part
+└─vda2 254:2 0 32.2G  0 part
+```
+
+and you should be able to partition the disk:
+
+```bash
+parted /dev/vda
+```
+
+## Boot phase (sarch)
+
+Run the preinstalled install script:
+
+```bash
+./install.sh
+```
