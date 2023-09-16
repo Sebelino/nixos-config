@@ -449,6 +449,9 @@ vim.keymap.set('n', '<C-h>', function ()
   vim.cmd(':wq')
 end)
 
+-- CTRL+p to format current paragraph
+vim.keymap.set('n', '<C-p>', 'gwip')
+
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
