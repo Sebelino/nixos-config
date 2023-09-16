@@ -32,7 +32,8 @@ symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.con
 chmod 600 "$HOME/.ssh/id_ed25519"
 
 # Needed by waybar (keyboard-state)
-sudo usermod -aG input,docker sebelino
+sudo usermod -aG input sebelino
+sudo usermod -aG docker sebelino
 sudo usermod -aG libvirt sebelino
 
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
