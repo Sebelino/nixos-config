@@ -9,5 +9,8 @@ sudo systemctl enable --now docker
 # Used by virt-manager
 sudo systemctl enable --now libvirtd
 
+# Smart card reader
+sudo systemctl enable --now pcscd
+
 ## Unclear if this one is needed
 #systemctl enable --now --user xdg-desktop-portal-wlr

@@ -2,6 +2,7 @@ anki-bin
 archiso
 bat
 bind
+ccid
 dnsmasq
 docker
 docker-buildx
@@ -25,6 +26,8 @@ libva-utils
 mesa-utils
 net-tools
 nmap
+opensc
+pcsc-tools
 qemu-full
 rclone
 strace
