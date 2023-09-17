@@ -8,6 +8,7 @@ docker-buildx
 drawio-desktop
 flameshot
 fzf
+gdb
 go-yq
 gptfdisk
 gtk3-demos
