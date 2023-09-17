@@ -15,6 +15,7 @@ go-yq
 gptfdisk
 gtk3-demos
 gtk4-demos
+helm
 imagemagick
 jc
 jq
