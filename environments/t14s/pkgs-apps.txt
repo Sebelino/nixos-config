@@ -3,6 +3,7 @@ archiso
 bat
 bind
 ccid
+dmidecode
 dnsmasq
 docker
 docker-buildx
