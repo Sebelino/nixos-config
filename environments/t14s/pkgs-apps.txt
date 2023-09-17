@@ -37,6 +37,7 @@ strace
 terraform
 transmission-gtk
 ttf-comic-neue
+unzip
 virt-manager
 wget
 xorg-xlsclients
