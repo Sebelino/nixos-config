@@ -5,7 +5,7 @@ bind
 dnsmasq
 docker
 docker-buildx
-drawio-desktop-bin
+drawio-desktop
 flameshot
 fzf
 go-yq
@@ -24,6 +24,7 @@ nmap
 qemu-full
 rclone
 transmission-gtk
+ttf-comic-neue
 virt-manager
 wget
 xorg-xlsclients
