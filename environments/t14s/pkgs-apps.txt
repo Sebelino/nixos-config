@@ -24,6 +24,7 @@ net-tools
 nmap
 qemu-full
 rclone
+strace
 transmission-gtk
 ttf-comic-neue
 virt-manager
