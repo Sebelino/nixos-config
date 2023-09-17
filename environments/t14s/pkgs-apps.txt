@@ -27,6 +27,7 @@ libva-mesa-driver
 libva-utils
 mesa-utils
 net-tools
+ngrok
 nmap
 opensc
 pcsc-tools
