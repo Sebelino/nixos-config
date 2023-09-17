@@ -454,6 +454,11 @@ end)
 -- CTRL+p to format current paragraph
 vim.keymap.set('n', '<C-p>', 'gwip')
 
+-- CTRL+l to format file
+vim.keymap.set('n', '<C-l>', function ()
+  vim.cmd(':TerraformFmt')
+end)
+
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
