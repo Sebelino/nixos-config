@@ -20,6 +20,9 @@ k9s
 kind
 kubectx
 lf
+libva-mesa-driver
+libva-utils
+mesa-utils
 net-tools
 nmap
 qemu-full
