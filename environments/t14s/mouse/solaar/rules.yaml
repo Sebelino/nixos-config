@@ -100,14 +100,11 @@
 ...
 ---
 - Key: [Middle Button, pressed]
-- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'middle-click']
+- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'Middle Button']
 ...
 ---
-- And:
-  - Not:
-      Process: chromium
-  - Key: [Forward Button, released]
-- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'kill-window']
+- Key: [Forward Button, released]
+- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'Forward Button']
 ...
 ---
 - Key: [Smart Shift, pressed]
