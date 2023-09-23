@@ -8,6 +8,7 @@ dnsmasq
 docker
 docker-buildx
 drawio-desktop
+dunst
 flameshot
 fzf
 gdb

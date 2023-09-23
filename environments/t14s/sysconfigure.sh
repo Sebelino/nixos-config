@@ -29,6 +29,7 @@ symlink "../../theme/gtk-4.0/settings.ini" "$HOME/.config/gtk-4.0/settings.ini"
 symlink "../../theme/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 symlink "../../theme/gtkrc-2.0" "$HOME/.gtkrc-2.0"
 symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
+symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
