@@ -91,14 +91,6 @@
   - click
 ...
 ---
-- And:
-  - Process: chromium
-  - Key: [Forward Button, released]
-- KeyPress:
-  - [Control_L, w]
-  - click
-...
----
 - Key: [Middle Button, pressed]
 - Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'Middle Button']
 ...

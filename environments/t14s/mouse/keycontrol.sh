@@ -12,18 +12,25 @@ get_app_name() {
 
 kc_Hyper_L=12
 kc_Shift_R=57
-key_T=33
-key_F5=63
+kc_F5=63
+kc_Ctrl=58
+kc_W=17
+kc_T=33
 
 case "$argument" in
     'Forward Button')
-        notify-send --urgency=low 'Kill window'
-        ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $key_T:1 $key_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
+        app_name="$(get_app_name)"
+        if [ "$app_name" = "chromium" ]; then
+            ydotool key $kc_Ctrl:1 $kc_W:1 $kc_W:0 $kc_Ctrl:0
+        else
+            notify-send --urgency=low 'Kill window'
+            ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $kc_T:1 $kc_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
+        fi
     ;;
     'Middle Button')
         app_name="$(get_app_name)"
         if [ "$app_name" = "chromium" ]; then
-            ydotool key $key_F5:1 $key_F5:0
+            ydotool key $kc_F5:1 $kc_F5:0
         else
             notify-send --urgency=low 'Ineffective middle click'
         fi
