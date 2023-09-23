@@ -49,9 +49,9 @@
 ...
 ---
 - MouseGesture: Mouse Down
-- Execute: [notify-send, --urgency=low, Toggle between windows]
+- Execute: [notify-send, --urgency=low, '9', Switch window]
 - KeyPress:
-  - [Hyper_L, n]
+  - [Hyper_L, '9']
   - click
 ...
 ---
