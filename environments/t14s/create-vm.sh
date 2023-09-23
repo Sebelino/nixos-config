@@ -5,7 +5,16 @@
 
 set -euo pipefail
 
+scriptdir="$(dirname "$(realpath "$0")")"
+
 set -x
+
+image_pool_name="images"
+
+virsh pool-delete --pool "$image_pool_name" || true
+virsh pool-undefine --pool "$image_pool_name" || true
+virsh pool-define --validate --file "${scriptdir}/vm/libvirt/pool-images.xml"
+virsh pool-build "$image_pool_name"
 
 vm_name="win81"
 
