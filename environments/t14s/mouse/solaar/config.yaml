@@ -5,18 +5,19 @@
     sidetone, equalizer, adc_power_management]
   _battery: 4096
   _modelId: B02340820000
-  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _sensitive: {change-host: false, divert-keys: false, dpi-sliding: false, hires-smooth-invert: false, hires-smooth-resolution: false, mouse-gestures: false,
+    reprogrammable-keys: false, thumb-scroll-mode: false}
   _serial: CD63774D
   _unitId: CD63774D
   _wpid: '4082'
   change-host: null
-  divert-keys: {82: 0, 83: 0, 86: 0, 195: 0, 196: 0}
+  divert-keys: {82: 1, 83: 0, 86: 1, 195: 2, 196: 1}
   dpi: 1000
   hires-scroll-mode: false
   hires-smooth-invert: false
   hires-smooth-resolution: true
   reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 195: 195, 196: 196}
   scroll-ratchet: 1
-  smart-shift: 1
+  smart-shift: 0
   thumb-scroll-invert: false
   thumb-scroll-mode: false

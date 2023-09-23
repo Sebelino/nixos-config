@@ -44,3 +44,4 @@ virt-manager
 wev
 wget
 xorg-xlsclients
+ydotool
