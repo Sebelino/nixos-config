@@ -8,9 +8,9 @@
 ...
 ---
 - MouseGesture: Mouse Left
-- Execute: [notify-send, --urgency=low, '3', Switch window]
+- Execute: [notify-send, --urgency=low, '1', Switch window]
 - KeyPress:
-  - [Hyper_L, '3']
+  - [Hyper_L, '1']
   - click
 ...
 ---
@@ -22,9 +22,9 @@
 ...
 ---
 - MouseGesture: Mouse Right
-- Execute: [notify-send, --urgency=low, '6', Switch window]
+- Execute: [notify-send, --urgency=low, '8', Switch window]
 - KeyPress:
-  - [Hyper_L, '6']
+  - [Hyper_L, '8']
   - click
 ...
 ---
