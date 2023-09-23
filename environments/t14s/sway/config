@@ -14,7 +14,7 @@ set $term alacritty
 set $menu dmenu_path | dmenu -nb '#000000' -sf '#1e1e1e' -sb '#00f000' -nf '#00f000' | xargs swaymsg exec --
 
 # Desktop background
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/sebelino/nixos-config/windowmanager/wallpaper fill
 
 # Idle configuration
 # This will lock your screen after X seconds of inactivity, then turn off
