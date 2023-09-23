@@ -99,19 +99,15 @@
   - click
 ...
 ---
-- And:
-  - Process: chromium
-  - Key: [Middle Button, pressed]
-- KeyPress:
-  - F5
-  - click
+- Key: [Middle Button, pressed]
+- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'middle-click']
 ...
 ---
 - And:
   - Not:
       Process: chromium
   - Key: [Forward Button, released]
-- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'killwindow']
+- Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'kill-window']
 ...
 ---
 - Key: [Smart Shift, pressed]
