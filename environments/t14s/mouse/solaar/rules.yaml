@@ -83,14 +83,6 @@
   - click
 ...
 ---
-- And:
-  - Process: anki
-  - Key: [Forward Button, released]
-- KeyPress:
-  - space
-  - click
-...
----
 - Key: [Middle Button, pressed]
 - Execute: [/home/sebelino/nixos-config/environments/t14s/mouse/keycontrol.sh, 'Middle Button']
 ...
