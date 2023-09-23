@@ -6,11 +6,27 @@ argument="$1"
 
 # Keycodes for ydotool can be found in /usr/include/linux/input-event-codes.h
 
+kc_Hyper_L=12
+kc_Shift_R=57
+key_T=33
+key_F5=63
+
 case "$argument" in
-    killwindow)
+    kill-window)
         notify-send --urgency=low 'Kill window'
         # Hyper_L + Shift_R + t
-        ydotool key 12:1 57:1 33:1 33:0 57:0 12:0
+        ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $key_T:1 $key_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
+    ;;
+    middle-click)
+        echo hoy
+        app_name="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .app_id')"
+        echo "$app_name"
+        if [ "$app_name" = "chromium" ]; then
+            # F5
+            ydotool key $key_F5:1 $key_F5:0
+        else
+            notify-send --urgency=low 'Ineffective middle click'
+        fi
     ;;
     *) notify-send --urgency=low 5 "Unrecognized argument to keycontrol.sh: $argument"
     ;;
