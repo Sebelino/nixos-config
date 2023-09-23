@@ -33,6 +33,7 @@ opensc
 pcsc-tools
 qemu-full
 rclone
+solaar
 strace
 terraform
 transmission-gtk
