@@ -16,6 +16,8 @@ set $menu dmenu_path | dmenu -nb '#000000' -sf '#1e1e1e' -sb '#00f000' -nf '#00f
 # Desktop background
 output * bg /home/sebelino/nixos-config/windowmanager/wallpaper fill
 
+exec_always QT_QPA_PLATFORM='wayland' flameshot
+
 # Idle configuration
 # This will lock your screen after X seconds of inactivity, then turn off
 # your displays after Y seconds, and turn your screens back on when
