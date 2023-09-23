@@ -30,15 +30,26 @@ symlink "../../theme/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 symlink "../../theme/gtkrc-2.0" "$HOME/.gtkrc-2.0"
 symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
+symlink "vm/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
 sudo usermod -aG docker sebelino
-sudo usermod -aG libvirt sebelino
 
+# Needed by libvirt (virt-manager, virt-install)
+sudo usermod -aG libvirt sebelino
+sudo usermod -aG kvm sebelino
+
+# Needed for autologin
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
 sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service.d/autologin.conf
 
+# Smart card related
 sudo cp "$scriptdir/smartcard/opensc.conf" /etc/opensc.conf
+
+# Prevents virt-manager error:
+# "Requested operation is not valid: network 'default' is not active"
+# You can also start it manually with `virsh net-start default`
+virsh net-autostart --network default

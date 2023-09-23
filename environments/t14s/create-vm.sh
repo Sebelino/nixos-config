@@ -10,10 +10,10 @@ set -x
 vm_name="win81"
 
 # Destroy VM if it already exists
-sudo virsh destroy "$vm_name" || true
-sudo virsh undefine --nvram "$vm_name" || true
+virsh destroy "$vm_name" || true
+virsh undefine --nvram "$vm_name" || true
 
-sudo virt-install \
+virt-install \
     --name "$vm_name" \
     --ram=4096 \
     --vcpus=2 \
