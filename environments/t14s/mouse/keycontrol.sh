@@ -18,13 +18,11 @@ key_F5=63
 case "$argument" in
     'Forward Button')
         notify-send --urgency=low 'Kill window'
-        # Hyper_L + Shift_R + t
         ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $key_T:1 $key_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
     ;;
     'Middle Button')
         app_name="$(get_app_name)"
         if [ "$app_name" = "chromium" ]; then
-            # F5
             ydotool key $key_F5:1 $key_F5:0
         else
             notify-send --urgency=low 'Ineffective middle click'
