@@ -1,0 +1,17 @@
+<pool type='dir'>
+  <name>images</name>
+  <uuid>096c1cc8-fd8c-465f-a3ae-c15c4af898f6</uuid>
+  <capacity unit='bytes'>0</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>0</available>
+  <source>
+  </source>
+  <target>
+    <path>/home/sebelino/.local/share/libvirt/images</path>
+    <permissions>
+      <mode>0777</mode>
+      <owner>0</owner>
+      <group>0</group>
+    </permissions>
+  </target>
+</pool>
