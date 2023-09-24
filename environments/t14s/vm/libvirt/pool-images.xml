@@ -10,8 +10,8 @@
     <path>/home/sebelino/.local/share/libvirt/images</path>
     <permissions>
       <mode>0777</mode>
-      <owner>0</owner>
-      <group>0</group>
+      <owner>963</owner>
+      <group>963</group>
     </permissions>
   </target>
 </pool>
