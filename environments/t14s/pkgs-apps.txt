@@ -42,6 +42,7 @@ transmission-gtk
 ttf-comic-neue
 unzip
 virt-manager
+virt-viewer
 wev
 wget
 xorg-xlsclients

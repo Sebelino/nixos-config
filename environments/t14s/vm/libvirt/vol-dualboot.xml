@@ -1,0 +1,14 @@
+<volume>
+  <name>dualboot</name>
+  <allocation>0</allocation>
+  <capacity unit="G">10</capacity>
+  <target>
+    <path>/home/sebelino/.local/share/libvirt/images/dualboot</path>
+    <permissions>
+      <owner>963</owner>
+      <group>963</group>
+      <mode>0777</mode>
+      <label>virt_image_t</label>
+    </permissions>
+  </target>
+</volume>
