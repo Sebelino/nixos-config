@@ -5,7 +5,7 @@ set -euo pipefail
 argument="$1"
 
 get_app_name() {
-    swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .app_id'
+    swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | if .app_id != null then .app_id else .window_properties.instance end'
 }
 
 # Keycodes for ydotool can be found in /usr/include/linux/input-event-codes.h
