@@ -10,6 +10,7 @@ export GPG_TTY=$(tty)
 export XDG_CURRENT_DESKTOP=sway
 
 # Needed by Flameshot
+export QT_QPA_PLATFORM="wayland"
 export SDL_VIDEODRIVER="wayland,x11"
 export _JAVA_AWT_WM_NONREPARENTING=1
 #export XDG_SESSION_DESKTOP="sway"
