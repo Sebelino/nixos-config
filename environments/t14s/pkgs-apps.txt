@@ -33,6 +33,7 @@ nmap
 opensc
 pcsc-tools
 qemu-full
+qt6-wayland
 rclone
 solaar
 strace
