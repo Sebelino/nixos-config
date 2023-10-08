@@ -10,7 +10,7 @@ docker-buildx
 downgrade
 drawio-desktop
 dunst
-flameshot
+flameshot-git
 fzf
 gdb
 go-yq
