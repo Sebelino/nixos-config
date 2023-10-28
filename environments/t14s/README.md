@@ -452,3 +452,7 @@ Run the preinstalled install script:
 ```bash
 ./install.sh
 ```
+
+# VPN
+
+If required, see [`VPN.md`](./VPN.md) on how to set up a VPN client.
