@@ -36,7 +36,6 @@ ngrok
 nm-connection-editor
 nmap
 openconnect
-opensc
 pam_pkcs11
 pcsc-tools
 pcsclite

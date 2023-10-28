@@ -47,9 +47,6 @@ sudo usermod -aG kvm sebelino
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
 sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service.d/autologin.conf
 
-# Smart card related
-sudo cp "$scriptdir/smartcard/opensc.conf" /etc/opensc.conf
-
 # Prevents virt-manager error:
 # "Requested operation is not valid: network 'default' is not active"
 # You can also start it manually with `virsh net-start default`
