@@ -1,7 +1,7 @@
 <volume>
   <name>dualboot</name>
   <allocation>0</allocation>
-  <capacity unit="G">10</capacity>
+  <capacity unit="G">64</capacity>
   <target>
     <path>/home/sebelino/.local/share/libvirt/images/dualboot</path>
     <permissions>
