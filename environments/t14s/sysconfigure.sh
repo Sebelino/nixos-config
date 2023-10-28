@@ -54,3 +54,10 @@ sudo cp "$scriptdir/smartcard/opensc.conf" /etc/opensc.conf
 # "Requested operation is not valid: network 'default' is not active"
 # You can also start it manually with `virsh net-start default`
 virsh net-autostart --network default
+
+# Needed because VPN server does not send intermediate cert, causing trust warning in Pulse Secure
+sudo trust -v anchor --store "$scriptdir/vpn/secrets/DigiCertTLSRSASHA2562020CA1-1.crt.pem"
+
+# To prevent untrusted CA errors by non-browser tools
+sudo trust -v anchor --store "$scriptdir/vpn/secrets/Region Stockholm RSA Rot CA v3.pem"
+sudo trust -v anchor --store "$scriptdir/vpn/secrets/SITHS e-id Root CA v2.pem"

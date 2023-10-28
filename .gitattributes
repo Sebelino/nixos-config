@@ -1,2 +1,2 @@
-secrets/** filter=git-crypt diff=git-crypt
+**/secrets/** filter=git-crypt diff=git-crypt
 blobs/** filter=lfs diff=lfs merge=lfs -text

@@ -1,5 +1,7 @@
 anki-bin
+teams-for-linux
 archiso
+openshift-client-bin
 bat
 bind
 ccid
@@ -29,10 +31,15 @@ libva-mesa-driver
 libva-utils
 mesa-utils
 net-tools
+networkmanager-openconnect
 ngrok
+nm-connection-editor
 nmap
+openconnect
 opensc
+pam_pkcs11
 pcsc-tools
+pcsclite
 qemu-full
 qt6-wayland
 rclone
@@ -42,6 +49,7 @@ terraform
 transmission-gtk
 ttf-comic-neue
 unzip
+usbutils
 virt-manager
 virt-viewer
 wev
