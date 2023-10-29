@@ -31,6 +31,7 @@ mesa-utils
 net-tools
 ngrok
 nmap
+openconnect
 pam_pkcs11
 pcsc-tools
 pcsclite
