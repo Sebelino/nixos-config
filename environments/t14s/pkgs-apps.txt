@@ -43,6 +43,7 @@ terraform
 transmission-gtk
 ttf-comic-neue
 unzip
+usbutils
 virt-manager
 virt-viewer
 wev
