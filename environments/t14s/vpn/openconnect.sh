@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+# This script assumes your smartcard is inserted.
+
 set -euo pipefail
 
 VPN_SERVER="sam.sll.se"
 OPENCONNECT_BIN_PATH="$HOME/src/openconnect/openconnect"
-TOKEN_URL_PATH=/tmp/tokenurl.txt
-CERT_TOKEN_URL_PATH=/tmp/certtokenurl.txt
+TOKEN_URL_PATH=/tmp/tokenurl.txt # Cache the token URL to avoid unnecessary p11tool calls
+CERT_TOKEN_URL_PATH=/tmp/certtokenurl.txt # Cache the token URL to avoid unnecessary p11tool calls
 
 set -x
 
