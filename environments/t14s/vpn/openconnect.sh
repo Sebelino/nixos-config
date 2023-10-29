@@ -8,8 +8,15 @@ VPN_SERVER="sam.sll.se"
 OPENCONNECT_BIN_PATH="$HOME/src/openconnect/openconnect"
 TOKEN_URL_PATH=/tmp/tokenurl.txt # Cache the token URL to avoid unnecessary p11tool calls
 CERT_TOKEN_URL_PATH=/tmp/certtokenurl.txt # Cache the token URL to avoid unnecessary p11tool calls
+TUN_IFACE="vpn0" # Will be shown in the output of `ip link show`
 
 set -x
+
+if [ ! -d "/sys/class/net/${TUN_IFACE}" ]; then
+    # If not already done, create a network interface for OpenConnect to use. Will disappear on reboot.
+    # See https://www.infradead.org/openconnect/nonroot.html
+    sudo ip tuntap add "$TUN_IFACE" mode tun user "$USER"
+fi
 
 if [ -f "$TOKEN_URL_PATH" ]; then
     tokenurl="$(cat "$TOKEN_URL_PATH")"

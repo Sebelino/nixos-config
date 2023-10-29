@@ -97,14 +97,6 @@ $ ./configure
 $ make
 ```
 
-Create a network interface for OpenConnect to use (taken from
-[here](https://www.infradead.org/openconnect/nonroot.html)):
-
-```bash
-$ sudo ip tuntap add vpn0 mode tun user "$USER"
-$ ip link show
-```
-
 Run the VPN using the [`openconnect.sh`](./vpn/openconnect.sh) wrapper script:
 
 ```bash
