@@ -117,3 +117,5 @@ certificates at the `Authorities` tab in Chromium:
 
 * `./vpn/secrets/Region Stockholm RSA Rot CA v3.pem`
 * `./vpn/secrets/SITHS e-id Root CA v2.pem.pem`
+
+![image](https://github.com/Sebelino/nixos-config/assets/837775/93009875-9ade-48fe-8192-543b107322ef)
