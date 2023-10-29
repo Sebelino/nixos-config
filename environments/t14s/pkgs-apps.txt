@@ -1,7 +1,5 @@
 anki-bin
-teams-for-linux
 archiso
-openshift-client-bin
 bat
 bind
 ccid
@@ -34,6 +32,7 @@ net-tools
 ngrok
 nmap
 openconnect
+openshift-client-bin
 pam_pkcs11
 pcsc-tools
 pcsclite
@@ -42,6 +41,7 @@ qt6-wayland
 rclone
 solaar
 strace
+teams-for-linux
 terraform
 transmission-gtk
 ttf-comic-neue
