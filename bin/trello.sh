@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-APP=google-chrome
+APP=chromium
 
 "$APP" --app=https://trello.com/b/tE0AZdus/tasks
