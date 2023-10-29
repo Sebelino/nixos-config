@@ -1,4 +1,5 @@
 anki-bin
+teams-for-linux
 archiso
 openshift-client-bin
 bat
