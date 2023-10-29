@@ -1,5 +1,6 @@
 anki-bin
 archiso
+openshift-client-bin
 bat
 bind
 ccid
