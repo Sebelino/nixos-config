@@ -51,6 +51,7 @@ virt-manager
 virt-viewer
 wev
 wget
+wireshark-qt
 xorg-xlsclients
 ydotool
 zathura
