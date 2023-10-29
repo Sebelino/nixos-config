@@ -49,6 +49,7 @@ unzip
 usbutils
 virt-manager
 virt-viewer
+wdisplays-git
 wev
 wget
 wireshark-qt
