@@ -1,5 +1,16 @@
 #!/usr/bin/env zsh
 
+_openssl_print_cert() {
+  if [ "$#" -eq 1 ]; then
+    cert="$1"
+  else
+    tempfile="$(mktemp)"
+    echo "$(</dev/stdin)" > "$tempfile"
+    cert="$tempfile"
+  fi
+  openssl x509 -text -noout -in "$cert"
+}
+
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
 # Branch (b)
@@ -39,3 +50,4 @@ alias tfa="terraform apply"
 alias tfp="terraform plan"
 alias tfi="terraform init"
 alias tfd="terraform destroy"
+alias cer=_openssl_print_cert
