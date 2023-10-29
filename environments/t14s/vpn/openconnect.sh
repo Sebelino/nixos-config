@@ -27,6 +27,7 @@ else
 fi
 
 # Prompts for PIN code
+# Add --dump-http-traffic, --printcookie, -vvvv if needed
 "$OPENCONNECT_BIN_PATH" \
     -c "$certtokenurl" \
     --protocol=pulse \
@@ -35,7 +36,4 @@ fi
     --authgroup eTjänstekort \
     -i vpn0 \
     -s 'sudo -E /etc/vpnc/vpnc-script' \
-    --printcookie \
-    --dump-http-traffic \
-    -vvvv \
     "$VPN_SERVER"
