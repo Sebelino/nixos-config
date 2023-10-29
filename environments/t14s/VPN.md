@@ -2,10 +2,11 @@
 
 ## Net iD
 
-Start by installing Net iD Enterprise. The Net iD Linux client can be
-downloaded from the following page, but the page is only accessible by
-smartcard authentication. Hence, you will need to use a computer which already
-has smartcard authentication set up for your browser in order to access it.
+Start by installing [Net iD Enterprise](https://e-identitet.se/net-id/). The
+Net iD Linux client can be downloaded from the following page, but the page is
+only accessible by smartcard authentication. Hence, you will need to use a
+computer which already has smartcard authentication set up for your browser in
+order to access it.
 
 https://service.pointsharp.com/secure/siths/siths_nie_download.aspx
 
