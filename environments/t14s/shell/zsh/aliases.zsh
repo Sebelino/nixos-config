@@ -11,6 +11,12 @@ _openssl_print_cert() {
   openssl x509 -text -noout -in "$cert"
 }
 
+_openssl_show_certs() {
+  domain="$1"
+  port="${2:-443}"
+  openssl s_client -showcerts -servername "$domain" -connect "${domain}:${port}" < /dev/null
+}
+
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
 # Branch (b)
@@ -51,3 +57,4 @@ alias tfp="terraform plan"
 alias tfi="terraform init"
 alias tfd="terraform destroy"
 alias cer=_openssl_print_cert
+alias ces=_openssl_show_certs
