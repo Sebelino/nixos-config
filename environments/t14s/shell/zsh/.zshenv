@@ -1,5 +1,7 @@
 export EDITOR=nvim
 
+export PATH="$PATH:$HOME/bin"
+
 # Needed to sign commits
 export GPG_TTY=$(tty)
 
