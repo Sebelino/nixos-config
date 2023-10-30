@@ -52,6 +52,9 @@ input "type:touchpad" {
     # Start your launcher
     bindsym $mod+s exec $menu
 
+    # Lock screen
+    bindsym $mod+plus exec 'swaylock -f -c 000000'
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
