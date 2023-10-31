@@ -55,6 +55,9 @@ input "type:touchpad" {
     # Lock screen
     bindsym $mod+plus exec 'swaylock -f -c 000000'
 
+    # Move the currently focused workspace to the other monitor
+    bindsym $mod+w exec 'sway_move_workspace.sh'
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
