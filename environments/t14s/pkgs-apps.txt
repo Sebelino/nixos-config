@@ -13,6 +13,7 @@ dunst
 flameshot-git
 fzf
 gdb
+gimp
 go-yq
 gptfdisk
 gtk3-demos
