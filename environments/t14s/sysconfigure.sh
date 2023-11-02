@@ -33,6 +33,7 @@ symlink "../../bin" "$HOME/bin"
 symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vm/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
+symlink "display/way-displays" "$HOME/.config/way-displays"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
