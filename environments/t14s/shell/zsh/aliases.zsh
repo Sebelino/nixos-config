@@ -17,6 +17,11 @@ _openssl_show_certs() {
   openssl s_client -showcerts -servername "$domain" -connect "${domain}:${port}" < /dev/null
 }
 
+_openssl_check_expiry_time() {
+  hostname="$1"
+  openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
+}
+
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
 # Branch (b)
@@ -58,3 +63,4 @@ alias tfi="terraform init"
 alias tfd="terraform destroy"
 alias cer=_openssl_print_cert
 alias ces=_openssl_show_certs
+alias cee=_openssl_check_expiry_time
