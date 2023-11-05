@@ -13,6 +13,7 @@ ALIGN: MIDDLE
 # Define your own.
 ORDER:
   - HDMI-A-1 # Top, monitor at home
+  - DP-2     # Top, monitor at work
   - eDP-1    # Bottom, laptop screen
 
 # Enable scaling, overrides AUTO_SCALE and SCALE
