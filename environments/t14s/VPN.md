@@ -145,6 +145,24 @@ resolution_mode=1
 scale=2
 ```
 
+## Client cert authentication with `curl`
+
+Install `extra/libp11`:
+
+```bash
+$ yay -S libp11
+```
+
+You should now be able to authenticate with `curl` and `openssl` using a client
+certificate and private key specified using `pkcs11` strings:
+
+```bash
+curl -v 'https://certauth.federation.sll.se/adfs/certauth/?...' \
+  ...
+  --cert 'pkcs11:...;type=cert' \
+  --key 'pkcs11:...;type=private'
+```
+
 ## Unresolved issues
 
 ### ADFS client authentication
