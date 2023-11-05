@@ -113,6 +113,38 @@ certificates at the `Authorities` tab in Chromium:
 
 ![image](https://github.com/Sebelino/nixos-config/assets/837775/93009875-9ade-48fe-8192-543b107322ef)
 
+## RDP
+
+Install `extra/remmina` and `extra/freerdp`:
+
+```bash
+$ yay -S remmina freerdp
+```
+
+Ensure your VPN is running and functional. Then run:
+
+```bash
+$ server=my.rdp.server.com
+$ hsa_id=gxxx
+$ domain=GAIA
+$
+$ remmina -c "rdp://${domain}\\${hsa_id}@${server}"
+```
+
+Enter your password and you should be able to connect to the server over RDP.
+
+To turn on the `Toggle dynamic resolution update` setting in a persisted
+manner, add `resolution_mode=1` and `scale=2` to the config file:
+
+```bash
+$ cat ~/.config/remmina/remmina.pref | grep -A4 "\[remmina\]"
+[remmina]
+name=
+ignore-tls-errors=1
+resolution_mode=1
+scale=2
+```
+
 ## Unresolved issues
 
 ### ADFS client authentication
