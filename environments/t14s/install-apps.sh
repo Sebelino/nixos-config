@@ -5,3 +5,5 @@ set -euo pipefail
 scriptdir="$(dirname "$(realpath "$0")")"
 
 yay -S --needed --noconfirm - < "$scriptdir/pkgs-apps.txt"
+
+"$scriptdir/install-teams-for-linux.sh"
