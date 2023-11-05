@@ -1,5 +1,4 @@
 anki-bin
-way-displays
 archiso
 bat
 bind
@@ -52,6 +51,7 @@ unzip
 usbutils
 virt-manager
 virt-viewer
+way-displays
 wdisplays-git
 wev
 wget
