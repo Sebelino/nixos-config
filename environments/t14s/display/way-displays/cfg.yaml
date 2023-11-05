@@ -12,8 +12,8 @@ ALIGN: MIDDLE
 # The default ORDER is simply the order in which the displays are discovered.
 # Define your own.
 ORDER:
-  - HDMI-A-1 # Top
-  - eDP-1    # Bottom
+  - HDMI-A-1 # Top, monitor at home
+  - eDP-1    # Bottom, laptop screen
 
 # Enable scaling, overrides AUTO_SCALE and SCALE
 #SCALING: TRUE
