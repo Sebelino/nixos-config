@@ -30,6 +30,11 @@ exec swayidle -w \
 # If multiple monitors, arrange them correctly
 exec way-displays > "/tmp/way-displays.${XDG_VTNR}.${USER}.log" 2>&1
 
+# Works around a Flameshot+Wayland bug where flameshot only allows me to take a
+# screenshot of one of my two monitors:
+# https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1740216337
+for_window [app_id="flameshot"] fullscreen enable global
+
 # Input configuration
 
 input "type:keyboard" {
