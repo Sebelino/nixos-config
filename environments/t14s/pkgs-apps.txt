@@ -46,7 +46,6 @@ rclone
 remmina
 solaar
 strace
-teams-for-linux
 terraform
 transmission-gtk
 ttf-comic-neue
