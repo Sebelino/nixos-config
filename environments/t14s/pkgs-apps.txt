@@ -28,6 +28,7 @@ k9s
 kind
 kubectx
 lf
+libp11
 libva-mesa-driver
 libva-utils
 mesa-utils
