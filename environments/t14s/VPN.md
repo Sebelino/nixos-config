@@ -112,3 +112,36 @@ certificates at the `Authorities` tab in Chromium:
 * `./vpn/secrets/SITHS e-id Root CA v2.pem.pem`
 
 ![image](https://github.com/Sebelino/nixos-config/assets/837775/93009875-9ade-48fe-8192-543b107322ef)
+
+## Unresolved issues
+
+### ADFS client authentication
+
+TLS client authentication against https://certauth.federation.sll.se via the
+ADFS tenant produces a HTTP 200 with the error message: `No valid client
+certificate found in the request`. Based on my investigations with Wireshark,
+the server request a client certificate, but Chromium is never prompting me to
+select a certificate, and instead sends a TLS message containing a Certificate
+field containing zero (0) certificates.
+
+On the other hand, making the same request using `curl` with
+`--cert 'pkcs11:...;type=cert' --key 'pkcs11:...;type=private`
+produces a HTTP 302, which matches what I expect in a successful client cert
+authentication flow. Wireshark reveals that `curl` sends a TLS message
+containing a Certificate fields containing one (1) certificate as expected.
+
+So my guess is that this is a Chromium issue. OTOH, I am able to successfully
+authenticate with a client cert against https://idp2.sll.se with Chromium, and
+I am prompted to select a cert. So perhaps Chromium lacks support for a certain
+type of client cert authentication flow?
+
+Whether a VPN is running or not appears to be of no consequence, since I am
+able to successfully authenticate with Chrome on my other computer with the VPN
+turned off.
+
+### Split tunneling
+
+Video/audio traffic from Teams seems to enter the VPN (sam.sll.se), possibly
+worsening call quality. It's worth investigating
+setting up OpenConnect to exclude this traffic using
+[split tunneling](https://gist.github.com/stefancocora/686bbce938f27ef72649a181e7bd0158).
