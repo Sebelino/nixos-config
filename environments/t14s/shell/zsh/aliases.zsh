@@ -64,3 +64,4 @@ alias tfd="terraform destroy"
 alias cer=_openssl_print_cert
 alias ces=_openssl_show_certs
 alias cee=_openssl_check_expiry_time
+alias nät="nmcli connection up Sebelino-hotspot"
