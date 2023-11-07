@@ -206,6 +206,46 @@ That is, until I found that you could fix the problem by adding
 
 [Reference.](https://askubuntu.com/questions/1205749/how-permanently-remove-or-disable-hsp-hfp-bluetooth-profile)
 
+### Audio issues: Pipewire uses the wrong sink/source
+
+Scenario:
+
+* You have connected your laptop to an external monitor with USB-C
+* You have plugged in a headset with USB-A
+* Expected behavior: Audio should come out from your headset
+* Actual behavior: Audio is coming out from your monitor speakers
+
+This indicates that Pipewire picks the monitor speaker/mic over the headset
+speaker/mic. You can confirm this by running:
+
+```bash
+$ wpctl status
+Audio
+ ├─ Sinks:
+ │      60. Family 17h/19h HD Audio Controller Speaker + Headphones [vol: 0.50 MUTED]
+ │  *  137. HP E34m G4 USB Audio Analog Stereo  [vol: 0.55]
+ │     161. Jabra Evolve2 85 Analog Stereo      [vol: 0.95]
+ └─ Sources:
+        61. Family 17h/19h HD Audio Controller Headphones Stereo Microphone [vol: 1.00]
+        62. Family 17h/19h HD Audio Controller Digital Microphone [vol: 1.00]
+       120. Jabra Evolve2 85 Mono               [vol: 1.00]
+    *  132. HP E34m G4 USB Audio Analog Stereo  [vol: 0.94]
+```
+
+To select the headset speaker (161 Jabra...) by default, run:
+
+```bash
+$ wpctl set-default 161
+```
+
+To select the headset microphone (120 Jabra...) by default, run:
+
+```bash
+$ wpctl set-default 120
+```
+
+These settings _should_ persist even if you unplug the device.
+
 ## Autologin
 
 Add an override for tty1:
