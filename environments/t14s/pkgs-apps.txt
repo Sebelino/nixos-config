@@ -24,6 +24,7 @@ helm
 imagemagick
 jc
 jq
+jwt-cli
 k9s
 kind
 kubectx
