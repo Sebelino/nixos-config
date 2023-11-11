@@ -1,0 +1,12 @@
+[Unit]
+Description=Mouse button mapping that works on Wayland
+After=display-manager.service
+
+[Service]
+ExecStart=/home/sebelino/nixos-config/environments/t14s/mouse/mousemapper.sh
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
