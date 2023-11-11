@@ -22,10 +22,13 @@ case "$argument" in
     'Forward Button')
         app_name="$(get_app_name)"
         if [ "$app_name" = "chromium" ]; then
+            # Close tab
             ydotool key $kc_Ctrl:1 $kc_W:1 $kc_W:0 $kc_Ctrl:0
         elif [ "$app_name" = "anki" ]; then
+            # Click "Show Answer"
             ydotool key $kc_Space:1 $kc_Space:0
         else
+            # Kill window
             notify-send --urgency=low 'Kill window'
             ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $kc_T:1 $kc_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
         fi
@@ -33,6 +36,7 @@ case "$argument" in
     'Middle Button')
         app_name="$(get_app_name)"
         if [ "$app_name" = "chromium" ]; then
+            # Refresh page
             ydotool key $kc_F5:1 $kc_F5:0
         else
             notify-send --urgency=low 'Ineffective middle click'
