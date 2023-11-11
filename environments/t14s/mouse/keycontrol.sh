@@ -19,6 +19,7 @@ get_app_name() {
 # Meaning, if you change your keyboard layout, you will need to change the values below.
 
 kc_Hyper_L=12 # KEY_MINUS
+kc_Tab=42     # KEY_LEFTSHIFT
 kc_Shift_R=57 # KEY_SPACE
 kc_F5=63      # KEY_F5
 kc_Ctrl=58    # KEY_CAPSLOCK
@@ -48,6 +49,24 @@ case "$argument" in
             ydotool key $kc_F5:1 $kc_F5:0
         else
             notify-send --urgency=low 'Ineffective middle click'
+        fi
+    ;;
+    'Smart Shift Scroll Left')
+        # Hold the Smart Shift button while scrolling left
+        app_name="$(get_app_name)"
+        if [ "$app_name" = "chromium" ]; then
+            ydotool key $kc_Ctrl:1 $kc_Shift_R:1 $kc_Tab:1 $kc_Tab:0 $kc_Shift_R:0 $kc_Ctrl:0
+        else
+            notify-send --urgency=low 'Ineffective mode shift left scroll'
+        fi
+    ;;
+    'Smart Shift Scroll Right')
+        # Hold the Smart Shift button while scrolling right
+        app_name="$(get_app_name)"
+        if [ "$app_name" = "chromium" ]; then
+            ydotool key $kc_Ctrl:1 $kc_Tab:1 $kc_Tab:0 $kc_Ctrl:0
+        else
+            notify-send --urgency=low 'Ineffective mode shift right scroll'
         fi
     ;;
     *) notify-send --urgency=low 5 "Unrecognized argument to keycontrol.sh: $argument"

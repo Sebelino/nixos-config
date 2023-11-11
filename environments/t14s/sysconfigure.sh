@@ -34,6 +34,7 @@ symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.con
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vm/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
 symlink "display/way-displays" "$HOME/.config/way-displays"
+symlink "mouse/mousemapper.service" "$HOME/.config/systemd/user/mousemapper.service"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
