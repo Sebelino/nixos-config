@@ -9,14 +9,16 @@ get_app_name() {
 }
 
 # Keycodes for ydotool can be found in /usr/include/linux/input-event-codes.h
+# Note that you need to specify the keycodes for the actual physical keys.
+# Meaning, if you change your keyboard layout, you will need to change the values below.
 
-kc_Hyper_L=12
-kc_Shift_R=57
-kc_F5=63
-kc_Ctrl=58
-kc_Space=51
-kc_W=17
-kc_T=33
+kc_Hyper_L=12 # KEY_MINUS
+kc_Shift_R=57 # KEY_SPACE
+kc_F5=63      # KEY_F5
+kc_Ctrl=58    # KEY_CAPSLOCK
+kc_Space=51   # KEY_COMMA
+kc_W=17       # KEY_W
+kc_T=33       # KEY_F
 
 case "$argument" in
     'Forward Button')
