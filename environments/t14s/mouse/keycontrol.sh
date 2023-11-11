@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Dependencies:
+# ydotool
+# sway
+# jq
+# libnotify (dep of solaar, drawio-desktop)
+
 set -euo pipefail
 
 argument="$1"
