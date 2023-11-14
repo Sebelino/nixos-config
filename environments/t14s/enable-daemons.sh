@@ -6,6 +6,9 @@ sudo systemctl enable --now bluetooth
 sudo systemctl enable --now pacman-filesdb-refresh.timer
 sudo systemctl enable --now docker
 
+# Adjust time
+sudo systemctl enable --now systemd-timesyncd
+
 # Used by virt-manager
 sudo systemctl enable --now libvirtd
 
