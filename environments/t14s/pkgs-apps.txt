@@ -28,6 +28,7 @@ jwt-cli
 k9s
 kind
 kubectx
+kubeseal
 lf
 libp11
 libva-mesa-driver
