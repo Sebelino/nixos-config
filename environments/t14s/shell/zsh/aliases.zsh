@@ -22,6 +22,31 @@ _openssl_check_expiry_time() {
   openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
 }
 
+_create_branch_with_generated_name() {
+    git add . && \
+    git stash && \
+    git checkout main && \
+    git pull --rebase && \
+    branch_name="$(generate_random_branch_name.sh)" && \
+    git checkout -b "$branch_name" && \
+    git stash pop && \
+    git add . && \
+    unset branch_name
+}
+
+_create_branch_with_generated_name_from_current_branch() {
+    branch_name="$(generate_random_branch_name.sh)" && \
+    git checkout -b "$branch_name" && \
+    unset branch_name
+}
+
+_github_create_pr() {
+    extra_arg="$1"
+    git push -u origin HEAD && \
+    gh pr create --fill $1 && \
+    gh pr view --web  # Should retry here
+}
+
 _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 
 # Branch (b)
@@ -65,3 +90,6 @@ alias cer=_openssl_print_cert
 alias ces=_openssl_show_certs
 alias cee=_openssl_check_expiry_time
 alias nät="nmcli connection up Sebelino-hotspot"
+alias gbC="_create_branch_with_generated_name"
+alias gbCC="_create_branch_with_generated_name_from_current_branch"
+alias ghp="_github_create_pr"

@@ -60,6 +60,7 @@ wdisplays-git
 wev
 wget
 wireshark-qt
+words
 xorg-xlsclients
 ydotool
 zathura
