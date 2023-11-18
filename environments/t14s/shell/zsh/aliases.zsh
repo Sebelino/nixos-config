@@ -38,7 +38,7 @@ _create_branch_with_generated_name() {
     git switch "$(_get_git_trunk)" && \
     git pull --rebase && \
     branch_name="$(generate_random_branch_name.sh)" && \
-    git checkout -b "$branch_name" && \
+    git switch -c "$branch_name" && \
     git stash pop && \
     git add . && \
     unset branch_name
