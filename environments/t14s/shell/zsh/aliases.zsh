@@ -84,6 +84,10 @@ alias gl="git log --topo-order --pretty=format:\"${_git_log_medium_format}\""
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 
+# Stash (s)
+alias gs="git stash"
+alias gsp="git stash pop"
+
 # Working Copy (w)
 alias gws="git status --short"
 alias gwS="git status"
