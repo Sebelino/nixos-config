@@ -454,6 +454,14 @@ end)
 -- CTRL+p to format current paragraph
 vim.keymap.set('n', '<C-p>', 'gwip')
 
+-- CTRL+i to copy text to clipboard
+vim.keymap.set('n', '<C-i>', '"+yy')
+vim.keymap.set('v', '<C-i>', '"+y')
+
+-- CTRL+k to paste text
+vim.keymap.set('n', '<C-k>', '"+p')
+vim.keymap.set('v', '<C-k>', '"+p')
+
 -- CTRL+l to format file
 vim.keymap.set('n', '<C-l>', function ()
   vim.cmd(':TerraformFmt')
