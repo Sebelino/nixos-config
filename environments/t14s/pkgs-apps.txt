@@ -37,6 +37,10 @@ mesa-utils
 net-tools
 ngrok
 nmap
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 openconnect
 openshift-client-bin
 pam_pkcs11
