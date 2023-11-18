@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-_openssl_print_cert() {
+sebe_openssl_print_cert() {
   if [ "$#" -eq 1 ]; then
     cert="$1"
   else
@@ -11,13 +11,13 @@ _openssl_print_cert() {
   openssl x509 -text -noout -in "$cert"
 }
 
-_openssl_show_certs() {
+sebe_openssl_show_certs() {
   domain="$1"
   port="${2:-443}"
   openssl s_client -showcerts -servername "$domain" -connect "${domain}:${port}" < /dev/null
 }
 
-_openssl_check_expiry_time() {
+sebe_openssl_check_expiry_time() {
   hostname="$1"
   openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
 }
@@ -32,7 +32,7 @@ _get_git_trunk() {
   fi
 }
 
-_create_branch_with_generated_name() {
+sebe_create_branch_with_generated_name() {
     git add . && \
     git stash && \
     git switch "$(_get_git_trunk)" && \
@@ -44,13 +44,13 @@ _create_branch_with_generated_name() {
     unset branch_name
 }
 
-_create_branch_with_generated_name_from_current_branch() {
+sebe_create_branch_with_generated_name_from_current_branch() {
     branch_name="$(generate_random_branch_name.sh)" && \
     git checkout -b "$branch_name" && \
     unset branch_name
 }
 
-_github_create_pr() {
+sebe_github_create_pr() {
     extra_arg="$1"
     git push -u origin HEAD && \
     gh pr create --fill $1 && \
@@ -100,10 +100,10 @@ alias tfa="terraform apply"
 alias tfp="terraform plan"
 alias tfi="terraform init"
 alias tfd="terraform destroy"
-alias cer=_openssl_print_cert
-alias ces=_openssl_show_certs
-alias cee=_openssl_check_expiry_time
+alias cer=sebe_openssl_print_cert
+alias ces=sebe_openssl_show_certs
+alias cee=sebe_openssl_check_expiry_time
 alias nät="nmcli connection up Sebelino-hotspot"
-alias gbC="_create_branch_with_generated_name"
-alias gbCC="_create_branch_with_generated_name_from_current_branch"
-alias ghp="_github_create_pr"
+alias gbC=sebe_create_branch_with_generated_name
+alias gbCC=sebe_create_branch_with_generated_name_from_current_branch
+alias ghp=sebe_github_create_pr
