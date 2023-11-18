@@ -22,10 +22,20 @@ _openssl_check_expiry_time() {
   openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
 }
 
+_get_git_trunk() {
+  if [ $(git rev-parse --verify "main" 2>/dev/null) ]; then
+    echo "main"
+  elif [ $(git rev-parse --verify "master" 2>/dev/null) ]; then
+    echo "master"
+  else
+    >&2 echo "Couldn't find 'main' or 'master' branch"
+  fi
+}
+
 _create_branch_with_generated_name() {
     git add . && \
     git stash && \
-    git checkout main && \
+    git switch "$(_get_git_trunk)" && \
     git pull --rebase && \
     branch_name="$(generate_random_branch_name.sh)" && \
     git checkout -b "$branch_name" && \
