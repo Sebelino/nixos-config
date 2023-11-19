@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+# If I have made any changes to a *.service file, reload those changes
+systemctl --user daemon-reload
+
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now pacman-filesdb-refresh.timer
 sudo systemctl enable --now docker
@@ -23,6 +26,3 @@ systemctl --user enable --now ydotool
 
 # Custom daemon for acting on certain mouse events
 systemctl --user enable --now mousemapper
-
-# If I have made any changes to a *.service file, reload those changes
-systemctl --user daemon-reload
