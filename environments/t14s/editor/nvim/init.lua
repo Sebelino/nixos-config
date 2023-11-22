@@ -465,6 +465,9 @@ vim.keymap.set('v', '<C-i>', '"+y')
 vim.keymap.set('n', '<C-k>', '"+p')
 vim.keymap.set('v', '<C-k>', '"+p')
 
+-- Alt+s to quote word
+vim.keymap.set('n', '<M-s>', 'ciW""<Esc>P')
+
 -- CTRL+l to format file
 vim.keymap.set('n', '<C-l>', function ()
   vim.cmd(':TerraformFmt')
