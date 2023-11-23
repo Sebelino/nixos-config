@@ -124,16 +124,16 @@
 # Font configuration
 font:
   normal:
-    family: Jetbrains Mono Nerd Font
+    family: JetBrainsMono NF
     style: Regular
   bold:
-    family: Jetbrains Mono Nerd Font
+    family: JetBrainsMono NF
     style: Bold
   italic:
-    family: Jetbrains Mono Nerd Font
+    family: JetBrainsMono NF
     style: MediumItalic
   bold_italic:
-    family: Jetbrains Mono Nerd Font
+    family: JetBrainsMono NF
     style: BoldItalic
 
   # Point size
