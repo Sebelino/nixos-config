@@ -4,6 +4,7 @@ aws-cli
 bat
 bind
 ccid
+certbot
 dmidecode
 dnsmasq
 docker
