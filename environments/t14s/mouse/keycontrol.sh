@@ -26,6 +26,7 @@ kc_Ctrl=58    # KEY_CAPSLOCK
 kc_Space=51   # KEY_COMMA
 kc_W=17       # KEY_W
 kc_T=33       # KEY_F
+kc_M=50       # KEY_M
 
 case "$argument" in
     'Forward Button')
@@ -36,6 +37,9 @@ case "$argument" in
         elif [ "$app_name" = "anki" ]; then
             # Click "Show Answer"
             ydotool key $kc_Space:1 $kc_Space:0
+        elif [ "$app_name" = "teams-for-linux" ]; then
+            # Mute mic
+            ydotool key $kc_Ctrl:1 $kc_Shift_R:1 $kc_M:1 $kc_M:0 $kc_Shift_R $kc_Ctrl
         else
             # Kill window
             notify-send --urgency=low 'Kill window'
