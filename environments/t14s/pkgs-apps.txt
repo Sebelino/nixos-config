@@ -1,5 +1,6 @@
 anki-bin
 archiso
+aws-cli
 bat
 bind
 ccid
