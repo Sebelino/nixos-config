@@ -9,6 +9,7 @@ dmidecode
 dnsmasq
 docker
 docker-buildx
+docker-compose
 downgrade
 drawio-desktop
 dunst
