@@ -45,6 +45,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 openconnect
+openldap
 openshift-client-bin
 pam_pkcs11
 pcsc-tools
