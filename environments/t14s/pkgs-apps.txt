@@ -59,6 +59,7 @@ strace
 terraform
 transmission-gtk
 ttf-comic-neue
+ttf-ms-fonts
 unzip
 usbutils
 virt-manager
