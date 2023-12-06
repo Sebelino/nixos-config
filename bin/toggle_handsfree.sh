@@ -10,7 +10,7 @@ card_name="$(echo "$card" | jq -r '.name')"
 
 active_profile="$(echo "$card" | jq -r '.active_profile')"
 
-nonactive_profile="$(echo "$card" | jq -r ".profiles | del(.off) | del(.$active_profile) | keys[]")"
+nonactive_profile="$(echo "$card" | jq -r ".profiles | del(.off) | del(.\"$active_profile\") | del(.\"headset-head-unit\") | del(.\"a2dp-sink-sbc_xq\") | del(.\"headset-head-unit-cvsd\") | keys[]")"
 
 set -x
 
