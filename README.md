@@ -246,6 +246,13 @@ $ wpctl set-default 120
 
 These settings _should_ persist even if you unplug the device.
 
+### Audio issues: Bluetooth headset mic does not work in Teams (Pipewire)
+
+Go to https://webcammictest.com/check-mic.html and your headset should switch
+from A2DP mode (better audio, mic disabled) to HFP mode (worse audio, mic
+enabled). In the Settings of your Teams meeting, an option should appear to
+turn on the Headset mic.
+
 ## Autologin
 
 Add an override for tty1:
