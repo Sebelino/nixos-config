@@ -4,12 +4,15 @@
 
 set -Eeuo pipefail
 
+a2dp_profile_name="a2dp-sink"
+hfp_profile_name="headset-head-unit-msbc"
+
 pw_dump="$(pw-dump)"
 headset_device_id="$(echo "$pw_dump" | jq '.[] | select(.info.props."device.form-factor" == "headset").id')"
 active_profile_index="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.Profile[].index")"
 profile_list="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.EnumProfile")"
-a2dp_profile_index=$(echo "$profile_list" | jq '.[] | select(.name == "a2dp-sink").index')
-handsfree_profile_index=$(echo "$profile_list" | jq '.[] | select(.name == "headset-head-unit-msbc").index')
+a2dp_profile_index=$(echo "$profile_list" | jq ".[] | select(.name == \"$a2dp_profile_name\").index")
+handsfree_profile_index=$(echo "$profile_list" | jq ".[] | select(.name == \"$hfp_profile_name\").index")
 
 if [ "$active_profile_index" = "$a2dp_profile_index" ]; then
     # Switch to handsfree profile (with mic, worse audio)
