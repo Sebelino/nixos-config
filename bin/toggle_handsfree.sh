@@ -4,16 +4,19 @@
 
 set -Eeuo pipefail
 
-card="$(pactl --format=json list cards | jq -r '.[] | select(.driver == "module-bluez5-device.c")')"
+pw_dump="$(pw-dump)"
+headset_device_id="$(echo "$pw_dump" | jq '.[] | select(.info.props."device.form-factor" == "headset").id')"
+active_profile_index="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.Profile[].index")"
+profile_list="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.EnumProfile")"
+a2dp_profile_index=$(echo "$profile_list" | jq '.[] | select(.name == "a2dp-sink").index')
+handsfree_profile_index=$(echo "$profile_list" | jq '.[] | select(.name == "headset-head-unit-msbc").index')
 
-card_name="$(echo "$card" | jq -r '.name')"
-
-active_profile="$(echo "$card" | jq -r '.active_profile')"
-
-nonactive_profile="$(echo "$card" | jq -r ".profiles | del(.off) | del(.\"$active_profile\") | del(.\"headset-head-unit\") | del(.\"a2dp-sink-sbc_xq\") | del(.\"headset-head-unit-cvsd\") | keys[]")"
-
-set -x
-
-pactl set-card-profile "$card_name" "$nonactive_profile"
-
-notify-send --urgency=low "Toggle audio profile" "$nonactive_profile"
+if [ "$active_profile_index" = "$a2dp_profile_index" ]; then
+    # Switch to handsfree profile (with mic, worse audio)
+    wpctl set-profile "$headset_device_id" "$handsfree_profile_index"
+    notify-send --urgency=low "Toggle audio profile" "🎤 HFP"
+else
+    # Switch to A2DP profile (no mic, better audio)
+    wpctl set-profile "$headset_device_id" "$a2dp_profile_index"
+    notify-send --urgency=low "Toggle audio profile" "🎧 A2DP"
+fi
