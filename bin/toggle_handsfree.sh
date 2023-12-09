@@ -17,9 +17,9 @@ handsfree_profile_index=$(echo "$profile_list" | jq ".[] | select(.name == \"$hf
 if [ "$active_profile_index" = "$a2dp_profile_index" ]; then
     # Switch to handsfree profile (with mic, worse audio)
     wpctl set-profile "$headset_device_id" "$handsfree_profile_index"
-    notify-send --urgency=low "Toggle audio profile" "🎤 HFP"
+    notify-send --urgency=low "Toggle audio profile" "🎤 $hfp_profile_name"
 else
     # Switch to A2DP profile (no mic, better audio)
     wpctl set-profile "$headset_device_id" "$a2dp_profile_index"
-    notify-send --urgency=low "Toggle audio profile" "🎧 A2DP"
+    notify-send --urgency=low "Toggle audio profile" "🎧 $a2dp_profile_name"
 fi
