@@ -149,6 +149,9 @@ input "type:touchpad" {
     # Start flameshot
     bindsym $mod+c exec flameshot gui
 
+    # Toggle handsfree on bluetooth headset
+    bindsym $mod+y exec toggle_handsfree.sh
+
 mode "resize" {
     # 96px is 5 % of 1920px
     bindsym $left  resize shrink width  96px
