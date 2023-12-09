@@ -9,6 +9,12 @@ hfp_profile_name="headset-head-unit-msbc"
 
 pw_dump="$(pw-dump)"
 headset_device_id="$(echo "$pw_dump" | jq '.[] | select(.info.props."device.form-factor" == "headset").id')"
+
+if [ "$headset_device_id" = "" ]; then
+    notify-send --urgency=low "Toggle audio profile" "⚠ Headset not connected"
+    exit 1
+fi
+
 active_profile_index="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.Profile[].index")"
 profile_list="$(echo "$pw_dump" | jq ".[] | select(.id == $headset_device_id).info.params.EnumProfile")"
 a2dp_profile_index=$(echo "$profile_list" | jq ".[] | select(.name == \"$a2dp_profile_name\").index")
