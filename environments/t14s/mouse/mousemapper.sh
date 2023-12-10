@@ -8,6 +8,9 @@
 
 set -euo pipefail
 
+# Workaround for an issue where swaymsg fails with "Unable to retrieve socket path" if invoked too early
+echo "SWAYSOCK=$SWAYSOCK" # This daemon might fail here with "unbound variable SWAYSOCK", forcing a restart
+
 mouse_name="Logitech MX Master 3"
 smart_shift_buffer_path="/dev/shm/smart_shift_buffer"
 script_dir="$(dirname "$(realpath "$0")")"
