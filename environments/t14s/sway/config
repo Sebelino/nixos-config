@@ -35,6 +35,8 @@ exec way-displays > "/tmp/way-displays.${XDG_VTNR}.${USER}.log" 2>&1
 # https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1740216337
 for_window [app_id="flameshot"] fullscreen enable global
 
+exec solaar -w hide
+
 # Input configuration
 
 input "type:keyboard" {
