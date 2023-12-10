@@ -38,7 +38,7 @@ function process_wheel_event() {
 }
 
 function parse_event_line() {
-    # When scrolling the wheel horiziontally, each line will look something like this:
+    # When scrolling the wheel horizontally, each line will look something like this:
     # event11  POINTER_SCROLL_WHEEL    +0.798s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
     action="$2"
     horizontal_value="${7-:}"
