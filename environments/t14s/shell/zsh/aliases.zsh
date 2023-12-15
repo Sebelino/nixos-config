@@ -92,6 +92,10 @@ alias gl="git log --topo-order --pretty=format:\"${_git_log_medium_format}\""
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 
+# Rebase (r)
+alias gr="git rebase"
+alias grc="git rebase --continue"
+
 # Stash (s)
 alias gs="git stash"
 alias gsp="git stash pop"
