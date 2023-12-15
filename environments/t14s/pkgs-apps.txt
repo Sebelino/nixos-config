@@ -26,6 +26,7 @@ gtk4-demos
 helm
 imagemagick
 jc
+jira-cli
 jq
 jwt-cli
 k9s

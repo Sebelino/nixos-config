@@ -32,16 +32,24 @@ _get_git_trunk() {
   fi
 }
 
-sebe_create_branch_with_generated_name() {
+sebe_create_branch_from_branchname() {
+    branch_name="$1"
     git add . && \
     git stash && \
     git switch "$(_get_git_trunk)" && \
     git pull --rebase && \
-    branch_name="$(generate_random_branch_name.sh)" && \
     git switch -c "$branch_name" && \
     git stash pop && \
     git add . && \
     unset branch_name
+}
+
+sebe_create_branch_with_generated_name() {
+    sebe_create_branch_from_branchname "$(generate_random_branch_name.sh)"
+}
+
+sebe_create_jira_branch_with_generated_name() {
+    sebe_create_branch_from_branchname "$(generate_random_jira_branch_name.sh)"
 }
 
 sebe_create_branch_with_generated_name_from_current_branch() {
@@ -105,5 +113,6 @@ alias ces=sebe_openssl_show_certs
 alias cee=sebe_openssl_check_expiry_time
 alias nät="nmcli connection up Sebelino-hotspot"
 alias gbC=sebe_create_branch_with_generated_name
+alias gbJ=sebe_create_jira_branch_with_generated_name
 alias gbCC=sebe_create_branch_with_generated_name_from_current_branch
 alias ghp=sebe_github_create_pr
