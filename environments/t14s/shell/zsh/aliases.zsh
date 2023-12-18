@@ -22,6 +22,16 @@ sebe_openssl_check_expiry_time() {
   openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
 }
 
+sebe_update_branch_with_trunk() {
+    trunk="$(git branch -l master main | sed 's/^[* ] //')"
+    this_branch="$(git rev-parse --abbrev-ref HEAD)" && \
+    git checkout "$trunk" && \
+    git pull --rebase && \
+    git checkout "$this_branch" && \
+    git rebase "$trunk" && \
+    unset trunk
+}
+
 _get_git_trunk() {
   if [ $(git rev-parse --verify "main" 2>/dev/null) ]; then
     echo "main"
@@ -120,3 +130,4 @@ alias gbC=sebe_create_branch_with_generated_name
 alias gbJ=sebe_create_jira_branch_with_generated_name
 alias gbCC=sebe_create_branch_with_generated_name_from_current_branch
 alias ghp=sebe_github_create_pr
+alias gbt="sebe_update_branch_with_trunk"
