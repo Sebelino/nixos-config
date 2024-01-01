@@ -118,6 +118,7 @@ alias gwd="git diff --no-ext-diff"
 # Custom
 alias k="kubectl"
 alias v="nvim"
+alias zat="zathura"
 alias tfa="terraform apply"
 alias tfp="terraform plan"
 alias tfi="terraform init"
