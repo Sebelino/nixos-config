@@ -66,6 +66,7 @@ unzip
 usbutils
 virt-manager
 virt-viewer
+vpn-slice
 way-displays
 wdisplays-git
 wev

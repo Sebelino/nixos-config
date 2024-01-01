@@ -19,6 +19,10 @@ if ! pcsc_scan -c | grep "Card inserted"; then
     exit 1
 fi
 
+# subprocess.CalledProcessError: Command '['/usr/bin/ip', '-4', 'address', 'add', '10.100.44.171', 'dev', 'vpn0']' returned non-zero exit status 2.
+# Script 'sudo -E vpn-slice %93.184.216.34/32' returned error 1
+sudo ip link delete vpn0 || true
+
 if [ ! -d "/sys/class/net/${TUN_IFACE}" ]; then
     # If not already done, create a network interface for OpenConnect to use. Will disappear on reboot.
     # See https://www.infradead.org/openconnect/nonroot.html
@@ -51,3 +55,18 @@ fi
     -i vpn0 \
     -s 'sudo -E /etc/vpnc/vpnc-script' \
     "$VPN_SERVER"
+
+#"$OPENCONNECT_BIN_PATH" \
+#    -c "$certtokenurl" \
+#    --protocol=pulse \
+#    --useragent 'Pulse-Secure/22.2.1.1295' \
+#    --os=win \
+#    --authgroup eTjänstekort \
+#    -i vpn0 \
+#    -s 'sudo -E vpn-slice --verbose --dump 93.184.216.34/32' \
+#    "$VPN_SERVER"
+
+#    -s 'sudo -E /etc/vpnc/vpnc-script' \
+#    -s 'sudo -E vpn-slice --verbose --dump 0.0.0.0/0' \
+
+#    -s 'sudo -E vpn-slice --verbose --dump 0.0.0.0/0 %93.184.216.34/32' \
