@@ -366,6 +366,12 @@ Or rather, you have to switch to a new set of keybindings:
 * Decrease playback speed: Instead of Shift + Comma (Space + <), use Shift + Space (Space + Comma)
 * Increase playback speed: Instead of Shift + Period (Space + P), use Shift + Ä (Space + Period)
 
+Install multilib packages (Adobe Reader, Wine, etc.):
+
+```bash
+bash ~/nixos-config/environments/t14s/install-multilib-pkgs.sh
+```
+
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
