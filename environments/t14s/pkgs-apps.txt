@@ -37,6 +37,7 @@ kubectx
 kubeseal
 lf
 libp11
+libreoffice-fresh
 libva-mesa-driver
 libva-utils
 mesa-utils
