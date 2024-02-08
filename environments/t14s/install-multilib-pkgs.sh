@@ -12,3 +12,5 @@ if [ ! -L "/etc/pacman.conf" ]; then
     echo "Converting /etc/pacman.conf into symlink..."
     sudo ln -s "$pacman_conf_path" /etc/pacman.conf
 fi
+
+yay -S --needed --noconfirm - < "$scriptdir/pkgs-multilib.txt"
