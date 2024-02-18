@@ -54,6 +54,7 @@ openshift-client-bin
 pam_pkcs11
 pcsc-tools
 pcsclite
+qdirstat-git
 qemu-full
 qt6-wayland
 rclone
