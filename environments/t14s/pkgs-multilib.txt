@@ -1,4 +1,0 @@
-adobe-reader-11
-wine
-wine-gecko
-wine-mono
