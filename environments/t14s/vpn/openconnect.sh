@@ -50,4 +50,5 @@ fi
     --authgroup eTjänstekort \
     -i vpn0 \
     -s 'sudo -E /etc/vpnc/vpnc-script' \
+    --servercert "pin-sha256:20q/9GYOeyuXLSFKqnAXOH1R6cq2k+kPdiGixoLMl+E=" \
     "$VPN_SERVER"
