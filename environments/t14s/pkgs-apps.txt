@@ -62,6 +62,7 @@ remmina
 solaar
 strace
 terraform
+tor-browser
 transmission-gtk
 ttf-comic-neue
 ttf-ms-fonts
