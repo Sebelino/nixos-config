@@ -74,5 +74,6 @@ LOG_THRESHOLD: INFO
 
 # Disable the specified displays.
 DISABLED:
+  - "DP-8" # Broken
   #- "eDP-1"
 
