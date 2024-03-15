@@ -1,4 +1,5 @@
 # This file will be hot-reloaded on save.
+# If that doesn't work, try running `way-displays`
 # Logs are found at /tmp/way-displays.${XDG_VTNR}.${USER}.log
 
 # Arrange displays in a ROW (default, left to right) or a COLUMN (top to bottom)
