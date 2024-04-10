@@ -80,6 +80,7 @@ wget
 wireshark-qt
 words
 xorg-xlsclients
+yamllint
 ydotool
 zathura
 zathura-pdf-poppler
