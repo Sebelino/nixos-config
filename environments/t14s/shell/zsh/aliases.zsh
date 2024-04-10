@@ -11,12 +11,6 @@ sebe_openssl_print_cert() {
   openssl x509 -text -noout -in "$cert"
 }
 
-sebe_openssl_show_certs() {
-  domain="$1"
-  port="${2:-443}"
-  openssl s_client -showcerts -servername "$domain" -connect "${domain}:${port}" < /dev/null
-}
-
 sebe_openssl_check_expiry_time() {
   hostname="$1"
   openssl s_client -connect "$hostname:443" -servername "$hostname" -showcerts </dev/null 2>/dev/null | jc --x509-cert | jq -r '.[0].tbs_certificate.validity.not_after_iso' | cut -d 'T' -f1
@@ -124,7 +118,7 @@ alias tfp="terraform plan"
 alias tfi="terraform init"
 alias tfd="terraform destroy"
 alias cer=sebe_openssl_print_cert
-alias ces=sebe_openssl_show_certs
+alias ces='bash $HOME/bin/get-tls-chain.sh'
 alias cee=sebe_openssl_check_expiry_time
 alias nät="nmcli connection up Sebelino-hotspot"
 alias gbC=sebe_create_branch_with_generated_name
