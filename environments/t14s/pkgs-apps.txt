@@ -74,6 +74,7 @@ ttf-comic-neue
 ttf-ms-fonts
 unzip
 usbutils
+vault
 virt-manager
 virt-viewer
 way-displays
