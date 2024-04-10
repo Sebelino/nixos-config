@@ -1,5 +1,6 @@
 anki-bin
 archiso
+argocd
 at
 aws-cli
 bat
