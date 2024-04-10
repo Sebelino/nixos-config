@@ -1,5 +1,6 @@
 anki-bin
 archiso
+at
 aws-cli
 bat
 bind

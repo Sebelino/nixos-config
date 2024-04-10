@@ -18,6 +18,9 @@ sudo systemctl enable --now libvirtd
 # Smart card reader
 sudo systemctl enable --now pcscd
 
+# at command
+sudo systemctl restart atd
+
 # Keyboard automation tool
 systemctl --user enable --now ydotool
 
