@@ -45,6 +45,7 @@ libva-mesa-driver
 libva-utils
 mesa-utils
 mitmproxy
+multi-gitter
 net-tools
 ngrok
 nmap
