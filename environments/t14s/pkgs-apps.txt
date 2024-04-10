@@ -44,6 +44,7 @@ libreoffice-fresh
 libva-mesa-driver
 libva-utils
 mesa-utils
+mitmproxy
 net-tools
 ngrok
 nmap
