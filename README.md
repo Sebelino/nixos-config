@@ -355,6 +355,30 @@ xscreensaver-settings:   Serial number:  570 / 571
 
 I downgraded xscreensaver from `6.06` to `6.04` as a workaround.
 
+## `wl-copy` pasting doesn't work
+
+You may find that certain strings cannot be pasted if you copy them into the
+clipboard using `wl-copy`. In particular, this happens for PGP messages:
+
+```bash
+$ cat sample.pgp
+-----BEGIN PGP MESSAGE-----
+aG95aG95aG95aG95aG95aG95aG95aG95
+-----END PGP MESSAGE-----
+$ cat sample.pgp | wl-copy
+$ wl-paste -l
+application/pgp-encrypted
+```
+
+At this point, running `wl-paste` successfully prints the message, but pressing
+CTRL+SHIFT+V in Alacritty does nothing.
+
+To remedy this, [override the MIME type](https://bbs.archlinux.org/viewtopic.php?id=283588):
+
+```bash
+$ cat sample.pgp | wl-copy -t text/plain
+```
+
 ## Sins
 
 There have been times when I have had to defile my NixOS system with dirty
