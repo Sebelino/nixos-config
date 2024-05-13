@@ -59,6 +59,7 @@ openshift-client-bin
 pam_pkcs11
 pcsc-tools
 pcsclite
+pdftk
 pycharm-community-edition
 qdirstat-git
 qemu-full
