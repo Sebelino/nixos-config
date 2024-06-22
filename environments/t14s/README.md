@@ -468,3 +468,11 @@ If required, see [`VPN.md`](./VPN.md) on how to set up a VPN client.
 If the keyboard appears to be stuck, check that Sway is not in Resize mode
 (Mod+r). Try ESC. And try the physical Caps Lock key, because the problem seems
 to be that the CTRL is pressed down (?).
+
+## Troubleshooting: Touchpad stops working
+
+Did the touchpad suddenly stop working? Rebooting does not help? Does the issue
+persist even if you boot into Windows?
+
+Try shutting off the computer completely (instead of rebooting). Wait for a few
+seconds, then power on. This has fixed the problem on at least two occasions.
