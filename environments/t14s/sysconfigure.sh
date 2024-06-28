@@ -36,6 +36,7 @@ symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vm/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
 symlink "display/way-displays" "$HOME/.config/way-displays"
 symlink "mouse/mousemapper.service" "$HOME/.config/systemd/user/mousemapper.service"
+symlink "vcs/jira/jira-refresh-currently-assigned-issue.service" "$HOME/.config/systemd/user/jira-refresh-currently-assigned-issue.service"
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
