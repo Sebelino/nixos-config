@@ -13,3 +13,5 @@
     defaultBranch = main
 [alias]
     rewritebranch = "!f() { git rebase -i $(git merge-base main HEAD); }; f"
+[core]
+    excludesfile = ~/.gitignore_global
