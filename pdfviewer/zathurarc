@@ -1,3 +1,5 @@
+set selection-clipboard clipboard
+
 map y navigate previous
 map e navigate next
 map i set recolor
