@@ -87,5 +87,6 @@ words
 xorg-xlsclients
 yamllint
 ydotool
+yt-dlp
 zathura
 zathura-pdf-poppler
