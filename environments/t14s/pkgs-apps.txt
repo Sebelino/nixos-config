@@ -69,6 +69,7 @@ remmina
 solaar
 strace
 terraform
+tfautomv-bin
 tor-browser
 transmission-gtk
 ttf-comic-neue
