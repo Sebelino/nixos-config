@@ -252,6 +252,9 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+--
+-- When indenting, insert one tab, not two
+vim.o.shiftwidth = 4
 
 -- Set highlight on search
 vim.o.hlsearch = true
