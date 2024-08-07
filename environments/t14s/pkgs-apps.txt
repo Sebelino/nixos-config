@@ -60,6 +60,7 @@ pam_pkcs11
 pcsc-tools
 pcsclite
 pdftk
+pkgfile
 pycharm-community-edition
 qdirstat-git
 qemu-full
