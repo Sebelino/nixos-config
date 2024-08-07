@@ -34,6 +34,7 @@ exec way-displays > "/tmp/way-displays.${XDG_VTNR}.${USER}.log" 2>&1
 # screenshot of one of my two monitors:
 # https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1740216337
 for_window [app_id="flameshot"] fullscreen enable global
+for_window [title="find-open-cmd"] floating enable
 
 exec solaar -w hide
 
