@@ -158,6 +158,9 @@ input "type:touchpad" {
     # Toggle handsfree on bluetooth headset
     bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
+    # Quickly find a file and open it
+    bindsym $mod+h exec find-open.sh
+
 mode "resize" {
     # 96px is 5 % of 1920px
     bindsym $left  resize shrink width  96px
