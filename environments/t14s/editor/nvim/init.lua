@@ -220,8 +220,16 @@ require('lazy').setup({
     ft = {"go", "gomod"},
     build = ':lua require("go.install").update_all_sync()',
   },
-
   "hashivim/vim-terraform",
+  {
+    -- LaTex development
+    "lervag/vimtex",
+    lazy = false, -- The docs recommend against lazy-loading this
+    tag = "v2.15",
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+    end
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.

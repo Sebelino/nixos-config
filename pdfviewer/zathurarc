@@ -6,7 +6,7 @@ map i set recolor
 
 set recolor-lightcolor "#000000"
 set highlight-active-color "#FF0000"
-set recolor true
+set recolor false
 set recolor-keephue true
 
 set statusbar-fg "#008000"
