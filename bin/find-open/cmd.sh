@@ -15,6 +15,10 @@ elif [[ "$filepath" == *.jpg ]]; then
     nohup feh "$filepath" &
 elif [[ "$filepath" == *.png ]]; then
     nohup feh "$filepath" &
+elif [[ "$filepath" == *.sh ]]; then
+    bash "$filepath"
+    echo -e "\033[0;32m✓\033[0m"
+    sleep 0.5
 else
     nvim "$filepath"
 fi
