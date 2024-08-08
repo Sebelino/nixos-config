@@ -14,19 +14,47 @@ get_focused_app() {
     swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true)'
 }
 
-youtube_seek() {
+execute_with_inertia() {
     inertia_factor="$1"
-    direction="$2"
-    seek_buffer="/dev/shm/youtube_seek_buffer"
+    seek_buffer="$2"
+    keys="$3"
     if [ ! -f "$seek_buffer" ]; then
         echo -n 1 > "$seek_buffer"
         return # We incremented the value from 0 to 1, so let's exit
     fi
     current_value="$(cat "$seek_buffer")"
     if [ "$current_value" = "0" ]; then
-        ydotool key "$direction:1" "$direction:0"
+        # shellcheck disable=SC2086
+        ydotool key $keys
+        notify-send --urgency=low "keys = $keys"
     fi
     echo -n "$(( (current_value + 1) % inertia_factor ))" > "$seek_buffer"
+}
+
+chromium_tab_switch() {
+    keys="$1"
+    execute_with_inertia 2 "/dev/shm/chromium_tab_switch" "$keys"
+}
+
+chromium_tab_switch_left() {
+    chromium_tab_switch "$kc_Ctrl:1 $kc_Shift_R:1 $kc_Tab:1 $kc_Tab:0 $kc_Shift_R:0 $kc_Ctrl:0"
+}
+
+chromium_tab_switch_right() {
+    chromium_tab_switch "$kc_Ctrl:1 $kc_Tab:1 $kc_Tab:0 $kc_Ctrl:0"
+}
+
+youtube_seek() {
+    keys="$1"
+    execute_with_inertia 2 "/dev/shm/youtube_seek_buffer" "$keys"
+}
+
+youtube_seek_left() {
+    youtube_seek "$kc_Left:1 $kc_Left:0"
+}
+
+youtube_seek_right() {
+    youtube_seek "$kc_Right:1 $kc_Right:0"
 }
 
 jq_app_id='if .app_id != null then .app_id else .window_properties.instance end'
@@ -74,42 +102,42 @@ case "$argument" in
             notify-send --urgency=low 'Ineffective middle click'
         fi
     ;;
-    'Dumb Shift Scroll Left')
-        # Let go of the Smart Shift button while scrolling left
-        app_data="$(get_focused_app)"
-        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
-        if [ "$app_name" = "chromium" ]; then
-            app_title="$(echo "$app_data" | jq -r ".name")"
-            if [[ "$app_title" == *" YouTube"* ]]; then
-                youtube_seek 3 $kc_Left
-            fi
-        fi
-    ;;
-    'Dumb Shift Scroll Right')
-        # Let go of the Smart Shift button while scrolling right
-        app_data="$(get_focused_app)"
-        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
-        if [ "$app_name" = "chromium" ]; then
-            app_title="$(echo "$app_data" | jq -r ".name")"
-            if [[ "$app_title" == *" YouTube"* ]]; then
-                youtube_seek 3 $kc_Right
-            fi
-        fi
-    ;;
     'Smart Shift Scroll Left')
         # Hold the Smart Shift button while scrolling left
-        app_name="$(get_focused_app | jq -r "$jq_app_id")"
+        app_data="$(get_focused_app)"
+        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
-            ydotool key $kc_Ctrl:1 $kc_Shift_R:1 $kc_Tab:1 $kc_Tab:0 $kc_Shift_R:0 $kc_Ctrl:0
-        else
-            notify-send --urgency=low 'Ineffective mode shift left scroll'
+            app_title="$(echo "$app_data" | jq -r ".name")"
+            if [[ "$app_title" == *" YouTube"* ]]; then
+                youtube_seek_left
+            fi
         fi
     ;;
     'Smart Shift Scroll Right')
         # Hold the Smart Shift button while scrolling right
+        app_data="$(get_focused_app)"
+        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
+        if [ "$app_name" = "chromium" ]; then
+            app_title="$(echo "$app_data" | jq -r ".name")"
+            if [[ "$app_title" == *" YouTube"* ]]; then
+                youtube_seek_right
+            fi
+        fi
+    ;;
+    'Dumb Shift Scroll Left')
+        # Let go of the Smart Shift button while scrolling left
         app_name="$(get_focused_app | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
-            ydotool key $kc_Ctrl:1 $kc_Tab:1 $kc_Tab:0 $kc_Ctrl:0
+            chromium_tab_switch_left
+        else
+            notify-send --urgency=low 'Ineffective mode shift left scroll'
+        fi
+    ;;
+    'Dumb Shift Scroll Right')
+        # Let go of the Smart Shift button while scrolling right
+        app_name="$(get_focused_app | jq -r "$jq_app_id")"
+        if [ "$app_name" = "chromium" ]; then
+            chromium_tab_switch_right
         else
             notify-send --urgency=low 'Ineffective mode shift right scroll'
         fi
