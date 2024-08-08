@@ -22,7 +22,9 @@ echo "Found ${mouse_name} at ${mouse_device}"
 function execute() {
     event_name="$1"
     smart_shift_buffer="$(cat "$smart_shift_buffer_path")"
-    if [[ "$smart_shift_buffer" == "1" ]]; then
+    if [[ "$smart_shift_buffer" == "0" ]]; then
+        "$keycontrol_path" "Dumb Shift ${event_name}"
+    elif [[ "$smart_shift_buffer" == "1" ]]; then
         "$keycontrol_path" "Smart Shift ${event_name}"
     fi
 }
