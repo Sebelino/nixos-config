@@ -26,7 +26,6 @@ execute_with_inertia() {
     if [ "$current_value" = "0" ]; then
         # shellcheck disable=SC2086
         ydotool key $keys
-        notify-send --urgency=low "keys = $keys"
     fi
     echo -n "$(( (current_value + 1) % inertia_factor ))" > "$seek_buffer"
 }
