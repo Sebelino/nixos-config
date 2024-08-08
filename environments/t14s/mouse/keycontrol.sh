@@ -22,7 +22,7 @@ youtube_seek() {
         echo -n 1 > "$seek_buffer"
         return # We incremented the value from 0 to 1, so let's exit
     fi
-    current_value="$(cat "/dev/shm/youtube_seek_buffer")"
+    current_value="$(cat "$seek_buffer")"
     if [ "$current_value" = "0" ]; then
         ydotool key "$direction:1" "$direction:0"
     fi
