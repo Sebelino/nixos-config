@@ -71,7 +71,7 @@ solaar
 strace
 terraform
 tfautomv-bin
-tor-browser
+tor-browser-bin
 transmission-gtk
 ttf-comic-neue
 ttf-ms-fonts
