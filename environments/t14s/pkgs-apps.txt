@@ -60,6 +60,7 @@ pam_pkcs11
 pcsc-tools
 pcsclite
 pdftk
+pistol-bin
 pkgfile
 pycharm-community-edition
 qdirstat-git
@@ -81,6 +82,7 @@ usbutils
 vault
 virt-manager
 virt-viewer
+viu
 way-displays
 wdisplays-git
 wev

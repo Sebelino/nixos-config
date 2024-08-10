@@ -25,6 +25,9 @@ set cursorpreviewfmt "\033[7;2m"
 
 set hidden false
 
+set preview true
+set previewer ~/.config/lf/previewer
+
 # use enter for shell commands
 map <enter> shell
 
