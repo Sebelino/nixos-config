@@ -65,6 +65,7 @@ pycharm-community-edition
 qdirstat-git
 qemu-full
 qt6-wayland
+ranger
 rclone
 remmina
 solaar
