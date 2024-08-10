@@ -1,5 +1,5 @@
 # interpreter for shell commands
-set shell zsh
+set shell sh
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -46,6 +46,20 @@ cmd open &{{
         text/*) lf -remote "send $id \$$EDITOR \$fx";;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
+}}
+
+cmd mkexec ${{
+    for f in $fx; do
+        chmod +x "$f"
+    done
+    lf -remote "send $id reload" # Color-highlight chmodded files
+}}
+
+cmd unexec ${{
+    for f in $fx; do
+        chmod -x "$f"
+    done
+    lf -remote "send $id reload" # Color-highlight unchmodded files
 }}
 
 # mkdir command. See wiki if you want it to select created dir
