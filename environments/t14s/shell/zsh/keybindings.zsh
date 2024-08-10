@@ -33,3 +33,9 @@ _cmd_to_clip() {
 }
 zle -N _cmd_to_clip
 bindkey '\eu' _cmd_to_clip
+
+lfcd() {
+    cd "$(command lf -print-last-dir "$@")"
+}
+bindkey -s '^o' 'lfcd\n'
+bindkey -s '^n' 'lf\n'
