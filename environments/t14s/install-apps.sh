@@ -12,7 +12,8 @@ missing_packages="$(comm -23 <(sort -u < "$scriptdir/pkgs-apps.txt") <(pacman -Q
 if [ -z "$missing_packages" ]; then
   echo "No packages to install."
 else
-  yay -S --needed --noconfirm "$missing_packages"
+  # shellcheck disable=SC2086
+  yay -S --needed --noconfirm $missing_packages
 fi
 
 
