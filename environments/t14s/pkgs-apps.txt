@@ -72,6 +72,8 @@ remmina
 solaar
 strace
 terraform
+texlive-binextra
+texlive-latex
 tfautomv-bin
 tor-browser-bin
 transmission-gtk
