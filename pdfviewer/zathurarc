@@ -4,8 +4,8 @@ map y navigate previous
 map e navigate next
 map i set recolor
 
-set recolor-lightcolor "#000000"
-set highlight-active-color "#FF0000"
+set recolor-lightcolor "rgba(0, 0, 0, 1)"
+set highlight-active-color "rgba(255, 0, 0, 0.5)"
 set recolor false
 set recolor-keephue true
 
