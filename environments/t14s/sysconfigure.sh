@@ -41,6 +41,8 @@ symlink "vcs/jira/jira-refresh-currently-assigned-issue.service" "$HOME/.config/
 
 chmod 600 "$HOME/.ssh/id_ed25519"
 
+mkdir -p "$HOME/.trash" # Needed to get lf's trash command to work correctly
+
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
 sudo usermod -aG docker sebelino
