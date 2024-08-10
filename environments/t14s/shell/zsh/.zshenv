@@ -1,4 +1,5 @@
 export EDITOR=nvim
+export OPENER=rifle # From ranger package, to open files in lf
 
 export PATH="$PATH:$HOME/bin"
 
