@@ -105,6 +105,7 @@ case "$argument" in
         # noop
     ;;
     'Smart Shift Press Left')
+        # Hold the Smart Shift button while pressing the left mouse button
         app_data="$(get_focused_app)"
         app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
@@ -115,9 +116,11 @@ case "$argument" in
         # noop
     ;;
     'Smart Shift Release Left')
+        # Hold the Smart Shift button while releasing the left mouse button
         app_data="$(get_focused_app)"
         app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
+            # CTRL-click a link, to open it in a new tab
             ydotool key "$kc_Ctrl:0"
             # Switch to the newly opened tab
             ydotool key $kc_Ctrl:1 $kc_Tab:1 $kc_Tab:0 $kc_Ctrl:0
