@@ -101,6 +101,26 @@ case "$argument" in
             notify-send --urgency=low 'Ineffective middle click'
         fi
     ;;
+    'Dumb Shift Press Left')
+        # noop
+    ;;
+    'Smart Shift Press Left')
+        app_data="$(get_focused_app)"
+        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
+        if [ "$app_name" = "chromium" ]; then
+            ydotool key "$kc_Ctrl:1"
+        fi
+    ;;
+    'Dumb Shift Release Left')
+        # noop
+    ;;
+    'Smart Shift Release Left')
+        app_data="$(get_focused_app)"
+        app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
+        if [ "$app_name" = "chromium" ]; then
+            ydotool key "$kc_Ctrl:0"
+        fi
+    ;;
     'Smart Shift Scroll Left')
         # Hold the Smart Shift button while scrolling left
         app_data="$(get_focused_app)"

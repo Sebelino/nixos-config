@@ -42,14 +42,37 @@ function process_wheel_event() {
     fi
 }
 
+function process_button_event() {
+    button="$1"
+    state="$2"
+    if [ "$button" = "BTN_LEFT" ]; then
+        if [ "$state" = "pressed," ]; then
+            execute "Press Left"
+        elif [ "$state" = "released," ]; then
+            execute "Release Left"
+        else
+            echo "Unexpected state $state" >> "$HOME/mousemapper.sh.log"
+        fi
+    else
+        return
+    fi
+}
+
 function parse_event_line() {
-    # When scrolling the wheel horizontally, each line will look something like this:
-    # event11  POINTER_SCROLL_WHEEL    +0.798s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
     action="$2"
-    horizontal_value="${7-:}"
 
     if [ "${action}" = "POINTER_SCROLL_WHEEL" ]; then
+        # When scrolling the wheel horizontally, each line will look something like this:
+        # event11  POINTER_SCROLL_WHEEL    +0.798s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
+        horizontal_value="${7-:}"
         process_wheel_event "$horizontal_value"
+    elif [ "${action}" = "POINTER_BUTTON" ]; then
+        # When clicking the left button, each line will look something like this:
+        # event7   POINTER_BUTTON          +3.756s	BTN_LEFT (272) pressed, seat count: 1
+        # event7   POINTER_BUTTON          +3.836s	BTN_LEFT (272) released, seat count: 0
+        button="$4"
+        state="$6"
+        process_button_event "$button" "$state"
     fi
 }
 
