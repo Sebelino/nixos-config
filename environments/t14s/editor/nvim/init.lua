@@ -472,6 +472,10 @@ vim.keymap.set('v', '<C-k>', '"+p')
 -- Alt+s to quote word
 vim.keymap.set('n', '<M-s>', 'ciW""<Esc>P')
 
+-- Overrides default keybinding (tag stack)
+-- Ctrl+t to insert newline without leaving insert mode
+vim.keymap.set('n', '<C-t>', 'o<Esc>')
+
 -- CTRL+l to format file
 vim.keymap.set('n', '<C-l>', function ()
   vim.cmd(':TerraformFmt')
