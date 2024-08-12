@@ -119,6 +119,8 @@ case "$argument" in
         app_name="$(echo "$app_data" | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
             ydotool key "$kc_Ctrl:0"
+            # Switch to the newly opened tab
+            ydotool key $kc_Ctrl:1 $kc_Tab:1 $kc_Tab:0 $kc_Ctrl:0
         fi
     ;;
     'Smart Shift Scroll Left')
