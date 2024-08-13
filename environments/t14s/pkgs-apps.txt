@@ -29,6 +29,7 @@ gptfdisk
 gtk3-demos
 gtk4-demos
 helm
+hwinfo
 imagemagick
 jc
 jira-cli
