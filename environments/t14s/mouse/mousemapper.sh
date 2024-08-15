@@ -19,6 +19,10 @@ mouse_device="$(libinput list-devices | grep "$mouse_name" -A1 | grep -o '/dev/i
 
 echo "Found ${mouse_name} at ${mouse_device}"
 
+if [ ! -f "$smart_shift_buffer_path" ]; then
+    echo -n 0 > "$smart_shift_buffer_path"
+fi
+
 function execute() {
     event_name="$1"
     smart_shift_buffer="$(cat "$smart_shift_buffer_path")"
