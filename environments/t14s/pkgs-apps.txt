@@ -4,6 +4,7 @@ argocd
 at
 aws-cli
 bat
+bc
 bind
 ccid
 certbot
