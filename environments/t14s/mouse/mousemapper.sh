@@ -37,7 +37,7 @@ function process_wheel_event() {
     horizontal_value="$1"
     if [[ "$horizontal_value" = "0"* ]]; then
         # Assuming vertical scroll event, which we don't care about
-        return
+        :
     elif [[ "$horizontal_value" = "-"* ]]; then
         execute "Scroll Left"
     else
@@ -58,7 +58,7 @@ function process_button_event() {
             echo "Unexpected state $state" >> "$HOME/mousemapper.sh.log"
         fi
     else
-        return
+        :
     fi
 }
 

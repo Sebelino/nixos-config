@@ -20,7 +20,7 @@ execute_with_inertia() {
     keys="$3"
     if [ ! -f "$seek_buffer" ]; then
         echo -n 1 > "$seek_buffer"
-        return # We incremented the value from 0 to 1, so let's exit
+        return 0 # We incremented the value from 0 to 1, so let's exit
     fi
     current_value="$(cat "$seek_buffer")"
     if [ "$current_value" = "0" ]; then
