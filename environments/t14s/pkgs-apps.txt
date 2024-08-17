@@ -69,6 +69,7 @@ pycharm-community-edition
 qdirstat-git
 qemu-full
 qt6-wayland
+r
 ranger
 rclone
 remmina
