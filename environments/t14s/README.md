@@ -1,3 +1,7 @@
+* Model: Thinkpad T14s Gen 3
+* Serial Number: GM-04X17V
+* Type Number: 21CQ-003EMX
+
 # Full install guide for new system
 
 ## Live USB building phase
