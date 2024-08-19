@@ -480,3 +480,45 @@ persist even if you boot into Windows?
 
 Try shutting off the computer completely (instead of rebooting). Wait for a few
 seconds, then power on. This has fixed the problem on at least two occasions.
+
+## Troubleshooting: `amdgpu: [gfxhub] page fault`
+
+My system has begun to freeze recently. Happens about once every two days. This
+started happening around the same time I started using more powerful monitors
+(4K or 120Hz). `journalctl -xe --boot=-1` shows:
+
+```
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu: [gfxhub] page fault (src_id:0 ring:24 vmid:6 pasid:32779)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:  in process chromium pid 1747 thread chromium:cs0 pid 1766
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:   in page starting at address 0x000000003b800000 from client 0x1b (UTCL2)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu: GCVM_L2_PROTECTION_FAULT_STATUS:0x00601431
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          Faulty UTCL2 client ID: SQC (data) (0xa)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          MORE_FAULTS: 0x1
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          WALKER_ERROR: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          PERMISSION_FAULTS: 0x3
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          MAPPING_ERROR: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          RW: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu: [gfxhub] page fault (src_id:0 ring:24 vmid:6 pasid:32779)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:  in process chromium pid 1747 thread chromium:cs0 pid 1766
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:   in page starting at address 0x000000003b800000 from client 0x1b (UTCL2)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu: GCVM_L2_PROTECTION_FAULT_STATUS:0x00000000
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          Faulty UTCL2 client ID: CB/DB (0x0)
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          MORE_FAULTS: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          WALKER_ERROR: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          PERMISSION_FAULTS: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          MAPPING_ERROR: 0x0
+Aug 19 12:54:53 t14s kernel: amdgpu 0000:33:00.0: amdgpu:          RW: 0x0
+Aug 19 12:55:03 t14s kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* ring gfx_0.1.0 timeout, signaled seq=947849, emitted seq=947850
+Aug 19 12:55:03 t14s kernel: [drm:amdgpu_job_timedout [amdgpu]] *ERROR* Process information: process sway pid 1375 thread sway:cs0 pid 1449
+```
+
+I followed the advice in this
+[Gitlab thread](https://gitlab.freedesktop.org/drm/amd/-/issues/3067)
+and tried setting the DPM performance level to `high` (from `auto`):
+
+```
+# echo "high" > /sys/class/drm/card1/device/power_dpm_force_performance_level
+```
+
+Hopefully that fixes it. If it does, I'll need to make sure this is set on
+boot.
