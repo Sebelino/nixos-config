@@ -2,11 +2,16 @@ profile HomeTriple {
 	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
 	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
 	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
+	exec swaymsg workspace 2, move workspace to '"Samsung Electric Company Odyssey G8 HNBX200352"'
+	exec swaymsg workspace 3, move workspace to '"BNQ BenQ GL2450H B9D00653019"'
+	exec swaymsg workspace 5, move workspace to '"LG Display 0x06ED Unknown"'
 }
 
 profile HomeWithoutBenq {
 	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
 	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
+	exec swaymsg workspace 2, move workspace to '"Samsung Electric Company Odyssey G8 HNBX200352"'
+	exec swaymsg workspace 5, move workspace to '"LG Display 0x06ED Unknown"'
 }
 
 profile HomeWithoutOdyssey {
@@ -16,4 +21,5 @@ profile HomeWithoutOdyssey {
 
 profile LaptopOnly {
 	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
+	exec swaymsg workspace 2, move workspace to '"LG Display 0x06ED Unknown"'
 }
