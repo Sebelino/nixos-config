@@ -37,6 +37,7 @@ jira-cli
 jq
 jwt-cli
 k9s
+kanshi
 kind
 kubectx
 kubeseal
@@ -89,7 +90,6 @@ vault
 virt-manager
 virt-viewer
 viu
-way-displays
 wdisplays-git
 wev
 wget

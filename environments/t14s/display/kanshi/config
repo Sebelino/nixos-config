@@ -1,0 +1,19 @@
+profile HomeTriple {
+	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
+	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
+	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
+}
+
+profile HomeWithoutBenq {
+	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
+	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
+}
+
+profile HomeWithoutOdyssey {
+	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
+	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
+}
+
+profile LaptopOnly {
+	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
+}

@@ -35,7 +35,7 @@ symlink "../../bin" "$HOME/bin"
 symlink "browser/chromium/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
 symlink "notify/dunst/dunstrc" "$HOME/.config/dunst/dunstrc"
 symlink "vm/libvirt/libvirt.conf" "$HOME/.config/libvirt/libvirt.conf"
-symlink "display/way-displays" "$HOME/.config/way-displays"
+symlink "display/kanshi" "$HOME/.config/kanshi"
 symlink "mouse/mousemapper.service" "$HOME/.config/systemd/user/mousemapper.service"
 symlink "vcs/jira/jira-refresh-currently-assigned-issue.service" "$HOME/.config/systemd/user/jira-refresh-currently-assigned-issue.service"
 
