@@ -6,7 +6,6 @@ aws-cli
 bat
 bc
 bind
-ccid
 certbot
 chart-testing
 dmidecode
@@ -42,7 +41,6 @@ kind
 kubectx
 kubeseal
 lf
-libp11
 libreoffice-fresh
 libva-mesa-driver
 libva-utils
@@ -57,11 +55,8 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
-openconnect
 openldap
 openshift-client-bin
-pam_pkcs11
-pcsc-tools
 pdftk
 pistol-bin
 pkgfile
