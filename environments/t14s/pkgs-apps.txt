@@ -1,7 +1,6 @@
 anki-bin
 archiso
 at
-aws-cli
 bat
 bc
 bind
@@ -28,7 +27,6 @@ gtk4-demos
 hwinfo
 imagemagick
 jc
-jira-cli
 jq
 jwt-cli
 kanshi
@@ -39,7 +37,6 @@ libva-utils
 lshw
 mesa-utils
 mitmproxy
-multi-gitter
 net-tools
 ngrok
 nmap
@@ -47,7 +44,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
-openldap
 pdftk
 pistol-bin
 pkgfile
@@ -63,14 +59,12 @@ strace
 terraform
 texlive-binextra
 texlive-latex
-tfautomv-bin
 tor-browser-bin
 transmission-gtk
 ttf-comic-neue
 ttf-ms-fonts
 unzip
 usbutils
-vault
 virt-manager
 virt-viewer
 viu
