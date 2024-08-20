@@ -1,4 +1,5 @@
 anki-bin
+xorg-xrandr
 archiso
 at
 bat
