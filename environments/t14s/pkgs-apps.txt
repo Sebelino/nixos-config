@@ -19,7 +19,6 @@ drawio-desktop
 dunst
 firefox
 flameshot-git
-freerdp
 fzf
 gdb
 gimp
@@ -67,7 +66,6 @@ qt6-wayland
 r
 ranger
 rclone
-remmina
 solaar
 strace
 terraform
