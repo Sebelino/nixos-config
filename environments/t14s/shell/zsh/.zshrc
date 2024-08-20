@@ -30,7 +30,6 @@ source $ZSH/oh-my-zsh.sh
 # Custom stuff:
 
 source "$ZDOTDIR/aliases.zsh"
-source "$ZDOTDIR/secrets/work.zsh"
 source "$ZDOTDIR/keybindings.zsh"
 
 # Zsh plugins, installed with yay:
