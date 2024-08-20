@@ -11,7 +11,7 @@ set $term alacritty
 # Application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu -nb '#000000' -sf '#1e1e1e' -sb '#00f000' -nf '#00f000' | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -m 0 -nb '#000000' -sf '#1e1e1e' -sb '#00f000' -nf '#00f000' | xargs swaymsg exec --
 
 # Desktop background
 output * bg /home/sebelino/nixos-config/windowmanager/wallpaper fill
