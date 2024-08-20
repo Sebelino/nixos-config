@@ -62,7 +62,3 @@ sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service
 # "Requested operation is not valid: network 'default' is not active"
 # You can also start it manually with `virsh net-start default`
 virsh net-autostart --network default
-
-# To prevent untrusted CA errors by non-browser tools
-sudo trust -v anchor --store "$scriptdir/vpn/secrets/Region Stockholm RSA Rot CA v3.pem"
-sudo trust -v anchor --store "$scriptdir/vpn/secrets/SITHS e-id Root CA v2.pem"
