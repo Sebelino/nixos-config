@@ -62,7 +62,6 @@ openldap
 openshift-client-bin
 pam_pkcs11
 pcsc-tools
-pcsclite
 pdftk
 pistol-bin
 pkgfile
