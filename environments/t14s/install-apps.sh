@@ -15,6 +15,3 @@ else
   # shellcheck disable=SC2086
   yay -S --needed --noconfirm $missing_packages
 fi
-
-
-"$scriptdir/install-teams-for-linux.sh"
