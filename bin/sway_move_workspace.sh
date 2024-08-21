@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -Eeuo pipefail
 
-unfocused_output="$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == false).name')"
+# Should match the first part of any of the strings given by `swaymsg -t get_outputs | jq -r '.[].name'`
+monitor_prefix="$1"
 
-swaymsg move workspace to "$unfocused_output"
+requested_display_name="$(swaymsg -t get_outputs | jq -r ".[] | select(.name | startswith(\"$monitor_prefix\")).name")"
+
+swaymsg move workspace to "$requested_display_name"

@@ -69,8 +69,23 @@ input "type:touchpad" {
     # Lock screen
     bindsym $mod+plus exec 'swaylock -f -c 000000'
 
-    # Move the currently focused workspace to the other monitor
-    bindsym $mod+w exec 'sway_move_workspace.sh'
+    # Switch to the primary display (laptop)
+    bindsym $mod+a exec 'sway_switch_workspace.sh eDP'
+
+    # Switch to the secondary display (main external monitor, above laptop)
+    bindsym $mod+q exec 'sway_switch_workspace.sh DP'
+
+    # Switch to the tertiary display (auxiliary external monitor, right of secondary display)
+    bindsym $mod+w exec 'sway_switch_workspace.sh HDMI'
+
+    # Move the currently focused workspace to the primary display (laptop)
+    bindsym $mod+Shift+a exec 'sway_move_workspace.sh eDP'
+
+    # Move the currently focused workspace to the secondary display (main external monitor, above laptop)
+    bindsym $mod+Shift+q exec 'sway_move_workspace.sh DP'
+
+    # Move the currently focused workspace to the tertiary display (auxiliary external monitor, right of secondary display)
+    bindsym $mod+Shift+w exec 'sway_move_workspace.sh HDMI'
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -150,7 +165,7 @@ input "type:touchpad" {
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+z focus parent
 
     # Start flameshot
     bindsym $mod+c exec flameshot gui
