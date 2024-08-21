@@ -1,5 +1,4 @@
 anki-bin
-xorg-xrandr
 archiso
 at
 bat
@@ -75,6 +74,7 @@ wget
 wireshark-qt
 words
 xorg-xlsclients
+xorg-xrandr
 yamllint
 ydotool
 yt-dlp
