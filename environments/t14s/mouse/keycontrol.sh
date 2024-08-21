@@ -153,6 +153,8 @@ case "$argument" in
         app_name="$(get_focused_app | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
             chromium_tab_switch_left
+        elif [ "$app_name" = "draw.io" ]; then
+            :
         else
             notify-send --urgency=low 'Ineffective mode shift left scroll'
         fi
@@ -162,6 +164,8 @@ case "$argument" in
         app_name="$(get_focused_app | jq -r "$jq_app_id")"
         if [ "$app_name" = "chromium" ]; then
             chromium_tab_switch_right
+        elif [ "$app_name" = "draw.io" ]; then
+            :
         else
             notify-send --urgency=low 'Ineffective mode shift right scroll'
         fi
