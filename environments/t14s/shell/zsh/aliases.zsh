@@ -109,6 +109,10 @@ alias gws="git status --short"
 alias gwS="git status"
 alias gwd="git diff --no-ext-diff"
 
+# List files
+alias l="lsd -lAv --group-directories-first"
+alias ls="lsd"
+
 # Custom
 alias k="kubectl"
 alias v="nvim"
