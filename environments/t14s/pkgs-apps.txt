@@ -34,6 +34,7 @@ lf
 libreoffice-fresh
 libva-mesa-driver
 libva-utils
+lsd
 lshw
 mesa-utils
 mitmproxy
