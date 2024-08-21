@@ -5,6 +5,7 @@ profile HomeTriple {
 	exec swaymsg workspace 3, move workspace to '"BNQ BenQ GL2450H B9D00653019"'
 	exec swaymsg workspace 5, move workspace to '"LG Display 0x06ED Unknown"'
 	exec swaymsg workspace 2, move workspace to '"Samsung Electric Company Odyssey G8 HNBX200352"'
+	exec ydotool mousemove -a -x 800 -y 800
 }
 
 profile HomeWithoutBenq {
