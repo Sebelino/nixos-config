@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-APP=google-chrome
+set -Eeuo pipefail
 
-"$APP" -app=https://mail.google.com/
+chromium -app=https://mail.google.com/
