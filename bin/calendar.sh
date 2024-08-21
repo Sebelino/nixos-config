@@ -1,9 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-GCALENDAR_URL="https://calendar.google.com/calendar"
-OUTLOOK_URL="https://outlook.office.com/calendar/view/week"
+set -Eeuo pipefail
 
-url="$OUTLOOK_URL"
+gcalendar_url="https://calendar.google.com/calendar"
+outlook_url="https://outlook.office.com/calendar/view/week"
 
-google-chrome "-app=$url" &!
-chromium "-app=$url" &!
+url="$gcalendar_url"
+
+chromium "-app=$url" &
