@@ -110,8 +110,8 @@ alias gwS="git status"
 alias gwd="git diff --no-ext-diff"
 
 # List files
-alias l="lsd -lAv --group-directories-first"
-alias ls="lsd"
+alias l="lsd --group-directories-first -lAv"
+alias ls="lsd --group-directories-first"
 
 # Custom
 alias k="kubectl"
