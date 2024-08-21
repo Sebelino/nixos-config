@@ -30,6 +30,7 @@ jc
 jq
 jwt-cli
 kanshi
+keybase-bin
 lf
 libreoffice-fresh
 libva-mesa-driver
