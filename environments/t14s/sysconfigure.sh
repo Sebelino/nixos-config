@@ -15,6 +15,7 @@ fi
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
 symlink "vcs/gitignore_global" "$HOME/.gitignore_global"
 symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+symlink "security/gnupg/gpg.conf" "$HOME/.gnupg/gpg.conf"
 symlink "shell/zdotdir.zshenv" "$HOME/.zshenv"
 symlink "shell/zsh" "$HOME/.config/zsh"
 symlink "terminal/alacritty" "$HOME/.config/alacritty"
