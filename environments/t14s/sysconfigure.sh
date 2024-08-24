@@ -12,6 +12,7 @@ if [ ! -L "$HOME/.ssh/id_ed25519" ]; then
     rm -f "$HOME/.ssh/id_ed25519.pub"
 fi
 
+symlink "locale/locale.conf" "$HOME/.config/locale.conf"
 symlink "vcs/gitconfig" "$HOME/.gitconfig"
 symlink "vcs/gitignore_global" "$HOME/.gitignore_global"
 symlink "security/gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
@@ -43,6 +44,10 @@ symlink "vcs/jira/jira-refresh-currently-assigned-issue.service" "$HOME/.config/
 chmod 600 "$HOME/.ssh/id_ed25519"
 
 mkdir -p "$HOME/.trash" # Needed to get lf's trash command to work correctly
+
+# Enable Swedish locale
+sudo sed -i 's/#\(sv_SE.UTF-8 UTF-8\)/\1/g' /etc/locale.gen
+sudo locale-gen
 
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
