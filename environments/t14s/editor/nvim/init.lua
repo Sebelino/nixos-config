@@ -264,6 +264,9 @@ vim.o.hlsearch = true
 -- Make line numbers default
 vim.wo.number = true
 
+-- Enable relative numbers
+vim.opt.relativenumber = true
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
