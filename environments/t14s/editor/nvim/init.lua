@@ -219,6 +219,8 @@ require('lazy').setup({
         leap.opts[k] = v
       end
       leap.add_default_mappings(true)
+      vim.keymap.del({ "x", "o" }, "x") -- Retain ability to delete char during visual mode
+      vim.keymap.del({ "x", "o" }, "X") -- Retain ability to delete char during visual mode
       vim.keymap.set("n", "s", function()
         require("leap").leap({ target_windows = { vim.api.nvim_get_current_win() } })
       end)
