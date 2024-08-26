@@ -61,6 +61,8 @@ strace
 terraform
 texlive-binextra
 texlive-latex
+texlive-latexextra
+texlive-latexrecommended
 thunderbird
 tor-browser-bin
 transmission-gtk
