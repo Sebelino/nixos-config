@@ -1,4 +1,5 @@
 airtame-application
+slurp
 anki-bin
 archiso
 at
