@@ -1,5 +1,4 @@
 airtame-application
-slurp
 anki-bin
 archiso
 at
@@ -58,6 +57,7 @@ qt6-wayland
 r
 ranger
 rclone
+slurp
 solaar
 strace
 terraform
