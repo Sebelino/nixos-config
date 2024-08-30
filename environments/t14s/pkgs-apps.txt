@@ -57,6 +57,7 @@ qt6-wayland
 r
 ranger
 rclone
+rstudio-desktop
 slurp
 solaar
 strace
