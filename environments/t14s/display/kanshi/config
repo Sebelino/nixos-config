@@ -20,6 +20,11 @@ profile HomeWithoutOdyssey {
 	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
 }
 
+profile Varsta {
+	output "LG Display 0x06ED Unknown" mode 1920x1200 position 0,1080
+	output "Samsung Electric Company SAMSUNG Unknown" mode 1920x1080 position 0,0
+}
+
 profile LaptopOnly {
 	output "LG Display 0x06ED Unknown" mode 1920x1200 position 1920,2160
 	exec swaymsg workspace 2, move workspace to '"LG Display 0x06ED Unknown"'
