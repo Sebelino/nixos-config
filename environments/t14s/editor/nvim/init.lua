@@ -466,6 +466,10 @@ vim.keymap.set('n', '<F12>', function()
   end
 end)
 
+-- Workaround for annoying bug where the cursor slowed down a lot when I set hlsearch
+-- https://github.com/neovim/neovim/issues/23590#issuecomment-1911925029
+vim.cmd('hi! link CurSearch Search')
+
 -- CTRL+y to gracefully exit Neovim
 vim.keymap.set('n', '<C-y>', function ()
   vim.cmd(':qa')
