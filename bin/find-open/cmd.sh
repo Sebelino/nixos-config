@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-export FZF_DEFAULT_COMMAND="find . -not -path '*/.*'"
+export FZF_DEFAULT_COMMAND="fd"
 
 filepath="$(fzf)"
 filepath="$(readlink -f "$filepath")"
