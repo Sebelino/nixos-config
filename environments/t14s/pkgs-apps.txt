@@ -51,6 +51,7 @@ pdftk
 pistol-bin
 pkgfile
 pycharm-community-edition
+python-scikit-learn
 qdirstat-git
 qemu-full
 qt6-wayland
