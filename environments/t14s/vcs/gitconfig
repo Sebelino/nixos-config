@@ -1,5 +1,5 @@
 [user]
-    name = Sebastian Olsson
+    name = Ville Sebastian Olsson
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
