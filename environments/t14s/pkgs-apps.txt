@@ -64,6 +64,7 @@ solaar
 strace
 terraform
 texlive-binextra
+texlive-fontsextra
 texlive-latex
 texlive-latexextra
 texlive-latexrecommended
