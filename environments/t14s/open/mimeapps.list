@@ -1,0 +1,17 @@
+[Default Applications]
+x-scheme-handler/webcal=chromium.desktop
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-D0L8S2.desktop
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/discord-719647875465871400=discord-719647875465871400.desktop
+message/rfc822=userapp-Thunderbird-D0L8S2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-D0L8S2.desktop
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-D0L8S2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-D0L8S2.desktop;
