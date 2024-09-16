@@ -156,7 +156,7 @@ case "$argument" in
         elif [ "$app_name" = "draw.io" ]; then
             :
         else
-            notify-send --urgency=low 'Ineffective mode shift left scroll'
+            notify-send --urgency=low 'Ineffective left scroll'
         fi
     ;;
     'Dumb Shift Scroll Right')
@@ -167,7 +167,7 @@ case "$argument" in
         elif [ "$app_name" = "draw.io" ]; then
             :
         else
-            notify-send --urgency=low 'Ineffective mode shift right scroll'
+            notify-send --urgency=low 'Ineffective right scroll'
         fi
     ;;
     *) notify-send --urgency=low 5 "Unrecognized argument to keycontrol.sh: $argument"
