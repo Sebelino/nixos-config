@@ -155,6 +155,8 @@ case "$argument" in
             chromium_tab_switch_left
         elif [ "$app_name" = "draw.io" ]; then
             :
+        elif [ "$app_name" = "org.pwmt.zathura" ]; then
+            :
         else
             notify-send --urgency=low 'Ineffective left scroll'
         fi
@@ -165,6 +167,8 @@ case "$argument" in
         if [ "$app_name" = "chromium" ]; then
             chromium_tab_switch_right
         elif [ "$app_name" = "draw.io" ]; then
+            :
+        elif [ "$app_name" = "org.pwmt.zathura" ]; then
             :
         else
             notify-send --urgency=low 'Ineffective right scroll'
