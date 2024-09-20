@@ -6,6 +6,7 @@ bat
 bc
 bind
 certbot
+discord
 dmidecode
 dnsmasq
 docker
