@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rclone sync -P "$HOME/gdrive/academia" "google-drive:/academia"
+rclone bisync -P "$HOME/gdrive/academia" "google-drive:/academia" --drive-skip-gdocs --resync
