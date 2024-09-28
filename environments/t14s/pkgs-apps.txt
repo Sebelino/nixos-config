@@ -93,4 +93,4 @@ yamllint
 ydotool
 yt-dlp
 zathura
-zathura-pdf-poppler
+zathura-pdf-mupdf
