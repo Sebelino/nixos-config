@@ -131,3 +131,4 @@ alias gbCC=sebe_create_branch_with_generated_name_from_current_branch
 alias ghp=sebe_github_create_pr
 alias gbt="sebe_update_branch_with_trunk"
 alias cdn="cd $HOME/nixos-config/environments/t14s/"
+alias wlc="wl-copy < "
