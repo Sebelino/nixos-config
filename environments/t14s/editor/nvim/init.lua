@@ -244,6 +244,10 @@ require('lazy').setup({
   },
   "hashivim/vim-terraform",
   {
+    -- Github Copilot
+    "github/copilot.vim",
+  },
+  {
     -- LaTex development
     "lervag/vimtex",
     lazy = false, -- The docs recommend against lazy-loading this
