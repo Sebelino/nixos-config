@@ -18,6 +18,7 @@ drawio-desktop
 dunst
 firefox
 flameshot-git
+fprintd
 fzf
 gdb
 gimp
