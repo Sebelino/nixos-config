@@ -376,6 +376,21 @@ Install multilib packages (Adobe Reader, Wine, etc.):
 bash ~/nixos-config/environments/t14s/install-multilib-pkgs.sh
 ```
 
+Set up fingerprint scanning with `swaylock`:
+
+```bash
+sudo fprintd-enroll sebelino
+sudo cat /etc/pam.d/swaylock
+```
+
+```diff
+- auth include login
++ auth sufficient pam_unix.so try_first_pass likeauth nullok
++ auth sufficient pam_fprintd.so
+```
+
+At the lock screen, you need to press enter before scanning your finger.
+
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
