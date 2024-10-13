@@ -55,8 +55,10 @@ pistol-bin
 pkgfile
 plocate
 pycharm-community-edition
+python-matplotlib
 python-pyqt5
 python-scikit-learn
+python-seaborn
 qdirstat-git
 qemu-full
 qt6-wayland
