@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-export FZF_DEFAULT_COMMAND="fd"
+export FZF_DEFAULT_COMMAND="fd -I"
 
 filepath="$(fzf)"
 filepath="$(readlink -f "$filepath")"
