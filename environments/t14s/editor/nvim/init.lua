@@ -389,7 +389,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 
 -- Disable Copilot for certain files
 vim.api.nvim_create_autocmd('BufEnter', {
-  pattern = {"diary.txt"},
+  pattern = {"diary.txt","drills.gitignore.tex"},
   callback = function()
     vim.b.copilot_enabled = false
   end
