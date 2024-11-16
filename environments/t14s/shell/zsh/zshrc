@@ -32,10 +32,6 @@ source $ZSH/oh-my-zsh.sh
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/keybindings.zsh"
 
-# Delete whole word with CTRL+W
-autoload -U select-word-style
-select-word-style shell
-
 # Zsh plugins, installed with yay:
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
