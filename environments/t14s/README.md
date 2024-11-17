@@ -391,6 +391,16 @@ sudo cat /etc/pam.d/swaylock
 
 At the lock screen, you need to press enter before scanning your finger.
 
+Enable the `iommu=pt` Kernel parameter to prevent the system from freezing:
+
+```bash
+sudo nvim /boot/loader/entries/arch.conf
+```
+```diff
+- options cryptdevice=UUID=68d34a90-93d0-49c4-bccb-4a82238553e1:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp
++ options cryptdevice=UUID=68d34a90-93d0-49c4-bccb-4a82238553e1:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp amd_iommu=on iommu=pt
+```
+
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
