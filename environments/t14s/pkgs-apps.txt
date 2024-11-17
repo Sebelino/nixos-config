@@ -77,7 +77,6 @@ texlive-latex
 texlive-latexextra
 texlive-latexrecommended
 thunderbird
-tor-browser-bin
 transmission-gtk
 ttf-comic-neue
 ttf-ms-fonts
