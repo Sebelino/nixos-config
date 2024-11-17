@@ -80,6 +80,7 @@ thunderbird
 transmission-gtk
 ttf-comic-neue
 ttf-ms-fonts
+udunits
 unzip
 usbutils
 virt-manager
