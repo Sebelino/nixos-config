@@ -170,7 +170,7 @@ input "type:touchpad" {
     bindsym $mod+z focus parent
 
     # Start flameshot
-    bindsym $mod+c exec flameshot gui
+    bindsym $mod+c exec flameshot gui --raw > /tmp/screenshot.png && cp /tmp/screenshot.png $HOME/misc/screenshots/$(date "+%Y-%m-%d_%H-%M-%S").png && cp /tmp/screenshot.png $HOME/misc/screenshots/newest.png && cat /tmp/screenshot.png | wl-copy
 
     # Toggle handsfree on bluetooth headset
     bindsym $mod+y exec toggle_handsfree.sh
