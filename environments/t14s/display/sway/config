@@ -37,7 +37,11 @@ exec_always pkill kanshi; exec kanshi > "/tmp/kanshi.${XDG_VTNR}.${USER}.log" 2>
 # Works around a Flameshot+Wayland bug where flameshot only allows me to take a
 # screenshot of one of my two monitors:
 # https://github.com/flameshot-org/flameshot/issues/2364#issuecomment-1740216337
-for_window [app_id="flameshot"] fullscreen enable global
+
+# Commenting this out makes flameshot work on one monitor, but with three monitors, the selection area is limited to one monitor.
+# Uncommenting it makes flameshot work with three monitors with full selection area, but it doesn't work with one monitor.
+#for_window [app_id="flameshot"] fullscreen enable global
+
 for_window [title="find-open-cmd"] floating enable
 
 exec solaar -w hide
