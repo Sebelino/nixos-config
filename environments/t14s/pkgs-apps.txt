@@ -62,6 +62,7 @@ python-seaborn
 qdirstat-git
 qemu-full
 qt6-wayland
+quarto-cli-bin
 r
 ranger
 rclone
