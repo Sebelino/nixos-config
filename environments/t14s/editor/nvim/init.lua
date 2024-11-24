@@ -429,12 +429,19 @@ vim.api.nvim_create_autocmd('BufEnter', {
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'r' },
 
-  -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-  auto_install = false,
+  auto_install = true,
+  sync_install = false,
+  ignore_install = {},
+  modules = {},
 
-  highlight = { enable = true },
+  highlight = {
+    enable = true,
+    disable = function (lang, bufnr)
+      return lang == 'latex' or lang == 'tex'
+    end,
+  },
   indent = { enable = true },
   incremental_selection = {
     enable = true,
