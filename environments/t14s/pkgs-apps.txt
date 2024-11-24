@@ -79,6 +79,7 @@ texlive-latexextra
 texlive-latexrecommended
 thunderbird
 transmission-gtk
+tree-sitter-cli
 ttf-comic-neue
 ttf-ms-fonts
 udunits
