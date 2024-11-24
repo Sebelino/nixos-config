@@ -277,6 +277,14 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
+-- Auto-compile latex on save
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "*.tex",  -- Match only TeX files
+    callback = function()
+        vim.cmd("silent! !latexmk -pdf % > /dev/null 2>&1")
+    end,
+})
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
