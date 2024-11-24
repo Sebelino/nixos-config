@@ -254,6 +254,7 @@ require('lazy').setup({
   {
     -- LaTex development
     "lervag/vimtex",
+    enabled = false, -- Disabled because everything slows down in large documents
     lazy = false, -- The docs recommend against lazy-loading this
     tag = "v2.15",
     init = function()
