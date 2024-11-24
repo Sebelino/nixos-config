@@ -277,6 +277,27 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
+-- Latex speed improvements
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'tex',
+  callback = function()
+    vim.opt.relativenumber = false
+    vim.g.vimtex_matchparen_enabled = 0
+    vim.g.vimtex_stopline = 100
+    vim.g.matchup_matchparen_deferred = 1
+    vim.g.matchup_override_vimtex = 0
+    vim.g.vimtex_delim_timeout = 30
+    vim.g.loaded_matchparen = 1
+    vim.g.vimtex_complete_enabled_= 0
+    vim.g.vimtex_syntax_conceal_disable = 1
+
+    vim.o.foldmethod = "expr"
+    vim.o.foldexpr="vimtex#fold#level(v:lnum)"
+    vim.o.foldtext="vimtex#fold#text()"
+    vim.o.foldlevel=2
+  end
+})
+
 -- Auto-compile latex on save
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = "*.tex",  -- Match only TeX files
