@@ -19,6 +19,7 @@ sudo systemctl enable --now libvirtd
 sudo systemctl enable --now pcscd
 
 # at command
+sudo systemctl enable --now atd
 sudo systemctl restart atd
 
 # Keyboard automation tool
