@@ -67,8 +67,8 @@ function parse_event_line() {
 
     if [ "${action}" = "POINTER_SCROLL_WHEEL" ]; then
         # When scrolling the wheel horizontally, each line will look something like this:
-        # event11  POINTER_SCROLL_WHEEL    +0.798s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
-        horizontal_value="${7-:}"
+        # event7   POINTER_SCROLL_WHEEL    101 +14.105s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
+        horizontal_value="${8-:}"
         process_wheel_event "$horizontal_value"
     elif [ "${action}" = "POINTER_BUTTON" ]; then
         # When clicking the left button, each line will look something like this:
