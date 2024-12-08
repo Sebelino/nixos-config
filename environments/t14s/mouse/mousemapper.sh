@@ -6,18 +6,27 @@
 # ~/nixos-config/keyboard/smart_shift_buffer.sh
 # solaar (must be running in order to execute smart_shift_buffer.sh)
 
-set -euo pipefail
+set -Eeuo pipefail
 
 # Workaround for an issue where swaymsg fails with "Unable to retrieve socket path" if invoked too early
 echo "SWAYSOCK=$SWAYSOCK" # This daemon might fail here with "unbound variable SWAYSOCK", forcing a restart
 
 mouse_name="MX Master 3"
+mouse_device=""
+
+while [ -z "$mouse_device" ]; do
+    if ! mouse_device="$(libinput list-devices | grep "$mouse_name" -A1 | grep -o '/dev/input/event[0-9]*')"; then
+        mouse_device=""
+    fi
+    if [ -z "$mouse_device" ]; then
+        sleep 2
+    fi
+done
+echo "Found ${mouse_name} at ${mouse_device}"
+
 smart_shift_buffer_path="/dev/shm/smart_shift_buffer"
 script_dir="$(dirname "$(realpath "$0")")"
 keycontrol_path="${script_dir}/keycontrol.sh"
-mouse_device="$(libinput list-devices | grep "$mouse_name" -A1 | grep -o '/dev/input/event[0-9]*')"
-
-echo "Found ${mouse_name} at ${mouse_device}"
 
 if [ ! -f "$smart_shift_buffer_path" ]; then
     echo -n 0 > "$smart_shift_buffer_path"
@@ -78,6 +87,9 @@ function parse_event_line() {
         button="$4"
         state="$6"
         process_button_event "$button" "$state"
+    elif [ "${action}" = "DEVICE_REMOVED" ]; then
+        echo "Mouse device removed. Exiting."
+        exit 1 # Force restart, so stdbuf is re-run
     fi
 }
 
