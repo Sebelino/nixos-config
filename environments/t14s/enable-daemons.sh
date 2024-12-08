@@ -7,13 +7,17 @@ systemctl --user daemon-reload
 
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now pacman-filesdb-refresh.timer
-sudo systemctl enable --now docker
+#sudo systemctl enable --now docker
 
 # Adjust time
 sudo systemctl enable --now systemd-timesyncd
 
 # Used by virt-manager
-sudo systemctl enable --now libvirtd
+# Enabling this may cause `reboot` to hang for 5 seconds https://www.reddit.com/r/archlinux/comments/1h1ucdu/a_5second_delay_after_powering_off/
+#sudo systemctl enable --now libvirtd
+#sudo systemctl enable --now libvirtd.socket
+#sudo systemctl enable --now libvirtd-ro.socket
+#sudo systemctl enable --now libvirtd-admin.socket
 
 # Smart card reader
 sudo systemctl enable --now pcscd
