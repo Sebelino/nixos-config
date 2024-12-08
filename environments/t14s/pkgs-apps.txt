@@ -25,6 +25,7 @@ gimp
 github-cli
 go-yq
 gptfdisk
+gsl
 gtk3-demos
 gtk4-demos
 hwinfo
