@@ -6,6 +6,7 @@ bat
 bc
 bind
 certbot
+diffpdf
 discord
 dmidecode
 dnsmasq
