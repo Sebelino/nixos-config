@@ -18,9 +18,7 @@ while [ -z "$mouse_device" ]; do
     if ! mouse_device="$(libinput list-devices | grep "$mouse_name" -A1 | grep -o '/dev/input/event[0-9]*')"; then
         mouse_device=""
     fi
-    if [ -z "$mouse_device" ]; then
-        sleep 2
-    fi
+    sleep 2
 done
 echo "Found ${mouse_name} at ${mouse_device}"
 
