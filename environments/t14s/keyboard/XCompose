@@ -1,0 +1,10 @@
+# include "%L"
+
+# 1-key compositions
+<Multi_key> <a> : "á"
+<Multi_key> <c> : "ç"
+<Multi_key> <e> : "é"
+<Multi_key> <u> : "ü"
+
+# 2-key compositions
+<Multi_key> <n> <e> : "É"
