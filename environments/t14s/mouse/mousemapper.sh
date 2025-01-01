@@ -11,7 +11,9 @@ set -Eeuo pipefail
 # Workaround for an issue where swaymsg fails with "Unable to retrieve socket path" if invoked too early
 echo "SWAYSOCK=$SWAYSOCK" # This daemon might fail here with "unbound variable SWAYSOCK", forcing a restart
 
-mouse_name="MX Master 3"
+# MX Master 3 is named "MX Master 3"
+# MX Master 3s is named "Logitech USB Receiver Mouse"
+mouse_name="Logitech USB Receiver Mouse"
 mouse_device=""
 
 while [ -z "$mouse_device" ]; do
