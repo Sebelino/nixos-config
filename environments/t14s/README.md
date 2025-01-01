@@ -391,16 +391,6 @@ sudo cat /etc/pam.d/swaylock
 
 At the lock screen, you need to press enter before scanning your finger.
 
-Enable the `iommu=pt` Kernel parameter to prevent the system from freezing:
-
-```bash
-sudo nvim /boot/loader/entries/arch.conf
-```
-```diff
-- options cryptdevice=UUID=68d34a90-93d0-49c4-bccb-4a82238553e1:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp
-+ options cryptdevice=UUID=68d34a90-93d0-49c4-bccb-4a82238553e1:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp amd_iommu=on iommu=pt
-```
-
 # ISO building
 
 I have created my custom Arch Linux ISO using `archiso`, which I call
@@ -478,6 +468,49 @@ and you should be able to partition the disk:
 
 ```bash
 parted /dev/vda
+```
+
+### Graphical glitches
+
+I have kept seeing graphical glitches in Sway the past few months whenever
+resizing windows or switching workspaces. They come in two forms:
+
+In the more severe case, I keep seeing green glitchy boxes on my screen
+whenever switching workspaces or performing other operations that causes a
+sudden change in the display. This issue was short-lived, because I managed to
+fix it by downgrading the kernel from linux to linux-lts. Specifically, from
+Linux 6.12 to 6.6.
+
+In the less severe case, I am seeing weird rendering glitches when resizing
+windows. The glitch goes away when I focus the affected window. I have been
+suffering from this issue for a couple of months now, and I have yet to find a
+solution. LTS kernel downgrade did not help. iommu parameter fiddling did not
+help.
+
+### Bluetoothe idling
+
+When I set up Bluetooth with MX Master 3,
+I found that the mouse was idling after 1 second of inactivity.
+I tried creating this file:
+
+```bash
+sudo nvim /etc/udev/rules.d/50-bluetooth-mouse.rules
+```
+```
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="10ab", ATTR{idProduct}=="9309", ATTR{power/autosuspend}="-1"
+```
+
+and it seemed to have helped.
+
+### Installing V8 (Rstudio)
+
+Building V8 from source using AUR takes forever or makes the computer freeze.
+Instead, do the following.
+In Rstudio, run:
+
+```
+Sys.setenv(DOWNLOAD_STATIC_LIBV8=1)
+install.packages("V8")
 ```
 
 ## Boot phase (sarch)
