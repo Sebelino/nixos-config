@@ -46,8 +46,10 @@ chmod 600 "$HOME/.ssh/id_ed25519"
 mkdir -p "$HOME/.trash" # Needed to get lf's trash command to work correctly
 
 # Enable Swedish locale
-sudo sed -i 's/#\(sv_SE.UTF-8 UTF-8\)/\1/g' /etc/locale.gen
-sudo locale-gen
+if grep -q "#sv_SE.UTF-8 UTF-8" /etc/locale.gen; then
+    sudo sed -i 's/#\(sv_SE.UTF-8 UTF-8\)/\1/g' /etc/locale.gen
+    sudo locale-gen
+fi
 
 # Needed by waybar (keyboard-state)
 sudo usermod -aG input sebelino
