@@ -50,7 +50,7 @@ exec solaar -w hide
 
 input "type:keyboard" {
     xkb_layout solemak,se
-    xkb_options grp:rctrl_toggle
+    xkb_options grp:rctrl_toggle,compose:lwin
     repeat_delay 250
     repeat_rate 50
 }
