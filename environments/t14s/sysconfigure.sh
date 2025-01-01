@@ -76,4 +76,6 @@ fi
 # Prevents virt-manager error:
 # "Requested operation is not valid: network 'default' is not active"
 # You can also start it manually with `virsh net-start default`
-virsh net-autostart --network default
+if pgrep -x "libvirtd" > /dev/null; then
+    virsh net-start --network default
+fi
