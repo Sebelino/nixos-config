@@ -58,6 +58,7 @@ pistol-bin
 pkgfile
 plocate
 pycharm-community-edition
+python-keras
 python-matplotlib
 python-pyqt5
 python-scikit-learn
