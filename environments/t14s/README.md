@@ -576,3 +576,20 @@ and tried setting the DPM performance level to `high` (from `auto`):
 
 Hopefully that fixes it. If it does, I'll need to make sure this is set on
 boot.
+
+## Troubleshooting: Matlab won't start
+
+Downgrade glibc to 2.40.
+
+https://bbs.archlinux.org/viewtopic.php?id=303177
+
+If that doesn't work, you may want to try the following script. Although it was
+not necessary to run it this way once I got it working the first time...
+```bash
+#! /bin/sh
+export GTK_PATH=/usr/lib/gtk-2.0
+export LD_PRELOAD=/usr/lib/libstdc++.so
+export LD_LIBRARY_PATH=/usr/lib/dri/
+export QT_QPA_PLATFORM=xcb
+~/misc/matlab/bin/matlab
+```
