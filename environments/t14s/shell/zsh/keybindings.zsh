@@ -37,5 +37,5 @@ bindkey '\eu' sebe_cmd_to_clip
 lfcd() {
     cd "$(command lf -print-last-dir "$@")"
 }
-bindkey -s '^o' 'lfcd\n'
+bindkey -s '^o' 'cd ~/Downloads && lf ; cd -\n'
 bindkey -s '^n' 'lf\n'
