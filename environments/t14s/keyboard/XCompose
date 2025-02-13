@@ -2,6 +2,8 @@
 
 # 1-key compositions
 <Multi_key> <a> : "á"
+<Multi_key> <r> : "≤"
+<Multi_key> <s> : "≥"
 <Multi_key> <c> : "ç"
 <Multi_key> <e> : "é"
 <Multi_key> <u> : "ü"
