@@ -69,9 +69,6 @@ sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service
 
 if ! diff -q boot/mkinitcpio.conf /etc/mkinitcpio.conf > /dev/null; then
     diff boot/mkinitcpio.conf /etc/mkinitcpio.conf || true | bat
-    sed -i 's/^#\(COMPRESSION="xz"\)/\1/g' boot/mkinitcpio.conf
-    sed -i 's/^#\(COMPRESSION_OPTIONS\)=()/\1=(-9e)/g' boot/mkinitcpio.conf
-    sudo cp /etc/mkinitcpio.conf "$HOME/mkinitcpio.conf.bak"
     sudo cp boot/mkinitcpio.conf /etc/mkinitcpio.conf
     sudo mkinitcpio -P
 fi
