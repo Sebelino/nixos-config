@@ -60,6 +60,7 @@ plocate
 pycharm-community-edition
 python-keras
 python-matplotlib
+python-networkx
 python-pyqt5
 python-scikit-learn
 python-seaborn
