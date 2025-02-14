@@ -54,6 +54,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+pdfgrep
 pdftk
 pistol-bin
 pkgfile
