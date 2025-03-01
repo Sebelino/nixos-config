@@ -579,7 +579,14 @@ boot.
 
 ## Troubleshooting: Matlab won't start
 
-Downgrade glibc to 2.40.
+```bash
+cp /home/sebelino/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so /home/sebelino/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so.bak
+sudo patchelf --clear-execstack /home/sebelino/.MathWorks/ServiceHost/-mw_shared_installs/v2025.2.2.1/bin/glnxa64/libmwfoundation_crash_handling.so
+```
+
+https://bbs.archlinux.org/viewtopic.php?id=303177
+
+If that doesn't work, try downgrading glibc to 2.40.
 
 https://bbs.archlinux.org/viewtopic.php?id=303177
 
@@ -592,4 +599,11 @@ export LD_PRELOAD=/usr/lib/libstdc++.so
 export LD_LIBRARY_PATH=/usr/lib/dri/
 export QT_QPA_PLATFORM=xcb
 ~/misc/matlab/bin/matlab
+```
+
+In addition, you can get rid of the `GLIBCXX_3.4.32` error by doing:
+
+```bash
+mv /home/sebelino/misc/matlab/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6{,.bak}
+ln -s /usr/lib/libstdc++.so.6 /home/sebelino/misc/matlab/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6
 ```
