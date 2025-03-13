@@ -56,6 +56,7 @@ noto-fonts-extra
 ntfs-3g
 pdfgrep
 pdftk
+pipectl
 pistol-bin
 pkgfile
 plocate
@@ -73,6 +74,7 @@ quarto-cli-bin
 r
 ranger
 rclone
+rofi
 rstudio-desktop
 slurp
 solaar
@@ -101,6 +103,7 @@ wdisplays-git
 wev
 wget
 wireshark-qt
+wl-mirror
 words
 xorg-xlsclients
 xorg-xrandr
