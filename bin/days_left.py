@@ -24,5 +24,5 @@ if __name__ == "__main__":
         "--expire-time",
         str(notification_seconds * 1000),
         "Days left",
-        message,
+        message.replace("-","\\-"),
     ])
