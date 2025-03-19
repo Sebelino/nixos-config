@@ -60,11 +60,12 @@ pipectl
 pistol-bin
 pkgfile
 plocate
-pycharm-community-edition
+pycharm-professional
 python-keras
 python-matplotlib
 python-networkx
 python-pyqt5
+python-pytesseract
 python-scikit-learn
 python-seaborn
 qdirstat-git
