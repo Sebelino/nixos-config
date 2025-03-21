@@ -29,6 +29,7 @@ gptfdisk
 gsl
 gtk3-demos
 gtk4-demos
+htop
 hwinfo
 imagemagick
 jc
