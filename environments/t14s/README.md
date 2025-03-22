@@ -151,8 +151,10 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options cryptdevice=UUID=XXX:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp
+options cryptdevice=UUID=XXX:vg root=/dev/mapper/vg-root resume=/dev/mapper/vg-swap rw intel_pstate=no_hwp processor.max_cstate=5
 ```
+
+The `processor.max_cstate=5` should hopefully prevent intermittent freezes: https://bbs.archlinux.org/viewtopic.php?id=302000
 
 ```bash
 lvmroot_partition_uuid="$(blkid "${lvmroot_partition}" -s UUID -o value)"
