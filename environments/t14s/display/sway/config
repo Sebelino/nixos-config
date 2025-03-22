@@ -23,12 +23,13 @@ exec_always QT_QPA_PLATFORM='wayland' flameshot
 # This will lock your screen after X seconds of inactivity, then turn off
 # your displays after Y seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+# Heisenbug: Passing -d prevents red screen of death upon attempting to unlock
 exec swayidle -w \
-         timeout 1800 'swaylock -f -c 000000 --show-keyboard-layout --image ~/nixos-config/blobs/images/tree_hill.jpg' \
+         timeout 1800 'swaylock -f -c 000000 --show-keyboard-layout --image ~/nixos-config/blobs/images/tree_hill.jpg -d > /home/sebelino/misc/log/swaylock/out.2.log 2> /home/sebelino/misc/log/swaylock/err.2.log' \
          timeout 2580 'swaymsg "output * power off"' \
          resume 'swaymsg "output * power on"' \
          timeout 3600 'systemctl suspend' \
-         before-sleep 'swaylock -f -c ff0000 --show-keyboard-layout --image ~/nixos-config/blobs/images/seele.jpg'
+         before-sleep 'swaylock -f -c 0000ff --show-keyboard-layout --image ~/nixos-config/blobs/images/seele.jpg -d > /home/sebelino/misc/log/swaylock/out.3.log 2> /home/sebelino/misc/log/swaylock/err.3.log'
 
 
 # If multiple monitors, arrange them correctly
@@ -73,7 +74,8 @@ input "type:touchpad" {
     bindsym $mod+s exec $menu
 
     # Lock screen
-    bindsym $mod+plus exec 'swaylock -f -c 000000 --show-keyboard-layout --image ~/nixos-config/blobs/images/matrixrain3.jpg'
+    # Heisenbug: Passing -d prevents red screen of death upon attempting to unlock
+    bindsym $mod+plus exec 'swaylock -f -c 000000 --show-keyboard-layout --image ~/nixos-config/blobs/images/matrixrain3.jpg -d > /home/sebelino/misc/log/swaylock/out.1.log 2> /home/sebelino/misc/log/swaylock/err.1.log'
 
     # Switch to the primary display (laptop)
     bindsym $mod+a exec 'sway_switch_workspace.sh eDP'
