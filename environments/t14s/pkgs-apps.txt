@@ -102,6 +102,8 @@ ttf-ms-fonts
 udunits
 unzip
 usbutils
+ventoy-bin
+veracrypt
 virt-manager
 virt-viewer
 viu
