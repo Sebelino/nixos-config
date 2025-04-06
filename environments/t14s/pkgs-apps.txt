@@ -35,6 +35,7 @@ hwinfo
 imagemagick
 jc
 jq
+jupyterlab
 jwt-cli
 kanshi
 keybase-bin
