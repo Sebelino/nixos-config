@@ -25,6 +25,7 @@ gdb
 gimp
 github-cli
 go-yq
+gparted
 gptfdisk
 gsl
 gtk3-demos
