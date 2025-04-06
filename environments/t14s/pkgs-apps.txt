@@ -67,6 +67,7 @@ pycharm-professional
 python-keras
 python-matplotlib
 python-networkx
+python-openai-whisper
 python-pip-system-certs
 python-pyqt5
 python-pytesseract
