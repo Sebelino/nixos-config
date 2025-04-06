@@ -17,6 +17,8 @@ elif [[ "$filepath" == *.png ]]; then
     nohup feh "$filepath" &
 elif [[ "$filepath" == *.mp4 ]]; then
     nohup vlc "$filepath" &
+elif [[ "$filepath" == *.mov ]]; then
+    nohup vlc "$filepath" &
 elif [[ "$filepath" == *.sh ]]; then
     bash "$filepath"
     echo -e "\033[0;32m✓\033[0m"
