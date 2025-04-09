@@ -40,6 +40,8 @@ jwt-cli
 kanshi
 keybase-bin
 lf
+lib32-mesa
+lib32-vulkan-radeon
 libreoffice-fresh
 libva-mesa-driver
 libva-utils
@@ -47,6 +49,7 @@ lld
 lsd
 lshw
 massren
+mesa
 mesa-utils
 mitmproxy
 net-tools
@@ -107,6 +110,7 @@ veracrypt
 virt-manager
 virt-viewer
 viu
+vulkan-radeon
 wdisplays-git
 wev
 wget
