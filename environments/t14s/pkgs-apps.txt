@@ -119,6 +119,7 @@ wl-mirror
 words
 xorg-xlsclients
 xorg-xrandr
+xournalpp
 yamllint
 ydotool
 yt-dlp
