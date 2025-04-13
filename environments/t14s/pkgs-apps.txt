@@ -25,6 +25,7 @@ gdb
 gimp
 github-cli
 go-yq
+google-cloud-cli
 gparted
 gptfdisk
 gsl
