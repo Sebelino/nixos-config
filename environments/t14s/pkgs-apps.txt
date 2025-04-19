@@ -1,3 +1,4 @@
+mpv
 airtame-application
 anki-bin
 archiso
@@ -89,6 +90,7 @@ rstudio-desktop
 slurp
 solaar
 strace
+streamlink
 terraform
 texlive-binextra
 texlive-fontsextra
