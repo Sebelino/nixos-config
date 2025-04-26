@@ -108,6 +108,7 @@ alias gsp="git stash pop"
 alias gws="git status --short"
 alias gwS="git status"
 alias gwd="git diff --no-ext-diff"
+alias gwdn="nbdiff --ignore-outputs --ignore-metadata --ignore-details"
 
 # List files
 alias l="lsd --group-directories-first -lAv"
