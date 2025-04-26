@@ -1,4 +1,3 @@
-mpv
 airtame-application
 anki-bin
 archiso
@@ -54,6 +53,7 @@ massren
 mesa
 mesa-utils
 mitmproxy
+mpv
 net-tools
 ngrok
 nmap
