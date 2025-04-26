@@ -73,6 +73,9 @@ if ! diff -q boot/mkinitcpio.conf /etc/mkinitcpio.conf > /dev/null; then
     sudo mkinitcpio -P
 fi
 
+# Needed to get rid of the annoying beep sound
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
+
 # Prevents virt-manager error:
 # "Requested operation is not valid: network 'default' is not active"
 # You can also start it manually with `virsh net-start default`
