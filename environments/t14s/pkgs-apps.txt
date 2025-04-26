@@ -44,7 +44,6 @@ lf
 lib32-mesa
 lib32-vulkan-radeon
 libreoffice-fresh
-libva-mesa-driver
 libva-utils
 lld
 lsd
