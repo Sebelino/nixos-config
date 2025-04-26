@@ -140,10 +140,10 @@ mkinitcpio -P
 
 bootctl --path=/boot install
 
-echo default arch >> /boot/loader/loader.conf
+echo default arch-stable >> /boot/loader/loader.conf
 echo timeout 5 >> /boot/loader/loader.conf
 
-nvim /boot/loader/entries/arch.conf
+nvim /boot/loader/entries/arch-stable.conf
 ```
 
 ```
