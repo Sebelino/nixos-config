@@ -84,6 +84,7 @@ qemu-full
 qt6-wayland
 quarto-cli-bin
 r
+radeontop
 ranger
 rclone
 rofi
@@ -115,6 +116,7 @@ virt-manager
 virt-viewer
 viu
 vulkan-radeon
+vulkan-tools
 wdisplays-git
 wev
 wget
