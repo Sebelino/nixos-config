@@ -45,6 +45,8 @@ lib32-mesa
 lib32-vulkan-radeon
 libreoffice-fresh
 libva-utils
+linux-zen
+linux-zen-headers
 lld
 lsd
 lshw
