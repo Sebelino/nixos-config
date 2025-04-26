@@ -9,6 +9,8 @@ gpg --quiet --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.
 
 missing_packages="$(comm -23 <(sort -u < "$scriptdir/pkgs-apps.txt") <(pacman -Q | cut -d' ' -f1 | sort -u))"
 
+echo "Missing packages: $missing_packages"
+
 if [ -z "$missing_packages" ]; then
   echo "No packages to install."
 else
