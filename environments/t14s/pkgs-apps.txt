@@ -72,6 +72,7 @@ plocate
 pycharm-professional
 python-keras
 python-matplotlib
+python-nbdime
 python-networkx
 python-openai-whisper
 python-pip-system-certs
