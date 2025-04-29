@@ -34,4 +34,4 @@ systemctl --user enable --now ydotool
 
 # Custom daemon for acting on certain mouse events
 systemctl --user enable --now mousemapper
-systemctl --user enable --now jira-refresh-currently-assigned-issue
+#systemctl --user enable --now jira-refresh-currently-assigned-issue
