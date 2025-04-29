@@ -7,7 +7,7 @@ systemctl --user daemon-reload
 
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now pacman-filesdb-refresh.timer
-#sudo systemctl enable --now docker
+sudo systemctl enable --now docker
 
 # Adjust time
 sudo systemctl enable --now systemd-timesyncd
