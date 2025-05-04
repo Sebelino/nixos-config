@@ -71,6 +71,9 @@ pistol-bin
 pkgfile
 plocate
 pycharm-professional
+python-google-api-core
+python-google-api-python-client
+python-google-auth
 python-keras
 python-matplotlib
 python-nbdime
@@ -79,8 +82,10 @@ python-openai-whisper
 python-pip-system-certs
 python-pyqt5
 python-pytesseract
+python-pytorch
 python-scikit-learn
 python-seaborn
+python-torchvision
 qdirstat-git
 qemu-full
 qt6-wayland
