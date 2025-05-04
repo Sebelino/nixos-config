@@ -79,6 +79,7 @@ python-matplotlib
 python-nbdime
 python-networkx
 python-openai-whisper
+python-opencv
 python-pip-system-certs
 python-pyqt5
 python-pytesseract
