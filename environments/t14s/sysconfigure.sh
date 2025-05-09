@@ -73,6 +73,14 @@ if ! diff -q boot/mkinitcpio.conf /etc/mkinitcpio.conf > /dev/null; then
     sudo mkinitcpio -P
 fi
 
+for dst in /boot/loader/entries/*; do
+  fname=$(basename "$dst")
+  if ! diff -q "boot/loader/entries/${fname}" "$dst" > /dev/null; then
+    (diff -u "boot/loader/entries/${fname}" "$dst" || true) | bat -l diff
+    sudo cp "boot/loader/entries/${fname}" "$dst"
+  fi
+done
+
 # Needed to get rid of the annoying beep sound
 echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 
