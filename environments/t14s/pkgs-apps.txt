@@ -35,6 +35,7 @@ gtk4-demos
 htop
 hwinfo
 imagemagick
+inotify-tools
 jc
 jq
 jupyterlab
@@ -46,11 +47,13 @@ lib32-mesa
 lib32-vulkan-radeon
 libreoffice-fresh
 libva-utils
+limitcpu
 linux-zen
 linux-zen-headers
 lld
 lsd
 lshw
+lxappearance
 massren
 mesa
 mesa-utils
@@ -64,6 +67,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+obs-studio
 pdfgrep
 pdftk
 pipectl
