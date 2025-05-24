@@ -67,6 +67,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+nwg-look
 obs-studio
 pdfgrep
 pdftk
@@ -101,6 +102,7 @@ ranger
 rclone
 rofi
 rstudio-desktop
+sassc
 slurp
 solaar
 strace
