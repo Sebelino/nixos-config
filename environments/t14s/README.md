@@ -515,6 +515,21 @@ Sys.setenv(DOWNLOAD_STATIC_LIBV8=1)
 install.packages("V8")
 ```
 
+## GTK theme
+
+Install my custom GTK theme:
+
+```bash
+mkdir -p ~/.themes
+mkdir -p ~/src
+cd ~/src
+git clone git@github.com:Sebelino/hacker
+ln -s $PWD/hackerer/Hackerer ~/.themes/Shackerer
+```
+
+Install `nwg-look`, run it, select the Shacker theme and click Apply. Restart
+Chromium and the changes should take effect.
+
 ## Boot phase (sarch)
 
 Run the preinstalled install script:
