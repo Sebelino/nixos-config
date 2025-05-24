@@ -53,7 +53,6 @@ linux-zen-headers
 lld
 lsd
 lshw
-lxappearance
 massren
 mesa
 mesa-utils
