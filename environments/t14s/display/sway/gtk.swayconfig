@@ -4,6 +4,6 @@
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
-    gsettings set $gnome-schema icon-theme 'Adwaita-dark'
+    gsettings set $gnome-schema gtk-theme 'Shackerer'
+    gsettings set $gnome-schema icon-theme 'Shackerer'
 }
