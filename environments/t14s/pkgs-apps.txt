@@ -113,6 +113,7 @@ texlive-fontsrecommended
 texlive-latex
 texlive-latexextra
 texlive-latexrecommended
+texlive-mathscience
 texlive-plaingeneric
 texlive-xetex
 thunderbird
