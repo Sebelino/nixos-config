@@ -102,6 +102,7 @@ rclone
 rofi
 rstudio-desktop
 sassc
+slack-desktop
 slurp
 solaar
 strace
