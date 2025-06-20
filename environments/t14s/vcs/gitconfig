@@ -1,5 +1,6 @@
 [user]
     name = Ville Sebastian Olsson
+    email = sebelino7@gmail.com
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
