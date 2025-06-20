@@ -15,7 +15,7 @@ xkb_symbols "basic" {
     key <AE08> { [             8,            8,            Home,                8 ] };
     key <AE09> { [             9,            9,             End,                9 ] };
     key <AE10> { [             0,   parenright, rightsinglequotemark,  rightdoublequotemark ] };
-    key <AE11> { [       Hyper_L,      Hyper_L,         Hyper_L,          Hyper_L ] };
+    key <AE11> { [       Super_L,      Super_L,         Super_L,          Super_L ] };
     key <AE12> { [          plus,        minus,        multiply,         division ] };
 
     key <BKSP> { [     BackSpace,    BackSpace,       BackSpace,         BackSpace] };

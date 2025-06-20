@@ -1,6 +1,6 @@
 # Windows key (and '+' on solemak)
 # If this stops working, try Mod4
-set $mod Mod3
+set $mod Super
 
 set $left l
 set $down n
