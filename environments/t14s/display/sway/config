@@ -246,3 +246,5 @@ client.focused_inactive     #111111 #111111 #007700 #112233   #111111
 client.unfocused            #111111 #111111 #007700 #112233   #111111
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f   #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f   #2f343f
+
+exec $term
