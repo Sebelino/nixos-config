@@ -3,7 +3,7 @@
 
 include "/home/sebelino/.gtkrc-2.0.mine"
 gtk-theme-name="Shackerer"
-gtk-icon-theme-name="Adwaita-dark"
+gtk-icon-theme-name="Shackerer"
 gtk-font-name="Adwaita Sans 11"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=24
