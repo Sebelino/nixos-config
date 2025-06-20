@@ -37,3 +37,18 @@ source "$ZDOTDIR/keybindings.zsh"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme # zsh-theme-powerlevel10k
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sebelino/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sebelino/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/sebelino/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sebelino/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
