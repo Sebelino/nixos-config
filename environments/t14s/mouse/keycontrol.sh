@@ -62,7 +62,7 @@ jq_app_id='if .app_id != null then .app_id else .window_properties.instance end'
 # Note that you need to specify the keycodes for the actual physical keys.
 # Meaning, if you change your keyboard layout, you will need to change the values below.
 
-kc_Hyper_L=12 # KEY_MINUS
+kc_Super_L=12 # KEY_MINUS
 kc_Tab=42     # KEY_LEFTSHIFT
 kc_Shift_R=57 # KEY_SPACE
 kc_F5=63      # KEY_F5
@@ -89,7 +89,7 @@ case "$argument" in
         else
             # Kill window
             notify-send --urgency=low 'Kill window'
-            ydotool key $kc_Hyper_L:1 $kc_Shift_R:1 $kc_T:1 $kc_T:0 $kc_Shift_R:0 $kc_Hyper_L:0
+            ydotool key $kc_Super_L:1 $kc_Shift_R:1 $kc_T:1 $kc_T:0 $kc_Shift_R:0 $kc_Super_L:0
         fi
     ;;
     'Middle Button')

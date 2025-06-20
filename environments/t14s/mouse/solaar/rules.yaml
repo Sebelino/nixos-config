@@ -3,28 +3,28 @@
 - MouseGesture: Mouse Down
 - Execute: [notify-send, --urgency=low, '9', Switch window]
 - KeyPress:
-  - [Hyper_L, '9']
+  - [Super_L, '9']
   - click
 ...
 ---
 - MouseGesture: Mouse Left
 - Execute: [notify-send, --urgency=low, '1', Switch window]
 - KeyPress:
-  - [Hyper_L, '1']
+  - [Super_L, '1']
   - click
 ...
 ---
 - MouseGesture: Mouse Up
 - Execute: [notify-send, --urgency=low, '2', Switch window]
 - KeyPress:
-  - [Hyper_L, '2']
+  - [Super_L, '2']
   - click
 ...
 ---
 - MouseGesture: Mouse Right
 - Execute: [notify-send, --urgency=low, '8', Switch window]
 - KeyPress:
-  - [Hyper_L, '8']
+  - [Super_L, '8']
   - click
 ...
 ---
