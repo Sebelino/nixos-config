@@ -1,0 +1,7 @@
+[general]
+fullscreen = true
+early-exit = true
+initial-tool = "brush"
+copy-command = "wl-copy"
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
