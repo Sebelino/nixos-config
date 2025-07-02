@@ -36,6 +36,8 @@ exec swayidle -w \
 # If multiple monitors, arrange them correctly
 exec_always pkill kanshi; exec kanshi > "/tmp/kanshi.${XDG_VTNR}.${USER}.log" 2>&1
 
+
+for_window [title="find-open-cmd"] floating enable
 for_window [app_id="com.gabm.satty"] fullscreen enable
 
 exec solaar -w hide
