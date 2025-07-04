@@ -1,0 +1,14 @@
+<volume>
+  <name>win11</name>
+  <allocation>0</allocation>
+  <capacity unit="G">64</capacity>
+  <target>
+    <path>/home/sebelino/.local/share/libvirt/images/win11</path>
+    <permissions>
+      <owner>963</owner>
+      <group>963</group>
+      <mode>0777</mode>
+      <label>virt_image_t</label>
+    </permissions>
+  </target>
+</volume>
