@@ -112,6 +112,7 @@ slurp
 solaar
 strace
 streamlink
+swtpm
 terraform
 texlive-binextra
 texlive-fontsextra
