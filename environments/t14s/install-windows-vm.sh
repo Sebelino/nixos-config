@@ -4,8 +4,6 @@ set -Eeuo pipefail
 
 scriptdir="$(dirname "$(realpath "$0")")"
 
-set -x
-
 # Needed for virt-install by the libvirt-qemu user
 chmod go+x "$HOME/.local"
 chmod go+x "$HOME/.local/share"
