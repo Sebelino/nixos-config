@@ -51,10 +51,13 @@ input "type:keyboard" {
     repeat_rate 50
 }
 
+# Check: swaymsg -t get_inputs | jq '.[] | select(.type=="touchpad")'
 input "type:touchpad" {
     # Disable while typing
     dwt enabled
     tap enabled
+    drag enabled
+    drag_lock disabled
     natural_scroll enabled
 }
 
