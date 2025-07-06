@@ -28,6 +28,9 @@ smart_shift_buffer_path="/dev/shm/smart_shift_buffer"
 script_dir="$(dirname "$(realpath "$0")")"
 keycontrol_path="${script_dir}/keycontrol.sh"
 
+last_thumbwheel_scroll_time="$(date +%s.%N)"
+cooldown_seconds=0.3
+
 if [ ! -f "$smart_shift_buffer_path" ]; then
     echo -n 0 > "$smart_shift_buffer_path"
 fi
@@ -79,7 +82,12 @@ function parse_event_line() {
         # event7   POINTER_SCROLL_WHEEL    101 +14.105s	vert 0.00/0.0 horiz -15.00/-120.0* (wheel)
         # shellcheck disable=SC2001
         horizontal_value="$(echo "$@" | sed 's/.*horiz \([^ ]\+\).*/\1/')"
-        process_wheel_event "$horizontal_value"
+        now="$(date +%s.%N)"
+        elapsed=$(echo "$now - $last_thumbwheel_scroll_time" | bc)
+        if (( $(echo "$elapsed > $cooldown_seconds" | bc -l) )); then
+          last_thumbwheel_scroll_time="$now"
+          process_wheel_event "$horizontal_value"
+        fi
     elif [ "${action}" = "POINTER_BUTTON" ]; then
         # When clicking the left button, each line will look something like this:
         # event7   POINTER_BUTTON          +3.756s	BTN_LEFT (272) pressed, seat count: 1

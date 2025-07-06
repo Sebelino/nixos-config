@@ -32,7 +32,7 @@ execute_with_inertia() {
 
 chromium_tab_switch() {
     keys="$1"
-    execute_with_inertia 2 "/dev/shm/chromium_tab_switch" "$keys"
+    execute_with_inertia 1 "/dev/shm/chromium_tab_switch" "$keys"
 }
 
 chromium_tab_switch_left() {
@@ -45,7 +45,7 @@ chromium_tab_switch_right() {
 
 youtube_seek() {
     keys="$1"
-    execute_with_inertia 2 "/dev/shm/youtube_seek_buffer" "$keys"
+    execute_with_inertia 1 "/dev/shm/youtube_seek_buffer" "$keys"
 }
 
 youtube_seek_left() {
