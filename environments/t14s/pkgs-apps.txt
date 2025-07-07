@@ -144,6 +144,7 @@ wget
 wireshark-qt
 wl-mirror
 words
+xmlstarlet
 xorg-xlsclients
 xorg-xrandr
 xournalpp
