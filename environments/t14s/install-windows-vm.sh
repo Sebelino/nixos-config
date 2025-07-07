@@ -82,4 +82,5 @@ WAYLAND_DISPLAY="" virt-install \
     --boot uefi \
     --tpm model=tpm-crb \
     --features smm.state=on \
+    --graphics spice \
     --machine q35
