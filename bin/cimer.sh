@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-pid_file=/tmp/timer.sh.pid
-pid="$(cat "$pid_file")"
+PID_FILE="/tmp/timer.sh.pid"
+TIMER_FILE="/tmp/timer.sh.txt"
+PAUSE_FILE="/tmp/timer.sh.pause"
+
+pid="$(cat "$PID_FILE")"
 kill "$pid"
-rm -f /tmp/timer.sh.txt
-rm -f "$pid_file"
+rm -f "$PID_FILE"
+rm -f "$TIMER_FILE"
+rm -f "$PAUSE_FILE"
