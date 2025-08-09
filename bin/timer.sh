@@ -9,6 +9,8 @@ TIMER_FILE="/tmp/timer.sh.txt"
 PAUSE_FILE="/tmp/timer.sh.pause"
 SECONDS_LEFT=$((mins * 60))
 
+notify-send "⏰ Timer set for $mins minutes."
+
 while [ $SECONDS_LEFT -gt 0 ]; do
     if [ -f "$PAUSE_FILE" ]; then
         printf "⏸️%02d:%02d\n" $MINUTES $SECONDS > "$TIMER_FILE"
