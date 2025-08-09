@@ -1,0 +1,6 @@
+[Unit]
+Description=Send daily notification
+
+[Service]
+Type=oneshot
+ExecStart=%h/bin/daily-notify.sh

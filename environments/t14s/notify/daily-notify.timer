@@ -1,0 +1,9 @@
+[Unit]
+Description=Run notify-send daily
+
+[Timer]
+OnCalendar=21:59
+Persistent=true
+
+[Install]
+WantedBy=timers.target
