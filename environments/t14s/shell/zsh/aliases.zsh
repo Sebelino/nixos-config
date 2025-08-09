@@ -133,3 +133,4 @@ alias ghp=sebe_github_create_pr
 alias gbt="sebe_update_branch_with_trunk"
 alias cdn="cd $HOME/nixos-config/environments/t14s/"
 alias wlc="wl-copy < "
+alias dup="$TERM &!"
