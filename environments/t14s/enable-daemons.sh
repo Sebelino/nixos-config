@@ -3,6 +3,7 @@
 set -euo pipefail
 
 # If I have made any changes to a *.service file, reload those changes
+systemctl --user daemon-reexec
 systemctl --user daemon-reload
 
 sudo systemctl enable --now bluetooth
@@ -35,3 +36,8 @@ systemctl --user enable --now ydotool
 # Custom daemon for acting on certain mouse events
 systemctl --user enable --now mousemapper
 #systemctl --user enable --now jira-refresh-currently-assigned-issue
+
+# Daily notification
+# To list timers:
+# systemctl --user list-timers
+systemctl --user enable --now daily-notify.timer
