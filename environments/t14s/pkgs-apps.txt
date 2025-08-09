@@ -7,6 +7,7 @@ bc
 bind
 certbot
 claude-code
+dart-sass
 diffpdf
 discord
 dive
@@ -32,6 +33,7 @@ gparted
 gptfdisk
 grim
 gsl
+gtk-engine-murrine
 gtk3-demos
 gtk4-demos
 htop
