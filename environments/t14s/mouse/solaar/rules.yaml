@@ -8,10 +8,7 @@
 ...
 ---
 - MouseGesture: Mouse Left
-- Execute: [notify-send, --urgency=low, '1', Switch window]
-- KeyPress:
-  - [Super_L, '1']
-  - click
+- Execute: [/home/sebelino/nixos-config/environments/t14s/screenshot/shot.sh]
 ...
 ---
 - MouseGesture: Mouse Up
