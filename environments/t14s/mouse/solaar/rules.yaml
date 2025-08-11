@@ -9,6 +9,8 @@
 ---
 - MouseGesture: Mouse Left
 - Execute: [/home/sebelino/nixos-config/environments/t14s/screenshot/shot.sh]
+- KeyPress:
+  - click
 ...
 ---
 - MouseGesture: Mouse Up
