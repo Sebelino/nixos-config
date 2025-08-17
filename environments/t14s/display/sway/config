@@ -179,6 +179,9 @@ input "type:touchpad" {
     # Toggle handsfree on bluetooth headset
     bindsym $mod+y exec toggle_handsfree.sh
 
+    # Pause/unpause timer
+    bindsym $mod+period exec pause.sh
+
     # Toggle handsfree on bluetooth headset
     bindsym $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
