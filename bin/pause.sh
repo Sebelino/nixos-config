@@ -2,6 +2,8 @@
 
 set -Eeuo pipefail
 
+notify-send "⏸️ Pause timer toggled."
+
 PAUSE_FILE="/tmp/timer.sh.pause"
 
 if [ -f "$PAUSE_FILE" ]; then

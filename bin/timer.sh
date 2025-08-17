@@ -9,6 +9,11 @@ TIMER_FILE="/tmp/timer.sh.txt"
 PAUSE_FILE="/tmp/timer.sh.pause"
 SECONDS_LEFT=$((mins * 60))
 
+if [ -f "$PAUSE_FILE" ]; then
+  notify-send "⏸️ Error: Timer is already running (and paused)."
+  exit 1
+fi
+
 notify-send "⏰ Timer set for $mins minutes."
 
 while [ $SECONDS_LEFT -gt 0 ]; do
