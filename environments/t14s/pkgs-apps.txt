@@ -126,6 +126,7 @@ texlive-mathscience
 texlive-plaingeneric
 texlive-xetex
 thunderbird
+tor-browser-bin
 transmission-gtk
 tree-sitter-cli
 ttf-comic-neue
