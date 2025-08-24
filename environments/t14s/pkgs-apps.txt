@@ -111,7 +111,6 @@ sassc
 satty
 slack-desktop
 slurp
-slurp
 solaar
 strace
 streamlink
