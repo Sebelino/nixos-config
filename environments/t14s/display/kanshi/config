@@ -1,36 +1,36 @@
 profile HomeTriple {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 1920,2160
+	output eDP-1 mode 1920x1200 position 1920,2160
 	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
 	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
 	exec swaymsg workspace 3, move workspace to '"BNQ BenQ GL2450H B9D00653019"'
-	exec swaymsg workspace 5, move workspace to '"LG Display 0x06ED Unknown"'
+	exec swaymsg workspace 5, move workspace to 'eDP-1'
 	exec swaymsg workspace 2, move workspace to '"Samsung Electric Company Odyssey G8 HNBX200352"'
 	exec ydotool mousemove -a -x 800 -y 800
 }
 
 profile HomeWithoutBenq {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 1920,2160
+	output eDP-1 mode 1920x1200 position 1920,2160
 	output "Samsung Electric Company Odyssey G8 HNBX200352" mode 3840x2160 position 0,0
 	exec swaymsg workspace 2, move workspace to '"Samsung Electric Company Odyssey G8 HNBX200352"'
-	exec swaymsg workspace 5, move workspace to '"LG Display 0x06ED Unknown"'
+	exec swaymsg workspace 5, move workspace to 'eDP-1'
 }
 
 profile HomeWithoutOdyssey {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 1920,2160
+	output eDP-1 mode 1920x1200 position 1920,2160
 	output "BNQ BenQ GL2450H B9D00653019" mode 1920x1080 position 3840,1080
 }
 
 profile Varsta {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 0,1080
+	output eDP-1 mode 1920x1200 position 0,1080
 	output "Samsung Electric Company SAMSUNG Unknown" mode 1920x1080 position 0,0
 }
 
 profile Cens {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 0,1080
+	output eDP-1 mode 1920x1200 position 0,1080
 	output "NEC Corporation EA221WM 9Y320288NB" mode 1680x1050 position 0,0
 }
 
 profile LaptopOnly {
-	output "Lenovo Group Limited 0x403A Unknown" mode 1920x1200 position 1920,2160
-	exec swaymsg workspace 2, move workspace to '"LG Display 0x06ED Unknown"'
+	output eDP-1 mode 1920x1200 position 1920,2160
+	exec swaymsg workspace 2, move workspace to 'eDP-1'
 }
