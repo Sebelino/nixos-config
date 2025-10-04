@@ -156,7 +156,7 @@
     },
     "custom/timer": {
         "format": "{}",
-        "exec": "cat /tmp/timer.sh.txt",
+        "exec": "touch /tmp/timer.sh.txt || cat /tmp/timer.sh.txt",
         "interval": 1,
     },
 }
