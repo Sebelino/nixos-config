@@ -25,6 +25,9 @@
             "default": ""
         }
     },
+    "sway/window": {
+        "swap-icon-label": true // Should prevent [warning] 'swap-icon-label' must be a bool
+    },
     "keyboard-state": {
         "numlock": false,
         "capslock": true,
