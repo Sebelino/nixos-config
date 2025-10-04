@@ -32,12 +32,11 @@ exec swayidle -w \
          timeout 3600 'systemctl suspend' \
          before-sleep 'swaylock -f -c 0000ff --show-keyboard-layout --image ~/nixos-config/blobs/images/seele.jpg -d > /home/sebelino/misc/log/swaylock/out.3.log 2> /home/sebelino/misc/log/swaylock/err.3.log'
 
-
 # If multiple monitors, arrange them correctly
-#exec_always pkill kanshi; exec kanshi > "/tmp/kanshi.${XDG_VTNR}.${USER}.log" 2>&1
 exec_always /home/sebelino/bin/kanshi-restart.sh
 
-exec_always pkill multibg-wayland; exec multibg-wayland /home/sebelino/nixos-config/windowmanager/wallpapers 2>&1
+# Different wallpaper per workspace
+exec_always /home/sebelino/bin/multibg-wayland-restart.sh
 
 for_window [title="find-open-cmd"] floating enable
 for_window [app_id="com.gabm.satty"] fullscreen enable
