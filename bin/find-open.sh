@@ -8,4 +8,5 @@ title="find-open-cmd"
 nohup alacritty \
     --title "$title" \
     --working-directory "$HOME" \
-    --command "$script" &
+    --command "$script" \
+    > "/tmp/${title}.out" 2>&1 &
