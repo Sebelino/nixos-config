@@ -33,4 +33,6 @@ done
 
 echo "" > "$TIMER_FILE"
 notify-send "⏰ Time's up!"
-paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+paplay /usr/share/sounds/freedesktop/stereo/complete.oga # Indicates soft deadline
+sleep 5
+paplay /usr/share/sounds/freedesktop/stereo/dialog-warning.oga # Indicates hard deadline
