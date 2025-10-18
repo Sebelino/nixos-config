@@ -112,6 +112,7 @@ sassc
 satty
 slack-desktop
 slurp
+snes9x-gtk
 solaar
 strace
 streamlink
