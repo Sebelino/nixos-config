@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-script="$HOME/bin/find-open/cmd.sh"
+script="$HOME/bin/popup/find-open.sh"
 title="find-open-cmd"
 
 nohup alacritty \
