@@ -39,6 +39,7 @@ exec_always /home/sebelino/bin/kanshi-restart.sh
 exec_always /home/sebelino/bin/multibg-wayland-restart.sh
 
 for_window [title="find-open-cmd"] floating enable
+for_window [title="term-open-cmd"] floating enable
 for_window [app_id="com.gabm.satty"] fullscreen enable
 
 exec solaar -w hide
@@ -188,6 +189,9 @@ input "type:touchpad" {
 
     # Quickly find a file and open it
     bindsym $mod+h exec find-open.sh
+
+    # Open a terminal popup
+    bindsym $mod+k exec term-open.sh
 
 mode "resize" {
     # 96px is 5 % of 1920px
