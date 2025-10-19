@@ -2,4 +2,4 @@
 
 set -Eeuo pipefail
 
-timer.sh 25
+timer.sh 25 --skip-second-beep
