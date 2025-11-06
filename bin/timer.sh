@@ -46,6 +46,6 @@ notify-send "⏰ Time's up!"
 paplay /usr/share/sounds/freedesktop/stereo/complete.oga # Indicates soft deadline
 
 if [ "$mode" != "--skip-second-beep" ]; then
-    sleep 7
+    sleep 10
     paplay /usr/share/sounds/freedesktop/stereo/dialog-warning.oga # Indicates hard deadline
 fi
