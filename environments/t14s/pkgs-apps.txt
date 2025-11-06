@@ -148,6 +148,7 @@ veracrypt
 virt-manager
 virt-viewer
 viu
+vmware-horizon-client
 vulkan-radeon
 vulkan-tools
 wdisplays-git
