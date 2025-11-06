@@ -66,6 +66,9 @@ sudo usermod -aG kvm sebelino
 # Needed to run wireshark as non-root
 sudo usermod -aG wireshark sebelino
 
+# Needed to access scanner devices
+sudo usermod -aG scanner sebelino
+
 # Needed for autologin
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
 sudo cp "$scriptdir/login/autologin.conf" /etc/systemd/system/getty@tty1.service.d/autologin.conf

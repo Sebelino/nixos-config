@@ -40,6 +40,10 @@ htop
 hwinfo
 imagemagick
 inotify-tools
+iscan
+iscan-data
+iscan-plugin-perfection-v330
+iscanimage
 jc
 jq
 jupyterlab
