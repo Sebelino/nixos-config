@@ -16,3 +16,5 @@
     rewritebranch = "!f() { git rebase -i $(git merge-base main HEAD); }; f"
 [core]
     excludesfile = ~/.gitignore_global
+[credential]
+	helper = cache
