@@ -41,3 +41,6 @@ systemctl --user enable --now mousemapper
 # To list timers:
 # systemctl --user list-timers
 systemctl --user enable --now daily-notify.timer
+
+# Printing service
+sudo systemctl enable --now cups.service
