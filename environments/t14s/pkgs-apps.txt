@@ -53,8 +53,6 @@ jwt-cli
 kanshi
 keybase-bin
 lf
-lib32-mesa
-lib32-vulkan-radeon
 libreoffice-fresh
 libva-utils
 limitcpu
