@@ -11,6 +11,8 @@ x-scheme-handler/discord-719647875465871400=discord-719647875465871400.desktop
 message/rfc822=userapp-Thunderbird-D0L8S2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-D0L8S2.desktop
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+inode/directory=pcmanfm.desktop
+x-directory/normal=pcmanfm.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-D0L8S2.desktop;
