@@ -79,6 +79,7 @@ noto-fonts-extra
 ntfs-3g
 nwg-look
 obs-studio
+pcmanfm
 pdfgrep
 pdftk
 pipdeptree
