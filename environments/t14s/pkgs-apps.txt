@@ -5,6 +5,7 @@ at
 bat
 bc
 bind
+calibre
 certbot
 claude-code
 cups
