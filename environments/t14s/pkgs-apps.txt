@@ -52,6 +52,7 @@ jq
 jupyterlab
 jwt-cli
 kanshi
+kcc
 keybase-bin
 lf
 libreoffice-fresh
