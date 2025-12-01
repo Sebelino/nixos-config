@@ -50,6 +50,7 @@ iscan-plugin-perfection-v330
 iscanimage
 jc
 jq
+jujutsu
 jupyterlab
 jwt-cli
 kanshi
