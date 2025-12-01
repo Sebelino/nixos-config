@@ -2,6 +2,7 @@ airtame-application
 anki-bin
 archiso
 at
+azure-cli
 bat
 bc
 bind
