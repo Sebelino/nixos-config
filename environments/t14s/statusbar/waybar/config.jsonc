@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "custom/timer", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "custom/keyboard-layout", "battery", "custom/timer", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -158,6 +158,14 @@
         "format": "{}",
         "exec": "[ -f /tmp/timer.sh.txt ] && cat /tmp/timer.sh.txt",
         "interval": 1,
+    },
+    "custom/keyboard-layout": {
+        "format": "{}",
+        "exec": "get-keyboard-layout.sh",
+        "interval": 1,
+        "on-click": "toggle_solemak.sh",
+        "tooltip": true,
+        "tooltip-format": "Click to toggle keyboard layout"
     },
 }
 
