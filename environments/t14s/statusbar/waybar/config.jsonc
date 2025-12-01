@@ -162,7 +162,8 @@
     "custom/keyboard-layout": {
         "format": "{}",
         "exec": "get-keyboard-layout.sh",
-        "interval": 1,
+        "interval": 60,
+        "signal": 8,
         "on-click": "toggle_solemak.sh",
         "tooltip": true,
         "tooltip-format": "Click to toggle keyboard layout"
