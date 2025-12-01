@@ -47,8 +47,8 @@ exec solaar -w hide
 # Input configuration
 
 input "type:keyboard" {
-    xkb_layout solemak,se
-    xkb_options grp:rctrl_toggle,compose:lwin
+    xkb_layout solemak
+    xkb_options compose:lwin
     repeat_delay 250
     repeat_rate 50
 }
@@ -192,6 +192,9 @@ input "type:touchpad" {
 
     # Open a terminal popup
     bindsym $mod+k exec term-open.sh
+
+    # Toggle between solemak and Swedish keyboard layouts
+    bindsym Control_R exec toggle_solemak.sh
 
 mode "resize" {
     # 96px is 5 % of 1920px
