@@ -10,6 +10,10 @@ if [ "$XDG_CURRENT_DESKTOP" = "sway" ]; then
         new_layout="solemak"
     fi
     swaymsg input type:keyboard xkb_layout "$new_layout"
+
+    # Refresh Waybar instantly (see `signal` in statusbar/waybar/config.jsonc)
+    pkill -SIGRTMIN+8 waybar 2>/dev/null || true
+
     echo "$new_layout"
 else
     out="$(setxkbmap -query | grep solemak)"
