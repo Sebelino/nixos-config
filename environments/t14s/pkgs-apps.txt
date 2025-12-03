@@ -57,6 +57,7 @@ kanshi
 kcc
 keybase-bin
 lf
+libinput-tools
 libreoffice-fresh
 libva-utils
 limitcpu
