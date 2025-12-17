@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Don't use this script on Wayland! Use mirror-displays.sh instead!
+
 set -euo pipefail
 
 set -x
