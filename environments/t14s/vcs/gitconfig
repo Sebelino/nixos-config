@@ -1,6 +1,7 @@
 [user]
     name = Ville Sebastian Olsson
     email = sebelino7@gmail.com
+    signingkey = 153B2EB341D89B7D
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
