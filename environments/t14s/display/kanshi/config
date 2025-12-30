@@ -30,6 +30,11 @@ profile Cens {
 	output "NEC Corporation EA221WM 9Y320288NB" mode 1680x1050 position 0,0
 }
 
+profile EmmaWithAlienware {
+	output eDP-1 mode 1920x1200 position 0,1080
+	output "Dell Inc. AW3423DWF H4W62S3" mode 1920x1080 position 0,0
+}
+
 profile LaptopOnly {
 	output eDP-1 mode 1920x1200 position 1920,2160
 	exec swaymsg workspace 2, move workspace to 'eDP-1'
