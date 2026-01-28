@@ -384,6 +384,23 @@
         },
         {
           "type": "basic",
+          "description": "Left Shift -> Tab",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "from": {
             "key_code": "n",
             "modifiers": {
