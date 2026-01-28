@@ -2,11 +2,11 @@
   "title": "Solemak",
   "rules": [
     {
-      "description": "Solemak (best-effort from XKB) + Caps=Ctrl + AE11=Hyper (Cmd+Ctrl+Opt+Shift)",
+      "description": "Solemak for Mac",
       "manipulators": [
         {
           "type": "basic",
-          "description": "Plus",
+          "description": "Plus Modifier",
           "from": {
             "key_code": "hyphen",
             "modifiers": {
@@ -28,7 +28,7 @@
         },
         {
           "type": "basic",
-          "description": "Optional: Tab -> Backspace (matches your XKB <TAB> { [BackSpace...] })",
+          "description": "Tab",
           "from": {
             "key_code": "tab",
             "modifiers": {
@@ -45,7 +45,7 @@
         },
         {
           "type": "basic",
-          "description": "RCommand + a -> <",
+          "description": "RCommand + AKey",
           "from": {
             "key_code": "a",
             "modifiers": {
@@ -65,6 +65,7 @@
         },
         {
           "type": "basic",
+          "description": "EKey",
           "from": {
             "key_code": "e",
             "modifiers": {
@@ -81,6 +82,7 @@
         },
         {
           "type": "basic",
+          "description": "RKey",
           "from": {
             "key_code": "r",
             "modifiers": {
@@ -97,7 +99,7 @@
         },
         {
           "type": "basic",
-          "description": "RCommand + r -> >",
+          "description": "RCommand + RKey",
           "from": {
             "key_code": "r",
             "modifiers": {
@@ -120,6 +122,7 @@
         },
         {
           "type": "basic",
+          "description": "TKey",
           "from": {
             "key_code": "t",
             "modifiers": {
@@ -136,6 +139,7 @@
         },
         {
           "type": "basic",
+          "description": "YKey",
           "from": {
             "key_code": "y",
             "modifiers": {
@@ -152,6 +156,7 @@
         },
         {
           "type": "basic",
+          "description": "UKey",
           "from": {
             "key_code": "u",
             "modifiers": {
@@ -168,6 +173,7 @@
         },
         {
           "type": "basic",
+          "description": "IKey",
           "from": {
             "key_code": "i",
             "modifiers": {
@@ -184,6 +190,7 @@
         },
         {
           "type": "basic",
+          "description": "OKey",
           "from": {
             "key_code": "o",
             "modifiers": {
@@ -200,6 +207,7 @@
         },
         {
           "type": "basic",
+          "description": "PKey",
           "from": {
             "key_code": "p",
             "modifiers": {
@@ -216,7 +224,7 @@
         },
         {
           "type": "basic",
-          "description": "Physical Å -> Enter",
+          "description": "ÅKey",
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
@@ -233,7 +241,7 @@
         },
         {
           "type": "basic",
-          "description": "close_bracket -> å",
+          "description": "HatKey",
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
@@ -250,7 +258,7 @@
         },
         {
           "type": "basic",
-          "description": "Caps Lock -> Left Control",
+          "description": "Capslock Modifier",
           "from": {
             "key_code": "caps_lock",
             "modifiers": {
@@ -267,6 +275,7 @@
         },
         {
           "type": "basic",
+          "description": "SKey",
           "from": {
             "key_code": "s",
             "modifiers": {
@@ -283,7 +292,7 @@
         },
         {
           "type": "basic",
-          "description": "RCommand + s -> (",
+          "description": "RCommand + SKey",
           "from": {
             "key_code": "s",
             "modifiers": {
@@ -306,6 +315,7 @@
         },
         {
           "type": "basic",
+          "description": "DKey",
           "from": {
             "key_code": "d",
             "modifiers": {
@@ -322,6 +332,7 @@
         },
         {
           "type": "basic",
+          "description": "FKey",
           "from": {
             "key_code": "f",
             "modifiers": {
@@ -338,6 +349,7 @@
         },
         {
           "type": "basic",
+          "description": "GKey",
           "from": {
             "key_code": "g",
             "modifiers": {
@@ -354,6 +366,7 @@
         },
         {
           "type": "basic",
+          "description": "JKey",
           "from": {
             "key_code": "j",
             "modifiers": {
@@ -370,6 +383,7 @@
         },
         {
           "type": "basic",
+          "description": "KKey",
           "from": {
             "key_code": "k",
             "modifiers": {
@@ -386,6 +400,7 @@
         },
         {
           "type": "basic",
+          "description": "LKey",
           "from": {
             "key_code": "l",
             "modifiers": {
@@ -402,6 +417,7 @@
         },
         {
           "type": "basic",
+          "description": "ÖKey",
           "from": {
             "key_code": "semicolon",
             "modifiers": {
@@ -418,7 +434,7 @@
         },
         {
           "type": "basic",
-          "description": "Physical ä -> Escape",
+          "description": "ÄKey",
           "from": {
             "key_code": "quote",
             "modifiers": {
@@ -435,7 +451,7 @@
         },
         {
           "type": "basic",
-          "description": "Left Shift -> Tab",
+          "description": "Leftshift",
           "from": {
             "key_code": "left_shift",
             "modifiers": {
@@ -452,6 +468,7 @@
         },
         {
           "type": "basic",
+          "description": "NKey",
           "from": {
             "key_code": "n",
             "modifiers": {
@@ -468,7 +485,7 @@
         },
         {
           "type": "basic",
-          "description": "Comma -> Space",
+          "description": "Comma",
           "from": {
             "key_code": "comma",
             "modifiers": {
@@ -485,6 +502,7 @@
         },
         {
           "type": "basic",
+          "description": "Dot",
           "description": "period -> ä",
           "from": {
             "key_code": "period",
@@ -502,7 +520,7 @@
         },
         {
           "type": "basic",
-          "description": "slash -> ö",
+          "description": "Minus",
           "from": {
             "key_code": "slash",
             "modifiers": {
@@ -519,7 +537,7 @@
         },
         {
           "type": "basic",
-          "description": "Space -> Right Shift",
+          "description": "Space",
           "from": {
             "key_code": "spacebar",
             "modifiers": {
