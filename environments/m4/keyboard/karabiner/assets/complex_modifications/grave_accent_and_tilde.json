@@ -1,13 +1,18 @@
 {
-    "description": "Fix ISO < > key misdetected as grave_accent_and_tilde",
-    "manipulators": [
+  "title": "ISO < > key fix",
+  "rules": [
+    {
+      "description": "Map grave_accent_and_tilde to non_us_backslash",
+      "manipulators": [
         {
-            "from": {
-                "key_code": "grave_accent_and_tilde",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [{ "key_code": "non_us_backslash" }],
-            "type": "basic"
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "key_code": "non_us_backslash" }]
         }
-    ]
+      ]
+    }
+  ]
 }
