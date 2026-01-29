@@ -381,17 +381,13 @@ bash ~/nixos-config/environments/t14s/install-multilib-pkgs.sh
 Set up fingerprint scanning with `swaylock`:
 
 ```bash
-sudo fprintd-enroll sebelino
-sudo cat /etc/pam.d/swaylock
-```
-
-```diff
-- auth include login
-+ auth sufficient pam_unix.so try_first_pass likeauth nullok
-+ auth sufficient pam_fprintd.so
+cd security/pam.d
+./update-config.sh
 ```
 
 At the lock screen, you need to press enter before scanning your finger.
+Alternatively, you can just type your password (without having to press enter
+first).
 
 # ISO building
 

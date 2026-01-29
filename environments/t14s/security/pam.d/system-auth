@@ -1,3 +1,5 @@
+# SEBELINO A copy of the default config. I haven't made any modifications at all.
+#
 #%PAM-1.0
 
 auth       required                    pam_faillock.so      preauth
