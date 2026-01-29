@@ -532,7 +532,8 @@
             "key_code": "d",
             "modifiers": {
               "optional": [
-                "shift"
+                "shift",
+                "control"
               ]
             }
           },
