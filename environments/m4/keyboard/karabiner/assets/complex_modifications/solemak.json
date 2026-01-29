@@ -45,9 +45,9 @@
         },
         {
           "type": "basic",
-          "description": "RCommand + AKey",
+          "description": "RCommand + QKey",
           "from": {
-            "key_code": "a",
+            "key_code": "q",
             "modifiers": {
               "mandatory": [
                 "right_command"
@@ -59,7 +59,35 @@
           },
           "to": [
             {
-              "key_code": "non_us_backslash"
+              "key_code": "8",
+              "modifiers": [
+                "option",
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + WKey",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": [
+                "option",
+                "shift"
+              ]
             }
           ]
         },
@@ -70,7 +98,7 @@
             "key_code": "e",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -82,12 +110,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + EKey",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "RKey",
           "from": {
             "key_code": "r",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -113,9 +164,9 @@
           },
           "to": [
             {
-              "key_code": "non_us_backslash",
+              "key_code": "9",
               "modifiers": [
-                "left_shift"
+                "option"
               ]
             }
           ]
@@ -127,7 +178,7 @@
             "key_code": "t",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -139,12 +190,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + TKey",
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "YKey",
           "from": {
             "key_code": "y",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -156,12 +230,38 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + YKey",
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "option"
+              ]
+            },
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "UKey",
           "from": {
             "key_code": "u",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -173,12 +273,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + UKey",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "6",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "IKey",
           "from": {
             "key_code": "i",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -190,12 +313,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + IKey",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "OKey",
           "from": {
             "key_code": "o",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -207,12 +353,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + OKey",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "PKey",
           "from": {
             "key_code": "p",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -224,12 +393,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + PKey",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "ÅKey",
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -246,7 +438,7 @@
             "key_code": "close_bracket",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -275,12 +467,32 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + AKey",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "non_us_backslash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "SKey",
           "from": {
             "key_code": "s",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -306,9 +518,9 @@
           },
           "to": [
             {
-              "key_code": "9",
+              "key_code": "non_us_backslash",
               "modifiers": [
-                "left_shift"
+                "shift"
               ]
             }
           ]
@@ -320,7 +532,7 @@
             "key_code": "d",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -332,12 +544,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + DKey",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "8",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "FKey",
           "from": {
             "key_code": "f",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -349,12 +584,36 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + FKey",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "GKey",
           "from": {
             "key_code": "g",
             "modifiers": {
               "optional": [
-                "any"
+                "shift",
+                "control"
               ]
             }
           },
@@ -366,12 +625,55 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + GKey",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + HKey",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "backslash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "JKey",
           "from": {
             "key_code": "j",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -383,12 +685,33 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + JKey",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "KKey",
           "from": {
             "key_code": "k",
             "modifiers": {
               "optional": [
-                "any"
+                "shift",
+                "control"
               ]
             }
           },
@@ -400,12 +723,32 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + KKey",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "LKey",
           "from": {
             "key_code": "l",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -417,12 +760,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + LKey",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "ÖKey",
           "from": {
             "key_code": "semicolon",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -434,12 +800,35 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + ÖKey",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "ÄKey",
           "from": {
             "key_code": "quote",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -468,12 +857,168 @@
         },
         {
           "type": "basic",
+          "description": "Langle",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "comma"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + Langle",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "backslash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + ZKey",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "3",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + XKey",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": [
+                "option",
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + CKey",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "7",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + VKey",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign"
+            },
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + BKey",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "NKey",
           "from": {
             "key_code": "n",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -485,12 +1030,61 @@
         },
         {
           "type": "basic",
+          "description": "RCommand + NKey",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "backslash",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + MKey",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "Comma",
           "from": {
             "key_code": "comma",
             "modifiers": {
               "optional": [
-                "any"
+                "shift"
               ]
             }
           },
@@ -502,11 +1096,13 @@
         },
         {
           "type": "basic",
-          "description": "Dot",
-          "description": "period -> ä",
+          "description": "RCommand + Comma",
           "from": {
-            "key_code": "period",
+            "key_code": "comma",
             "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
               "optional": [
                 "any"
               ]
@@ -514,7 +1110,73 @@
           },
           "to": [
             {
+              "key_code": "slash",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + Comma",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Period",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "optional": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
               "key_code": "quote"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "RCommand + Period",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "right_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "option"
+              ]
             }
           ]
         },
