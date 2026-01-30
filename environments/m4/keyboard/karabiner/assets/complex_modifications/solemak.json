@@ -560,6 +560,29 @@
         },
         {
           "type": "basic",
+          "description": "LCommand + SKey",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "DKey",
           "from": {
             "key_code": "d",
@@ -595,6 +618,29 @@
               "key_code": "8",
               "modifiers": [
                 "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + DKey",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "command"
               ]
             }
           ]
