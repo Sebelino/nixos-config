@@ -80,6 +80,7 @@ on-mode-changed = []
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
+    cmd-alt-ctrl-shift-x = 'exec-and-forget /Users/sebelino/src/nixos-config/bin/aerospace_swap.sh'
 
     # All possible keys:
     # - Letters.        a, b, c, ..., z
