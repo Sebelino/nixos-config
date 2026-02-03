@@ -116,12 +116,12 @@ on-mode-changed = []
 #    # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     cmd-alt-ctrl-shift-h = 'focus left'
     cmd-alt-ctrl-shift-j = 'focus down'
-    cmd-alt-ctrl-shift-k = 'focus up'
+    cmd-alt-ctrl-shift-k = 'focus right'
     cmd-alt-ctrl-shift-l = 'focus right'
 #
 #    # See: https://nikitabobko.github.io/AeroSpace/commands#move
     cmd-alt-ctrl-shift-y = 'move left'
-    cmd-alt-ctrl-shift-u = 'move down'
+    cmd-alt-ctrl-shift-u = 'focus left'
     cmd-alt-ctrl-shift-i = 'move up'
     cmd-alt-ctrl-shift-o = 'move right'
 #
@@ -163,11 +163,13 @@ on-mode-changed = []
 #    alt-z = 'workspace Z'
 #
 #    # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    cmd-alt-ctrl-shift-q = 'move-node-to-workspace 1'
+    cmd-alt-ctrl-shift-q = 'exec-and-forget aerospace focus-monitor 1'
+    cmd-alt-ctrl-shift-a = 'exec-and-forget aerospace focus-monitor 2'
+    #cmd-alt-ctrl-shift-q = 'move-node-to-workspace 1'
     cmd-alt-ctrl-shift-w = 'move-node-to-workspace 2'
     cmd-alt-ctrl-shift-e = 'move-node-to-workspace 3'
     cmd-alt-ctrl-shift-r = 'move-node-to-workspace 4'
-    cmd-alt-ctrl-shift-t = 'move-node-to-workspace 5'
+    cmd-alt-ctrl-shift-t = '''exec-and-forget osascript -e 'tell application "iTerm" to create window with default profile' '''
 #
 #    # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 #    alt-tab = 'workspace-back-and-forth'
