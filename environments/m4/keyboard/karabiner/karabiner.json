@@ -216,6 +216,23 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "LCommand + UKey",
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "mandatory": ["left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "IKey",
                                 "from": {
                                     "key_code": "i",
