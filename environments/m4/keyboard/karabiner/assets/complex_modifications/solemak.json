@@ -198,6 +198,29 @@
         },
         {
           "type": "basic",
+          "description": "LCommand + RKey",
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "p",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "TKey",
           "from": {
             "key_code": "t",
@@ -423,6 +446,29 @@
               "key_code": "5",
               "modifiers": [
                 "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + OKey",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "y",
+              "modifiers": [
+                "command"
               ]
             }
           ]
@@ -871,6 +917,29 @@
         },
         {
           "type": "basic",
+          "description": "LCommand + KKey",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "LKey",
           "from": {
             "key_code": "l",
@@ -906,6 +975,31 @@
               "key_code": "hyphen",
               "modifiers": [
                 "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + LOption + LKey",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_option"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "command",
+		"option"
               ]
             }
           ]
@@ -1025,6 +1119,29 @@
         },
         {
           "type": "basic",
+          "description": "LCommand + Langle",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "comma",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "RCommand + ZKey",
           "from": {
             "key_code": "z",
@@ -1072,6 +1189,29 @@
         },
         {
           "type": "basic",
+          "description": "LCommand + XKey",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
           "description": "RCommand + CKey",
           "from": {
             "key_code": "c",
@@ -1089,6 +1229,52 @@
               "key_code": "7",
               "modifiers": [
                 "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + CKey",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + EKey",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": [
+                "command"
               ]
             }
           ]
@@ -1113,6 +1299,29 @@
             },
             {
               "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "LCommand + VKey",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "command"
+              ]
             }
           ]
         },
