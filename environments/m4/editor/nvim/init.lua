@@ -29,6 +29,8 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 999
+vim.opt.backup = true
+vim.opt.backupdir = vim.fn.expand("~/.local/share/nvim/backup//")
 
 -- Default indentation (vim-sleuth will auto-detect)
 vim.opt.tabstop = 4
