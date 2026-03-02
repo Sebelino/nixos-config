@@ -80,7 +80,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --------------------------------------------------------------------------------
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
     vim.fn.system({
         "git",
@@ -419,8 +419,8 @@ require("lazy").setup({
             "nvim-treesitter/nvim-treesitter-textobjects",
         },
         config = function()
-            ---@diagnostic disable-next-line: missing-fields
-            require("nvim-treesitter.configs").setup({
+            -- New nvim-treesitter 1.0 API
+            require("nvim-treesitter").setup({
                 ensure_installed = {
                     "go",
                     "gomod",
@@ -437,39 +437,36 @@ require("lazy").setup({
                     "yaml",
                     "bash",
                 },
-                auto_install = true,
-                highlight = { enable = true },
-                indent = { enable = true },
-                textobjects = {
-                    select = {
-                        enable = true,
-                        lookahead = true,
-                        keymaps = {
-                            ["af"] = "@function.outer",
-                            ["if"] = "@function.inner",
-                            ["ac"] = "@class.outer",
-                            ["ic"] = "@class.inner",
-                        },
+            })
+
+            -- Textobjects configuration
+            require("nvim-treesitter-textobjects").setup({
+                select = {
+                    lookahead = true,
+                    keymaps = {
+                        ["af"] = "@function.outer",
+                        ["if"] = "@function.inner",
+                        ["ac"] = "@class.outer",
+                        ["ic"] = "@class.inner",
                     },
-                    move = {
-                        enable = true,
-                        set_jumps = true,
-                        goto_next_start = {
-                            ["]m"] = "@function.outer",
-                            ["]]"] = "@class.outer",
-                        },
-                        goto_next_end = {
-                            ["]M"] = "@function.outer",
-                            ["]["] = "@class.outer",
-                        },
-                        goto_previous_start = {
-                            ["[m"] = "@function.outer",
-                            ["[["] = "@class.outer",
-                        },
-                        goto_previous_end = {
-                            ["[M"] = "@function.outer",
-                            ["[]"] = "@class.outer",
-                        },
+                },
+                move = {
+                    set_jumps = true,
+                    goto_next_start = {
+                        ["]m"] = "@function.outer",
+                        ["]]"] = "@class.outer",
+                    },
+                    goto_next_end = {
+                        ["]M"] = "@function.outer",
+                        ["]["] = "@class.outer",
+                    },
+                    goto_previous_start = {
+                        ["[m"] = "@function.outer",
+                        ["[["] = "@class.outer",
+                    },
+                    goto_previous_end = {
+                        ["[M"] = "@function.outer",
+                        ["[]"] = "@class.outer",
                     },
                 },
             })
