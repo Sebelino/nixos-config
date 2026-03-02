@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Common Commands
 
-### Arch Linux Package Management (Primary Environment)
+### Arch Linux Package Management (t14s)
 - `yay -S package_name` - Install packages from official repos or AUR
 - `yay -S --needed --noconfirm - < pkgs-essentials.txt` - Install packages from file
 - `pacman -Qi package_name` - Query package info
@@ -16,66 +16,59 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `bash ~/nixos-config/environments/t14s/install-apps.sh` - Install additional applications
 - `bash ~/nixos-config/environments/t14s/enable-daemons.sh` - Enable system services
 
-### Legacy NixOS Commands (Deprecated)
-- `sudo nixos-rebuild switch` (alias: `nrs`) - Apply NixOS configuration changes
-- Note: NixOS configs exist but are no longer actively maintained
+### Environment Setup Scripts (m4 - macOS)
+- `bash ~/src/nixos-config/environments/m4/sysconfigure.sh` - Create symlinks for dotfiles
 
 ### Configuration Management
-- **Primary environment**: `environments/t14s/` (Arch Linux on ThinkPad T14s Gen 3)
-- Legacy NixOS configs: `configuration.nix`, `home.nix`
-- Package lists: `pkgs-essentials.txt`, `pkgs-apps.txt`, `pkgs-multilib.txt`
+- **Primary environments**: `environments/t14s/` (Arch Linux) and `environments/m4/` (macOS ARM64)
+- Legacy NixOS configs: `configuration.nix`, `home.nix` (no longer maintained)
+- Package lists (t14s): `pkgs-essentials.txt`, `pkgs-apps.txt`, `pkgs-multilib.txt`
 
 ## Architecture Overview
 
-This repository started as a NixOS configuration but has evolved into a dotfiles repository primarily focused on Arch Linux setup. The active development happens in `environments/t14s/`.
+This repository started as a NixOS configuration but has evolved into a dotfiles repository for Arch Linux and macOS. Active development happens in `environments/t14s/` and `environments/m4/`.
 
-### Primary Environment: environments/t14s/ (Arch Linux)
-The main active configuration for ThinkPad T14s Gen 3 running Arch Linux with Sway (Wayland):
+### environments/t14s/ (Arch Linux on ThinkPad T14s Gen 3)
 
 **Key Configuration Files:**
-- `display/sway/config` - Sway window manager configuration
-- `statusbar/waybar/` - Waybar status bar for Wayland
-- `editor/nvim/` - Neovim configuration with init.lua
-- `terminal/alacritty/` - Alacritty terminal emulator config
-- `shell/zsh/` - Zsh shell configuration
-- `keyboard/` - Custom solemak keyboard layout and XKB config
-- `audio/cmus/` - Music player configuration
-- `browser/chromium/` - Chromium browser flags
-- `security/gnupg/` - GPG configuration
+- `display/sway/config` - Sway window manager (Wayland)
+- `statusbar/waybar/` - Waybar status bar
+- `editor/nvim/` - Neovim with init.lua
+- `terminal/alacritty/` - Alacritty terminal
+- `shell/zsh/` - Zsh configuration
+- `keyboard/` - Custom solemak layout (XKB)
 
-**Package Management:**
-- `pkgs-essentials.txt` - Core system packages
-- `pkgs-apps.txt` - Additional applications 
-- `pkgs-multilib.txt` - Multilib packages (Wine, Adobe, etc.)
+**Package Lists:** `pkgs-essentials.txt`, `pkgs-apps.txt`, `pkgs-multilib.txt`
 
 **Setup Scripts:**
-- `bootstrap-from-root.sh` - Initial root user setup
-- `bootstrap-from-user.sh` - User configuration setup
-- `sysconfigure.sh` - Creates symlinks for all dotfiles
-- `install-*.sh` - Various installation scripts for different components
+- `bootstrap-from-root.sh` → `bootstrap-from-user.sh` → `install-essentials.sh` → `sysconfigure.sh` → `enable-daemons.sh`
 
-### Legacy Components (Inactive)
-- **Root level configs** - NixOS configuration files (no longer maintained)
-  - `configuration.nix`, `home.nix`, `packages-home.nix`
-  - `environments/zenia/` - NixOS hardware configuration
-- **Shared configs** - Still used by t14s environment:
-  - `bin/` - Utility scripts for system management
-  - `secrets/` - Encrypted files (GPG keys, SSH keys)
-  - `pdfviewer/`, `theme/` - Shared application configs
+### environments/m4/ (macOS ARM64 - Mac Mini M4)
+
+**Key Configuration Files:**
+- `display/aerospace/aerospace.toml` - AeroSpace window manager
+- `keyboard/karabiner/` - Karabiner keyboard remapping
+- `shell/zsh/` - Zsh configuration (zshrc, aliases.zsh)
+
+**Setup:** `bash sysconfigure.sh` to create symlinks
+
+### Shared Components
+- `lib/common.sh` - Symlink/copy utility functions used by sysconfigure.sh scripts
+- `bin/` - Utility scripts for system management
+- `secrets/` - git-crypt encrypted files (GPG keys, SSH keys)
+
+### Symlink Pattern
+Each environment's `sysconfigure.sh` uses `lib/common.sh` to create symlinks:
+```bash
+source "${scriptdir}/../../lib/common.sh"
+symlink "shell/zsh/zshrc" "$HOME/.zshrc"
+```
 
 ### Key Technical Details
-- **Window Manager**: Sway (Wayland) with Waybar status bar
-- **Shell**: Zsh with extensive Git aliases and custom functions
-- **Editor**: Neovim with Lua configuration
-- **Terminal**: Alacritty with custom configuration
-- **Keyboard**: Custom solemak layout with XKB configuration
-- **Audio**: PipeWire with PulseAudio compatibility
-- **Graphics**: AMD GPU with potential power management tweaks
-- **Security**: LUKS disk encryption, GPG key management
+- **t14s**: Sway/Wayland, Zsh, Neovim, Alacritty, PipeWire, AMD GPU, LUKS encryption
+- **m4**: AeroSpace, Zsh with Oh-My-Zsh + Starship, Karabiner
 
 ### Common Operations
-- **System setup**: Run bootstrap scripts in order for fresh installs
-- **Package installation**: Use yay with package list files
-- **Dotfile management**: `sysconfigure.sh` creates all necessary symlinks
+- **Dotfile management**: Run `sysconfigure.sh` in the relevant environment directory
 - **GPG setup**: Required for decrypting git-crypt files with `git crypt unlock`
-- **Custom ISO**: Build custom Arch ISO with sarch-* scripts
+- **Git LFS**: Run `git lfs install && git lfs pull` for binary blobs
