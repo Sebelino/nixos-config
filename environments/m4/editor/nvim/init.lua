@@ -28,7 +28,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 vim.opt.cursorline = true
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 999
 
 -- Default indentation (vim-sleuth will auto-detect)
 vim.opt.tabstop = 4
