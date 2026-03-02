@@ -1,0 +1,19 @@
+{
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "diagnostics": {
+    "globals": ["vim"],
+    "disable": ["missing-fields", "incomplete-signature-doc"]
+  },
+  "workspace": {
+    "library": [
+      "$VIMRUNTIME/lua",
+      "${3rd}/luv/library"
+    ],
+    "checkThirdParty": false
+  },
+  "telemetry": {
+    "enable": false
+  }
+}
