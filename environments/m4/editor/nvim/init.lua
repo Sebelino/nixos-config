@@ -409,18 +409,18 @@ require("lazy").setup({
     },
 
     -- Treesitter: Better syntax highlighting
+    -- Pin to v0.9.x for stable configs API
     {
         "nvim-treesitter/nvim-treesitter",
-        version = false,
+        commit = "f197a15b0d1e8d555263af20add51450e5aaa1f0",
         build = ":TSUpdate",
-        event = { "BufReadPost", "BufNewFile" },
-        cmd = { "TSUpdate", "TSInstall" },
+        lazy = false,
         dependencies = {
             "nvim-treesitter/nvim-treesitter-textobjects",
         },
         config = function()
-            -- New nvim-treesitter 1.0 API
-            require("nvim-treesitter").setup({
+            ---@diagnostic disable-next-line: missing-fields
+            require("nvim-treesitter.configs").setup({
                 ensure_installed = {
                     "go",
                     "gomod",
@@ -436,37 +436,43 @@ require("lazy").setup({
                     "json",
                     "yaml",
                     "bash",
+                    "markdown",
+                    "markdown_inline",
                 },
-            })
-
-            -- Textobjects configuration
-            require("nvim-treesitter-textobjects").setup({
-                select = {
-                    lookahead = true,
-                    keymaps = {
-                        ["af"] = "@function.outer",
-                        ["if"] = "@function.inner",
-                        ["ac"] = "@class.outer",
-                        ["ic"] = "@class.inner",
+                auto_install = true,
+                ignore_install = { "query" },
+                highlight = { enable = true },
+                indent = { enable = true },
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead = true,
+                        keymaps = {
+                            ["af"] = "@function.outer",
+                            ["if"] = "@function.inner",
+                            ["ac"] = "@class.outer",
+                            ["ic"] = "@class.inner",
+                        },
                     },
-                },
-                move = {
-                    set_jumps = true,
-                    goto_next_start = {
-                        ["]m"] = "@function.outer",
-                        ["]]"] = "@class.outer",
-                    },
-                    goto_next_end = {
-                        ["]M"] = "@function.outer",
-                        ["]["] = "@class.outer",
-                    },
-                    goto_previous_start = {
-                        ["[m"] = "@function.outer",
-                        ["[["] = "@class.outer",
-                    },
-                    goto_previous_end = {
-                        ["[M"] = "@function.outer",
-                        ["[]"] = "@class.outer",
+                    move = {
+                        enable = true,
+                        set_jumps = true,
+                        goto_next_start = {
+                            ["]m"] = "@function.outer",
+                            ["]]"] = "@class.outer",
+                        },
+                        goto_next_end = {
+                            ["]M"] = "@function.outer",
+                            ["]["] = "@class.outer",
+                        },
+                        goto_previous_start = {
+                            ["[m"] = "@function.outer",
+                            ["[["] = "@class.outer",
+                        },
+                        goto_previous_end = {
+                            ["[M"] = "@function.outer",
+                            ["[]"] = "@class.outer",
+                        },
                     },
                 },
             })
@@ -490,6 +496,7 @@ require("lazy").setup({
     },
 }, {
     -- Lazy.nvim options
+    rocks = { enabled = false },
     ui = {
         icons = {
             cmd = "⌘",
