@@ -442,7 +442,7 @@ require("lazy").setup({
                     "markdown_inline",
                 },
                 auto_install = true,
-                ignore_install = { "query" },
+                ignore_install = { "query", "latex" },
                 highlight = { enable = true },
                 indent = { enable = true },
                 textobjects = {
