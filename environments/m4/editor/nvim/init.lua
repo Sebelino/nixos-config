@@ -411,10 +411,10 @@ require("lazy").setup({
     },
 
     -- Treesitter: Better syntax highlighting
-    -- Pin to v0.9.x for stable configs API
+    -- Use archived master branch which has the stable configs API
     {
         "nvim-treesitter/nvim-treesitter",
-        commit = "f197a15b0d1e8d555263af20add51450e5aaa1f0",
+        branch = "master",
         build = ":TSUpdate",
         lazy = false,
         dependencies = {
