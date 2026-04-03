@@ -17,3 +17,4 @@ x-directory/normal=pcmanfm.desktop
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-D0L8S2.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-D0L8S2.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
