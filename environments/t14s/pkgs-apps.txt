@@ -34,6 +34,7 @@ go-yq
 google-cloud-cli
 gparted
 gptfdisk
+gradle
 grim
 gsl
 gtk-engine-murrine
