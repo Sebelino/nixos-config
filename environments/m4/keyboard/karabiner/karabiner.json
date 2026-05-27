@@ -354,6 +354,23 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "LCommand + Space + ÅKey",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "å",
+                                        "modifiers": ["command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "description": "HatKey",
                                 "from": {
                                     "key_code": "close_bracket",
@@ -908,6 +925,23 @@
                                     {
                                         "key_code": "backslash",
                                         "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "LCommand + Space + NKey",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "n",
+                                        "modifiers": ["command", "shift"]
                                     }
                                 ],
                                 "type": "basic"
