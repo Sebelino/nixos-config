@@ -481,6 +481,14 @@ require("lazy").setup({
         end,
     },
 
+    -- markdown-preview.nvim: Live preview markdown in a browser
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = "cd app && bash install.sh",
+    },
+
     -- GitHub Copilot
     {
         "github/copilot.vim",
